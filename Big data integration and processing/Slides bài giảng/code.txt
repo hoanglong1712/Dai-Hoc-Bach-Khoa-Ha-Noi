@@ -1,0 +1,7 @@
+
+https://www.projectpro.io/recipes/read-data-from-hdfs-pyspark
+
+jobdata = spark.read.csv("hdfs://localhost:9000/user/u1/job.csv")
+
+
+https://sparkbyexamples.com/pyspark/pyspark-createorreplacetempview/
