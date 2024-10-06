@@ -1,5 +1,6 @@
 
 Project 1: Issue Report Classification
+- Validating code: https://www.kaggle.com/code/lehoanglonglong/hust-seminar-2-validation
 - Source code: https://www.kaggle.com/lehoanglonglong/hust-seminar-2
 - Latex link: https://www.overleaf.com/read/kqscknnwttpv#bd43e2
 - Datasets: NLBSE'24 tool competition on issue report classification, 3,000 samples.
