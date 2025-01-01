@@ -11,770 +11,18 @@
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-:Premier_League a schema:SportsLeague ;
-	dct:title "Premier League" ;
-	schema:description "The top professional football division of the nation football league system."
 
-:Bundesliga a schema:SportsLeague ;
-	dct:title "Bundesliga" ;
-	schema:description "The top professional football division of the nation football league system."
+schema:SportsTeam a rdfs:Class ;
+    rdfs:label "Sports Team" .
 
-:Ligue_1 a schema:SportsLeague ;
-	dct:title "Ligue 1" ;
-	schema:description "The top professional football division of the nation football league system."
+schema:SportsPerson a rdfs:Class ;
+    rdfs:label "Sports Person" .
 
-:LaLiga a schema:SportsLeague ;
-	dct:title "LaLiga" ;
-	schema:description "The top professional football division of the nation football league system."
+schema:SportsActivityLocation a rdfs:Class ;
+    rdfs:label "Sports Activity Location" . 
 
-:Serie_A a schema:SportsLeague ;
-	dct:title "Serie A" ;
-	schema:description "The top professional football division of the nation football league system."
-
-:Manchester_City a schema:SportsTeam ;
-	dct:title "Manchester City" ;
-	foaf:homepage <https://www.mancity.com/> ;
-	schema:memberOf :Premier_League ;
-	schema:relatedLink wdw:Q50602 ; # (Wikidata entity)
-	schema:member :Manuel_Akanji :Nathan_Aké :Julián_Álvarez ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Bayern_Munich a schema:SportsTeam ;
-	dct:title "Bayern Munich" ;
-	foaf:homepage <https://fcbayern.com/en> ;
-	schema:memberOf :Bundesliga ;
-	schema:relatedLink wdw:Q15789 ; # (Wikidata entity)
-	schema:member :João_Cancelo :Daley_Blind :Kingsley_Coman ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Paris_Saint-Germain a schema:SportsTeam ;
-	dct:title "Paris Saint-Germain" ;
-	foaf:homepage <https://en.psg.fr/> ;
-	schema:memberOf :Ligue_1 ;
-	schema:relatedLink wdw:Q483020 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Barcelona a schema:SportsTeam ;
-	dct:title "Barcelona" ;
-	foaf:homepage <https://www.fcbarcelona.com/en/> ;
-	schema:memberOf :LaLiga ;
-	schema:relatedLink wdw:Q7156 ; # (Wikidata entity)
-	schema:member :Jordi_Alba :Ronald_Araújo :Marcos_Alonso ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Real_Madrid a schema:SportsTeam ;
-	dct:title "Real Madrid" ;
-	foaf:homepage <https://www.realmadrid.com/en-US> ;
-	schema:memberOf :LaLiga ;
-	schema:relatedLink wdw:Q8682 ; # (Wikidata entity)
-	schema:member :Karim_Benzema :David_Alaba :Marco_Asensio ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Manchester_United a schema:SportsTeam ;
-	dct:title "Manchester United" ;
-	foaf:homepage <https://www.manutd.com/> ;
-	schema:memberOf :Premier_League ;
-	schema:relatedLink wdw:Q18656 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Juventus a schema:SportsTeam ;
-	dct:title "Juventus" ;
-	foaf:homepage <https://www.juventus.com/en/> ;
-	schema:memberOf :Serie_A ;
-	schema:relatedLink wdw:Q1422 ; # (Wikidata entity)
-	schema:member :Federico_Chiesa :Leonardo_Bonucci ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Aston_Villa a schema:SportsTeam ;
-	dct:title "Aston Villa" ;
-	foaf:homepage <https://www.avfc.co.uk/> ;
-	schema:memberOf :Premier_League ;
-	schema:relatedLink wdw:Q18711 ; # (Wikidata entity)
-	schema:member :Cameron_Archer :Leon_Bailey :Ludwig_Augustinsson ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Borussia_Dortmund a schema:SportsTeam ;
-	dct:title "Borussia Dortmund" ;
-	foaf:homepage <https://www.bvb.de/de/en.html> ;
-	schema:memberOf :Bundesliga ;
-	schema:relatedLink wdw:Q41420 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Atletico_Madrid a schema:SportsTeam ;
-	dct:title "Atletico Madrid" ;
-	foaf:homepage <https://en.atleticodemadrid.com/> ;
-	schema:memberOf :LaLiga ;
-	schema:relatedLink wdw:Q8701 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Atalanta a schema:SportsTeam ;
-	dct:title "Atalanta" ;
-	foaf:homepage <https://en.atalanta.it/> ;
-	schema:memberOf :Serie_A ;
-	schema:relatedLink wdw:Q1886 ; # (Wikidata entity)
-	schema:member :Merih_Demiral :Berat_Djimsiti :Jeremie_Boga ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Chelsea a schema:SportsTeam ;
-	dct:title "Chelsea" ;
-	foaf:homepage <https://www.chelseafc.com/en> ;
-	schema:memberOf :Premier_League ;
-	schema:relatedLink wdw:Q9616 ; # (Wikidata entity)
-	schema:member :César_Azpilicueta :Pierre-Emerick_Aubameyang :Kepa_Arrizabalaga ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Liverpool a schema:SportsTeam ;
-	dct:title "Liverpool" ;
-	foaf:homepage <https://www.liverpoolfc.com/> ;
-	schema:memberOf :Premier_League ;
-	schema:relatedLink wdw:Q1130849 ; # (Wikidata entity)
-	schema:member :Trent_Alexander-Arnold :Thiago_Alcántara :Alisson ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:AC_Milan a schema:SportsTeam ;
-	dct:title "AC Milan" ;
-	foaf:homepage <http://www.acmilan.com/en> ;
-	schema:memberOf :Serie_A ;
-	schema:relatedLink wdw:Q1543 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Lille a schema:SportsTeam ;
-	dct:title "Lille" ;
-	foaf:homepage <https://www.losc.fr/> ;
-	schema:memberOf :Ligue_1 ;
-	schema:relatedLink wdw:Q19516 ; # (Wikidata entity)
-	schema:member :Carlos_Baleba :Benjamin_André :Jonathan_Bamba ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Tottenham a schema:SportsTeam ;
-	dct:title "Tottenham" ;
-	foaf:homepage <https://www.tottenhamhotspur.com/> ;
-	schema:memberOf :Premier_League ;
-	schema:relatedLink wdw:Q18741 ; # (Wikidata entity)
-	schema:member :Yves_Bissouma :Bryan :Rodrigo_Bentancur ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Napoli a schema:SportsTeam ;
-	dct:title "Napoli" ;
-	foaf:homepage <https://sscnapoli.it/en/> ;
-	schema:memberOf :Serie_A ;
-	schema:relatedLink wdw:Q2641 ; # (Wikidata entity)
-	schema:member :Giovanni_Di_Lorenzo :Elif_Elmas ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Leicester a schema:SportsTeam ;
-	dct:title "Leicester" ;
-	foaf:homepage <https://www.lcfc.com/> ;
-	schema:memberOf :Premier_League ;
-	schema:relatedLink wdw:Q19481 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Wolfsburg a schema:SportsTeam ;
-	dct:title "Wolfsburg" ;
-	foaf:homepage <https://www.vfl-wolfsburg.de/en/home> ;
-	schema:memberOf :Bundesliga ;
-	schema:relatedLink wdw:Q101859 ; # (Wikidata entity)
-	schema:member :Maximilian_Arnold :Sebastiaan_Bornauw ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Inter a schema:SportsTeam ;
-	dct:title "Inter" ;
-	foaf:homepage <https://www.inter.it/en> ;
-	schema:memberOf :Serie_A ;
-	schema:relatedLink wdw:Q631 ; # (Wikidata entity)
-	schema:member :Nicolò_Barella :Francesco_Acerbi :Kristjan_Asllani ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Lyon a schema:SportsTeam ;
-	dct:title "Lyon" ;
-	foaf:homepage <https://www.ol.fr/en> ;
-	schema:memberOf :Ligue_1 ;
-	schema:relatedLink wdw:Q704 ; # (Wikidata entity)
-	schema:member :Houssem_Aouar :Jérôme_Boateng :Bradley_Barcola ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:RB_Leipzig a schema:SportsTeam ;
-	dct:title "RB Leipzig" ;
-	foaf:homepage <https://rbleipzig.com/en> ;
-	schema:memberOf :Bundesliga ;
-	schema:relatedLink wdw:Q702455 ; # (Wikidata entity)
-	schema:member :Janis_Blaswich :Abdou_Diallo ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Leeds a schema:SportsTeam ;
-	dct:title "Leeds" ;
-	foaf:homepage <https://www.leedsunited.com/> ;
-	schema:memberOf :Premier_League ;
-	schema:relatedLink wdw:Q1128631 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:West_Ham a schema:SportsTeam ;
-	dct:title "West Ham" ;
-	foaf:homepage <https://www.whufc.com/> ;
-	schema:memberOf :Premier_League ;
-	schema:relatedLink wdw:Q18747 ; # (Wikidata entity)
-	schema:member :Alphonse_Areola :Nayef_Aguerd :Michail_Antonio ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Everton a schema:SportsTeam ;
-	dct:title "Everton" ;
-	foaf:homepage <https://www.evertonfc.com/home> ;
-	schema:memberOf :Premier_League ;
-	schema:relatedLink wdw:Q5794 ; # (Wikidata entity)
-	schema:member :Dele_Alli :Asmir_Begovi? :Dominic_Calvert-Lewin ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Bayer_Leverkusen a schema:SportsTeam ;
-	dct:title "Bayer Leverkusen" ;
-	foaf:homepage <https://www.bayer04.de/> ;
-	schema:memberOf :Bundesliga ;
-	schema:relatedLink wdw:Q104761 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Eintracht_Frankfurt a schema:SportsTeam ;
-	dct:title "Eintracht Frankfurt" ;
-	foaf:homepage <https://en.eintracht.de/> ;
-	schema:memberOf :Bundesliga ;
-	schema:relatedLink wdw:Q38245 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Monaco a schema:SportsTeam ;
-	dct:title "Monaco" ;
-	foaf:homepage <https://www.asmonaco.com/en/> ;
-	schema:memberOf :Ligue_1 ;
-	schema:relatedLink wdw:Q180305 ; # (Wikidata entity)
-	schema:member :Ruben_Aguilar :Maghnes_Akliouche :Benoît_Badiashile ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Roma a schema:SportsTeam ;
-	dct:title "Roma" ;
-	foaf:homepage <https://www.asroma.com/en> ;
-	schema:memberOf :Serie_A ;
-	schema:relatedLink wdw:Q2739 ; # (Wikidata entity)
-	schema:member :Tammy_Abraham :Edoardo_Bove :Andrea_Belotti ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Sevilla a schema:SportsTeam ;
-	dct:title "Sevilla" ;
-	foaf:homepage <http://sevillafc.es/en> ;
-	schema:memberOf :LaLiga ;
-	schema:relatedLink wdw:Q10329 ; # (Wikidata entity)
-	schema:member :Loïc_Bade :Carlos_Álvarez :Marcos_Acuña ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Borussia_M.Gladbach a schema:SportsTeam ;
-	dct:title "Borussia M.Gladbach" ;
-	foaf:homepage <https://www.borussia.de/en> ;
-	schema:memberOf :Bundesliga ;
-	schema:relatedLink wdw:Q101959 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Arsenal a schema:SportsTeam ;
-	dct:title "Arsenal" ;
-	foaf:homepage <https://www.arsenal.com/> ;
-	schema:memberOf :Premier_League ;
-	schema:relatedLink wdw:Q9617 ; # (Wikidata entity)
-	schema:member :Mohamed_Elneny :Gabriel_Dos_Santos :Rob_Holding ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Rennes a schema:SportsTeam ;
-	dct:title "Rennes" ;
-	foaf:homepage <https://www.staderennais.com/en> ;
-	schema:memberOf :Ligue_1 ;
-	schema:relatedLink wdw:Q19509 ; # (Wikidata entity)
-	schema:member :Matthis_Abline :Lorenz_Assignon ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:VfB_Stuttgart a schema:SportsTeam ;
-	dct:title "VfB Stuttgart" ;
-	foaf:homepage <https://www.vfb.de/en/> ;
-	schema:memberOf :Bundesliga ;
-	schema:relatedLink wdw:Q4512 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Wolverhampton_Wanderers a schema:SportsTeam ;
-	dct:title "Wolverhampton Wanderers" ;
-	foaf:homepage <https://www.wolves.co.uk/> ;
-	schema:memberOf :Premier_League ;
-	schema:relatedLink wdw:Q19500 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Sassuolo a schema:SportsTeam ;
-	dct:title "Sassuolo" ;
-	foaf:homepage <https://www.sassuolocalcio.it/en/> ;
-	schema:memberOf :Serie_A ;
-	schema:relatedLink wdw:Q8603 ; # (Wikidata entity)
-	schema:member :Kaan_Ayhan :Janis_Antiste :Agustín_Álvarez_Martínez ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Metz a schema:SportsTeam ;
-	dct:title "Metz" ;
-	foaf:homepage <https://www.fcmetz.com/> ;
-	schema:memberOf :Ligue_1 ;
-	schema:relatedLink wdw:Q221525 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Villarreal a schema:SportsTeam ;
-	dct:title "Villarreal" ;
-	foaf:homepage <https://villarrealcf.es/en/> ;
-	schema:memberOf :LaLiga ;
-	schema:relatedLink wdw:Q12297 ; # (Wikidata entity)
-	schema:member :Raúl_Albiol :Alex_Baena :Étienne_Capoue ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Real_Sociedad a schema:SportsTeam ;
-	dct:title "Real Sociedad" ;
-	foaf:homepage <https://www.realsociedad.eus/en> ;
-	schema:memberOf :LaLiga ;
-	schema:relatedLink wdw:Q10315 ; # (Wikidata entity)
-	schema:member :Ander_Barrenetxea :Mohamed_Ali_Cho :Aritz_Elustondo ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Brighton a schema:SportsTeam ;
-	dct:title "Brighton" ;
-	foaf:homepage <https://www.brightonandhovealbion.com/> ;
-	schema:memberOf :Premier_League ;
-	schema:relatedLink wdw:Q19453 ; # (Wikidata entity)
-	schema:member :Moisés_Caicedo :Julio_César_Enciso :Facundo_Buonanotte ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Real_Betis a schema:SportsTeam ;
-	dct:title "Real Betis" ;
-	foaf:homepage <https://en.realbetisbalompie.es/> ;
-	schema:memberOf :LaLiga ;
-	schema:relatedLink wdw:Q8723 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Burnley a schema:SportsTeam ;
-	dct:title "Burnley" ;
-	foaf:homepage <https://www.burnleyfootballclub.com/> ;
-	schema:memberOf :Premier_League ;
-	schema:relatedLink wdw:Q19458 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Lens a schema:SportsTeam ;
-	dct:title "Lens" ;
-	foaf:homepage <https://www.rclens.fr/fr/english> ;
-	schema:memberOf :Ligue_1 ;
-	schema:relatedLink wdw:Q191843 ; # (Wikidata entity)
-	schema:member :Salis_Abdul_Samed :Patrick_Berg ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Brest a schema:SportsTeam ;
-	dct:title "Brest" ;
-	foaf:homepage <https://www.sb29.bzh/> ;
-	schema:memberOf :Ligue_1 ;
-	schema:relatedLink wdw:Q218372 ; # (Wikidata entity)
-	schema:member :Haris_Belkebla :Youcef_Belaïli ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Fulham a schema:SportsTeam ;
-	dct:title "Fulham" ;
-	foaf:homepage <https://www.fulhamfc.com/> ;
-	schema:memberOf :Premier_League ;
-	schema:relatedLink wdw:Q18708 ; # (Wikidata entity)
-	schema:member :Tosin_Adarabioyo :Tom_Cairney :Nathaniel_Chalobah ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Marseille a schema:SportsTeam ;
-	dct:title "Marseille" ;
-	foaf:homepage <https://www.om.fr/en> ;
-	schema:memberOf :Ligue_1 ;
-	schema:relatedLink wdw:Q132885 ; # (Wikidata entity)
-	schema:member :Eric_Bailly :Leonardo_Balerdi :Cédric_Bakambu ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Sampdoria a schema:SportsTeam ;
-	dct:title "Sampdoria" ;
-	foaf:homepage <https://www.sampdoria.it/> ;
-	schema:memberOf :Serie_A ;
-	schema:relatedLink wdw:Q1457 ; # (Wikidata entity)
-	schema:member :Emil_Audero ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Montpellier a schema:SportsTeam ;
-	dct:title "Montpellier" ;
-	foaf:homepage <https://mhscfoot.com/> ;
-	schema:memberOf :Ligue_1 ;
-	schema:relatedLink wdw:Q19513 ; # (Wikidata entity)
-	schema:member :Nicolas_Cozza :Joris_Chotard ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Nice a schema:SportsTeam ;
-	dct:title "Nice" ;
-	foaf:homepage <https://www.ogcnice.com/en/> ;
-	schema:memberOf :Ligue_1 ;
-	schema:relatedLink wdw:Q185163 ; # (Wikidata entity)
-	schema:member :Ross_Barkley :Youcef_Atal :Melvin_Bard ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Hoffenheim a schema:SportsTeam ;
-	dct:title "Hoffenheim" ;
-	foaf:homepage <https://www.tsg-hoffenheim.de/en> ;
-	schema:memberOf :Bundesliga ;
-	schema:relatedLink wdw:Q22707 ; # (Wikidata entity)
-	schema:member :Kevin_Akpoguma :Angeliño :Fisnik_Asllani ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Southampton a schema:SportsTeam ;
-	dct:title "Southampton" ;
-	foaf:homepage <https://www.southamptonfc.com/en> ;
-	schema:memberOf :Premier_League ;
-	schema:relatedLink wdw:Q18732 ; # (Wikidata entity)
-	schema:member :Joe_Aribo :Che_Adams :Carlos_Alcaraz ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Newcastle_United a schema:SportsTeam ;
-	dct:title "Newcastle United" ;
-	foaf:homepage <https://www.newcastleunited.com/en> ;
-	schema:memberOf :Premier_League ;
-	schema:relatedLink wdw:Q18716 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Lazio a schema:SportsTeam ;
-	dct:title "Lazio" ;
-	foaf:homepage <https://www.sslazio.it/en/> ;
-	schema:memberOf :Serie_A ;
-	schema:relatedLink wdw:Q2609 ; # (Wikidata entity)
-	schema:member :Felipe_Anderson :Luis_Alberto :Marcos_Antônio ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Nantes a schema:SportsTeam ;
-	dct:title "Nantes" ;
-	foaf:homepage <https://www.fcnantes.com/> ;
-	schema:memberOf :Ligue_1 ;
-	schema:relatedLink wdw:Q192071 ; # (Wikidata entity)
-	schema:member :Dennis_Appiah :Ludovic_Blas :Mohamed_Achi ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Union_Berlin a schema:SportsTeam ;
-	dct:title "Union Berlin" ;
-	foaf:homepage <https://www.fc-union-berlin.de/en/> ;
-	schema:memberOf :Bundesliga ;
-	schema:relatedLink wdw:Q141971 ; # (Wikidata entity)
-	schema:member :Sheraldo_Becker :Kevin_Behrens ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Strasbourg a schema:SportsTeam ;
-	dct:title "Strasbourg" ;
-	foaf:homepage <https://www.rcstrasbourgalsace.fr/en/racing-en/> ;
-	schema:memberOf :Ligue_1 ;
-	schema:relatedLink wdw:Q126334 ; # (Wikidata entity)
-	schema:member :Ludovic_Ajorque :Jean-Ricner_Bellegarde ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Crystal_Palace a schema:SportsTeam ;
-	dct:title "Crystal Palace" ;
-	foaf:homepage <https://www.cpfc.co.uk/> ;
-	schema:memberOf :Premier_League ;
-	schema:relatedLink wdw:Q19467 ; # (Wikidata entity)
-	schema:member :Joachim_Andersen :Jordan_Ayew ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Freiburg a schema:SportsTeam ;
-	dct:title "Freiburg" ;
-	foaf:homepage <https://www.scfreiburg.com/en> ;
-	schema:memberOf :Bundesliga ;
-	schema:relatedLink wdw:Q106394 ; # (Wikidata entity)
-	schema:member :Ritsu_Doan :Maximilian_Eggestein :Mark_Flekken ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Valencia a schema:SportsTeam ;
-	dct:title "Valencia" ;
-	foaf:homepage <https://www.valenciacf.com/home> ;
-	schema:memberOf :LaLiga ;
-	schema:relatedLink wdw:Q10333 ; # (Wikidata entity)
-	schema:member :Domingos_André_Ribeiro_Almeida :Edinson_Cavani :Samu_Castillejo ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Celta_Vigo a schema:SportsTeam ;
-	dct:title "Celta Vigo" ;
-	foaf:homepage <https://rccelta.es/en/> ;
-	schema:memberOf :LaLiga ;
-	schema:relatedLink wdw:Q8749 ; # (Wikidata entity)
-	schema:member :Iago_Aspas :Fran_Beltrán :Joseph_Aidoo ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Reims a schema:SportsTeam ;
-	dct:title "Reims" ;
-	foaf:homepage <https://www.stade-de-reims.com/> ;
-	schema:memberOf :Ligue_1 ;
-	schema:relatedLink wdw:Q208228 ; # (Wikidata entity)
-	schema:member :Yunis_Abdelhamid :Emmanuel_Agbadou ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Torino a schema:SportsTeam ;
-	dct:title "Torino" ;
-	foaf:homepage <https://www.torinofc.it/en> ;
-	schema:memberOf :Serie_A ;
-	schema:relatedLink wdw:Q2768 ; # (Wikidata entity)
-	schema:member :Alessandro_Buongiorno :Ola_Aina ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Verona a schema:SportsTeam ;
-	dct:title "Verona" ;
-	foaf:homepage <https://www.hellasverona.it/en> ;
-	schema:memberOf :Serie_A ;
-	schema:relatedLink wdw:Q8639 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Saint-Etienne a schema:SportsTeam ;
-	dct:title "Saint-Etienne" ;
-	foaf:homepage <https://www.asse.fr/> ;
-	schema:memberOf :Ligue_1 ;
-	schema:relatedLink wdw:Q19521 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Bordeaux a schema:SportsTeam ;
-	dct:title "Bordeaux" ;
-	foaf:homepage <https://www.girondins.com/> ;
-	schema:memberOf :Ligue_1 ;
-	schema:relatedLink wdw:Q172476 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Hertha_Berlin a schema:SportsTeam ;
-	dct:title "Hertha Berlin" ;
-	foaf:homepage <https://www.herthabsc.com/en> ;
-	schema:memberOf :Bundesliga ;
-	schema:relatedLink wdw:Q102720 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Cagliari a schema:SportsTeam ;
-	dct:title "Cagliari" ;
-	foaf:homepage <https://cagliaricalcio.com/en/> ;
-	schema:memberOf :Serie_A ;
-	schema:relatedLink wdw:Q1900 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Mainz_05 a schema:SportsTeam ;
-	dct:title "Mainz 05" ;
-	foaf:homepage <https://www.mainz05.de/en> ;
-	schema:memberOf :Bundesliga ;
-	schema:relatedLink wdw:Q105254 ; # (Wikidata entity)
-	schema:member :Leandro_Barreiro_Martins :Aymen_Barkok :Ludovic_Ajorque ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Bologna a schema:SportsTeam ;
-	dct:title "Bologna" ;
-	foaf:homepage <https://www.bolognafc.it/en/home/> ;
-	schema:memberOf :Serie_A ;
-	schema:relatedLink wdw:Q1893 ; # (Wikidata entity)
-	schema:member :Musa_Barrow :Michel_Aebischer :Marko_Arnautovi? ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Augsburg a schema:SportsTeam ;
-	dct:title "Augsburg" ;
-	foaf:homepage <https://www.fcaugsburg.de/en/> ;
-	schema:memberOf :Bundesliga ;
-	schema:relatedLink wdw:Q15755 ; # (Wikidata entity)
-	schema:member :Julian_Baumgartlinger ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Udinese a schema:SportsTeam ;
-	dct:title "Udinese" ;
-	foaf:homepage <https://www.udinese.it/eng> ;
-	schema:memberOf :Serie_A ;
-	schema:relatedLink wdw:Q2798 ; # (Wikidata entity)
-	schema:member :Rodrigo_Becão :Beto :Tolgay_Arslan ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:SD_Huesca a schema:SportsTeam ;
-	dct:title "SD Huesca" ;
-	foaf:homepage <https://www.sdhuesca.es/> ;
-	schema:memberOf :LaLiga ;
-	schema:relatedLink wdw:Q11971 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Athletic_Bilbao a schema:SportsTeam ;
-	dct:title "Athletic Bilbao" ;
-	foaf:homepage <https://www.athletic-club.eus/en/> ;
-	schema:memberOf :LaLiga ;
-	schema:relatedLink wdw:Q8687 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Osasuna a schema:SportsTeam ;
-	dct:title "Osasuna" ;
-	foaf:homepage <https://www.osasuna.es/en> ;
-	schema:memberOf :LaLiga ;
-	schema:relatedLink wdw:Q10286 ; # (Wikidata entity)
-	schema:member :Darko_Braanac :Kike_Barja :Ezequiel_Ávila ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Lorient a schema:SportsTeam ;
-	dct:title "Lorient" ;
-	foaf:homepage <https://www.fclorient.bzh/> ;
-	schema:memberOf :Ligue_1 ;
-	schema:relatedLink wdw:Q48911 ; # (Wikidata entity)
-	schema:member :Adil_Aouchiche :Laurent_Abergel ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Genoa a schema:SportsTeam ;
-	dct:title "Genoa" ;
-	foaf:homepage <https://genoacfc.it/> ;
-	schema:memberOf :Serie_A ;
-	schema:relatedLink wdw:Q2074 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Arminia_Bielefeld a schema:SportsTeam ;
-	dct:title "Arminia Bielefeld" ;
-	foaf:homepage <https://www.arminia.de/> ;
-	schema:memberOf :Bundesliga ;
-	schema:relatedLink wdw:Q105844 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Angers a schema:SportsTeam ;
-	dct:title "Angers" ;
-	foaf:homepage <https://angers-sco.fr/> ;
-	schema:memberOf :Ligue_1 ;
-	schema:relatedLink wdw:Q845137 ; # (Wikidata entity)
-	schema:member :Himad_Abdelli ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Eibar a schema:SportsTeam ;
-	dct:title "Eibar" ;
-	foaf:homepage <https://www.sdeibar.com/en> ;
-	schema:memberOf :LaLiga ;
-	schema:relatedLink wdw:Q770740 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Werder_Bremen a schema:SportsTeam ;
-	dct:title "Werder Bremen" ;
-	foaf:homepage <https://www.werder.de/en> ;
-	schema:memberOf :Bundesliga ;
-	schema:relatedLink wdw:Q51976 ; # (Wikidata entity)
-	schema:member :Leonardo_Bittencourt ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Fiorentina a schema:SportsTeam ;
-	dct:title "Fiorentina" ;
-	foaf:homepage <https://www.acffiorentina.com/en> ;
-	schema:memberOf :Serie_A ;
-	schema:relatedLink wdw:Q2052 ; # (Wikidata entity)
-	schema:member :Sofyan_Amrabat :Arthur :Antonín_Barák ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Nimes a schema:SportsTeam ;
-	dct:title "Nimes" ;
-	foaf:homepage <http://www.nimes-olympique.com/> ;
-	schema:memberOf :Ligue_1 ;
-	schema:relatedLink wdw:Q730809 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:West_Bromwich_Albion a schema:SportsTeam ;
-	dct:title "West Bromwich Albion" ;
-	foaf:homepage <https://www.wba.co.uk/> ;
-	schema:memberOf :Premier_League ;
-	schema:relatedLink wdw:Q18744 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:FC_Koln a schema:SportsTeam ;
-	dct:title "FC Koln" ;
-	foaf:homepage <https://fc.de/en> ;
-	schema:memberOf :Bundesliga ;
-	schema:relatedLink wdw:Q104770 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Deportivo_Alaves a schema:SportsTeam ;
-	dct:title "Deportivo Alaves" ;
-	foaf:homepage <https://www.deportivoalaves.com/es/> ;
-	schema:memberOf :LaLiga ;
-	schema:relatedLink wdw:Q223620 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Levante a schema:SportsTeam ;
-	dct:title "Levante" ;
-	foaf:homepage <https://www.levanteud.com/en> ;
-	schema:memberOf :LaLiga ;
-	schema:relatedLink wdw:Q8823 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Spezia a schema:SportsTeam ;
-	dct:title "Spezia" ;
-	foaf:homepage <https://www.speziacalcio.com/en/home.html> ;
-	schema:memberOf :Serie_A ;
-	schema:relatedLink wdw:Q8615 ; # (Wikidata entity)
-	schema:member :Ethan_Ampadu :Kelvin_Amian ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Getafe a schema:SportsTeam ;
-	dct:title "Getafe" ;
-	foaf:homepage <https://www.getafecf.com/en> ;
-	schema:memberOf :LaLiga ;
-	schema:relatedLink wdw:Q8806 ; # (Wikidata entity)
-	schema:member :Carles_Aleñá ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Parma_Calcio_1913 a schema:SportsTeam ;
-	dct:title "Parma Calcio 1913" ;
-	foaf:homepage <https://www.parmacalcio1913.com/en/> ;
-	schema:memberOf :Serie_A ;
-	schema:relatedLink wdw:Q2693 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Elche a schema:SportsTeam ;
-	dct:title "Elche" ;
-	foaf:homepage <https://www.elchecf.es/> ;
-	schema:memberOf :LaLiga ;
-	schema:relatedLink wdw:Q10512 ; # (Wikidata entity)
-	schema:member :Édgar_Badía :Alejandro_Alfaro ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Granada a schema:SportsTeam ;
-	dct:title "Granada" ;
-	foaf:homepage <https://www.granadacf.es/> ;
-	schema:memberOf :LaLiga ;
-	schema:relatedLink wdw:Q8812 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Cadiz a schema:SportsTeam ;
-	dct:title "Cadiz" ;
-	foaf:homepage <https://www.cadizcf.com/en> ;
-	schema:memberOf :LaLiga ;
-	schema:relatedLink wdw:Q460448 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Real_Valladolid a schema:SportsTeam ;
-	dct:title "Real Valladolid" ;
-	foaf:homepage <https://www.realvalladolid.es/> ;
-	schema:memberOf :LaLiga ;
-	schema:relatedLink wdw:Q10319 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Sheffield_United a schema:SportsTeam ;
-	dct:title "Sheffield United" ;
-	foaf:homepage <https://www.sufc.co.uk/> ;
-	schema:memberOf :Premier_League ;
-	schema:relatedLink wdw:Q19607 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Crotone a schema:SportsTeam ;
-	dct:title "Crotone" ;
-	foaf:homepage <https://www.fccrotone.it/> ;
-	schema:memberOf :Serie_A ;
-	schema:relatedLink wdw:Q6690 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Benevento a schema:SportsTeam ;
-	dct:title "Benevento" ;
-	foaf:homepage <https://www.beneventocalcio.club/> ;
-	schema:memberOf :Serie_A ;
-	schema:relatedLink wdw:Q652516 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Dijon a schema:SportsTeam ;
-	dct:title "Dijon" ;
-	foaf:homepage <https://www.dfco.fr/> ;
-	schema:memberOf :Ligue_1 ;
-	schema:relatedLink wdw:Q503317 ; # (Wikidata entity)
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
-
-:Schalke_04 a schema:SportsTeam ;
-	dct:title "Schalke 04" ;
-	foaf:homepage <https://schalke04.de/en/> ;
-	schema:memberOf :Bundesliga ;
-	schema:relatedLink wdw:Q32494 ; # (Wikidata entity)
-	schema:member :Éder_Álvarez_Balanta :Mehmet-Can_Aydin ;
-	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+schema:SportsLeague a rdfs:Class ;
+    rdfs:label "Sports League" .    
 
 :Himad_Abdelli a schema:Person, schema:SportsPerson ;
 	foaf:name "Himad Abdelli" ;
@@ -872,8 +120,8 @@
 	schema:relatedLink wdw:Q187159 ; # (Wikidata entity)
 	schema:memberOf :Barcelona .
 
-:Ronald_Araújo a schema:Person, schema:SportsPerson ;
-	foaf:name "Ronald Araújo" ;
+:Ronald_Araujo a schema:Person, schema:SportsPerson ;
+	foaf:name "Ronald Araujo" ;
 	foaf:age 23 ;
 	schema:position "DF" ;
 	schema:nationality "URU" ;
@@ -888,8 +136,8 @@
 	schema:relatedLink wdw:Q442838 ; # (Wikidata entity)
 	schema:memberOf :Barcelona .
 
-:João_Cancelo a schema:Person, schema:SportsPerson ;
-	foaf:name "João Cancelo" ;
+:Joao_Cancelo a schema:Person, schema:SportsPerson ;
+	foaf:name "Joao Cancelo" ;
 	foaf:age 28 ;
 	schema:position "DFFW" ;
 	schema:nationality "POR" ;
@@ -928,8 +176,8 @@
 	schema:relatedLink wdw:Q27469951 ; # (Wikidata entity)
 	schema:memberOf :Bologna .
 
-:Marko_Arnautovi? a schema:Person, schema:SportsPerson ;
-	foaf:name "Marko Arnautovi?" ;
+:Marko_Arnautovi a schema:Person, schema:SportsPerson ;
+	foaf:name "Marko Arnautovi" ;
 	foaf:age 33 ;
 	schema:position "FW" ;
 	schema:nationality "AUT" ;
@@ -944,24 +192,24 @@
 	schema:relatedLink wdw:Q17579882 ; # (Wikidata entity)
 	schema:memberOf :Brest .
 
-:Youcef_Belaïli a schema:Person, schema:SportsPerson ;
-	foaf:name "Youcef Belaïli" ;
+:Youcef_Belaili a schema:Person, schema:SportsPerson ;
+	foaf:name "Youcef Belaili" ;
 	foaf:age 30 ;
 	schema:position "FWMF" ;
 	schema:nationality "ALG" ;
 	schema:relatedLink wdw:Q3572787 ; # (Wikidata entity)
 	schema:memberOf :Brest .
 
-:Moisés_Caicedo a schema:Person, schema:SportsPerson ;
-	foaf:name "Moisés Caicedo" ;
+:Moises_Caicedo a schema:Person, schema:SportsPerson ;
+	foaf:name "Moises Caicedo" ;
 	foaf:age 21 ;
 	schema:position "MF" ;
 	schema:nationality "ECU" ;
 	schema:relatedLink wdw:Q87715532 ; # (Wikidata entity)
 	schema:memberOf :Brighton .
 
-:Julio_César_Enciso a schema:Person, schema:SportsPerson ;
-	foaf:name "Julio César Enciso" ;
+:Julio_Cesar_Enciso a schema:Person, schema:SportsPerson ;
+	foaf:name "Julio Cesar Enciso" ;
 	foaf:age 19 ;
 	schema:position "FWMF" ;
 	schema:nationality "PAR" ;
@@ -984,8 +232,8 @@
 	schema:relatedLink wdw:Q26380 ; # (Wikidata entity)
 	schema:memberOf :Celta_Vigo .
 
-:Fran_Beltrán a schema:Person, schema:SportsPerson ;
-	foaf:name "Fran Beltrán" ;
+:Fran_Beltran a schema:Person, schema:SportsPerson ;
+	foaf:name "Fran Beltran" ;
 	foaf:age 24 ;
 	schema:position "MF" ;
 	schema:nationality "ESP" ;
@@ -1000,16 +248,16 @@
 	schema:relatedLink wdw:Q21042828 ; # (Wikidata entity)
 	schema:memberOf :Celta_Vigo .
 
-:César_Azpilicueta a schema:Person, schema:SportsPerson ;
-	foaf:name "César Azpilicueta" ;
+:Cesar_Azpilicueta a schema:Person, schema:SportsPerson ;
+	foaf:name "Cesar Azpilicueta" ;
 	foaf:age 33 ;
 	schema:position "DF" ;
 	schema:nationality "ESP" ;
 	schema:relatedLink wdw:Q294806 ; # (Wikidata entity)
 	schema:memberOf :Chelsea .
 
-:Pierre-Emerick_Aubameyang a schema:Person, schema:SportsPerson ;
-	foaf:name "Pierre-Emerick Aubameyang" ;
+:Pierre_Emerick_Aubameyang a schema:Person, schema:SportsPerson ;
+	foaf:name "Pierre Emerick Aubameyang" ;
 	foaf:age 33 ;
 	schema:position "FW" ;
 	schema:nationality "GAB" ;
@@ -1040,8 +288,8 @@
 	schema:relatedLink wdw:Q367861 ; # (Wikidata entity)
 	schema:memberOf :Crystal_Palace .
 
-:Édgar_Badía a schema:Person, schema:SportsPerson ;
-	foaf:name "Édgar Badía" ;
+:Edgar_Badia a schema:Person, schema:SportsPerson ;
+	foaf:name "Edgar Badia" ;
 	foaf:age 31 ;
 	schema:position "GK" ;
 	schema:nationality "ESP" ;
@@ -1064,16 +312,16 @@
 	schema:relatedLink wdw:Q10553748 ; # (Wikidata entity)
 	schema:memberOf :Everton .
 
-:Asmir_Begovi? a schema:Person, schema:SportsPerson ;
-	foaf:name "Asmir Begovi?" ;
+:Asmir_Begovi a schema:Person, schema:SportsPerson ;
+	foaf:name "Asmir Begovi" ;
 	foaf:age 35 ;
 	schema:position "GK" ;
 	schema:nationality "BIH" ;
 	schema:relatedLink wdw:Q431368 ; # (Wikidata entity)
 	schema:memberOf :Everton .
 
-:Dominic_Calvert-Lewin a schema:Person, schema:SportsPerson ;
-	foaf:name "Dominic Calvert-Lewin" ;
+:Dominic_Calvert_Lewin a schema:Person, schema:SportsPerson ;
+	foaf:name "Dominic Calvert Lewin" ;
 	foaf:age 25 ;
 	schema:position "FW" ;
 	schema:nationality "ENG" ;
@@ -1096,8 +344,8 @@
 	schema:relatedLink wdw:Q312508 ; # (Wikidata entity)
 	schema:memberOf :Fiorentina .
 
-:Antonín_Barák a schema:Person, schema:SportsPerson ;
-	foaf:name "Antonín Barák" ;
+:Antonin_Barak a schema:Person, schema:SportsPerson ;
+	foaf:name "Antonin Barak" ;
 	foaf:age 28 ;
 	schema:position "MF" ;
 	schema:nationality "CZE" ;
@@ -1152,8 +400,8 @@
 	schema:relatedLink wdw:Q36696865 ; # (Wikidata entity)
 	schema:memberOf :Fulham .
 
-:Carles_Aleñá a schema:Person, schema:SportsPerson ;
-	foaf:name "Carles Aleñá" ;
+:Carles_Alena a schema:Person, schema:SportsPerson ;
+	foaf:name "Carles Alena" ;
 	foaf:age 25 ;
 	schema:position "MF" ;
 	schema:nationality "ESP" ;
@@ -1168,8 +416,8 @@
 	schema:relatedLink wdw:Q982975 ; # (Wikidata entity)
 	schema:memberOf :Hoffenheim .
 
-:Angeliño a schema:Person, schema:SportsPerson ;
-	foaf:name "Angeliño" ;
+:Angelino a schema:Person, schema:SportsPerson ;
+	foaf:name "Angelino" ;
 	foaf:age 26 ;
 	schema:position "DF" ;
 	schema:nationality "ESP" ;
@@ -1184,8 +432,8 @@
 	schema:relatedLink wdw:Q109653419 ; # (Wikidata entity)
 	schema:memberOf :Hoffenheim .
 
-:Nicolò_Barella a schema:Person, schema:SportsPerson ;
-	foaf:name "Nicolò Barella" ;
+:Nicolo_Barella a schema:Person, schema:SportsPerson ;
+	foaf:name "Nicolo Barella" ;
 	foaf:age 26 ;
 	schema:position "MF" ;
 	schema:nationality "ITA" ;
@@ -1240,8 +488,8 @@
 	schema:relatedLink wdw:Q248228 ; # (Wikidata entity)
 	schema:memberOf :Lazio .
 
-:Marcos_Antônio a schema:Person, schema:SportsPerson ;
-	foaf:name "Marcos Antônio" ;
+:Marcos_Antonio a schema:Person, schema:SportsPerson ;
+	foaf:name "Marcos Antonio" ;
 	foaf:age 22 ;
 	schema:position "MF" ;
 	schema:nationality "BRA" ;
@@ -1272,8 +520,8 @@
 	schema:relatedLink wdw:Q113472432 ; # (Wikidata entity)
 	schema:memberOf :Lille .
 
-:Benjamin_André a schema:Person, schema:SportsPerson ;
-	foaf:name "Benjamin André" ;
+:Benjamin_Andre a schema:Person, schema:SportsPerson ;
+	foaf:name "Benjamin Andre" ;
 	foaf:age 32 ;
 	schema:position "MF" ;
 	schema:nationality "FRA" ;
@@ -1288,16 +536,16 @@
 	schema:relatedLink wdw:Q18921387 ; # (Wikidata entity)
 	schema:memberOf :Lille .
 
-:Trent_Alexander-Arnold a schema:Person, schema:SportsPerson ;
-	foaf:name "Trent Alexander-Arnold" ;
+:Trent_Alexander_Arnold a schema:Person, schema:SportsPerson ;
+	foaf:name "Trent Alexander Arnold" ;
 	foaf:age 24 ;
 	schema:position "DF" ;
 	schema:nationality "ENG" ;
 	schema:relatedLink wdw:Q27569376 ; # (Wikidata entity)
 	schema:memberOf :Liverpool .
 
-:Thiago_Alcántara a schema:Person, schema:SportsPerson ;
-	foaf:name "Thiago Alcántara" ;
+:Thiago_Alcantara a schema:Person, schema:SportsPerson ;
+	foaf:name "Thiago Alcantara" ;
 	foaf:age 31 ;
 	schema:position "MF" ;
 	schema:nationality "ESP" ;
@@ -1336,8 +584,8 @@
 	schema:relatedLink wdw:Q27927442 ; # (Wikidata entity)
 	schema:memberOf :Lyon .
 
-:Jérôme_Boateng a schema:Person, schema:SportsPerson ;
-	foaf:name "Jérôme Boateng" ;
+:Jerome_Boateng a schema:Person, schema:SportsPerson ;
+	foaf:name "Jerome Boateng" ;
 	foaf:age 34 ;
 	schema:position "DF" ;
 	schema:nationality "GER" ;
@@ -1384,16 +632,16 @@
 	schema:relatedLink wdw:Q19938984 ; # (Wikidata entity)
 	schema:memberOf :Manchester_City .
 
-:Nathan_Aké a schema:Person, schema:SportsPerson ;
-	foaf:name "Nathan Aké" ;
+:Nathan_Ake a schema:Person, schema:SportsPerson ;
+	foaf:name "Nathan Ake" ;
 	foaf:age 27 ;
 	schema:position "DF" ;
 	schema:nationality "NED" ;
 	schema:relatedLink wdw:Q1755683 ; # (Wikidata entity)
 	schema:memberOf :Manchester_City .
 
-:Julián_Álvarez a schema:Person, schema:SportsPerson ;
-	foaf:name "Julián Álvarez" ;
+:Julian_alvarez a schema:Person, schema:SportsPerson ;
+	foaf:name "Julian alvarez" ;
 	foaf:age 23 ;
 	schema:position "FWMF" ;
 	schema:nationality "ARG" ;
@@ -1416,8 +664,8 @@
 	schema:relatedLink wdw:Q50233588 ; # (Wikidata entity)
 	schema:memberOf :Marseille .
 
-:Cédric_Bakambu a schema:Person, schema:SportsPerson ;
-	foaf:name "Cédric Bakambu" ;
+:Cedric_Bakambu a schema:Person, schema:SportsPerson ;
+	foaf:name "Cedric Bakambu" ;
 	foaf:age 31 ;
 	schema:position "MF" ;
 	schema:nationality "COD" ;
@@ -1440,8 +688,8 @@
 	schema:relatedLink wdw:Q108910786 ; # (Wikidata entity)
 	schema:memberOf :Monaco .
 
-:Benoît_Badiashile a schema:Person, schema:SportsPerson ;
-	foaf:name "Benoît Badiashile" ;
+:Benoit_Badiashile a schema:Person, schema:SportsPerson ;
+	foaf:name "Benoit Badiashile" ;
 	foaf:age 21 ;
 	schema:position "DF" ;
 	schema:nationality "FRA" ;
@@ -1528,8 +776,8 @@
 	schema:relatedLink wdw:Q55865078 ; # (Wikidata entity)
 	schema:memberOf :Nice .
 
-:Darko_Braanac a schema:Person, schema:SportsPerson ;
-	foaf:name "Darko Braanac" ;
+:Darko_Braanac a schema:Person, schema:SportsPerson ;
+	foaf:name "Darko Braanac" ;
 	foaf:age 31 ;
 	schema:position "MF" ;
 	schema:nationality "SRB" ;
@@ -1544,8 +792,8 @@
 	schema:relatedLink wdw:Q32236556 ; # (Wikidata entity)
 	schema:memberOf :Osasuna .
 
-:Ezequiel_Ávila a schema:Person, schema:SportsPerson ;
-	foaf:name "Ezequiel Ávila" ;
+:Ezequiel_Avila a schema:Person, schema:SportsPerson ;
+	foaf:name "Ezequiel Avila" ;
 	foaf:age 29 ;
 	schema:position "FWMF" ;
 	schema:nationality "ARG" ;
@@ -1696,48 +944,48 @@
 	schema:relatedLink wdw:Q84571690 ; # (Wikidata entity)
 	schema:memberOf :Sassuolo .
 
-:Agustín_Álvarez_Martínez a schema:Person, schema:SportsPerson ;
-	foaf:name "Agustín Álvarez Martínez" ;
+:Agustin_Alvarez_Martinez a schema:Person, schema:SportsPerson ;
+	foaf:name "Agustin Alvarez Martinez" ;
 	foaf:age 21 ;
 	schema:position "FWMF" ;
 	schema:nationality "URU" ;
 	schema:relatedLink wdw:Q99390386 ; # (Wikidata entity)
 	schema:memberOf :Sassuolo .
 
-:Éder_Álvarez_Balanta a schema:Person, schema:SportsPerson ;
-	foaf:name "Éder Álvarez Balanta" ;
+:Eder_Alvarez_Balanta a schema:Person, schema:SportsPerson ;
+	foaf:name "Eder Alvarez Balanta" ;
 	foaf:age 29 ;
 	schema:position "MF" ;
 	schema:nationality "COL" ;
 	schema:relatedLink wdw:Q6174184 ; # (Wikidata entity)
 	schema:memberOf :Schalke_04 .
 
-:Mehmet-Can_Aydin a schema:Person, schema:SportsPerson ;
-	foaf:name "Mehmet-Can Aydin" ;
+:Mehmet_Can_Aydin a schema:Person, schema:SportsPerson ;
+	foaf:name "Mehmet Can Aydin" ;
 	foaf:age 21 ;
 	schema:position "DF" ;
 	schema:nationality "GER" ;
 	schema:relatedLink wdw:Q106352999 ; # (Wikidata entity)
 	schema:memberOf :Schalke_04 .
 
-:Loïc_Bade a schema:Person, schema:SportsPerson ;
-	foaf:name "Loïc Bade" ;
+:Loic_Bade a schema:Person, schema:SportsPerson ;
+	foaf:name "Loic Bade" ;
 	foaf:age 22 ;
 	schema:position "DF" ;
 	schema:nationality "FRA" ;
 	schema:relatedLink wdw:Q81741599 ; # (Wikidata entity)
 	schema:memberOf :Sevilla .
 
-:Carlos_Álvarez a schema:Person, schema:SportsPerson ;
-	foaf:name "Carlos Álvarez" ;
+:Carlos_Alvarez a schema:Person, schema:SportsPerson ;
+	foaf:name "Carlos Alvarez" ;
 	foaf:age 19 ;
 	schema:position "FW" ;
 	schema:nationality "ESP" ;
 	schema:relatedLink wdw:Q10555413 ; # (Wikidata entity)
 	schema:memberOf :Sevilla .
 
-:Marcos_Acuña a schema:Person, schema:SportsPerson ;
-	foaf:name "Marcos Acuña" ;
+:Marcos_Acuna a schema:Person, schema:SportsPerson ;
+	foaf:name "Marcos Acuna" ;
 	foaf:age 31 ;
 	schema:position "DF" ;
 	schema:nationality "ARG" ;
@@ -1792,8 +1040,8 @@
 	schema:relatedLink wdw:Q27671219 ; # (Wikidata entity)
 	schema:memberOf :Strasbourg .
 
-:Jean-Ricner_Bellegarde a schema:Person, schema:SportsPerson ;
-	foaf:name "Jean-Ricner Bellegarde" ;
+:Jean_Ricner_Bellegarde a schema:Person, schema:SportsPerson ;
+	foaf:name "Jean Ricner Bellegarde" ;
 	foaf:age 24 ;
 	schema:position "MF" ;
 	schema:nationality "FRA" ;
@@ -1840,8 +1088,8 @@
 	schema:relatedLink wdw:Q18817134 ; # (Wikidata entity)
 	schema:memberOf :Tottenham .
 
-:Rodrigo_Becão a schema:Person, schema:SportsPerson ;
-	foaf:name "Rodrigo Becão" ;
+:Rodrigo_Becao a schema:Person, schema:SportsPerson ;
+	foaf:name "Rodrigo Becao" ;
 	foaf:age 27 ;
 	schema:position "DF" ;
 	schema:nationality "BRA" ;
@@ -1880,8 +1128,8 @@
 	schema:relatedLink wdw:Q56065664 ; # (Wikidata entity)
 	schema:memberOf :Union_Berlin .
 
-:Domingos_André_Ribeiro_Almeida a schema:Person, schema:SportsPerson ;
-	foaf:name "Domingos André Ribeiro Almeida" ;
+:Domingos_Andre_Ribeiro_Almeida a schema:Person, schema:SportsPerson ;
+	foaf:name "Domingos Andre Ribeiro Almeida" ;
 	foaf:age 22 ;
 	schema:position "MF" ;
 	schema:nationality "POR" ;
@@ -1904,8 +1152,8 @@
 	schema:relatedLink wdw:Q17708755 ; # (Wikidata entity)
 	schema:memberOf :Valencia .
 
-:Raúl_Albiol a schema:Person, schema:SportsPerson ;
-	foaf:name "Raúl Albiol" ;
+:Raul_Albiol a schema:Person, schema:SportsPerson ;
+	foaf:name "Raul Albiol" ;
 	foaf:age 37 ;
 	schema:position "DF" ;
 	schema:nationality "ESP" ;
@@ -1920,8 +1168,8 @@
 	schema:relatedLink wdw:Q97404267 ; # (Wikidata entity)
 	schema:memberOf :Villarreal .
 
-:Étienne_Capoue a schema:Person, schema:SportsPerson ;
-	foaf:name "Étienne Capoue" ;
+:Etienne_Capoue a schema:Person, schema:SportsPerson ;
+	foaf:name "Etienne Capoue" ;
 	foaf:age 34 ;
 	schema:position "MF" ;
 	schema:nationality "FRA" ;
@@ -1976,15 +1224,866 @@
 	schema:relatedLink wdw:Q55806994 ; # (Wikidata entity)
 	schema:memberOf :Wolfsburg .
 
+:Premier_League a schema:SportsLeague ;
+	dct:title "Premier League" ;
+	schema:description "The top professional football division of the nation football league system.".
 
-schema:SportsTeam a rdfs:Class ;
-    rdfs:label "Sports Team" .
+:Bundesliga a schema:SportsLeague ;
+	dct:title "Bundesliga" ;
+	schema:description "The top professional football division of the nation football league system.".
 
-schema:SportsPerson a rdfs:Class ;
-    rdfs:label "Sports Person" .
+:Ligue_1 a schema:SportsLeague ;
+	dct:title "Ligue 1" ;
+	schema:description "The top professional football division of the nation football league system.".
 
-schema:SportsActivityLocation a rdfs:Class ;
-    rdfs:label "Sports Activity Location" . 
+:LaLiga a schema:SportsLeague ;
+	dct:title "LaLiga" ;
+	schema:description "The top professional football division of the nation football league system.".
 
-schema:SportsLeague a rdfs:Class ;
-    rdfs:label "Sports League" .    
+:Serie_A a schema:SportsLeague ;
+	dct:title "Serie A" ;
+	schema:description "The top professional football division of the nation football league system.".
+
+:Manchester_City a schema:SportsTeam ;
+	dct:title "Manchester City" ;
+	foaf:homepage <https://www.mancity.com/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q50602 ; # (Wikidata entity)
+	schema:member :Manuel_Akanji, :Nathan_Ake, :Julian_alvarez ;
+	:Goals "83" ; :ShotsPerGame "15.8" ; :yellow_cards "46" ; :red_cards "2" ; :PossessionPercent "60.8" ; :PassPercent "89.4" ; :AerialsWon "12.8" ; :Rating "7.01" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Bayern_Munich a schema:SportsTeam ;
+	dct:title "Bayern Munich" ;
+	foaf:homepage <https://fcbayern.com/en> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q15789 ; # (Wikidata entity)
+	schema:member :Joao_Cancelo, :Daley_Blind, :Kingsley_Coman ;
+	:Goals "99" ; :ShotsPerGame "17.1" ; :yellow_cards "44" ; :red_cards "3" ; :PossessionPercent "58.1" ; :PassPercent "85.5" ; :AerialsWon "12.9" ; :Rating "6.95" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Paris_Saint-Germain a schema:SportsTeam ;
+	dct:title "Paris Saint-Germain" ;
+	foaf:homepage <https://en.psg.fr/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q483020 ; # (Wikidata entity)
+	:Goals "86" ; :ShotsPerGame "15.0" ; :yellow_cards "73" ; :red_cards "7" ; :PossessionPercent "60.1" ; :PassPercent "89.5" ; :AerialsWon "9.5" ; :Rating "6.88" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Barcelona a schema:SportsTeam ;
+	dct:title "Barcelona" ;
+	foaf:homepage <https://www.fcbarcelona.com/en/> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q7156 ; # (Wikidata entity)
+	schema:member :Jordi_Alba, :Ronald_Araujo, :Marcos_Alonso ;
+	:Goals "85" ; :ShotsPerGame "15.3" ; :yellow_cards "68" ; :red_cards "2" ; :PossessionPercent "62.4" ; :PassPercent "89.7" ; :AerialsWon "10.6" ; :Rating "6.87" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Real_Madrid a schema:SportsTeam ;
+	dct:title "Real Madrid" ;
+	foaf:homepage <https://www.realmadrid.com/en-US> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q8682 ; # (Wikidata entity)
+	schema:member :Karim_Benzema, :David_Alaba, :Marco_Asensio ;
+	:Goals "67" ; :ShotsPerGame "14.4" ; :yellow_cards "57" ; :red_cards "2" ; :PossessionPercent "57.7" ; :PassPercent "87.7" ; :AerialsWon "11.8" ; :Rating "6.86" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Manchester_United a schema:SportsTeam ;
+	dct:title "Manchester United" ;
+	foaf:homepage <https://www.manutd.com/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q18656 ; # (Wikidata entity)
+	:Goals "73" ; :ShotsPerGame "13.8" ; :yellow_cards "64" ; :red_cards "1" ; :PossessionPercent "54.5" ; :PassPercent "84.8" ; :AerialsWon "14.5" ; :Rating "6.85" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Juventus a schema:SportsTeam ;
+	dct:title "Juventus" ;
+	foaf:homepage <https://www.juventus.com/en/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q1422 ; # (Wikidata entity)
+	schema:member :Federico_Chiesa, :Leonardo_Bonucci ;
+	:Goals "77" ; :ShotsPerGame "15.7" ; :yellow_cards "76" ; :red_cards "6" ; :PossessionPercent "55.4" ; :PassPercent "88.3" ; :AerialsWon "11.4" ; :Rating "6.85" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Aston_Villa a schema:SportsTeam ;
+	dct:title "Aston Villa" ;
+	foaf:homepage <https://www.avfc.co.uk/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q18711 ; # (Wikidata entity)
+	schema:member :Cameron_Archer, :Leon_Bailey, :Ludwig_Augustinsson ;
+	:Goals "55" ; :ShotsPerGame "13.7" ; :yellow_cards "63" ; :red_cards "4" ; :PossessionPercent "49.1" ; :PassPercent "78.6" ; :AerialsWon "19.4" ; :Rating "6.84" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Borussia_Dortmund a schema:SportsTeam ;
+	dct:title "Borussia Dortmund" ;
+	foaf:homepage <https://www.bvb.de/de/en.html> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q41420 ; # (Wikidata entity)
+	:Goals "75" ; :ShotsPerGame "14.6" ; :yellow_cards "43" ; :red_cards "1" ; :PossessionPercent "57.5" ; :PassPercent "85.5" ; :AerialsWon "12.8" ; :Rating "6.84" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Atletico_Madrid a schema:SportsTeam ;
+	dct:title "Atletico Madrid" ;
+	foaf:homepage <https://en.atleticodemadrid.com/> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q8701 ; # (Wikidata entity)
+	:Goals "67" ; :ShotsPerGame "12.1" ; :yellow_cards "100" ; :red_cards "0" ; :PossessionPercent "51.8" ; :PassPercent "83.1" ; :AerialsWon "14.4" ; :Rating "6.84" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Atalanta a schema:SportsTeam ;
+	dct:title "Atalanta" ;
+	foaf:homepage <https://en.atalanta.it/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q1886 ; # (Wikidata entity)
+	schema:member :Merih_Demiral, :Berat_Djimsiti, :Jeremie_Boga ;
+	:Goals "90" ; :ShotsPerGame "16.3" ; :yellow_cards "66" ; :red_cards "3" ; :PossessionPercent "53.5" ; :PassPercent "83.5" ; :AerialsWon "16.8" ; :Rating "6.84" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Chelsea a schema:SportsTeam ;
+	dct:title "Chelsea" ;
+	foaf:homepage <https://www.chelseafc.com/en> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q9616 ; # (Wikidata entity)
+	schema:member :Cesar_Azpilicueta, :Pierre_Emerick_Aubameyang, :Kepa_Arrizabalaga ;
+	:Goals "58" ; :ShotsPerGame "14.6" ; :yellow_cards "49" ; :red_cards "3" ; :PossessionPercent "58.6" ; :PassPercent "87.0" ; :AerialsWon "15.2" ; :Rating "6.83" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Liverpool a schema:SportsTeam ;
+	dct:title "Liverpool" ;
+	foaf:homepage <https://www.liverpoolfc.com/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q1130849 ; # (Wikidata entity)
+	schema:member :Trent_Alexander_Arnold, :Thiago_Alcantara, :Alisson ;
+	:Goals "68" ; :ShotsPerGame "16.0" ; :yellow_cards "40" ; :red_cards "0" ; :PossessionPercent "59.0" ; :PassPercent "85.7" ; :AerialsWon "14.3" ; :Rating "6.82" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:AC_Milan a schema:SportsTeam ;
+	dct:title "AC Milan" ;
+	foaf:homepage <http://www.acmilan.com/en> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q1543 ; # (Wikidata entity)
+	:Goals "74" ; :ShotsPerGame "14.7" ; :yellow_cards "80" ; :red_cards "4" ; :PossessionPercent "51.4" ; :PassPercent "84.0" ; :AerialsWon "15.2" ; :Rating "6.82" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Lille a schema:SportsTeam ;
+	dct:title "Lille" ;
+	foaf:homepage <https://www.losc.fr/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q19516 ; # (Wikidata entity)
+	schema:member :Carlos_Baleba, :Benjamin_Andre, :Jonathan_Bamba ;
+	:Goals "64" ; :ShotsPerGame "12.8" ; :yellow_cards "67" ; :red_cards "2" ; :PossessionPercent "52.6" ; :PassPercent "83.5" ; :AerialsWon "15.8" ; :Rating "6.82" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Tottenham a schema:SportsTeam ;
+	dct:title "Tottenham" ;
+	foaf:homepage <https://www.tottenhamhotspur.com/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q18741 ; # (Wikidata entity)
+	schema:member :Yves_Bissouma, :Bryan, :Rodrigo_Bentancur ;
+	:Goals "68" ; :ShotsPerGame "11.7" ; :yellow_cards "53" ; :red_cards "2" ; :PossessionPercent "51.3" ; :PassPercent "81.8" ; :AerialsWon "16.4" ; :Rating "6.81" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Napoli a schema:SportsTeam ;
+	dct:title "Napoli" ;
+	foaf:homepage <https://sscnapoli.it/en/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q2641 ; # (Wikidata entity)
+	schema:member :Giovanni_Di_Lorenzo, :Elif_Elmas ;
+	:Goals "86" ; :ShotsPerGame "17.0" ; :yellow_cards "71" ; :red_cards "3" ; :PossessionPercent "54.1" ; :PassPercent "87.0" ; :AerialsWon "11.1" ; :Rating "6.81" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Leicester a schema:SportsTeam ;
+	dct:title "Leicester" ;
+	foaf:homepage <https://www.lcfc.com/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q19481 ; # (Wikidata entity)
+	:Goals "68" ; :ShotsPerGame "12.8" ; :yellow_cards "61" ; :red_cards "0" ; :PossessionPercent "53.2" ; :PassPercent "82.1" ; :AerialsWon "16.2" ; :Rating "6.8" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Wolfsburg a schema:SportsTeam ;
+	dct:title "Wolfsburg" ;
+	foaf:homepage <https://www.vfl-wolfsburg.de/en/home> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q101859 ; # (Wikidata entity)
+	schema:member :Maximilian_Arnold, :Sebastiaan_Bornauw ;
+	:Goals "61" ; :ShotsPerGame "14.1" ; :yellow_cards "56" ; :red_cards "3" ; :PossessionPercent "51.0" ; :PassPercent "78.0" ; :AerialsWon "16.9" ; :Rating "6.8" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Inter a schema:SportsTeam ;
+	dct:title "Inter" ;
+	foaf:homepage <https://www.inter.it/en> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q631 ; # (Wikidata entity)
+	schema:member :Nicolo_Barella, :Francesco_Acerbi, :Kristjan_Asllani ;
+	:Goals "89" ; :ShotsPerGame "14.5" ; :yellow_cards "59" ; :red_cards "2" ; :PossessionPercent "52.0" ; :PassPercent "87.0" ; :AerialsWon "11.8" ; :Rating "6.8" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Lyon a schema:SportsTeam ;
+	dct:title "Lyon" ;
+	foaf:homepage <https://www.ol.fr/en> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q704 ; # (Wikidata entity)
+	schema:member :Houssem_Aouar, :Jerome_Boateng, :Bradley_Barcola ;
+	:Goals "81" ; :ShotsPerGame "16.1" ; :yellow_cards "60" ; :red_cards "10" ; :PossessionPercent "53.6" ; :PassPercent "84.7" ; :AerialsWon "14.3" ; :Rating "6.8" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:RB_Leipzig a schema:SportsTeam ;
+	dct:title "RB Leipzig" ;
+	foaf:homepage <https://rbleipzig.com/en> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q702455 ; # (Wikidata entity)
+	schema:member :Janis_Blaswich, :Abdou_Diallo ;
+	:Goals "60" ; :ShotsPerGame "16.0" ; :yellow_cards "57" ; :red_cards "0" ; :PossessionPercent "57.3" ; :PassPercent "83.2" ; :AerialsWon "18.6" ; :Rating "6.78" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Leeds a schema:SportsTeam ;
+	dct:title "Leeds" ;
+	foaf:homepage <https://www.leedsunited.com/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q1128631 ; # (Wikidata entity)
+	:Goals "62" ; :ShotsPerGame "13.7" ; :yellow_cards "61" ; :red_cards "1" ; :PossessionPercent "55.1" ; :PassPercent "80.8" ; :AerialsWon "14.5" ; :Rating "6.77" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:West_Ham a schema:SportsTeam ;
+	dct:title "West Ham" ;
+	foaf:homepage <https://www.whufc.com/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q18747 ; # (Wikidata entity)
+	schema:member :Alphonse_Areola, :Nayef_Aguerd, :Michail_Antonio ;
+	:Goals "62" ; :ShotsPerGame "12.3" ; :yellow_cards "48" ; :red_cards "3" ; :PossessionPercent "44.5" ; :PassPercent "77.8" ; :AerialsWon "19.9" ; :Rating "6.77" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Everton a schema:SportsTeam ;
+	dct:title "Everton" ;
+	foaf:homepage <https://www.evertonfc.com/home> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q5794 ; # (Wikidata entity)
+	schema:member :Dele_Alli, :Asmir_Begovi, :Dominic_Calvert_Lewin ;
+	:Goals "47" ; :ShotsPerGame "10.5" ; :yellow_cards "59" ; :red_cards "2" ; :PossessionPercent "47.3" ; :PassPercent "81.4" ; :AerialsWon "17.7" ; :Rating "6.73" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Bayer_Leverkusen a schema:SportsTeam ;
+	dct:title "Bayer Leverkusen" ;
+	foaf:homepage <https://www.bayer04.de/> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q104761 ; # (Wikidata entity)
+	:Goals "53" ; :ShotsPerGame "13.0" ; :yellow_cards "58" ; :red_cards "0" ; :PossessionPercent "57.3" ; :PassPercent "84.4" ; :AerialsWon "13.1" ; :Rating "6.73" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Eintracht_Frankfurt a schema:SportsTeam ;
+	dct:title "Eintracht Frankfurt" ;
+	foaf:homepage <https://en.eintracht.de/> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q38245 ; # (Wikidata entity)
+	:Goals "69" ; :ShotsPerGame "13.2" ; :yellow_cards "80" ; :red_cards "1" ; :PossessionPercent "52.4" ; :PassPercent "79.6" ; :AerialsWon "17.9" ; :Rating "6.73" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Monaco a schema:SportsTeam ;
+	dct:title "Monaco" ;
+	foaf:homepage <https://www.asmonaco.com/en/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q180305 ; # (Wikidata entity)
+	schema:member :Ruben_Aguilar, :Maghnes_Akliouche, :Benoit_Badiashile ;
+	:Goals "76" ; :ShotsPerGame "12.8" ; :yellow_cards "74" ; :red_cards "7" ; :PossessionPercent "54.2" ; :PassPercent "82.7" ; :AerialsWon "16.5" ; :Rating "6.73" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Roma a schema:SportsTeam ;
+	dct:title "Roma" ;
+	foaf:homepage <https://www.asroma.com/en> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q2739 ; # (Wikidata entity)
+	schema:member :Tammy_Abraham, :Edoardo_Bove, :Andrea_Belotti ;
+	:Goals "68" ; :ShotsPerGame "14.3" ; :yellow_cards "84" ; :red_cards "3" ; :PossessionPercent "51.5" ; :PassPercent "84.5" ; :AerialsWon "12.1" ; :Rating "6.71" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Sevilla a schema:SportsTeam ;
+	dct:title "Sevilla" ;
+	foaf:homepage <http://sevillafc.es/en> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q10329 ; # (Wikidata entity)
+	schema:member :Loic_Bade, :Carlos_Alvarez, :Marcos_Acuna ;
+	:Goals "53" ; :ShotsPerGame "12.1" ; :yellow_cards "75" ; :red_cards "2" ; :PossessionPercent "58.7" ; :PassPercent "86.2" ; :AerialsWon "16.6" ; :Rating "6.7" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Borussia_M.Gladbach a schema:SportsTeam ;
+	dct:title "Borussia M.Gladbach" ;
+	foaf:homepage <https://www.borussia.de/en> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q101959 ; # (Wikidata entity)
+	:Goals "64" ; :ShotsPerGame "13.4" ; :yellow_cards "61" ; :red_cards "2" ; :PossessionPercent "51.5" ; :PassPercent "82.0" ; :AerialsWon "15.3" ; :Rating "6.7" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Arsenal a schema:SportsTeam ;
+	dct:title "Arsenal" ;
+	foaf:homepage <https://www.arsenal.com/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q9617 ; # (Wikidata entity)
+	schema:member :Mohamed_Elneny, :Gabriel_Dos_Santos, :Rob_Holding ;
+	:Goals "55" ; :ShotsPerGame "12.1" ; :yellow_cards "47" ; :red_cards "5" ; :PossessionPercent "52.7" ; :PassPercent "85.0" ; :AerialsWon "13.5" ; :Rating "6.69" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Rennes a schema:SportsTeam ;
+	dct:title "Rennes" ;
+	foaf:homepage <https://www.staderennais.com/en> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q19509 ; # (Wikidata entity)
+	schema:member :Matthis_Abline, :Lorenz_Assignon ;
+	:Goals "52" ; :ShotsPerGame "13.5" ; :yellow_cards "80" ; :red_cards "5" ; :PossessionPercent "56.8" ; :PassPercent "85.6" ; :AerialsWon "16.9" ; :Rating "6.69" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:VfB_Stuttgart a schema:SportsTeam ;
+	dct:title "VfB Stuttgart" ;
+	foaf:homepage <https://www.vfb.de/en/> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q4512 ; # (Wikidata entity)
+	:Goals "56" ; :ShotsPerGame "13.4" ; :yellow_cards "63" ; :red_cards "2" ; :PossessionPercent "51.5" ; :PassPercent "81.1" ; :AerialsWon "16.3" ; :Rating "6.68" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Wolverhampton_Wanderers a schema:SportsTeam ;
+	dct:title "Wolverhampton Wanderers" ;
+	foaf:homepage <https://www.wolves.co.uk/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q19500 ; # (Wikidata entity)
+	:Goals "36" ; :ShotsPerGame "12.2" ; :yellow_cards "53" ; :red_cards "1" ; :PossessionPercent "49.7" ; :PassPercent "83.2" ; :AerialsWon "15.3" ; :Rating "6.67" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Sassuolo a schema:SportsTeam ;
+	dct:title "Sassuolo" ;
+	foaf:homepage <https://www.sassuolocalcio.it/en/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q8603 ; # (Wikidata entity)
+	schema:member :Kaan_Ayhan, :Janis_Antiste, :Agustin_Alvarez_Martinez ;
+	:Goals "64" ; :ShotsPerGame "13.9" ; :yellow_cards "74" ; :red_cards "4" ; :PossessionPercent "58.2" ; :PassPercent "87.8" ; :AerialsWon "10.9" ; :Rating "6.67" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Metz a schema:SportsTeam ;
+	dct:title "Metz" ;
+	foaf:homepage <https://www.fcmetz.com/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q221525 ; # (Wikidata entity)
+	:Goals "44" ; :ShotsPerGame "11.5" ; :yellow_cards "82" ; :red_cards "4" ; :PossessionPercent "46.9" ; :PassPercent "79.8" ; :AerialsWon "16.1" ; :Rating "6.66" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Villarreal a schema:SportsTeam ;
+	dct:title "Villarreal" ;
+	foaf:homepage <https://villarrealcf.es/en/> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q12297 ; # (Wikidata entity)
+	schema:member :Raul_Albiol, :Alex_Baena, :Etienne_Capoue ;
+	:Goals "60" ; :ShotsPerGame "10.7" ; :yellow_cards "65" ; :red_cards "5" ; :PossessionPercent "54.3" ; :PassPercent "84.4" ; :AerialsWon "13.0" ; :Rating "6.66" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Real_Sociedad a schema:SportsTeam ;
+	dct:title "Real Sociedad" ;
+	foaf:homepage <https://www.realsociedad.eus/en> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q10315 ; # (Wikidata entity)
+	schema:member :Ander_Barrenetxea, :Mohamed_Ali_Cho, :Aritz_Elustondo ;
+	:Goals "59" ; :ShotsPerGame "11.3" ; :yellow_cards "81" ; :red_cards "1" ; :PossessionPercent "53.7" ; :PassPercent "80.8" ; :AerialsWon "17.9" ; :Rating "6.65" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Brighton a schema:SportsTeam ;
+	dct:title "Brighton" ;
+	foaf:homepage <https://www.brightonandhovealbion.com/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q19453 ; # (Wikidata entity)
+	schema:member :Moises_Caicedo, :Julio_Cesar_Enciso, :Facundo_Buonanotte ;
+	:Goals "40" ; :ShotsPerGame "12.8" ; :yellow_cards "45" ; :red_cards "6" ; :PossessionPercent "50.7" ; :PassPercent "81.3" ; :AerialsWon "14.2" ; :Rating "6.65" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Real_Betis a schema:SportsTeam ;
+	dct:title "Real Betis" ;
+	foaf:homepage <https://en.realbetisbalompie.es/> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q8723 ; # (Wikidata entity)
+	:Goals "50" ; :ShotsPerGame "11.7" ; :yellow_cards "87" ; :red_cards "8" ; :PossessionPercent "52.9" ; :PassPercent "82.0" ; :AerialsWon "16.4" ; :Rating "6.64" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Burnley a schema:SportsTeam ;
+	dct:title "Burnley" ;
+	foaf:homepage <https://www.burnleyfootballclub.com/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q19458 ; # (Wikidata entity)
+	:Goals "33" ; :ShotsPerGame "10.1" ; :yellow_cards "48" ; :red_cards "0" ; :PossessionPercent "43.5" ; :PassPercent "71.6" ; :AerialsWon "23.4" ; :Rating "6.64" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Lens a schema:SportsTeam ;
+	dct:title "Lens" ;
+	foaf:homepage <https://www.rclens.fr/fr/english> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q191843 ; # (Wikidata entity)
+	schema:member :Salis_Abdul_Samed, :Patrick_Berg ;
+	:Goals "55" ; :ShotsPerGame "11.7" ; :yellow_cards "84" ; :red_cards "7" ; :PossessionPercent "51.1" ; :PassPercent "81.8" ; :AerialsWon "17.4" ; :Rating "6.64" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Brest a schema:SportsTeam ;
+	dct:title "Brest" ;
+	foaf:homepage <https://www.sb29.bzh/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q218372 ; # (Wikidata entity)
+	schema:member :Haris_Belkebla, :Youcef_Belaili ;
+	:Goals "50" ; :ShotsPerGame "11.8" ; :yellow_cards "60" ; :red_cards "4" ; :PossessionPercent "49.4" ; :PassPercent "81.3" ; :AerialsWon "18.6" ; :Rating "6.64" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Fulham a schema:SportsTeam ;
+	dct:title "Fulham" ;
+	foaf:homepage <https://www.fulhamfc.com/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q18708 ; # (Wikidata entity)
+	schema:member :Tosin_Adarabioyo, :Tom_Cairney, :Nathaniel_Chalobah ;
+	:Goals "27" ; :ShotsPerGame "11.6" ; :yellow_cards "67" ; :red_cards "3" ; :PossessionPercent "50.0" ; :PassPercent "81.2" ; :AerialsWon "17.2" ; :Rating "6.63" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Marseille a schema:SportsTeam ;
+	dct:title "Marseille" ;
+	foaf:homepage <https://www.om.fr/en> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q132885 ; # (Wikidata entity)
+	schema:member :Eric_Bailly, :Leonardo_Balerdi, :Cedric_Bakambu ;
+	:Goals "54" ; :ShotsPerGame "10.0" ; :yellow_cards "94" ; :red_cards "9" ; :PossessionPercent "52.4" ; :PassPercent "82.0" ; :AerialsWon "14.9" ; :Rating "6.63" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Sampdoria a schema:SportsTeam ;
+	dct:title "Sampdoria" ;
+	foaf:homepage <https://www.sampdoria.it/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q1457 ; # (Wikidata entity)
+	schema:member :Emil_Audero ;
+	:Goals "52" ; :ShotsPerGame "11.3" ; :yellow_cards "81" ; :red_cards "3" ; :PossessionPercent "46.1" ; :PassPercent "78.5" ; :AerialsWon "16.8" ; :Rating "6.63" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Montpellier a schema:SportsTeam ;
+	dct:title "Montpellier" ;
+	foaf:homepage <https://mhscfoot.com/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q19513 ; # (Wikidata entity)
+	schema:member :Nicolas_Cozza, :Joris_Chotard ;
+	:Goals "60" ; :ShotsPerGame "12.2" ; :yellow_cards "65" ; :red_cards "7" ; :PossessionPercent "46.4" ; :PassPercent "78.8" ; :AerialsWon "17.9" ; :Rating "6.63" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Nice a schema:SportsTeam ;
+	dct:title "Nice" ;
+	foaf:homepage <https://www.ogcnice.com/en/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q185163 ; # (Wikidata entity)
+	schema:member :Ross_Barkley, :Youcef_Atal, :Melvin_Bard ;
+	:Goals "50" ; :ShotsPerGame "10.8" ; :yellow_cards "69" ; :red_cards "4" ; :PossessionPercent "53.4" ; :PassPercent "85.6" ; :AerialsWon "10.5" ; :Rating "6.63" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Hoffenheim a schema:SportsTeam ;
+	dct:title "Hoffenheim" ;
+	foaf:homepage <https://www.tsg-hoffenheim.de/en> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q22707 ; # (Wikidata entity)
+	schema:member :Kevin_Akpoguma, :Angelino, :Fisnik_Asllani ;
+	:Goals "52" ; :ShotsPerGame "12.6" ; :yellow_cards "65" ; :red_cards "4" ; :PossessionPercent "50.8" ; :PassPercent "80.7" ; :AerialsWon "15.7" ; :Rating "6.63" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Southampton a schema:SportsTeam ;
+	dct:title "Southampton" ;
+	foaf:homepage <https://www.southamptonfc.com/en> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q18732 ; # (Wikidata entity)
+	schema:member :Joe_Aribo, :Che_Adams, :Carlos_Alcaraz ;
+	:Goals "47" ; :ShotsPerGame "11.2" ; :yellow_cards "52" ; :red_cards "3" ; :PossessionPercent "51.4" ; :PassPercent "79.3" ; :AerialsWon "14.1" ; :Rating "6.62" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Newcastle_United a schema:SportsTeam ;
+	dct:title "Newcastle United" ;
+	foaf:homepage <https://www.newcastleunited.com/en> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q18716 ; # (Wikidata entity)
+	:Goals "46" ; :ShotsPerGame "10.4" ; :yellow_cards "61" ; :red_cards "3" ; :PossessionPercent "41.6" ; :PassPercent "76.0" ; :AerialsWon "17.1" ; :Rating "6.62" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Lazio a schema:SportsTeam ;
+	dct:title "Lazio" ;
+	foaf:homepage <https://www.sslazio.it/en/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q2609 ; # (Wikidata entity)
+	schema:member :Felipe_Anderson, :Luis_Alberto, :Marcos_Antonio ;
+	:Goals "61" ; :ShotsPerGame "13.8" ; :yellow_cards "100" ; :red_cards "5" ; :PossessionPercent "52.2" ; :PassPercent "83.8" ; :AerialsWon "14.6" ; :Rating "6.62" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Nantes a schema:SportsTeam ;
+	dct:title "Nantes" ;
+	foaf:homepage <https://www.fcnantes.com/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q192071 ; # (Wikidata entity)
+	schema:member :Dennis_Appiah, :Ludovic_Blas, :Mohamed_Achi ;
+	:Goals "47" ; :ShotsPerGame "10.8" ; :yellow_cards "68" ; :red_cards "4" ; :PossessionPercent "45.2" ; :PassPercent "77.0" ; :AerialsWon "18.1" ; :Rating "6.62" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Union_Berlin a schema:SportsTeam ;
+	dct:title "Union Berlin" ;
+	foaf:homepage <https://www.fc-union-berlin.de/en/> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q141971 ; # (Wikidata entity)
+	schema:member :Sheraldo_Becker, :Kevin_Behrens ;
+	:Goals "50" ; :ShotsPerGame "11.7" ; :yellow_cards "55" ; :red_cards "2" ; :PossessionPercent "45.9" ; :PassPercent "76.2" ; :AerialsWon "17.6" ; :Rating "6.62" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Strasbourg a schema:SportsTeam ;
+	dct:title "Strasbourg" ;
+	foaf:homepage <https://www.rcstrasbourgalsace.fr/en/racing-en/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q126334 ; # (Wikidata entity)
+	schema:member :Ludovic_Ajorque, :Jean_Ricner_Bellegarde ;
+	:Goals "49" ; :ShotsPerGame "11.3" ; :yellow_cards "56" ; :red_cards "3" ; :PossessionPercent "46.5" ; :PassPercent "78.3" ; :AerialsWon "18.3" ; :Rating "6.61" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Crystal_Palace a schema:SportsTeam ;
+	dct:title "Crystal Palace" ;
+	foaf:homepage <https://www.cpfc.co.uk/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q19467 ; # (Wikidata entity)
+	schema:member :Joachim_Andersen, :Jordan_Ayew ;
+	:Goals "41" ; :ShotsPerGame "9.2" ; :yellow_cards "54" ; :red_cards "2" ; :PossessionPercent "42.9" ; :PassPercent "76.1" ; :AerialsWon "18.3" ; :Rating "6.61" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Freiburg a schema:SportsTeam ;
+	dct:title "Freiburg" ;
+	foaf:homepage <https://www.scfreiburg.com/en> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q106394 ; # (Wikidata entity)
+	schema:member :Ritsu_Doan, :Maximilian_Eggestein, :Mark_Flekken ;
+	:Goals "52" ; :ShotsPerGame "11.4" ; :yellow_cards "63" ; :red_cards "0" ; :PossessionPercent "47.5" ; :PassPercent "78.1" ; :AerialsWon "17.5" ; :Rating "6.6" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Valencia a schema:SportsTeam ;
+	dct:title "Valencia" ;
+	foaf:homepage <https://www.valenciacf.com/home> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q10333 ; # (Wikidata entity)
+	schema:member :Domingos_Andre_Ribeiro_Almeida, :Edinson_Cavani, :Samu_Castillejo ;
+	:Goals "50" ; :ShotsPerGame "10.3" ; :yellow_cards "77" ; :red_cards "5" ; :PossessionPercent "47.9" ; :PassPercent "79.4" ; :AerialsWon "16.3" ; :Rating "6.6" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Celta_Vigo a schema:SportsTeam ;
+	dct:title "Celta Vigo" ;
+	foaf:homepage <https://rccelta.es/en/> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q8749 ; # (Wikidata entity)
+	schema:member :Iago_Aspas, :Fran_Beltran, :Joseph_Aidoo ;
+	:Goals "55" ; :ShotsPerGame "9.4" ; :yellow_cards "104" ; :red_cards "5" ; :PossessionPercent "52.0" ; :PassPercent "79.9" ; :AerialsWon "16.5" ; :Rating "6.6" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Reims a schema:SportsTeam ;
+	dct:title "Reims" ;
+	foaf:homepage <https://www.stade-de-reims.com/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q208228 ; # (Wikidata entity)
+	schema:member :Yunis_Abdelhamid, :Emmanuel_Agbadou ;
+	:Goals "42" ; :ShotsPerGame "9.6" ; :yellow_cards "75" ; :red_cards "8" ; :PossessionPercent "46.3" ; :PassPercent "80.7" ; :AerialsWon "13.4" ; :Rating "6.6" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Torino a schema:SportsTeam ;
+	dct:title "Torino" ;
+	foaf:homepage <https://www.torinofc.it/en> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q2768 ; # (Wikidata entity)
+	schema:member :Alessandro_Buongiorno, :Ola_Aina ;
+	:Goals "50" ; :ShotsPerGame "12.2" ; :yellow_cards "72" ; :red_cards "4" ; :PossessionPercent "48.0" ; :PassPercent "80.5" ; :AerialsWon "16.1" ; :Rating "6.59" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Verona a schema:SportsTeam ;
+	dct:title "Verona" ;
+	foaf:homepage <https://www.hellasverona.it/en> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q8639 ; # (Wikidata entity)
+	:Goals "43" ; :ShotsPerGame "10.6" ; :yellow_cards "91" ; :red_cards "1" ; :PossessionPercent "49.6" ; :PassPercent "76.3" ; :AerialsWon "20.6" ; :Rating "6.59" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Saint-Etienne a schema:SportsTeam ;
+	dct:title "Saint-Etienne" ;
+	foaf:homepage <https://www.asse.fr/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q19521 ; # (Wikidata entity)
+	:Goals "42" ; :ShotsPerGame "11.6" ; :yellow_cards "76" ; :red_cards "2" ; :PossessionPercent "49.0" ; :PassPercent "79.3" ; :AerialsWon "16.4" ; :Rating "6.59" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Bordeaux a schema:SportsTeam ;
+	dct:title "Bordeaux" ;
+	foaf:homepage <https://www.girondins.com/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q172476 ; # (Wikidata entity)
+	:Goals "42" ; :ShotsPerGame "11.1" ; :yellow_cards "74" ; :red_cards "4" ; :PossessionPercent "50.2" ; :PassPercent "83.3" ; :AerialsWon "15.4" ; :Rating "6.59" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Hertha_Berlin a schema:SportsTeam ;
+	dct:title "Hertha Berlin" ;
+	foaf:homepage <https://www.herthabsc.com/en> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q102720 ; # (Wikidata entity)
+	:Goals "41" ; :ShotsPerGame "11.3" ; :yellow_cards "63" ; :red_cards "3" ; :PossessionPercent "49.8" ; :PassPercent "79.5" ; :AerialsWon "15.8" ; :Rating "6.58" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Cagliari a schema:SportsTeam ;
+	dct:title "Cagliari" ;
+	foaf:homepage <https://cagliaricalcio.com/en/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q1900 ; # (Wikidata entity)
+	:Goals "43" ; :ShotsPerGame "11.4" ; :yellow_cards "73" ; :red_cards "3" ; :PossessionPercent "45.8" ; :PassPercent "79.8" ; :AerialsWon "17.2" ; :Rating "6.58" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Mainz_05 a schema:SportsTeam ;
+	dct:title "Mainz 05" ;
+	foaf:homepage <https://www.mainz05.de/en> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q105254 ; # (Wikidata entity)
+	schema:member :Leandro_Barreiro_Martins, :Aymen_Barkok, :Ludovic_Ajorque ;
+	:Goals "39" ; :ShotsPerGame "11.1" ; :yellow_cards "61" ; :red_cards "1" ; :PossessionPercent "42.7" ; :PassPercent "71.3" ; :AerialsWon "18.3" ; :Rating "6.57" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Bologna a schema:SportsTeam ;
+	dct:title "Bologna" ;
+	foaf:homepage <https://www.bolognafc.it/en/home/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q1893 ; # (Wikidata entity)
+	schema:member :Musa_Barrow, :Michel_Aebischer, :Marko_Arnautovi ;
+	:Goals "51" ; :ShotsPerGame "13.1" ; :yellow_cards "78" ; :red_cards "4" ; :PossessionPercent "50.7" ; :PassPercent "81.5" ; :AerialsWon "15.1" ; :Rating "6.56" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Augsburg a schema:SportsTeam ;
+	dct:title "Augsburg" ;
+	foaf:homepage <https://www.fcaugsburg.de/en/> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q15755 ; # (Wikidata entity)
+	schema:member :Julian_Baumgartlinger ;
+	:Goals "36" ; :ShotsPerGame "9.9" ; :yellow_cards "65" ; :red_cards "4" ; :PossessionPercent "44.0" ; :PassPercent "73.6" ; :AerialsWon "16.8" ; :Rating "6.56" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Udinese a schema:SportsTeam ;
+	dct:title "Udinese" ;
+	foaf:homepage <https://www.udinese.it/eng> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q2798 ; # (Wikidata entity)
+	schema:member :Rodrigo_Becao, :Beto, :Tolgay_Arslan ;
+	:Goals "42" ; :ShotsPerGame "10.9" ; :yellow_cards "63" ; :red_cards "2" ; :PossessionPercent "47.2" ; :PassPercent "82.5" ; :AerialsWon "13.1" ; :Rating "6.55" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:SD_Huesca a schema:SportsTeam ;
+	dct:title "SD Huesca" ;
+	foaf:homepage <https://www.sdhuesca.es/> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q11971 ; # (Wikidata entity)
+	:Goals "34" ; :ShotsPerGame "10.7" ; :yellow_cards "68" ; :red_cards "2" ; :PossessionPercent "48.7" ; :PassPercent "79.8" ; :AerialsWon "15.7" ; :Rating "6.55" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Athletic_Bilbao a schema:SportsTeam ;
+	dct:title "Athletic Bilbao" ;
+	foaf:homepage <https://www.athletic-club.eus/en/> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q8687 ; # (Wikidata entity)
+	:Goals "46" ; :ShotsPerGame "10.6" ; :yellow_cards "81" ; :red_cards "3" ; :PossessionPercent "49.4" ; :PassPercent "78.5" ; :AerialsWon "17.9" ; :Rating "6.54" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Osasuna a schema:SportsTeam ;
+	dct:title "Osasuna" ;
+	foaf:homepage <https://www.osasuna.es/en> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q10286 ; # (Wikidata entity)
+	schema:member :Darko_Braanac, :Kike_Barja, :Ezequiel_Avila ;
+	:Goals "37" ; :ShotsPerGame "9.8" ; :yellow_cards "74" ; :red_cards "5" ; :PossessionPercent "44.6" ; :PassPercent "70.2" ; :AerialsWon "26.8" ; :Rating "6.54" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Lorient a schema:SportsTeam ;
+	dct:title "Lorient" ;
+	foaf:homepage <https://www.fclorient.bzh/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q48911 ; # (Wikidata entity)
+	schema:member :Adil_Aouchiche, :Laurent_Abergel ;
+	:Goals "50" ; :ShotsPerGame "11.2" ; :yellow_cards "67" ; :red_cards "3" ; :PossessionPercent "45.9" ; :PassPercent "78.8" ; :AerialsWon "13.7" ; :Rating "6.54" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Genoa a schema:SportsTeam ;
+	dct:title "Genoa" ;
+	foaf:homepage <https://genoacfc.it/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q2074 ; # (Wikidata entity)
+	:Goals "47" ; :ShotsPerGame "9.0" ; :yellow_cards "85" ; :red_cards "2" ; :PossessionPercent "46.1" ; :PassPercent "79.7" ; :AerialsWon "13.7" ; :Rating "6.54" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Arminia_Bielefeld a schema:SportsTeam ;
+	dct:title "Arminia Bielefeld" ;
+	foaf:homepage <https://www.arminia.de/> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q105844 ; # (Wikidata entity)
+	:Goals "26" ; :ShotsPerGame "9.8" ; :yellow_cards "52" ; :red_cards "1" ; :PossessionPercent "44.1" ; :PassPercent "74.6" ; :AerialsWon "22.2" ; :Rating "6.53" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Angers a schema:SportsTeam ;
+	dct:title "Angers" ;
+	foaf:homepage <https://angers-sco.fr/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q845137 ; # (Wikidata entity)
+	schema:member :Himad_Abdelli ;
+	:Goals "40" ; :ShotsPerGame "10.7" ; :yellow_cards "63" ; :red_cards "2" ; :PossessionPercent "47.1" ; :PassPercent "81.3" ; :AerialsWon "13.2" ; :Rating "6.53" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Eibar a schema:SportsTeam ;
+	dct:title "Eibar" ;
+	foaf:homepage <https://www.sdeibar.com/en> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q770740 ; # (Wikidata entity)
+	:Goals "29" ; :ShotsPerGame "11.9" ; :yellow_cards "67" ; :red_cards "3" ; :PossessionPercent "49.2" ; :PassPercent "72.6" ; :AerialsWon "24.4" ; :Rating "6.53" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Werder_Bremen a schema:SportsTeam ;
+	dct:title "Werder Bremen" ;
+	foaf:homepage <https://www.werder.de/en> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q51976 ; # (Wikidata entity)
+	schema:member :Leonardo_Bittencourt ;
+	:Goals "36" ; :ShotsPerGame "10.6" ; :yellow_cards "63" ; :red_cards "3" ; :PossessionPercent "45.2" ; :PassPercent "76.2" ; :AerialsWon "18.3" ; :Rating "6.52" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Fiorentina a schema:SportsTeam ;
+	dct:title "Fiorentina" ;
+	foaf:homepage <https://www.acffiorentina.com/en> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q2052 ; # (Wikidata entity)
+	schema:member :Sofyan_Amrabat, :Arthur, :Antonin_Barak ;
+	:Goals "47" ; :ShotsPerGame "9.8" ; :yellow_cards "86" ; :red_cards "5" ; :PossessionPercent "46.8" ; :PassPercent "81.0" ; :AerialsWon "14.2" ; :Rating "6.52" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Nimes a schema:SportsTeam ;
+	dct:title "Nimes" ;
+	foaf:homepage <http://www.nimes-olympique.com/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q730809 ; # (Wikidata entity)
+	:Goals "40" ; :ShotsPerGame "10.3" ; :yellow_cards "57" ; :red_cards "5" ; :PossessionPercent "45.8" ; :PassPercent "77.5" ; :AerialsWon "14.0" ; :Rating "6.52" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:West_Bromwich_Albion a schema:SportsTeam ;
+	dct:title "West Bromwich Albion" ;
+	foaf:homepage <https://www.wba.co.uk/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q18744 ; # (Wikidata entity)
+	:Goals "35" ; :ShotsPerGame "8.9" ; :yellow_cards "51" ; :red_cards "4" ; :PossessionPercent "41.0" ; :PassPercent "72.2" ; :AerialsWon "19.1" ; :Rating "6.51" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:FC_Koln a schema:SportsTeam ;
+	dct:title "FC Koln" ;
+	foaf:homepage <https://fc.de/en> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q104770 ; # (Wikidata entity)
+	:Goals "34" ; :ShotsPerGame "10.6" ; :yellow_cards "62" ; :red_cards "1" ; :PossessionPercent "47.1" ; :PassPercent "77.3" ; :AerialsWon "18.5" ; :Rating "6.51" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Deportivo_Alaves a schema:SportsTeam ;
+	dct:title "Deportivo Alaves" ;
+	foaf:homepage <https://www.deportivoalaves.com/es/> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q223620 ; # (Wikidata entity)
+	:Goals "36" ; :ShotsPerGame "9.1" ; :yellow_cards "87" ; :red_cards "8" ; :PossessionPercent "44.6" ; :PassPercent "72.9" ; :AerialsWon "22.6" ; :Rating "6.5" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Levante a schema:SportsTeam ;
+	dct:title "Levante" ;
+	foaf:homepage <https://www.levanteud.com/en> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q8823 ; # (Wikidata entity)
+	:Goals "46" ; :ShotsPerGame "10.1" ; :yellow_cards "70" ; :red_cards "1" ; :PossessionPercent "51.5" ; :PassPercent "80.1" ; :AerialsWon "12.2" ; :Rating "6.5" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Spezia a schema:SportsTeam ;
+	dct:title "Spezia" ;
+	foaf:homepage <https://www.speziacalcio.com/en/home.html> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q8615 ; # (Wikidata entity)
+	schema:member :Ethan_Ampadu, :Kelvin_Amian ;
+	:Goals "52" ; :ShotsPerGame "10.2" ; :yellow_cards "92" ; :red_cards "5" ; :PossessionPercent "51.6" ; :PassPercent "81.1" ; :AerialsWon "14.4" ; :Rating "6.5" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Getafe a schema:SportsTeam ;
+	dct:title "Getafe" ;
+	foaf:homepage <https://www.getafecf.com/en> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q8806 ; # (Wikidata entity)
+	schema:member :Carles_Alena ;
+	:Goals "28" ; :ShotsPerGame "9.5" ; :yellow_cards "117" ; :red_cards "7" ; :PossessionPercent "44.4" ; :PassPercent "66.5" ; :AerialsWon "22.8" ; :Rating "6.49" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Parma_Calcio_1913 a schema:SportsTeam ;
+	dct:title "Parma Calcio 1913" ;
+	foaf:homepage <https://www.parmacalcio1913.com/en/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q2693 ; # (Wikidata entity)
+	:Goals "39" ; :ShotsPerGame "10.4" ; :yellow_cards "91" ; :red_cards "1" ; :PossessionPercent "48.4" ; :PassPercent "82.5" ; :AerialsWon "16.9" ; :Rating "6.49" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Elche a schema:SportsTeam ;
+	dct:title "Elche" ;
+	foaf:homepage <https://www.elchecf.es/> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q10512 ; # (Wikidata entity)
+	schema:member :Edgar_Badia, :Alejandro_Alfaro ;
+	:Goals "34" ; :ShotsPerGame "7.1" ; :yellow_cards "95" ; :red_cards "3" ; :PossessionPercent "48.1" ; :PassPercent "81.5" ; :AerialsWon "13.2" ; :Rating "6.48" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Granada a schema:SportsTeam ;
+	dct:title "Granada" ;
+	foaf:homepage <https://www.granadacf.es/> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q8812 ; # (Wikidata entity)
+	:Goals "47" ; :ShotsPerGame "9.4" ; :yellow_cards "96" ; :red_cards "6" ; :PossessionPercent "43.4" ; :PassPercent "70.0" ; :AerialsWon "18.3" ; :Rating "6.47" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Cadiz a schema:SportsTeam ;
+	dct:title "Cadiz" ;
+	foaf:homepage <https://www.cadizcf.com/en> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q460448 ; # (Wikidata entity)
+	:Goals "36" ; :ShotsPerGame "8.0" ; :yellow_cards "77" ; :red_cards "3" ; :PossessionPercent "38.5" ; :PassPercent "68.8" ; :AerialsWon "18.5" ; :Rating "6.47" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Real_Valladolid a schema:SportsTeam ;
+	dct:title "Real Valladolid" ;
+	foaf:homepage <https://www.realvalladolid.es/> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q10319 ; # (Wikidata entity)
+	:Goals "34" ; :ShotsPerGame "9.7" ; :yellow_cards "93" ; :red_cards "4" ; :PossessionPercent "46.2" ; :PassPercent "74.8" ; :AerialsWon "17.1" ; :Rating "6.46" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Sheffield_United a schema:SportsTeam ;
+	dct:title "Sheffield United" ;
+	foaf:homepage <https://www.sufc.co.uk/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q19607 ; # (Wikidata entity)
+	:Goals "20" ; :ShotsPerGame "8.5" ; :yellow_cards "73" ; :red_cards "3" ; :PossessionPercent "43.0" ; :PassPercent "76.9" ; :AerialsWon "19.1" ; :Rating "6.46" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Crotone a schema:SportsTeam ;
+	dct:title "Crotone" ;
+	foaf:homepage <https://www.fccrotone.it/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q6690 ; # (Wikidata entity)
+	:Goals "45" ; :ShotsPerGame "9.5" ; :yellow_cards "85" ; :red_cards "4" ; :PossessionPercent "47.2" ; :PassPercent "80.4" ; :AerialsWon "12.7" ; :Rating "6.43" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Benevento a schema:SportsTeam ;
+	dct:title "Benevento" ;
+	foaf:homepage <https://www.beneventocalcio.club/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q652516 ; # (Wikidata entity)
+	:Goals "40" ; :ShotsPerGame "11.0" ; :yellow_cards "90" ; :red_cards "5" ; :PossessionPercent "44.2" ; :PassPercent "77.7" ; :AerialsWon "13.4" ; :Rating "6.43" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Dijon a schema:SportsTeam ;
+	dct:title "Dijon" ;
+	foaf:homepage <https://www.dfco.fr/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q503317 ; # (Wikidata entity)
+	:Goals "25" ; :ShotsPerGame "9.2" ; :yellow_cards "75" ; :red_cards "5" ; :PossessionPercent "46.9" ; :PassPercent "80.0" ; :AerialsWon "14.3" ; :Rating "6.42" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Schalke_04 a schema:SportsTeam ;
+	dct:title "Schalke 04" ;
+	foaf:homepage <https://schalke04.de/en/> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q32494 ; # (Wikidata entity)
+	schema:member :Eder_Alvarez_Balanta, :Mehmet_Can_Aydin ;
+	:Goals "25" ; :ShotsPerGame "8.9" ; :yellow_cards "70" ; :red_cards "2" ; :PossessionPercent "46.2" ; :PassPercent "76.5" ; :AerialsWon "15.6" ; :Rating "6.41" ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+

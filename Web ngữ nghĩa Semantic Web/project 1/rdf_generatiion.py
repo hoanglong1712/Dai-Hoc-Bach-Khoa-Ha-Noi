@@ -5,7 +5,7 @@ import pandas as pd
 def work():
 
     teams = pd.read_csv('team_url_homepage.csv')
-    teams = teams[['Team', 'Tournament', 'URL', 'Homepage']]
+    #teams = teams[['Team', 'Tournament', 'URL', 'Homepage']]
     teams = teams.loc[teams['URL'].str.contains('.wikidata') ]
 
     players = pd.read_csv('team_3_players_url.csv')
@@ -17,7 +17,7 @@ def work():
     for tournament in tournaments:
         tournament_str += (f':{tournament.replace(" ", "_")} a schema:SportsLeague ;\n'
                            f'\tdct:title "{tournament}" ;\n'
-                           f'\tschema:description "The top professional football division of the nation football league system."\n\n')
+                           f'\tschema:description "The top professional football division of the nation football league system.".\n\n')
         pass
 
     #print(players.columns)
@@ -34,21 +34,32 @@ def work():
                      f'\tschema:memberOf :{tournament.replace(" ", "_")} ;\n'
                      f'\tschema:relatedLink wdw:{url.split("/")[-1]} ; # (Wikidata entity)\n')
         if ps.empty is False:
-            names = [f":{x.replace(' ', '_')}"  for x in ps["Player"].tolist()]
-            team_str += f'\tschema:member {" ".join(names)} ;\n'
+            names = [f":{x.replace(' ', '_')}" for x in ps["Player"].tolist()]
+            team_str += f'\tschema:member {", ".join(names)} ;\n'
             pass
+        team_str += (f'\t:Goals "{row["Goals"]}" ; '
+                     f':ShotsPerGame "{row["Shots pg"]}" ; '
+                     f':yellow_cards "{row["yellow_cards"]}" ; '
+                     f':red_cards "{row["red_cards"]}" ; '
+                     f':PossessionPercent "{row["Possession%"]}" ; '
+                     f':PassPercent "{row["Pass%"]}" ; '
+                     f':AerialsWon "{row["AerialsWon"]}" ; '
+                     f':Rating "{row["Rating"]}" ;\n')
         team_str += '\tdct:license <http://creativecommons.org/licenses/by-sa/4.0/> .\n\n'
+        #break
         pass
 
     player_str = ''
 
     for index, row in players.iterrows():
+
         name = row['Player']
         team = row['Squad']
         nationality = row['Nation']
         age = row['Age']
         position = row['Pos']
         url = row['URL']
+
         player_str += (f':{name.replace(" ", "_")} a schema:Person, schema:SportsPerson ;\n'
                        f'\tfoaf:name "{name}" ;\n'
                        f'\tfoaf:age {age} ;\n'
@@ -56,6 +67,7 @@ def work():
                        f'\tschema:nationality "{nationality}" ;\n'
                        f'\tschema:relatedLink wdw:{url.split("/")[-1]} ; # (Wikidata entity)\n'
                        f'\tschema:memberOf :{team.replace(" ", "_")} .\n\n')
+
         pass
 
     prefix = """
@@ -88,7 +100,7 @@ schema:SportsLeague a rdfs:Class ;
     #print(prefic)
     #print(player_str)
     #print(tournament_str)
-    return f'{prefix}\n{tournament_str}{team_str}{player_str}{postfix}'
+    return f'{prefix}\n{postfix}\n{player_str}{tournament_str}{team_str}'
 
 if __name__ == '__main__':
     result = work()
