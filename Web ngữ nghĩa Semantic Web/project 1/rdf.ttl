@@ -1,0 +1,1990 @@
+
+@prefix : <http://example.org/football/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdw: <https://www.wikidata.org/wiki/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:Premier_League a schema:SportsLeague ;
+	dct:title "Premier League" ;
+	schema:description "The top professional football division of the nation football league system."
+
+:Bundesliga a schema:SportsLeague ;
+	dct:title "Bundesliga" ;
+	schema:description "The top professional football division of the nation football league system."
+
+:Ligue_1 a schema:SportsLeague ;
+	dct:title "Ligue 1" ;
+	schema:description "The top professional football division of the nation football league system."
+
+:LaLiga a schema:SportsLeague ;
+	dct:title "LaLiga" ;
+	schema:description "The top professional football division of the nation football league system."
+
+:Serie_A a schema:SportsLeague ;
+	dct:title "Serie A" ;
+	schema:description "The top professional football division of the nation football league system."
+
+:Manchester_City a schema:SportsTeam ;
+	dct:title "Manchester City" ;
+	foaf:homepage <https://www.mancity.com/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q50602 ; # (Wikidata entity)
+	schema:member :Manuel_Akanji :Nathan_Aké :Julián_Álvarez ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Bayern_Munich a schema:SportsTeam ;
+	dct:title "Bayern Munich" ;
+	foaf:homepage <https://fcbayern.com/en> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q15789 ; # (Wikidata entity)
+	schema:member :João_Cancelo :Daley_Blind :Kingsley_Coman ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Paris_Saint-Germain a schema:SportsTeam ;
+	dct:title "Paris Saint-Germain" ;
+	foaf:homepage <https://en.psg.fr/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q483020 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Barcelona a schema:SportsTeam ;
+	dct:title "Barcelona" ;
+	foaf:homepage <https://www.fcbarcelona.com/en/> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q7156 ; # (Wikidata entity)
+	schema:member :Jordi_Alba :Ronald_Araújo :Marcos_Alonso ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Real_Madrid a schema:SportsTeam ;
+	dct:title "Real Madrid" ;
+	foaf:homepage <https://www.realmadrid.com/en-US> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q8682 ; # (Wikidata entity)
+	schema:member :Karim_Benzema :David_Alaba :Marco_Asensio ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Manchester_United a schema:SportsTeam ;
+	dct:title "Manchester United" ;
+	foaf:homepage <https://www.manutd.com/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q18656 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Juventus a schema:SportsTeam ;
+	dct:title "Juventus" ;
+	foaf:homepage <https://www.juventus.com/en/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q1422 ; # (Wikidata entity)
+	schema:member :Federico_Chiesa :Leonardo_Bonucci ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Aston_Villa a schema:SportsTeam ;
+	dct:title "Aston Villa" ;
+	foaf:homepage <https://www.avfc.co.uk/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q18711 ; # (Wikidata entity)
+	schema:member :Cameron_Archer :Leon_Bailey :Ludwig_Augustinsson ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Borussia_Dortmund a schema:SportsTeam ;
+	dct:title "Borussia Dortmund" ;
+	foaf:homepage <https://www.bvb.de/de/en.html> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q41420 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Atletico_Madrid a schema:SportsTeam ;
+	dct:title "Atletico Madrid" ;
+	foaf:homepage <https://en.atleticodemadrid.com/> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q8701 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Atalanta a schema:SportsTeam ;
+	dct:title "Atalanta" ;
+	foaf:homepage <https://en.atalanta.it/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q1886 ; # (Wikidata entity)
+	schema:member :Merih_Demiral :Berat_Djimsiti :Jeremie_Boga ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Chelsea a schema:SportsTeam ;
+	dct:title "Chelsea" ;
+	foaf:homepage <https://www.chelseafc.com/en> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q9616 ; # (Wikidata entity)
+	schema:member :César_Azpilicueta :Pierre-Emerick_Aubameyang :Kepa_Arrizabalaga ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Liverpool a schema:SportsTeam ;
+	dct:title "Liverpool" ;
+	foaf:homepage <https://www.liverpoolfc.com/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q1130849 ; # (Wikidata entity)
+	schema:member :Trent_Alexander-Arnold :Thiago_Alcántara :Alisson ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:AC_Milan a schema:SportsTeam ;
+	dct:title "AC Milan" ;
+	foaf:homepage <http://www.acmilan.com/en> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q1543 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Lille a schema:SportsTeam ;
+	dct:title "Lille" ;
+	foaf:homepage <https://www.losc.fr/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q19516 ; # (Wikidata entity)
+	schema:member :Carlos_Baleba :Benjamin_André :Jonathan_Bamba ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Tottenham a schema:SportsTeam ;
+	dct:title "Tottenham" ;
+	foaf:homepage <https://www.tottenhamhotspur.com/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q18741 ; # (Wikidata entity)
+	schema:member :Yves_Bissouma :Bryan :Rodrigo_Bentancur ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Napoli a schema:SportsTeam ;
+	dct:title "Napoli" ;
+	foaf:homepage <https://sscnapoli.it/en/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q2641 ; # (Wikidata entity)
+	schema:member :Giovanni_Di_Lorenzo :Elif_Elmas ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Leicester a schema:SportsTeam ;
+	dct:title "Leicester" ;
+	foaf:homepage <https://www.lcfc.com/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q19481 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Wolfsburg a schema:SportsTeam ;
+	dct:title "Wolfsburg" ;
+	foaf:homepage <https://www.vfl-wolfsburg.de/en/home> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q101859 ; # (Wikidata entity)
+	schema:member :Maximilian_Arnold :Sebastiaan_Bornauw ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Inter a schema:SportsTeam ;
+	dct:title "Inter" ;
+	foaf:homepage <https://www.inter.it/en> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q631 ; # (Wikidata entity)
+	schema:member :Nicolò_Barella :Francesco_Acerbi :Kristjan_Asllani ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Lyon a schema:SportsTeam ;
+	dct:title "Lyon" ;
+	foaf:homepage <https://www.ol.fr/en> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q704 ; # (Wikidata entity)
+	schema:member :Houssem_Aouar :Jérôme_Boateng :Bradley_Barcola ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:RB_Leipzig a schema:SportsTeam ;
+	dct:title "RB Leipzig" ;
+	foaf:homepage <https://rbleipzig.com/en> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q702455 ; # (Wikidata entity)
+	schema:member :Janis_Blaswich :Abdou_Diallo ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Leeds a schema:SportsTeam ;
+	dct:title "Leeds" ;
+	foaf:homepage <https://www.leedsunited.com/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q1128631 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:West_Ham a schema:SportsTeam ;
+	dct:title "West Ham" ;
+	foaf:homepage <https://www.whufc.com/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q18747 ; # (Wikidata entity)
+	schema:member :Alphonse_Areola :Nayef_Aguerd :Michail_Antonio ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Everton a schema:SportsTeam ;
+	dct:title "Everton" ;
+	foaf:homepage <https://www.evertonfc.com/home> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q5794 ; # (Wikidata entity)
+	schema:member :Dele_Alli :Asmir_Begovi? :Dominic_Calvert-Lewin ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Bayer_Leverkusen a schema:SportsTeam ;
+	dct:title "Bayer Leverkusen" ;
+	foaf:homepage <https://www.bayer04.de/> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q104761 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Eintracht_Frankfurt a schema:SportsTeam ;
+	dct:title "Eintracht Frankfurt" ;
+	foaf:homepage <https://en.eintracht.de/> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q38245 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Monaco a schema:SportsTeam ;
+	dct:title "Monaco" ;
+	foaf:homepage <https://www.asmonaco.com/en/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q180305 ; # (Wikidata entity)
+	schema:member :Ruben_Aguilar :Maghnes_Akliouche :Benoît_Badiashile ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Roma a schema:SportsTeam ;
+	dct:title "Roma" ;
+	foaf:homepage <https://www.asroma.com/en> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q2739 ; # (Wikidata entity)
+	schema:member :Tammy_Abraham :Edoardo_Bove :Andrea_Belotti ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Sevilla a schema:SportsTeam ;
+	dct:title "Sevilla" ;
+	foaf:homepage <http://sevillafc.es/en> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q10329 ; # (Wikidata entity)
+	schema:member :Loïc_Bade :Carlos_Álvarez :Marcos_Acuña ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Borussia_M.Gladbach a schema:SportsTeam ;
+	dct:title "Borussia M.Gladbach" ;
+	foaf:homepage <https://www.borussia.de/en> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q101959 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Arsenal a schema:SportsTeam ;
+	dct:title "Arsenal" ;
+	foaf:homepage <https://www.arsenal.com/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q9617 ; # (Wikidata entity)
+	schema:member :Mohamed_Elneny :Gabriel_Dos_Santos :Rob_Holding ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Rennes a schema:SportsTeam ;
+	dct:title "Rennes" ;
+	foaf:homepage <https://www.staderennais.com/en> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q19509 ; # (Wikidata entity)
+	schema:member :Matthis_Abline :Lorenz_Assignon ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:VfB_Stuttgart a schema:SportsTeam ;
+	dct:title "VfB Stuttgart" ;
+	foaf:homepage <https://www.vfb.de/en/> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q4512 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Wolverhampton_Wanderers a schema:SportsTeam ;
+	dct:title "Wolverhampton Wanderers" ;
+	foaf:homepage <https://www.wolves.co.uk/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q19500 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Sassuolo a schema:SportsTeam ;
+	dct:title "Sassuolo" ;
+	foaf:homepage <https://www.sassuolocalcio.it/en/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q8603 ; # (Wikidata entity)
+	schema:member :Kaan_Ayhan :Janis_Antiste :Agustín_Álvarez_Martínez ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Metz a schema:SportsTeam ;
+	dct:title "Metz" ;
+	foaf:homepage <https://www.fcmetz.com/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q221525 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Villarreal a schema:SportsTeam ;
+	dct:title "Villarreal" ;
+	foaf:homepage <https://villarrealcf.es/en/> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q12297 ; # (Wikidata entity)
+	schema:member :Raúl_Albiol :Alex_Baena :Étienne_Capoue ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Real_Sociedad a schema:SportsTeam ;
+	dct:title "Real Sociedad" ;
+	foaf:homepage <https://www.realsociedad.eus/en> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q10315 ; # (Wikidata entity)
+	schema:member :Ander_Barrenetxea :Mohamed_Ali_Cho :Aritz_Elustondo ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Brighton a schema:SportsTeam ;
+	dct:title "Brighton" ;
+	foaf:homepage <https://www.brightonandhovealbion.com/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q19453 ; # (Wikidata entity)
+	schema:member :Moisés_Caicedo :Julio_César_Enciso :Facundo_Buonanotte ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Real_Betis a schema:SportsTeam ;
+	dct:title "Real Betis" ;
+	foaf:homepage <https://en.realbetisbalompie.es/> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q8723 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Burnley a schema:SportsTeam ;
+	dct:title "Burnley" ;
+	foaf:homepage <https://www.burnleyfootballclub.com/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q19458 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Lens a schema:SportsTeam ;
+	dct:title "Lens" ;
+	foaf:homepage <https://www.rclens.fr/fr/english> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q191843 ; # (Wikidata entity)
+	schema:member :Salis_Abdul_Samed :Patrick_Berg ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Brest a schema:SportsTeam ;
+	dct:title "Brest" ;
+	foaf:homepage <https://www.sb29.bzh/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q218372 ; # (Wikidata entity)
+	schema:member :Haris_Belkebla :Youcef_Belaïli ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Fulham a schema:SportsTeam ;
+	dct:title "Fulham" ;
+	foaf:homepage <https://www.fulhamfc.com/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q18708 ; # (Wikidata entity)
+	schema:member :Tosin_Adarabioyo :Tom_Cairney :Nathaniel_Chalobah ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Marseille a schema:SportsTeam ;
+	dct:title "Marseille" ;
+	foaf:homepage <https://www.om.fr/en> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q132885 ; # (Wikidata entity)
+	schema:member :Eric_Bailly :Leonardo_Balerdi :Cédric_Bakambu ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Sampdoria a schema:SportsTeam ;
+	dct:title "Sampdoria" ;
+	foaf:homepage <https://www.sampdoria.it/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q1457 ; # (Wikidata entity)
+	schema:member :Emil_Audero ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Montpellier a schema:SportsTeam ;
+	dct:title "Montpellier" ;
+	foaf:homepage <https://mhscfoot.com/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q19513 ; # (Wikidata entity)
+	schema:member :Nicolas_Cozza :Joris_Chotard ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Nice a schema:SportsTeam ;
+	dct:title "Nice" ;
+	foaf:homepage <https://www.ogcnice.com/en/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q185163 ; # (Wikidata entity)
+	schema:member :Ross_Barkley :Youcef_Atal :Melvin_Bard ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Hoffenheim a schema:SportsTeam ;
+	dct:title "Hoffenheim" ;
+	foaf:homepage <https://www.tsg-hoffenheim.de/en> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q22707 ; # (Wikidata entity)
+	schema:member :Kevin_Akpoguma :Angeliño :Fisnik_Asllani ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Southampton a schema:SportsTeam ;
+	dct:title "Southampton" ;
+	foaf:homepage <https://www.southamptonfc.com/en> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q18732 ; # (Wikidata entity)
+	schema:member :Joe_Aribo :Che_Adams :Carlos_Alcaraz ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Newcastle_United a schema:SportsTeam ;
+	dct:title "Newcastle United" ;
+	foaf:homepage <https://www.newcastleunited.com/en> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q18716 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Lazio a schema:SportsTeam ;
+	dct:title "Lazio" ;
+	foaf:homepage <https://www.sslazio.it/en/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q2609 ; # (Wikidata entity)
+	schema:member :Felipe_Anderson :Luis_Alberto :Marcos_Antônio ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Nantes a schema:SportsTeam ;
+	dct:title "Nantes" ;
+	foaf:homepage <https://www.fcnantes.com/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q192071 ; # (Wikidata entity)
+	schema:member :Dennis_Appiah :Ludovic_Blas :Mohamed_Achi ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Union_Berlin a schema:SportsTeam ;
+	dct:title "Union Berlin" ;
+	foaf:homepage <https://www.fc-union-berlin.de/en/> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q141971 ; # (Wikidata entity)
+	schema:member :Sheraldo_Becker :Kevin_Behrens ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Strasbourg a schema:SportsTeam ;
+	dct:title "Strasbourg" ;
+	foaf:homepage <https://www.rcstrasbourgalsace.fr/en/racing-en/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q126334 ; # (Wikidata entity)
+	schema:member :Ludovic_Ajorque :Jean-Ricner_Bellegarde ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Crystal_Palace a schema:SportsTeam ;
+	dct:title "Crystal Palace" ;
+	foaf:homepage <https://www.cpfc.co.uk/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q19467 ; # (Wikidata entity)
+	schema:member :Joachim_Andersen :Jordan_Ayew ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Freiburg a schema:SportsTeam ;
+	dct:title "Freiburg" ;
+	foaf:homepage <https://www.scfreiburg.com/en> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q106394 ; # (Wikidata entity)
+	schema:member :Ritsu_Doan :Maximilian_Eggestein :Mark_Flekken ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Valencia a schema:SportsTeam ;
+	dct:title "Valencia" ;
+	foaf:homepage <https://www.valenciacf.com/home> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q10333 ; # (Wikidata entity)
+	schema:member :Domingos_André_Ribeiro_Almeida :Edinson_Cavani :Samu_Castillejo ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Celta_Vigo a schema:SportsTeam ;
+	dct:title "Celta Vigo" ;
+	foaf:homepage <https://rccelta.es/en/> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q8749 ; # (Wikidata entity)
+	schema:member :Iago_Aspas :Fran_Beltrán :Joseph_Aidoo ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Reims a schema:SportsTeam ;
+	dct:title "Reims" ;
+	foaf:homepage <https://www.stade-de-reims.com/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q208228 ; # (Wikidata entity)
+	schema:member :Yunis_Abdelhamid :Emmanuel_Agbadou ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Torino a schema:SportsTeam ;
+	dct:title "Torino" ;
+	foaf:homepage <https://www.torinofc.it/en> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q2768 ; # (Wikidata entity)
+	schema:member :Alessandro_Buongiorno :Ola_Aina ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Verona a schema:SportsTeam ;
+	dct:title "Verona" ;
+	foaf:homepage <https://www.hellasverona.it/en> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q8639 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Saint-Etienne a schema:SportsTeam ;
+	dct:title "Saint-Etienne" ;
+	foaf:homepage <https://www.asse.fr/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q19521 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Bordeaux a schema:SportsTeam ;
+	dct:title "Bordeaux" ;
+	foaf:homepage <https://www.girondins.com/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q172476 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Hertha_Berlin a schema:SportsTeam ;
+	dct:title "Hertha Berlin" ;
+	foaf:homepage <https://www.herthabsc.com/en> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q102720 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Cagliari a schema:SportsTeam ;
+	dct:title "Cagliari" ;
+	foaf:homepage <https://cagliaricalcio.com/en/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q1900 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Mainz_05 a schema:SportsTeam ;
+	dct:title "Mainz 05" ;
+	foaf:homepage <https://www.mainz05.de/en> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q105254 ; # (Wikidata entity)
+	schema:member :Leandro_Barreiro_Martins :Aymen_Barkok :Ludovic_Ajorque ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Bologna a schema:SportsTeam ;
+	dct:title "Bologna" ;
+	foaf:homepage <https://www.bolognafc.it/en/home/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q1893 ; # (Wikidata entity)
+	schema:member :Musa_Barrow :Michel_Aebischer :Marko_Arnautovi? ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Augsburg a schema:SportsTeam ;
+	dct:title "Augsburg" ;
+	foaf:homepage <https://www.fcaugsburg.de/en/> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q15755 ; # (Wikidata entity)
+	schema:member :Julian_Baumgartlinger ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Udinese a schema:SportsTeam ;
+	dct:title "Udinese" ;
+	foaf:homepage <https://www.udinese.it/eng> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q2798 ; # (Wikidata entity)
+	schema:member :Rodrigo_Becão :Beto :Tolgay_Arslan ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:SD_Huesca a schema:SportsTeam ;
+	dct:title "SD Huesca" ;
+	foaf:homepage <https://www.sdhuesca.es/> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q11971 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Athletic_Bilbao a schema:SportsTeam ;
+	dct:title "Athletic Bilbao" ;
+	foaf:homepage <https://www.athletic-club.eus/en/> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q8687 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Osasuna a schema:SportsTeam ;
+	dct:title "Osasuna" ;
+	foaf:homepage <https://www.osasuna.es/en> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q10286 ; # (Wikidata entity)
+	schema:member :Darko_Braanac :Kike_Barja :Ezequiel_Ávila ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Lorient a schema:SportsTeam ;
+	dct:title "Lorient" ;
+	foaf:homepage <https://www.fclorient.bzh/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q48911 ; # (Wikidata entity)
+	schema:member :Adil_Aouchiche :Laurent_Abergel ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Genoa a schema:SportsTeam ;
+	dct:title "Genoa" ;
+	foaf:homepage <https://genoacfc.it/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q2074 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Arminia_Bielefeld a schema:SportsTeam ;
+	dct:title "Arminia Bielefeld" ;
+	foaf:homepage <https://www.arminia.de/> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q105844 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Angers a schema:SportsTeam ;
+	dct:title "Angers" ;
+	foaf:homepage <https://angers-sco.fr/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q845137 ; # (Wikidata entity)
+	schema:member :Himad_Abdelli ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Eibar a schema:SportsTeam ;
+	dct:title "Eibar" ;
+	foaf:homepage <https://www.sdeibar.com/en> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q770740 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Werder_Bremen a schema:SportsTeam ;
+	dct:title "Werder Bremen" ;
+	foaf:homepage <https://www.werder.de/en> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q51976 ; # (Wikidata entity)
+	schema:member :Leonardo_Bittencourt ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Fiorentina a schema:SportsTeam ;
+	dct:title "Fiorentina" ;
+	foaf:homepage <https://www.acffiorentina.com/en> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q2052 ; # (Wikidata entity)
+	schema:member :Sofyan_Amrabat :Arthur :Antonín_Barák ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Nimes a schema:SportsTeam ;
+	dct:title "Nimes" ;
+	foaf:homepage <http://www.nimes-olympique.com/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q730809 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:West_Bromwich_Albion a schema:SportsTeam ;
+	dct:title "West Bromwich Albion" ;
+	foaf:homepage <https://www.wba.co.uk/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q18744 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:FC_Koln a schema:SportsTeam ;
+	dct:title "FC Koln" ;
+	foaf:homepage <https://fc.de/en> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q104770 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Deportivo_Alaves a schema:SportsTeam ;
+	dct:title "Deportivo Alaves" ;
+	foaf:homepage <https://www.deportivoalaves.com/es/> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q223620 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Levante a schema:SportsTeam ;
+	dct:title "Levante" ;
+	foaf:homepage <https://www.levanteud.com/en> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q8823 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Spezia a schema:SportsTeam ;
+	dct:title "Spezia" ;
+	foaf:homepage <https://www.speziacalcio.com/en/home.html> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q8615 ; # (Wikidata entity)
+	schema:member :Ethan_Ampadu :Kelvin_Amian ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Getafe a schema:SportsTeam ;
+	dct:title "Getafe" ;
+	foaf:homepage <https://www.getafecf.com/en> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q8806 ; # (Wikidata entity)
+	schema:member :Carles_Aleñá ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Parma_Calcio_1913 a schema:SportsTeam ;
+	dct:title "Parma Calcio 1913" ;
+	foaf:homepage <https://www.parmacalcio1913.com/en/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q2693 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Elche a schema:SportsTeam ;
+	dct:title "Elche" ;
+	foaf:homepage <https://www.elchecf.es/> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q10512 ; # (Wikidata entity)
+	schema:member :Édgar_Badía :Alejandro_Alfaro ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Granada a schema:SportsTeam ;
+	dct:title "Granada" ;
+	foaf:homepage <https://www.granadacf.es/> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q8812 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Cadiz a schema:SportsTeam ;
+	dct:title "Cadiz" ;
+	foaf:homepage <https://www.cadizcf.com/en> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q460448 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Real_Valladolid a schema:SportsTeam ;
+	dct:title "Real Valladolid" ;
+	foaf:homepage <https://www.realvalladolid.es/> ;
+	schema:memberOf :LaLiga ;
+	schema:relatedLink wdw:Q10319 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Sheffield_United a schema:SportsTeam ;
+	dct:title "Sheffield United" ;
+	foaf:homepage <https://www.sufc.co.uk/> ;
+	schema:memberOf :Premier_League ;
+	schema:relatedLink wdw:Q19607 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Crotone a schema:SportsTeam ;
+	dct:title "Crotone" ;
+	foaf:homepage <https://www.fccrotone.it/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q6690 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Benevento a schema:SportsTeam ;
+	dct:title "Benevento" ;
+	foaf:homepage <https://www.beneventocalcio.club/> ;
+	schema:memberOf :Serie_A ;
+	schema:relatedLink wdw:Q652516 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Dijon a schema:SportsTeam ;
+	dct:title "Dijon" ;
+	foaf:homepage <https://www.dfco.fr/> ;
+	schema:memberOf :Ligue_1 ;
+	schema:relatedLink wdw:Q503317 ; # (Wikidata entity)
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Schalke_04 a schema:SportsTeam ;
+	dct:title "Schalke 04" ;
+	foaf:homepage <https://schalke04.de/en/> ;
+	schema:memberOf :Bundesliga ;
+	schema:relatedLink wdw:Q32494 ; # (Wikidata entity)
+	schema:member :Éder_Álvarez_Balanta :Mehmet-Can_Aydin ;
+	dct:license <http://creativecommons.org/licenses/by-sa/4.0/> .
+
+:Himad_Abdelli a schema:Person, schema:SportsPerson ;
+	foaf:name "Himad Abdelli" ;
+	foaf:age 23 ;
+	schema:position "MFFW" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q58303150 ; # (Wikidata entity)
+	schema:memberOf :Angers .
+
+:Mohamed_Elneny a schema:Person, schema:SportsPerson ;
+	foaf:name "Mohamed Elneny" ;
+	foaf:age 30 ;
+	schema:position "MF" ;
+	schema:nationality "EGY" ;
+	schema:relatedLink wdw:Q3318533 ; # (Wikidata entity)
+	schema:memberOf :Arsenal .
+
+:Gabriel_Dos_Santos a schema:Person, schema:SportsPerson ;
+	foaf:name "Gabriel Dos Santos" ;
+	foaf:age 25 ;
+	schema:position "DF" ;
+	schema:nationality "BRA" ;
+	schema:relatedLink wdw:Q2164391 ; # (Wikidata entity)
+	schema:memberOf :Arsenal .
+
+:Rob_Holding a schema:Person, schema:SportsPerson ;
+	foaf:name "Rob Holding" ;
+	foaf:age 27 ;
+	schema:position "DF" ;
+	schema:nationality "ENG" ;
+	schema:relatedLink wdw:Q21061767 ; # (Wikidata entity)
+	schema:memberOf :Arsenal .
+
+:Cameron_Archer a schema:Person, schema:SportsPerson ;
+	foaf:name "Cameron Archer" ;
+	foaf:age 21 ;
+	schema:position "FWMF" ;
+	schema:nationality "ENG" ;
+	schema:relatedLink wdw:Q66779547 ; # (Wikidata entity)
+	schema:memberOf :Aston_Villa .
+
+:Leon_Bailey a schema:Person, schema:SportsPerson ;
+	foaf:name "Leon Bailey" ;
+	foaf:age 25 ;
+	schema:position "FWMF" ;
+	schema:nationality "JAM" ;
+	schema:relatedLink wdw:Q20890178 ; # (Wikidata entity)
+	schema:memberOf :Aston_Villa .
+
+:Ludwig_Augustinsson a schema:Person, schema:SportsPerson ;
+	foaf:name "Ludwig Augustinsson" ;
+	foaf:age 28 ;
+	schema:position "DF" ;
+	schema:nationality "SWE" ;
+	schema:relatedLink wdw:Q4806248 ; # (Wikidata entity)
+	schema:memberOf :Aston_Villa .
+
+:Merih_Demiral a schema:Person, schema:SportsPerson ;
+	foaf:name "Merih Demiral" ;
+	foaf:age 24 ;
+	schema:position "DF" ;
+	schema:nationality "TUR" ;
+	schema:relatedLink wdw:Q29047921 ; # (Wikidata entity)
+	schema:memberOf :Atalanta .
+
+:Berat_Djimsiti a schema:Person, schema:SportsPerson ;
+	foaf:name "Berat Djimsiti" ;
+	foaf:age 29 ;
+	schema:position "DF" ;
+	schema:nationality "ALB" ;
+	schema:relatedLink wdw:Q15197300 ; # (Wikidata entity)
+	schema:memberOf :Atalanta .
+
+:Jeremie_Boga a schema:Person, schema:SportsPerson ;
+	foaf:name "Jeremie Boga" ;
+	foaf:age 26 ;
+	schema:position "MFFW" ;
+	schema:nationality "CIV" ;
+	schema:relatedLink wdw:Q20925240 ; # (Wikidata entity)
+	schema:memberOf :Atalanta .
+
+:Julian_Baumgartlinger a schema:Person, schema:SportsPerson ;
+	foaf:name "Julian Baumgartlinger" ;
+	foaf:age 35 ;
+	schema:position "MF" ;
+	schema:nationality "AUT" ;
+	schema:relatedLink wdw:Q697255 ; # (Wikidata entity)
+	schema:memberOf :Augsburg .
+
+:Jordi_Alba a schema:Person, schema:SportsPerson ;
+	foaf:name "Jordi Alba" ;
+	foaf:age 33 ;
+	schema:position "DF" ;
+	schema:nationality "ESP" ;
+	schema:relatedLink wdw:Q187159 ; # (Wikidata entity)
+	schema:memberOf :Barcelona .
+
+:Ronald_Araújo a schema:Person, schema:SportsPerson ;
+	foaf:name "Ronald Araújo" ;
+	foaf:age 23 ;
+	schema:position "DF" ;
+	schema:nationality "URU" ;
+	schema:relatedLink wdw:Q56332606 ; # (Wikidata entity)
+	schema:memberOf :Barcelona .
+
+:Marcos_Alonso a schema:Person, schema:SportsPerson ;
+	foaf:name "Marcos Alonso" ;
+	foaf:age 32 ;
+	schema:position "DF" ;
+	schema:nationality "ESP" ;
+	schema:relatedLink wdw:Q442838 ; # (Wikidata entity)
+	schema:memberOf :Barcelona .
+
+:João_Cancelo a schema:Person, schema:SportsPerson ;
+	foaf:name "João Cancelo" ;
+	foaf:age 28 ;
+	schema:position "DFFW" ;
+	schema:nationality "POR" ;
+	schema:relatedLink wdw:Q6298063 ; # (Wikidata entity)
+	schema:memberOf :Bayern_Munich .
+
+:Daley_Blind a schema:Person, schema:SportsPerson ;
+	foaf:name "Daley Blind" ;
+	foaf:age 32 ;
+	schema:position "MFDF" ;
+	schema:nationality "NED" ;
+	schema:relatedLink wdw:Q128912 ; # (Wikidata entity)
+	schema:memberOf :Bayern_Munich .
+
+:Kingsley_Coman a schema:Person, schema:SportsPerson ;
+	foaf:name "Kingsley Coman" ;
+	foaf:age 26 ;
+	schema:position "FWMF" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q6413296 ; # (Wikidata entity)
+	schema:memberOf :Bayern_Munich .
+
+:Musa_Barrow a schema:Person, schema:SportsPerson ;
+	foaf:name "Musa Barrow" ;
+	foaf:age 24 ;
+	schema:position "FWMF" ;
+	schema:nationality "GAM" ;
+	schema:relatedLink wdw:Q48573556 ; # (Wikidata entity)
+	schema:memberOf :Bologna .
+
+:Michel_Aebischer a schema:Person, schema:SportsPerson ;
+	foaf:name "Michel Aebischer" ;
+	foaf:age 26 ;
+	schema:position "FWMF" ;
+	schema:nationality "SUI" ;
+	schema:relatedLink wdw:Q27469951 ; # (Wikidata entity)
+	schema:memberOf :Bologna .
+
+:Marko_Arnautovi? a schema:Person, schema:SportsPerson ;
+	foaf:name "Marko Arnautovi?" ;
+	foaf:age 33 ;
+	schema:position "FW" ;
+	schema:nationality "AUT" ;
+	schema:relatedLink wdw:Q313575 ; # (Wikidata entity)
+	schema:memberOf :Bologna .
+
+:Haris_Belkebla a schema:Person, schema:SportsPerson ;
+	foaf:name "Haris Belkebla" ;
+	foaf:age 29 ;
+	schema:position "MF" ;
+	schema:nationality "ALG" ;
+	schema:relatedLink wdw:Q17579882 ; # (Wikidata entity)
+	schema:memberOf :Brest .
+
+:Youcef_Belaïli a schema:Person, schema:SportsPerson ;
+	foaf:name "Youcef Belaïli" ;
+	foaf:age 30 ;
+	schema:position "FWMF" ;
+	schema:nationality "ALG" ;
+	schema:relatedLink wdw:Q3572787 ; # (Wikidata entity)
+	schema:memberOf :Brest .
+
+:Moisés_Caicedo a schema:Person, schema:SportsPerson ;
+	foaf:name "Moisés Caicedo" ;
+	foaf:age 21 ;
+	schema:position "MF" ;
+	schema:nationality "ECU" ;
+	schema:relatedLink wdw:Q87715532 ; # (Wikidata entity)
+	schema:memberOf :Brighton .
+
+:Julio_César_Enciso a schema:Person, schema:SportsPerson ;
+	foaf:name "Julio César Enciso" ;
+	foaf:age 19 ;
+	schema:position "FWMF" ;
+	schema:nationality "PAR" ;
+	schema:relatedLink wdw:Q85872272 ; # (Wikidata entity)
+	schema:memberOf :Brighton .
+
+:Facundo_Buonanotte a schema:Person, schema:SportsPerson ;
+	foaf:name "Facundo Buonanotte" ;
+	foaf:age 18 ;
+	schema:position "MFFW" ;
+	schema:nationality "ARG" ;
+	schema:relatedLink wdw:Q113028093 ; # (Wikidata entity)
+	schema:memberOf :Brighton .
+
+:Iago_Aspas a schema:Person, schema:SportsPerson ;
+	foaf:name "Iago Aspas" ;
+	foaf:age 35 ;
+	schema:position "FW" ;
+	schema:nationality "ESP" ;
+	schema:relatedLink wdw:Q26380 ; # (Wikidata entity)
+	schema:memberOf :Celta_Vigo .
+
+:Fran_Beltrán a schema:Person, schema:SportsPerson ;
+	foaf:name "Fran Beltrán" ;
+	foaf:age 24 ;
+	schema:position "MF" ;
+	schema:nationality "ESP" ;
+	schema:relatedLink wdw:Q26475869 ; # (Wikidata entity)
+	schema:memberOf :Celta_Vigo .
+
+:Joseph_Aidoo a schema:Person, schema:SportsPerson ;
+	foaf:name "Joseph Aidoo" ;
+	foaf:age 27 ;
+	schema:position "DF" ;
+	schema:nationality "GHA" ;
+	schema:relatedLink wdw:Q21042828 ; # (Wikidata entity)
+	schema:memberOf :Celta_Vigo .
+
+:César_Azpilicueta a schema:Person, schema:SportsPerson ;
+	foaf:name "César Azpilicueta" ;
+	foaf:age 33 ;
+	schema:position "DF" ;
+	schema:nationality "ESP" ;
+	schema:relatedLink wdw:Q294806 ; # (Wikidata entity)
+	schema:memberOf :Chelsea .
+
+:Pierre-Emerick_Aubameyang a schema:Person, schema:SportsPerson ;
+	foaf:name "Pierre-Emerick Aubameyang" ;
+	foaf:age 33 ;
+	schema:position "FW" ;
+	schema:nationality "GAB" ;
+	schema:relatedLink wdw:Q44977 ; # (Wikidata entity)
+	schema:memberOf :Chelsea .
+
+:Kepa_Arrizabalaga a schema:Person, schema:SportsPerson ;
+	foaf:name "Kepa Arrizabalaga" ;
+	foaf:age 28 ;
+	schema:position "GK" ;
+	schema:nationality "ESP" ;
+	schema:relatedLink wdw:Q3195361 ; # (Wikidata entity)
+	schema:memberOf :Chelsea .
+
+:Joachim_Andersen a schema:Person, schema:SportsPerson ;
+	foaf:name "Joachim Andersen" ;
+	foaf:age 26 ;
+	schema:position "DF" ;
+	schema:nationality "DEN" ;
+	schema:relatedLink wdw:Q15943423 ; # (Wikidata entity)
+	schema:memberOf :Crystal_Palace .
+
+:Jordan_Ayew a schema:Person, schema:SportsPerson ;
+	foaf:name "Jordan Ayew" ;
+	foaf:age 31 ;
+	schema:position "FWMF" ;
+	schema:nationality "GHA" ;
+	schema:relatedLink wdw:Q367861 ; # (Wikidata entity)
+	schema:memberOf :Crystal_Palace .
+
+:Édgar_Badía a schema:Person, schema:SportsPerson ;
+	foaf:name "Édgar Badía" ;
+	foaf:age 31 ;
+	schema:position "GK" ;
+	schema:nationality "ESP" ;
+	schema:relatedLink wdw:Q10557934 ; # (Wikidata entity)
+	schema:memberOf :Elche .
+
+:Alejandro_Alfaro a schema:Person, schema:SportsPerson ;
+	foaf:name "Alejandro Alfaro" ;
+	foaf:age 20 ;
+	schema:position "MF" ;
+	schema:nationality "ESP" ;
+	schema:relatedLink wdw:Q385686 ; # (Wikidata entity)
+	schema:memberOf :Elche .
+
+:Dele_Alli a schema:Person, schema:SportsPerson ;
+	foaf:name "Dele Alli" ;
+	foaf:age 26 ;
+	schema:position "MF" ;
+	schema:nationality "ENG" ;
+	schema:relatedLink wdw:Q10553748 ; # (Wikidata entity)
+	schema:memberOf :Everton .
+
+:Asmir_Begovi? a schema:Person, schema:SportsPerson ;
+	foaf:name "Asmir Begovi?" ;
+	foaf:age 35 ;
+	schema:position "GK" ;
+	schema:nationality "BIH" ;
+	schema:relatedLink wdw:Q431368 ; # (Wikidata entity)
+	schema:memberOf :Everton .
+
+:Dominic_Calvert-Lewin a schema:Person, schema:SportsPerson ;
+	foaf:name "Dominic Calvert-Lewin" ;
+	foaf:age 25 ;
+	schema:position "FW" ;
+	schema:nationality "ENG" ;
+	schema:relatedLink wdw:Q19956709 ; # (Wikidata entity)
+	schema:memberOf :Everton .
+
+:Sofyan_Amrabat a schema:Person, schema:SportsPerson ;
+	foaf:name "Sofyan Amrabat" ;
+	foaf:age 26 ;
+	schema:position "MF" ;
+	schema:nationality "MAR" ;
+	schema:relatedLink wdw:Q18428483 ; # (Wikidata entity)
+	schema:memberOf :Fiorentina .
+
+:Arthur a schema:Person, schema:SportsPerson ;
+	foaf:name "Arthur" ;
+	foaf:age 24 ;
+	schema:position "FW" ;
+	schema:nationality "BRA" ;
+	schema:relatedLink wdw:Q312508 ; # (Wikidata entity)
+	schema:memberOf :Fiorentina .
+
+:Antonín_Barák a schema:Person, schema:SportsPerson ;
+	foaf:name "Antonín Barák" ;
+	foaf:age 28 ;
+	schema:position "MF" ;
+	schema:nationality "CZE" ;
+	schema:relatedLink wdw:Q21293144 ; # (Wikidata entity)
+	schema:memberOf :Fiorentina .
+
+:Ritsu_Doan a schema:Person, schema:SportsPerson ;
+	foaf:name "Ritsu Doan" ;
+	foaf:age 24 ;
+	schema:position "FWMF" ;
+	schema:nationality "JPN" ;
+	schema:relatedLink wdw:Q20630956 ; # (Wikidata entity)
+	schema:memberOf :Freiburg .
+
+:Maximilian_Eggestein a schema:Person, schema:SportsPerson ;
+	foaf:name "Maximilian Eggestein" ;
+	foaf:age 26 ;
+	schema:position "MF" ;
+	schema:nationality "GER" ;
+	schema:relatedLink wdw:Q21175165 ; # (Wikidata entity)
+	schema:memberOf :Freiburg .
+
+:Mark_Flekken a schema:Person, schema:SportsPerson ;
+	foaf:name "Mark Flekken" ;
+	foaf:age 29 ;
+	schema:position "GK" ;
+	schema:nationality "NED" ;
+	schema:relatedLink wdw:Q5811691 ; # (Wikidata entity)
+	schema:memberOf :Freiburg .
+
+:Tosin_Adarabioyo a schema:Person, schema:SportsPerson ;
+	foaf:name "Tosin Adarabioyo" ;
+	foaf:age 25 ;
+	schema:position "DF" ;
+	schema:nationality "ENG" ;
+	schema:relatedLink wdw:Q21620666 ; # (Wikidata entity)
+	schema:memberOf :Fulham .
+
+:Tom_Cairney a schema:Person, schema:SportsPerson ;
+	foaf:name "Tom Cairney" ;
+	foaf:age 32 ;
+	schema:position "MF" ;
+	schema:nationality "SCO" ;
+	schema:relatedLink wdw:Q1061904 ; # (Wikidata entity)
+	schema:memberOf :Fulham .
+
+:Nathaniel_Chalobah a schema:Person, schema:SportsPerson ;
+	foaf:name "Nathaniel Chalobah" ;
+	foaf:age 28 ;
+	schema:position "MF" ;
+	schema:nationality "ENG" ;
+	schema:relatedLink wdw:Q36696865 ; # (Wikidata entity)
+	schema:memberOf :Fulham .
+
+:Carles_Aleñá a schema:Person, schema:SportsPerson ;
+	foaf:name "Carles Aleñá" ;
+	foaf:age 25 ;
+	schema:position "MF" ;
+	schema:nationality "ESP" ;
+	schema:relatedLink wdw:Q21546191 ; # (Wikidata entity)
+	schema:memberOf :Getafe .
+
+:Kevin_Akpoguma a schema:Person, schema:SportsPerson ;
+	foaf:name "Kevin Akpoguma" ;
+	foaf:age 27 ;
+	schema:position "DF" ;
+	schema:nationality "NGA" ;
+	schema:relatedLink wdw:Q982975 ; # (Wikidata entity)
+	schema:memberOf :Hoffenheim .
+
+:Angeliño a schema:Person, schema:SportsPerson ;
+	foaf:name "Angeliño" ;
+	foaf:age 26 ;
+	schema:position "DF" ;
+	schema:nationality "ESP" ;
+	schema:relatedLink wdw:Q20688718 ; # (Wikidata entity)
+	schema:memberOf :Hoffenheim .
+
+:Fisnik_Asllani a schema:Person, schema:SportsPerson ;
+	foaf:name "Fisnik Asllani" ;
+	foaf:age 20 ;
+	schema:position "FWMF" ;
+	schema:nationality "KVX" ;
+	schema:relatedLink wdw:Q109653419 ; # (Wikidata entity)
+	schema:memberOf :Hoffenheim .
+
+:Nicolò_Barella a schema:Person, schema:SportsPerson ;
+	foaf:name "Nicolò Barella" ;
+	foaf:age 26 ;
+	schema:position "MF" ;
+	schema:nationality "ITA" ;
+	schema:relatedLink wdw:Q20090225 ; # (Wikidata entity)
+	schema:memberOf :Inter .
+
+:Francesco_Acerbi a schema:Person, schema:SportsPerson ;
+	foaf:name "Francesco Acerbi" ;
+	foaf:age 35 ;
+	schema:position "DF" ;
+	schema:nationality "ITA" ;
+	schema:relatedLink wdw:Q531302 ; # (Wikidata entity)
+	schema:memberOf :Inter .
+
+:Kristjan_Asllani a schema:Person, schema:SportsPerson ;
+	foaf:name "Kristjan Asllani" ;
+	foaf:age 20 ;
+	schema:position "MF" ;
+	schema:nationality "ALB" ;
+	schema:relatedLink wdw:Q106313163 ; # (Wikidata entity)
+	schema:memberOf :Inter .
+
+:Federico_Chiesa a schema:Person, schema:SportsPerson ;
+	foaf:name "Federico Chiesa" ;
+	foaf:age 25 ;
+	schema:position "DFFW" ;
+	schema:nationality "ITA" ;
+	schema:relatedLink wdw:Q26704703 ; # (Wikidata entity)
+	schema:memberOf :Juventus .
+
+:Leonardo_Bonucci a schema:Person, schema:SportsPerson ;
+	foaf:name "Leonardo Bonucci" ;
+	foaf:age 35 ;
+	schema:position "DF" ;
+	schema:nationality "ITA" ;
+	schema:relatedLink wdw:Q208050 ; # (Wikidata entity)
+	schema:memberOf :Juventus .
+
+:Felipe_Anderson a schema:Person, schema:SportsPerson ;
+	foaf:name "Felipe Anderson" ;
+	foaf:age 29 ;
+	schema:position "FW" ;
+	schema:nationality "BRA" ;
+	schema:relatedLink wdw:Q794628 ; # (Wikidata entity)
+	schema:memberOf :Lazio .
+
+:Luis_Alberto a schema:Person, schema:SportsPerson ;
+	foaf:name "Luis Alberto" ;
+	foaf:age 30 ;
+	schema:position "MF" ;
+	schema:nationality "ESP" ;
+	schema:relatedLink wdw:Q248228 ; # (Wikidata entity)
+	schema:memberOf :Lazio .
+
+:Marcos_Antônio a schema:Person, schema:SportsPerson ;
+	foaf:name "Marcos Antônio" ;
+	foaf:age 22 ;
+	schema:position "MF" ;
+	schema:nationality "BRA" ;
+	schema:relatedLink wdw:Q1894022 ; # (Wikidata entity)
+	schema:memberOf :Lazio .
+
+:Salis_Abdul_Samed a schema:Person, schema:SportsPerson ;
+	foaf:name "Salis Abdul Samed" ;
+	foaf:age 22 ;
+	schema:position "MF" ;
+	schema:nationality "GHA" ;
+	schema:relatedLink wdw:Q68110291 ; # (Wikidata entity)
+	schema:memberOf :Lens .
+
+:Patrick_Berg a schema:Person, schema:SportsPerson ;
+	foaf:name "Patrick Berg" ;
+	foaf:age 25 ;
+	schema:position "MFFW" ;
+	schema:nationality "NOR" ;
+	schema:relatedLink wdw:Q18066870 ; # (Wikidata entity)
+	schema:memberOf :Lens .
+
+:Carlos_Baleba a schema:Person, schema:SportsPerson ;
+	foaf:name "Carlos Baleba" ;
+	foaf:age 19 ;
+	schema:position "MF" ;
+	schema:nationality "CMR" ;
+	schema:relatedLink wdw:Q113472432 ; # (Wikidata entity)
+	schema:memberOf :Lille .
+
+:Benjamin_André a schema:Person, schema:SportsPerson ;
+	foaf:name "Benjamin André" ;
+	foaf:age 32 ;
+	schema:position "MF" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q2475780 ; # (Wikidata entity)
+	schema:memberOf :Lille .
+
+:Jonathan_Bamba a schema:Person, schema:SportsPerson ;
+	foaf:name "Jonathan Bamba" ;
+	foaf:age 26 ;
+	schema:position "FW" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q18921387 ; # (Wikidata entity)
+	schema:memberOf :Lille .
+
+:Trent_Alexander-Arnold a schema:Person, schema:SportsPerson ;
+	foaf:name "Trent Alexander-Arnold" ;
+	foaf:age 24 ;
+	schema:position "DF" ;
+	schema:nationality "ENG" ;
+	schema:relatedLink wdw:Q27569376 ; # (Wikidata entity)
+	schema:memberOf :Liverpool .
+
+:Thiago_Alcántara a schema:Person, schema:SportsPerson ;
+	foaf:name "Thiago Alcántara" ;
+	foaf:age 31 ;
+	schema:position "MF" ;
+	schema:nationality "ESP" ;
+	schema:relatedLink wdw:Q17493 ; # (Wikidata entity)
+	schema:memberOf :Liverpool .
+
+:Alisson a schema:Person, schema:SportsPerson ;
+	foaf:name "Alisson" ;
+	foaf:age 30 ;
+	schema:position "GK" ;
+	schema:nationality "BRA" ;
+	schema:relatedLink wdw:Q18237361 ; # (Wikidata entity)
+	schema:memberOf :Liverpool .
+
+:Adil_Aouchiche a schema:Person, schema:SportsPerson ;
+	foaf:name "Adil Aouchiche" ;
+	foaf:age 20 ;
+	schema:position "MFFW" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q63636233 ; # (Wikidata entity)
+	schema:memberOf :Lorient .
+
+:Laurent_Abergel a schema:Person, schema:SportsPerson ;
+	foaf:name "Laurent Abergel" ;
+	foaf:age 30 ;
+	schema:position "MF" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q15627798 ; # (Wikidata entity)
+	schema:memberOf :Lorient .
+
+:Houssem_Aouar a schema:Person, schema:SportsPerson ;
+	foaf:name "Houssem Aouar" ;
+	foaf:age 24 ;
+	schema:position "MF" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q27927442 ; # (Wikidata entity)
+	schema:memberOf :Lyon .
+
+:Jérôme_Boateng a schema:Person, schema:SportsPerson ;
+	foaf:name "Jérôme Boateng" ;
+	foaf:age 34 ;
+	schema:position "DF" ;
+	schema:nationality "GER" ;
+	schema:relatedLink wdw:Q151260 ; # (Wikidata entity)
+	schema:memberOf :Lyon .
+
+:Bradley_Barcola a schema:Person, schema:SportsPerson ;
+	foaf:name "Bradley Barcola" ;
+	foaf:age 20 ;
+	schema:position "FWMF" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q99670930 ; # (Wikidata entity)
+	schema:memberOf :Lyon .
+
+:Leandro_Barreiro_Martins a schema:Person, schema:SportsPerson ;
+	foaf:name "Leandro Barreiro Martins" ;
+	foaf:age 23 ;
+	schema:position "MF" ;
+	schema:nationality "LUX" ;
+	schema:relatedLink wdw:Q50827917 ; # (Wikidata entity)
+	schema:memberOf :Mainz_05 .
+
+:Aymen_Barkok a schema:Person, schema:SportsPerson ;
+	foaf:name "Aymen Barkok" ;
+	foaf:age 24 ;
+	schema:position "MF" ;
+	schema:nationality "MAR" ;
+	schema:relatedLink wdw:Q27892157 ; # (Wikidata entity)
+	schema:memberOf :Mainz_05 .
+
+:Ludovic_Ajorque a schema:Person, schema:SportsPerson ;
+	foaf:name "Ludovic Ajorque" ;
+	foaf:age 28 ;
+	schema:position "FW" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q27671219 ; # (Wikidata entity)
+	schema:memberOf :Mainz_05 .
+
+:Manuel_Akanji a schema:Person, schema:SportsPerson ;
+	foaf:name "Manuel Akanji" ;
+	foaf:age 27 ;
+	schema:position "DF" ;
+	schema:nationality "SUI" ;
+	schema:relatedLink wdw:Q19938984 ; # (Wikidata entity)
+	schema:memberOf :Manchester_City .
+
+:Nathan_Aké a schema:Person, schema:SportsPerson ;
+	foaf:name "Nathan Aké" ;
+	foaf:age 27 ;
+	schema:position "DF" ;
+	schema:nationality "NED" ;
+	schema:relatedLink wdw:Q1755683 ; # (Wikidata entity)
+	schema:memberOf :Manchester_City .
+
+:Julián_Álvarez a schema:Person, schema:SportsPerson ;
+	foaf:name "Julián Álvarez" ;
+	foaf:age 23 ;
+	schema:position "FWMF" ;
+	schema:nationality "ARG" ;
+	schema:relatedLink wdw:Q59381180 ; # (Wikidata entity)
+	schema:memberOf :Manchester_City .
+
+:Eric_Bailly a schema:Person, schema:SportsPerson ;
+	foaf:name "Eric Bailly" ;
+	foaf:age 28 ;
+	schema:position "DF" ;
+	schema:nationality "CIV" ;
+	schema:relatedLink wdw:Q18637352 ; # (Wikidata entity)
+	schema:memberOf :Marseille .
+
+:Leonardo_Balerdi a schema:Person, schema:SportsPerson ;
+	foaf:name "Leonardo Balerdi" ;
+	foaf:age 24 ;
+	schema:position "DF" ;
+	schema:nationality "ARG" ;
+	schema:relatedLink wdw:Q50233588 ; # (Wikidata entity)
+	schema:memberOf :Marseille .
+
+:Cédric_Bakambu a schema:Person, schema:SportsPerson ;
+	foaf:name "Cédric Bakambu" ;
+	foaf:age 31 ;
+	schema:position "MF" ;
+	schema:nationality "COD" ;
+	schema:relatedLink wdw:Q932982 ; # (Wikidata entity)
+	schema:memberOf :Marseille .
+
+:Ruben_Aguilar a schema:Person, schema:SportsPerson ;
+	foaf:name "Ruben Aguilar" ;
+	foaf:age 29 ;
+	schema:position "DF" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q20090069 ; # (Wikidata entity)
+	schema:memberOf :Monaco .
+
+:Maghnes_Akliouche a schema:Person, schema:SportsPerson ;
+	foaf:name "Maghnes Akliouche" ;
+	foaf:age 20 ;
+	schema:position "MFDF" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q108910786 ; # (Wikidata entity)
+	schema:memberOf :Monaco .
+
+:Benoît_Badiashile a schema:Person, schema:SportsPerson ;
+	foaf:name "Benoît Badiashile" ;
+	foaf:age 21 ;
+	schema:position "DF" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q57704058 ; # (Wikidata entity)
+	schema:memberOf :Monaco .
+
+:Nicolas_Cozza a schema:Person, schema:SportsPerson ;
+	foaf:name "Nicolas Cozza" ;
+	foaf:age 24 ;
+	schema:position "DF" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q43369696 ; # (Wikidata entity)
+	schema:memberOf :Montpellier .
+
+:Joris_Chotard a schema:Person, schema:SportsPerson ;
+	foaf:name "Joris Chotard" ;
+	foaf:age 21 ;
+	schema:position "MF" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q66364616 ; # (Wikidata entity)
+	schema:memberOf :Montpellier .
+
+:Dennis_Appiah a schema:Person, schema:SportsPerson ;
+	foaf:name "Dennis Appiah" ;
+	foaf:age 30 ;
+	schema:position "DFMF" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q5258151 ; # (Wikidata entity)
+	schema:memberOf :Nantes .
+
+:Ludovic_Blas a schema:Person, schema:SportsPerson ;
+	foaf:name "Ludovic Blas" ;
+	foaf:age 25 ;
+	schema:position "MFFW" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q22003400 ; # (Wikidata entity)
+	schema:memberOf :Nantes .
+
+:Mohamed_Achi a schema:Person, schema:SportsPerson ;
+	foaf:name "Mohamed Achi" ;
+	foaf:age 21 ;
+	schema:position "FW" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q112107491 ; # (Wikidata entity)
+	schema:memberOf :Nantes .
+
+:Giovanni_Di_Lorenzo a schema:Person, schema:SportsPerson ;
+	foaf:name "Giovanni Di Lorenzo" ;
+	foaf:age 29 ;
+	schema:position "DF" ;
+	schema:nationality "ITA" ;
+	schema:relatedLink wdw:Q14831282 ; # (Wikidata entity)
+	schema:memberOf :Napoli .
+
+:Elif_Elmas a schema:Person, schema:SportsPerson ;
+	foaf:name "Elif Elmas" ;
+	foaf:age 23 ;
+	schema:position "FWMF" ;
+	schema:nationality "MKD" ;
+	schema:relatedLink wdw:Q25409292 ; # (Wikidata entity)
+	schema:memberOf :Napoli .
+
+:Ross_Barkley a schema:Person, schema:SportsPerson ;
+	foaf:name "Ross Barkley" ;
+	foaf:age 29 ;
+	schema:position "FWMF" ;
+	schema:nationality "ENG" ;
+	schema:relatedLink wdw:Q326240 ; # (Wikidata entity)
+	schema:memberOf :Nice .
+
+:Youcef_Atal a schema:Person, schema:SportsPerson ;
+	foaf:name "Youcef Atal" ;
+	foaf:age 26 ;
+	schema:position "DFMF" ;
+	schema:nationality "ALG" ;
+	schema:relatedLink wdw:Q30349597 ; # (Wikidata entity)
+	schema:memberOf :Nice .
+
+:Melvin_Bard a schema:Person, schema:SportsPerson ;
+	foaf:name "Melvin Bard" ;
+	foaf:age 22 ;
+	schema:position "DF" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q55865078 ; # (Wikidata entity)
+	schema:memberOf :Nice .
+
+:Darko_Braanac a schema:Person, schema:SportsPerson ;
+	foaf:name "Darko Braanac" ;
+	foaf:age 31 ;
+	schema:position "MF" ;
+	schema:nationality "SRB" ;
+	schema:relatedLink wdw:Q698109 ; # (Wikidata entity)
+	schema:memberOf :Osasuna .
+
+:Kike_Barja a schema:Person, schema:SportsPerson ;
+	foaf:name "Kike Barja" ;
+	foaf:age 25 ;
+	schema:position "FWMF" ;
+	schema:nationality "ESP" ;
+	schema:relatedLink wdw:Q32236556 ; # (Wikidata entity)
+	schema:memberOf :Osasuna .
+
+:Ezequiel_Ávila a schema:Person, schema:SportsPerson ;
+	foaf:name "Ezequiel Ávila" ;
+	foaf:age 29 ;
+	schema:position "FWMF" ;
+	schema:nationality "ARG" ;
+	schema:relatedLink wdw:Q19949691 ; # (Wikidata entity)
+	schema:memberOf :Osasuna .
+
+:Janis_Blaswich a schema:Person, schema:SportsPerson ;
+	foaf:name "Janis Blaswich" ;
+	foaf:age 31 ;
+	schema:position "GK" ;
+	schema:nationality "GER" ;
+	schema:relatedLink wdw:Q20435757 ; # (Wikidata entity)
+	schema:memberOf :RB_Leipzig .
+
+:Abdou_Diallo a schema:Person, schema:SportsPerson ;
+	foaf:name "Abdou Diallo" ;
+	foaf:age 26 ;
+	schema:position "DFMF" ;
+	schema:nationality "SEN" ;
+	schema:relatedLink wdw:Q18685713 ; # (Wikidata entity)
+	schema:memberOf :RB_Leipzig .
+
+:Karim_Benzema a schema:Person, schema:SportsPerson ;
+	foaf:name "Karim Benzema" ;
+	foaf:age 35 ;
+	schema:position "FW" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q1912 ; # (Wikidata entity)
+	schema:memberOf :Real_Madrid .
+
+:David_Alaba a schema:Person, schema:SportsPerson ;
+	foaf:name "David Alaba" ;
+	foaf:age 30 ;
+	schema:position "DF" ;
+	schema:nationality "AUT" ;
+	schema:relatedLink wdw:Q31981 ; # (Wikidata entity)
+	schema:memberOf :Real_Madrid .
+
+:Marco_Asensio a schema:Person, schema:SportsPerson ;
+	foaf:name "Marco Asensio" ;
+	foaf:age 27 ;
+	schema:position "FWMF" ;
+	schema:nationality "ESP" ;
+	schema:relatedLink wdw:Q16148978 ; # (Wikidata entity)
+	schema:memberOf :Real_Madrid .
+
+:Ander_Barrenetxea a schema:Person, schema:SportsPerson ;
+	foaf:name "Ander Barrenetxea" ;
+	foaf:age 21 ;
+	schema:position "FWDF" ;
+	schema:nationality "ESP" ;
+	schema:relatedLink wdw:Q59823403 ; # (Wikidata entity)
+	schema:memberOf :Real_Sociedad .
+
+:Mohamed_Ali_Cho a schema:Person, schema:SportsPerson ;
+	foaf:name "Mohamed Ali Cho" ;
+	foaf:age 19 ;
+	schema:position "FW" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q98777530 ; # (Wikidata entity)
+	schema:memberOf :Real_Sociedad .
+
+:Aritz_Elustondo a schema:Person, schema:SportsPerson ;
+	foaf:name "Aritz Elustondo" ;
+	foaf:age 28 ;
+	schema:position "DF" ;
+	schema:nationality "ESP" ;
+	schema:relatedLink wdw:Q16516257 ; # (Wikidata entity)
+	schema:memberOf :Real_Sociedad .
+
+:Yunis_Abdelhamid a schema:Person, schema:SportsPerson ;
+	foaf:name "Yunis Abdelhamid" ;
+	foaf:age 35 ;
+	schema:position "DF" ;
+	schema:nationality "MAR" ;
+	schema:relatedLink wdw:Q3573237 ; # (Wikidata entity)
+	schema:memberOf :Reims .
+
+:Emmanuel_Agbadou a schema:Person, schema:SportsPerson ;
+	foaf:name "Emmanuel Agbadou" ;
+	foaf:age 25 ;
+	schema:position "DF" ;
+	schema:nationality "CIV" ;
+	schema:relatedLink wdw:Q69523791 ; # (Wikidata entity)
+	schema:memberOf :Reims .
+
+:Matthis_Abline a schema:Person, schema:SportsPerson ;
+	foaf:name "Matthis Abline" ;
+	foaf:age 19 ;
+	schema:position "FWMF" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q106621865 ; # (Wikidata entity)
+	schema:memberOf :Rennes .
+
+:Lorenz_Assignon a schema:Person, schema:SportsPerson ;
+	foaf:name "Lorenz Assignon" ;
+	foaf:age 22 ;
+	schema:position "DF" ;
+	schema:nationality "TOG" ;
+	schema:relatedLink wdw:Q108199499 ; # (Wikidata entity)
+	schema:memberOf :Rennes .
+
+:Tammy_Abraham a schema:Person, schema:SportsPerson ;
+	foaf:name "Tammy Abraham" ;
+	foaf:age 25 ;
+	schema:position "FW" ;
+	schema:nationality "ENG" ;
+	schema:relatedLink wdw:Q24050378 ; # (Wikidata entity)
+	schema:memberOf :Roma .
+
+:Edoardo_Bove a schema:Person, schema:SportsPerson ;
+	foaf:name "Edoardo Bove" ;
+	foaf:age 20 ;
+	schema:position "MF" ;
+	schema:nationality "ITA" ;
+	schema:relatedLink wdw:Q106775510 ; # (Wikidata entity)
+	schema:memberOf :Roma .
+
+:Andrea_Belotti a schema:Person, schema:SportsPerson ;
+	foaf:name "Andrea Belotti" ;
+	foaf:age 29 ;
+	schema:position "FW" ;
+	schema:nationality "ITA" ;
+	schema:relatedLink wdw:Q4754963 ; # (Wikidata entity)
+	schema:memberOf :Roma .
+
+:Emil_Audero a schema:Person, schema:SportsPerson ;
+	foaf:name "Emil Audero" ;
+	foaf:age 26 ;
+	schema:position "GK" ;
+	schema:nationality "ITA" ;
+	schema:relatedLink wdw:Q17410409 ; # (Wikidata entity)
+	schema:memberOf :Sampdoria .
+
+:Kaan_Ayhan a schema:Person, schema:SportsPerson ;
+	foaf:name "Kaan Ayhan" ;
+	foaf:age 28 ;
+	schema:position "DF" ;
+	schema:nationality "TUR" ;
+	schema:relatedLink wdw:Q3191617 ; # (Wikidata entity)
+	schema:memberOf :Sassuolo .
+
+:Janis_Antiste a schema:Person, schema:SportsPerson ;
+	foaf:name "Janis Antiste" ;
+	foaf:age 20 ;
+	schema:position "FW" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q84571690 ; # (Wikidata entity)
+	schema:memberOf :Sassuolo .
+
+:Agustín_Álvarez_Martínez a schema:Person, schema:SportsPerson ;
+	foaf:name "Agustín Álvarez Martínez" ;
+	foaf:age 21 ;
+	schema:position "FWMF" ;
+	schema:nationality "URU" ;
+	schema:relatedLink wdw:Q99390386 ; # (Wikidata entity)
+	schema:memberOf :Sassuolo .
+
+:Éder_Álvarez_Balanta a schema:Person, schema:SportsPerson ;
+	foaf:name "Éder Álvarez Balanta" ;
+	foaf:age 29 ;
+	schema:position "MF" ;
+	schema:nationality "COL" ;
+	schema:relatedLink wdw:Q6174184 ; # (Wikidata entity)
+	schema:memberOf :Schalke_04 .
+
+:Mehmet-Can_Aydin a schema:Person, schema:SportsPerson ;
+	foaf:name "Mehmet-Can Aydin" ;
+	foaf:age 21 ;
+	schema:position "DF" ;
+	schema:nationality "GER" ;
+	schema:relatedLink wdw:Q106352999 ; # (Wikidata entity)
+	schema:memberOf :Schalke_04 .
+
+:Loïc_Bade a schema:Person, schema:SportsPerson ;
+	foaf:name "Loïc Bade" ;
+	foaf:age 22 ;
+	schema:position "DF" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q81741599 ; # (Wikidata entity)
+	schema:memberOf :Sevilla .
+
+:Carlos_Álvarez a schema:Person, schema:SportsPerson ;
+	foaf:name "Carlos Álvarez" ;
+	foaf:age 19 ;
+	schema:position "FW" ;
+	schema:nationality "ESP" ;
+	schema:relatedLink wdw:Q10555413 ; # (Wikidata entity)
+	schema:memberOf :Sevilla .
+
+:Marcos_Acuña a schema:Person, schema:SportsPerson ;
+	foaf:name "Marcos Acuña" ;
+	foaf:age 31 ;
+	schema:position "DF" ;
+	schema:nationality "ARG" ;
+	schema:relatedLink wdw:Q17462635 ; # (Wikidata entity)
+	schema:memberOf :Sevilla .
+
+:Joe_Aribo a schema:Person, schema:SportsPerson ;
+	foaf:name "Joe Aribo" ;
+	foaf:age 26 ;
+	schema:position "MFFW" ;
+	schema:nationality "NGA" ;
+	schema:relatedLink wdw:Q27469960 ; # (Wikidata entity)
+	schema:memberOf :Southampton .
+
+:Che_Adams a schema:Person, schema:SportsPerson ;
+	foaf:name "Che Adams" ;
+	foaf:age 26 ;
+	schema:position "FW" ;
+	schema:nationality "SCO" ;
+	schema:relatedLink wdw:Q18683792 ; # (Wikidata entity)
+	schema:memberOf :Southampton .
+
+:Carlos_Alcaraz a schema:Person, schema:SportsPerson ;
+	foaf:name "Carlos Alcaraz" ;
+	foaf:age 20 ;
+	schema:position "MF" ;
+	schema:nationality "ARG" ;
+	schema:relatedLink wdw:Q88130791 ; # (Wikidata entity)
+	schema:memberOf :Southampton .
+
+:Ethan_Ampadu a schema:Person, schema:SportsPerson ;
+	foaf:name "Ethan Ampadu" ;
+	foaf:age 22 ;
+	schema:position "DFMF" ;
+	schema:nationality "WAL" ;
+	schema:relatedLink wdw:Q26250324 ; # (Wikidata entity)
+	schema:memberOf :Spezia .
+
+:Kelvin_Amian a schema:Person, schema:SportsPerson ;
+	foaf:name "Kelvin Amian" ;
+	foaf:age 25 ;
+	schema:position "DF" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q26405176 ; # (Wikidata entity)
+	schema:memberOf :Spezia .
+
+:Ludovic_Ajorque a schema:Person, schema:SportsPerson ;
+	foaf:name "Ludovic Ajorque" ;
+	foaf:age 28 ;
+	schema:position "FW" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q27671219 ; # (Wikidata entity)
+	schema:memberOf :Strasbourg .
+
+:Jean-Ricner_Bellegarde a schema:Person, schema:SportsPerson ;
+	foaf:name "Jean-Ricner Bellegarde" ;
+	foaf:age 24 ;
+	schema:position "MF" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q26251607 ; # (Wikidata entity)
+	schema:memberOf :Strasbourg .
+
+:Alessandro_Buongiorno a schema:Person, schema:SportsPerson ;
+	foaf:name "Alessandro Buongiorno" ;
+	foaf:age 23 ;
+	schema:position "DF" ;
+	schema:nationality "ITA" ;
+	schema:relatedLink wdw:Q51389133 ; # (Wikidata entity)
+	schema:memberOf :Torino .
+
+:Ola_Aina a schema:Person, schema:SportsPerson ;
+	foaf:name "Ola Aina" ;
+	foaf:age 26 ;
+	schema:position "DF" ;
+	schema:nationality "NGA" ;
+	schema:relatedLink wdw:Q20730338 ; # (Wikidata entity)
+	schema:memberOf :Torino .
+
+:Yves_Bissouma a schema:Person, schema:SportsPerson ;
+	foaf:name "Yves Bissouma" ;
+	foaf:age 26 ;
+	schema:position "MF" ;
+	schema:nationality "MLI" ;
+	schema:relatedLink wdw:Q22683033 ; # (Wikidata entity)
+	schema:memberOf :Tottenham .
+
+:Bryan a schema:Person, schema:SportsPerson ;
+	foaf:name "Bryan" ;
+	foaf:age 22 ;
+	schema:position "MFFW" ;
+	schema:nationality "ESP" ;
+	schema:relatedLink wdw:Q49561427 ; # (Wikidata entity)
+	schema:memberOf :Tottenham .
+
+:Rodrigo_Bentancur a schema:Person, schema:SportsPerson ;
+	foaf:name "Rodrigo Bentancur" ;
+	foaf:age 25 ;
+	schema:position "MF" ;
+	schema:nationality "URU" ;
+	schema:relatedLink wdw:Q18817134 ; # (Wikidata entity)
+	schema:memberOf :Tottenham .
+
+:Rodrigo_Becão a schema:Person, schema:SportsPerson ;
+	foaf:name "Rodrigo Becão" ;
+	foaf:age 27 ;
+	schema:position "DF" ;
+	schema:nationality "BRA" ;
+	schema:relatedLink wdw:Q55655668 ; # (Wikidata entity)
+	schema:memberOf :Udinese .
+
+:Beto a schema:Person, schema:SportsPerson ;
+	foaf:name "Beto" ;
+	foaf:age 25 ;
+	schema:position "FW" ;
+	schema:nationality "GNB" ;
+	schema:relatedLink wdw:Q313955 ; # (Wikidata entity)
+	schema:memberOf :Udinese .
+
+:Tolgay_Arslan a schema:Person, schema:SportsPerson ;
+	foaf:name "Tolgay Arslan" ;
+	foaf:age 32 ;
+	schema:position "MF" ;
+	schema:nationality "GER" ;
+	schema:relatedLink wdw:Q335413 ; # (Wikidata entity)
+	schema:memberOf :Udinese .
+
+:Sheraldo_Becker a schema:Person, schema:SportsPerson ;
+	foaf:name "Sheraldo Becker" ;
+	foaf:age 28 ;
+	schema:position "FW" ;
+	schema:nationality "SUR" ;
+	schema:relatedLink wdw:Q16069260 ; # (Wikidata entity)
+	schema:memberOf :Union_Berlin .
+
+:Kevin_Behrens a schema:Person, schema:SportsPerson ;
+	foaf:name "Kevin Behrens" ;
+	foaf:age 32 ;
+	schema:position "FW" ;
+	schema:nationality "GER" ;
+	schema:relatedLink wdw:Q56065664 ; # (Wikidata entity)
+	schema:memberOf :Union_Berlin .
+
+:Domingos_André_Ribeiro_Almeida a schema:Person, schema:SportsPerson ;
+	foaf:name "Domingos André Ribeiro Almeida" ;
+	foaf:age 22 ;
+	schema:position "MF" ;
+	schema:nationality "POR" ;
+	schema:relatedLink wdw:Q26704452 ; # (Wikidata entity)
+	schema:memberOf :Valencia .
+
+:Edinson_Cavani a schema:Person, schema:SportsPerson ;
+	foaf:name "Edinson Cavani" ;
+	foaf:age 35 ;
+	schema:position "FW" ;
+	schema:nationality "URU" ;
+	schema:relatedLink wdw:Q167790 ; # (Wikidata entity)
+	schema:memberOf :Valencia .
+
+:Samu_Castillejo a schema:Person, schema:SportsPerson ;
+	foaf:name "Samu Castillejo" ;
+	foaf:age 28 ;
+	schema:position "FW" ;
+	schema:nationality "ESP" ;
+	schema:relatedLink wdw:Q17708755 ; # (Wikidata entity)
+	schema:memberOf :Valencia .
+
+:Raúl_Albiol a schema:Person, schema:SportsPerson ;
+	foaf:name "Raúl Albiol" ;
+	foaf:age 37 ;
+	schema:position "DF" ;
+	schema:nationality "ESP" ;
+	schema:relatedLink wdw:Q4599 ; # (Wikidata entity)
+	schema:memberOf :Villarreal .
+
+:Alex_Baena a schema:Person, schema:SportsPerson ;
+	foaf:name "Alex Baena" ;
+	foaf:age 21 ;
+	schema:position "MFFW" ;
+	schema:nationality "ESP" ;
+	schema:relatedLink wdw:Q97404267 ; # (Wikidata entity)
+	schema:memberOf :Villarreal .
+
+:Étienne_Capoue a schema:Person, schema:SportsPerson ;
+	foaf:name "Étienne Capoue" ;
+	foaf:age 34 ;
+	schema:position "MF" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q60595 ; # (Wikidata entity)
+	schema:memberOf :Villarreal .
+
+:Leonardo_Bittencourt a schema:Person, schema:SportsPerson ;
+	foaf:name "Leonardo Bittencourt" ;
+	foaf:age 29 ;
+	schema:position "MFDF" ;
+	schema:nationality "GER" ;
+	schema:relatedLink wdw:Q687140 ; # (Wikidata entity)
+	schema:memberOf :Werder_Bremen .
+
+:Alphonse_Areola a schema:Person, schema:SportsPerson ;
+	foaf:name "Alphonse Areola" ;
+	foaf:age 29 ;
+	schema:position "GK" ;
+	schema:nationality "FRA" ;
+	schema:relatedLink wdw:Q2839693 ; # (Wikidata entity)
+	schema:memberOf :West_Ham .
+
+:Nayef_Aguerd a schema:Person, schema:SportsPerson ;
+	foaf:name "Nayef Aguerd" ;
+	foaf:age 26 ;
+	schema:position "DF" ;
+	schema:nationality "MAR" ;
+	schema:relatedLink wdw:Q28872567 ; # (Wikidata entity)
+	schema:memberOf :West_Ham .
+
+:Michail_Antonio a schema:Person, schema:SportsPerson ;
+	foaf:name "Michail Antonio" ;
+	foaf:age 32 ;
+	schema:position "FW" ;
+	schema:nationality "JAM" ;
+	schema:relatedLink wdw:Q1966430 ; # (Wikidata entity)
+	schema:memberOf :West_Ham .
+
+:Maximilian_Arnold a schema:Person, schema:SportsPerson ;
+	foaf:name "Maximilian Arnold" ;
+	foaf:age 28 ;
+	schema:position "MF" ;
+	schema:nationality "GER" ;
+	schema:relatedLink wdw:Q1093851 ; # (Wikidata entity)
+	schema:memberOf :Wolfsburg .
+
+:Sebastiaan_Bornauw a schema:Person, schema:SportsPerson ;
+	foaf:name "Sebastiaan Bornauw" ;
+	foaf:age 23 ;
+	schema:position "DF" ;
+	schema:nationality "BEL" ;
+	schema:relatedLink wdw:Q55806994 ; # (Wikidata entity)
+	schema:memberOf :Wolfsburg .
+
+
+schema:SportsTeam a rdfs:Class ;
+    rdfs:label "Sports Team" .
+
+schema:SportsPerson a rdfs:Class ;
+    rdfs:label "Sports Person" .
+
+schema:SportsActivityLocation a rdfs:Class ;
+    rdfs:label "Sports Activity Location" . 
+
+schema:SportsLeague a rdfs:Class ;
+    rdfs:label "Sports League" .    
