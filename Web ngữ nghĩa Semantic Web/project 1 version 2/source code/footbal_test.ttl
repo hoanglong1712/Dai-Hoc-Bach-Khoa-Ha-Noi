@@ -1,0 +1,5082 @@
+
+@prefix : <http://www.semanticweb.org/ontologies/2025/football/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/ontologies/2025/football/> .
+
+<http://www.semanticweb.org/ontologies/2025/football> rdf:type owl:Ontology .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#hires
+:hires rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf owl:topObjectProperty ;
+       rdfs:domain :Team ;
+       rdfs:range :Player .
+              
+
+###  http://www.semanticweb.org/ontologies/2025/football#playsFor
+:playsFor rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf owl:topObjectProperty ;
+       rdfs:domain :Player ;
+       rdfs:range :Team .
+              
+
+###  http://www.semanticweb.org/ontologies/2025/football#competesIn
+:competesIn rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf owl:topObjectProperty ;
+       rdfs:domain :Team ;
+       rdfs:range :League .
+              
+
+#################################################################
+#    Data properties
+#################################################################
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#name
+:name rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Player ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#age
+:age rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Player ;
+            rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#position
+:position rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Player ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#nationality
+:nationality rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Player ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#team_name
+:team_name rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Team ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#homepage
+:homepage rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Team ;
+            rdfs:range xsd:anyURI .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#goal
+:goal rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Team ;
+            rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#shot_percentage
+:shot_percentage rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Team ;
+            rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#yellow_card
+:yellow_card rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Team ;
+            rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#red_card
+:red_card rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Team ;
+            rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#procession_percentage
+:procession_percentage rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Team ;
+            rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#pass_percentage
+:pass_percentage rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Team ;
+            rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#aerials_won
+:aerials_won rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Team ;
+            rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#rating
+:rating rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Team ;
+            rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#league_name
+:league_name rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :League ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#description
+:description rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :League ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#link
+:link rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :WikidataLink ;
+            rdfs:range xsd:anyURI .
+
+
+
+#################################################################
+#    Classes
+#################################################################
+
+
+###  http://www.semanticweb.org/ontologies/2025/football/League
+:League rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football/Player
+:Player rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football/Team
+:Team rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football/WikidataLink
+:WikidataLink rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Premier_League
+:Premier_League rdf:type owl:NamedIndividual ,
+                     :League ;
+            :league_name "Premier League" .
+
+###  http://www.semanticweb.org/ontologies/2025/football#Bundesliga
+:Bundesliga rdf:type owl:NamedIndividual ,
+                     :League ;
+            :league_name "Bundesliga" .
+
+###  http://www.semanticweb.org/ontologies/2025/football#Ligue_1
+:Ligue_1 rdf:type owl:NamedIndividual ,
+                     :League ;
+            :league_name "Ligue 1" .
+
+###  http://www.semanticweb.org/ontologies/2025/football#LaLiga
+:LaLiga rdf:type owl:NamedIndividual ,
+                     :League ;
+            :league_name "LaLiga" .
+
+###  http://www.semanticweb.org/ontologies/2025/football#Serie_A
+:Serie_A rdf:type owl:NamedIndividual ,
+                     :League ;
+            :league_name "Serie A" .
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Himad_Abdelli
+:Himad_Abdelli rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Himad_Abdelli ;
+              :playsFor :Angers ;
+              :age 23 ;
+              :name "Himad Abdelli" ;
+              :nationality "FRA" ;
+              :position "MFFW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Himad_Abdelli
+:Wikidata_Himad_Abdelli rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q58303150"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Mohamed_Elneny
+:Mohamed_Elneny rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Mohamed_Elneny ;
+              :playsFor :Arsenal ;
+              :age 30 ;
+              :name "Mohamed Elneny" ;
+              :nationality "EGY" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Mohamed_Elneny
+:Wikidata_Mohamed_Elneny rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q3318533"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Gabriel_Dos_Santos
+:Gabriel_Dos_Santos rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Gabriel_Dos_Santos ;
+              :playsFor :Arsenal ;
+              :age 25 ;
+              :name "Gabriel Dos Santos" ;
+              :nationality "BRA" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Gabriel_Dos_Santos
+:Wikidata_Gabriel_Dos_Santos rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q2164391"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Rob_Holding
+:Rob_Holding rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Rob_Holding ;
+              :playsFor :Arsenal ;
+              :age 27 ;
+              :name "Rob Holding" ;
+              :nationality "ENG" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Rob_Holding
+:Wikidata_Rob_Holding rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q21061767"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Cameron_Archer
+:Cameron_Archer rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Cameron_Archer ;
+              :playsFor :Aston_Villa ;
+              :age 21 ;
+              :name "Cameron Archer" ;
+              :nationality "ENG" ;
+              :position "FWMF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Cameron_Archer
+:Wikidata_Cameron_Archer rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q66779547"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Leon_Bailey
+:Leon_Bailey rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Leon_Bailey ;
+              :playsFor :Aston_Villa ;
+              :age 25 ;
+              :name "Leon Bailey" ;
+              :nationality "JAM" ;
+              :position "FWMF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Leon_Bailey
+:Wikidata_Leon_Bailey rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q20890178"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Ludwig_Augustinsson
+:Ludwig_Augustinsson rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Ludwig_Augustinsson ;
+              :playsFor :Aston_Villa ;
+              :age 28 ;
+              :name "Ludwig Augustinsson" ;
+              :nationality "SWE" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Ludwig_Augustinsson
+:Wikidata_Ludwig_Augustinsson rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q4806248"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Merih_Demiral
+:Merih_Demiral rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Merih_Demiral ;
+              :playsFor :Atalanta ;
+              :age 24 ;
+              :name "Merih Demiral" ;
+              :nationality "TUR" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Merih_Demiral
+:Wikidata_Merih_Demiral rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q29047921"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Berat_Djimsiti
+:Berat_Djimsiti rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Berat_Djimsiti ;
+              :playsFor :Atalanta ;
+              :age 29 ;
+              :name "Berat Djimsiti" ;
+              :nationality "ALB" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Berat_Djimsiti
+:Wikidata_Berat_Djimsiti rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q15197300"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Jeremie_Boga
+:Jeremie_Boga rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Jeremie_Boga ;
+              :playsFor :Atalanta ;
+              :age 26 ;
+              :name "Jeremie Boga" ;
+              :nationality "CIV" ;
+              :position "MFFW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Jeremie_Boga
+:Wikidata_Jeremie_Boga rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q20925240"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Julian_Baumgartlinger
+:Julian_Baumgartlinger rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Julian_Baumgartlinger ;
+              :playsFor :Augsburg ;
+              :age 35 ;
+              :name "Julian Baumgartlinger" ;
+              :nationality "AUT" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Julian_Baumgartlinger
+:Wikidata_Julian_Baumgartlinger rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q697255"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Jordi_Alba
+:Jordi_Alba rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Jordi_Alba ;
+              :playsFor :Barcelona ;
+              :age 33 ;
+              :name "Jordi Alba" ;
+              :nationality "ESP" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Jordi_Alba
+:Wikidata_Jordi_Alba rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q187159"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Ronald_Araujo
+:Ronald_Araujo rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Ronald_Araujo ;
+              :playsFor :Barcelona ;
+              :age 23 ;
+              :name "Ronald Araujo" ;
+              :nationality "URU" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Ronald_Araujo
+:Wikidata_Ronald_Araujo rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q56332606"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Marcos_Alonso
+:Marcos_Alonso rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Marcos_Alonso ;
+              :playsFor :Barcelona ;
+              :age 32 ;
+              :name "Marcos Alonso" ;
+              :nationality "ESP" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Marcos_Alonso
+:Wikidata_Marcos_Alonso rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q442838"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Joao_Cancelo
+:Joao_Cancelo rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Joao_Cancelo ;
+              :playsFor :Bayern_Munich ;
+              :age 28 ;
+              :name "Joao Cancelo" ;
+              :nationality "POR" ;
+              :position "DFFW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Joao_Cancelo
+:Wikidata_Joao_Cancelo rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q6298063"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Daley_Blind
+:Daley_Blind rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Daley_Blind ;
+              :playsFor :Bayern_Munich ;
+              :age 32 ;
+              :name "Daley Blind" ;
+              :nationality "NED" ;
+              :position "MFDF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Daley_Blind
+:Wikidata_Daley_Blind rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q128912"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Kingsley_Coman
+:Kingsley_Coman rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Kingsley_Coman ;
+              :playsFor :Bayern_Munich ;
+              :age 26 ;
+              :name "Kingsley Coman" ;
+              :nationality "FRA" ;
+              :position "FWMF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Kingsley_Coman
+:Wikidata_Kingsley_Coman rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q6413296"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Musa_Barrow
+:Musa_Barrow rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Musa_Barrow ;
+              :playsFor :Bologna ;
+              :age 24 ;
+              :name "Musa Barrow" ;
+              :nationality "GAM" ;
+              :position "FWMF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Musa_Barrow
+:Wikidata_Musa_Barrow rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q48573556"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Michel_Aebischer
+:Michel_Aebischer rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Michel_Aebischer ;
+              :playsFor :Bologna ;
+              :age 26 ;
+              :name "Michel Aebischer" ;
+              :nationality "SUI" ;
+              :position "FWMF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Michel_Aebischer
+:Wikidata_Michel_Aebischer rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q27469951"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Marko_Arnautovi
+:Marko_Arnautovi rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Marko_Arnautovi ;
+              :playsFor :Bologna ;
+              :age 33 ;
+              :name "Marko Arnautovi" ;
+              :nationality "AUT" ;
+              :position "FW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Marko_Arnautovi
+:Wikidata_Marko_Arnautovi rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q313575"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Haris_Belkebla
+:Haris_Belkebla rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Haris_Belkebla ;
+              :playsFor :Brest ;
+              :age 29 ;
+              :name "Haris Belkebla" ;
+              :nationality "ALG" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Haris_Belkebla
+:Wikidata_Haris_Belkebla rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q17579882"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Youcef_Belaili
+:Youcef_Belaili rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Youcef_Belaili ;
+              :playsFor :Brest ;
+              :age 30 ;
+              :name "Youcef Belaili" ;
+              :nationality "ALG" ;
+              :position "FWMF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Youcef_Belaili
+:Wikidata_Youcef_Belaili rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q3572787"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Moises_Caicedo
+:Moises_Caicedo rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Moises_Caicedo ;
+              :playsFor :Brighton ;
+              :age 21 ;
+              :name "Moises Caicedo" ;
+              :nationality "ECU" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Moises_Caicedo
+:Wikidata_Moises_Caicedo rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q87715532"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Julio_Cesar_Enciso
+:Julio_Cesar_Enciso rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Julio_Cesar_Enciso ;
+              :playsFor :Brighton ;
+              :age 19 ;
+              :name "Julio Cesar Enciso" ;
+              :nationality "PAR" ;
+              :position "FWMF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Julio_Cesar_Enciso
+:Wikidata_Julio_Cesar_Enciso rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q85872272"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Facundo_Buonanotte
+:Facundo_Buonanotte rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Facundo_Buonanotte ;
+              :playsFor :Brighton ;
+              :age 18 ;
+              :name "Facundo Buonanotte" ;
+              :nationality "ARG" ;
+              :position "MFFW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Facundo_Buonanotte
+:Wikidata_Facundo_Buonanotte rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q113028093"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Iago_Aspas
+:Iago_Aspas rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Iago_Aspas ;
+              :playsFor :Celta_Vigo ;
+              :age 35 ;
+              :name "Iago Aspas" ;
+              :nationality "ESP" ;
+              :position "FW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Iago_Aspas
+:Wikidata_Iago_Aspas rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q26380"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Fran_Beltran
+:Fran_Beltran rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Fran_Beltran ;
+              :playsFor :Celta_Vigo ;
+              :age 24 ;
+              :name "Fran Beltran" ;
+              :nationality "ESP" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Fran_Beltran
+:Wikidata_Fran_Beltran rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q26475869"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Joseph_Aidoo
+:Joseph_Aidoo rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Joseph_Aidoo ;
+              :playsFor :Celta_Vigo ;
+              :age 27 ;
+              :name "Joseph Aidoo" ;
+              :nationality "GHA" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Joseph_Aidoo
+:Wikidata_Joseph_Aidoo rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q21042828"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Cesar_Azpilicueta
+:Cesar_Azpilicueta rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Cesar_Azpilicueta ;
+              :playsFor :Chelsea ;
+              :age 33 ;
+              :name "Cesar Azpilicueta" ;
+              :nationality "ESP" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Cesar_Azpilicueta
+:Wikidata_Cesar_Azpilicueta rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q294806"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Pierre_Emerick_Aubameyang
+:Pierre_Emerick_Aubameyang rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Pierre_Emerick_Aubameyang ;
+              :playsFor :Chelsea ;
+              :age 33 ;
+              :name "Pierre Emerick Aubameyang" ;
+              :nationality "GAB" ;
+              :position "FW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Pierre_Emerick_Aubameyang
+:Wikidata_Pierre_Emerick_Aubameyang rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q44977"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Kepa_Arrizabalaga
+:Kepa_Arrizabalaga rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Kepa_Arrizabalaga ;
+              :playsFor :Chelsea ;
+              :age 28 ;
+              :name "Kepa Arrizabalaga" ;
+              :nationality "ESP" ;
+              :position "GK" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Kepa_Arrizabalaga
+:Wikidata_Kepa_Arrizabalaga rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q3195361"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Joachim_Andersen
+:Joachim_Andersen rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Joachim_Andersen ;
+              :playsFor :Crystal_Palace ;
+              :age 26 ;
+              :name "Joachim Andersen" ;
+              :nationality "DEN" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Joachim_Andersen
+:Wikidata_Joachim_Andersen rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q15943423"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Jordan_Ayew
+:Jordan_Ayew rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Jordan_Ayew ;
+              :playsFor :Crystal_Palace ;
+              :age 31 ;
+              :name "Jordan Ayew" ;
+              :nationality "GHA" ;
+              :position "FWMF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Jordan_Ayew
+:Wikidata_Jordan_Ayew rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q367861"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Edgar_Badia
+:Edgar_Badia rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Edgar_Badia ;
+              :playsFor :Elche ;
+              :age 31 ;
+              :name "Edgar Badia" ;
+              :nationality "ESP" ;
+              :position "GK" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Edgar_Badia
+:Wikidata_Edgar_Badia rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q10557934"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Alejandro_Alfaro
+:Alejandro_Alfaro rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Alejandro_Alfaro ;
+              :playsFor :Elche ;
+              :age 20 ;
+              :name "Alejandro Alfaro" ;
+              :nationality "ESP" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Alejandro_Alfaro
+:Wikidata_Alejandro_Alfaro rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q385686"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Dele_Alli
+:Dele_Alli rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Dele_Alli ;
+              :playsFor :Everton ;
+              :age 26 ;
+              :name "Dele Alli" ;
+              :nationality "ENG" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Dele_Alli
+:Wikidata_Dele_Alli rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q10553748"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Asmir_Begovi
+:Asmir_Begovi rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Asmir_Begovi ;
+              :playsFor :Everton ;
+              :age 35 ;
+              :name "Asmir Begovi" ;
+              :nationality "BIH" ;
+              :position "GK" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Asmir_Begovi
+:Wikidata_Asmir_Begovi rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q431368"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Dominic_Calvert_Lewin
+:Dominic_Calvert_Lewin rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Dominic_Calvert_Lewin ;
+              :playsFor :Everton ;
+              :age 25 ;
+              :name "Dominic Calvert Lewin" ;
+              :nationality "ENG" ;
+              :position "FW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Dominic_Calvert_Lewin
+:Wikidata_Dominic_Calvert_Lewin rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q19956709"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Sofyan_Amrabat
+:Sofyan_Amrabat rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Sofyan_Amrabat ;
+              :playsFor :Fiorentina ;
+              :age 26 ;
+              :name "Sofyan Amrabat" ;
+              :nationality "MAR" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Sofyan_Amrabat
+:Wikidata_Sofyan_Amrabat rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q18428483"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Arthur
+:Arthur rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Arthur ;
+              :playsFor :Fiorentina ;
+              :age 24 ;
+              :name "Arthur" ;
+              :nationality "BRA" ;
+              :position "FW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Arthur
+:Wikidata_Arthur rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q312508"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Antonin_Barak
+:Antonin_Barak rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Antonin_Barak ;
+              :playsFor :Fiorentina ;
+              :age 28 ;
+              :name "Antonin Barak" ;
+              :nationality "CZE" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Antonin_Barak
+:Wikidata_Antonin_Barak rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q21293144"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Ritsu_Doan
+:Ritsu_Doan rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Ritsu_Doan ;
+              :playsFor :Freiburg ;
+              :age 24 ;
+              :name "Ritsu Doan" ;
+              :nationality "JPN" ;
+              :position "FWMF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Ritsu_Doan
+:Wikidata_Ritsu_Doan rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q20630956"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Maximilian_Eggestein
+:Maximilian_Eggestein rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Maximilian_Eggestein ;
+              :playsFor :Freiburg ;
+              :age 26 ;
+              :name "Maximilian Eggestein" ;
+              :nationality "GER" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Maximilian_Eggestein
+:Wikidata_Maximilian_Eggestein rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q21175165"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Mark_Flekken
+:Mark_Flekken rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Mark_Flekken ;
+              :playsFor :Freiburg ;
+              :age 29 ;
+              :name "Mark Flekken" ;
+              :nationality "NED" ;
+              :position "GK" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Mark_Flekken
+:Wikidata_Mark_Flekken rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q5811691"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Tosin_Adarabioyo
+:Tosin_Adarabioyo rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Tosin_Adarabioyo ;
+              :playsFor :Fulham ;
+              :age 25 ;
+              :name "Tosin Adarabioyo" ;
+              :nationality "ENG" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Tosin_Adarabioyo
+:Wikidata_Tosin_Adarabioyo rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q21620666"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Tom_Cairney
+:Tom_Cairney rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Tom_Cairney ;
+              :playsFor :Fulham ;
+              :age 32 ;
+              :name "Tom Cairney" ;
+              :nationality "SCO" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Tom_Cairney
+:Wikidata_Tom_Cairney rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q1061904"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Nathaniel_Chalobah
+:Nathaniel_Chalobah rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Nathaniel_Chalobah ;
+              :playsFor :Fulham ;
+              :age 28 ;
+              :name "Nathaniel Chalobah" ;
+              :nationality "ENG" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Nathaniel_Chalobah
+:Wikidata_Nathaniel_Chalobah rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q36696865"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Carles_Alena
+:Carles_Alena rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Carles_Alena ;
+              :playsFor :Getafe ;
+              :age 25 ;
+              :name "Carles Alena" ;
+              :nationality "ESP" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Carles_Alena
+:Wikidata_Carles_Alena rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q21546191"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Kevin_Akpoguma
+:Kevin_Akpoguma rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Kevin_Akpoguma ;
+              :playsFor :Hoffenheim ;
+              :age 27 ;
+              :name "Kevin Akpoguma" ;
+              :nationality "NGA" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Kevin_Akpoguma
+:Wikidata_Kevin_Akpoguma rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q982975"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Angelino
+:Angelino rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Angelino ;
+              :playsFor :Hoffenheim ;
+              :age 26 ;
+              :name "Angelino" ;
+              :nationality "ESP" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Angelino
+:Wikidata_Angelino rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q20688718"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Fisnik_Asllani
+:Fisnik_Asllani rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Fisnik_Asllani ;
+              :playsFor :Hoffenheim ;
+              :age 20 ;
+              :name "Fisnik Asllani" ;
+              :nationality "KVX" ;
+              :position "FWMF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Fisnik_Asllani
+:Wikidata_Fisnik_Asllani rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q109653419"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Nicolo_Barella
+:Nicolo_Barella rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Nicolo_Barella ;
+              :playsFor :Inter ;
+              :age 26 ;
+              :name "Nicolo Barella" ;
+              :nationality "ITA" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Nicolo_Barella
+:Wikidata_Nicolo_Barella rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q20090225"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Francesco_Acerbi
+:Francesco_Acerbi rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Francesco_Acerbi ;
+              :playsFor :Inter ;
+              :age 35 ;
+              :name "Francesco Acerbi" ;
+              :nationality "ITA" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Francesco_Acerbi
+:Wikidata_Francesco_Acerbi rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q531302"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Kristjan_Asllani
+:Kristjan_Asllani rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Kristjan_Asllani ;
+              :playsFor :Inter ;
+              :age 20 ;
+              :name "Kristjan Asllani" ;
+              :nationality "ALB" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Kristjan_Asllani
+:Wikidata_Kristjan_Asllani rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q106313163"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Federico_Chiesa
+:Federico_Chiesa rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Federico_Chiesa ;
+              :playsFor :Juventus ;
+              :age 25 ;
+              :name "Federico Chiesa" ;
+              :nationality "ITA" ;
+              :position "DFFW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Federico_Chiesa
+:Wikidata_Federico_Chiesa rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q26704703"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Leonardo_Bonucci
+:Leonardo_Bonucci rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Leonardo_Bonucci ;
+              :playsFor :Juventus ;
+              :age 35 ;
+              :name "Leonardo Bonucci" ;
+              :nationality "ITA" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Leonardo_Bonucci
+:Wikidata_Leonardo_Bonucci rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q208050"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Felipe_Anderson
+:Felipe_Anderson rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Felipe_Anderson ;
+              :playsFor :Lazio ;
+              :age 29 ;
+              :name "Felipe Anderson" ;
+              :nationality "BRA" ;
+              :position "FW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Felipe_Anderson
+:Wikidata_Felipe_Anderson rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q794628"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Luis_Alberto
+:Luis_Alberto rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Luis_Alberto ;
+              :playsFor :Lazio ;
+              :age 30 ;
+              :name "Luis Alberto" ;
+              :nationality "ESP" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Luis_Alberto
+:Wikidata_Luis_Alberto rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q248228"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Marcos_Antonio
+:Marcos_Antonio rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Marcos_Antonio ;
+              :playsFor :Lazio ;
+              :age 22 ;
+              :name "Marcos Antonio" ;
+              :nationality "BRA" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Marcos_Antonio
+:Wikidata_Marcos_Antonio rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q1894022"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Salis_Abdul_Samed
+:Salis_Abdul_Samed rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Salis_Abdul_Samed ;
+              :playsFor :Lens ;
+              :age 22 ;
+              :name "Salis Abdul Samed" ;
+              :nationality "GHA" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Salis_Abdul_Samed
+:Wikidata_Salis_Abdul_Samed rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q68110291"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Patrick_Berg
+:Patrick_Berg rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Patrick_Berg ;
+              :playsFor :Lens ;
+              :age 25 ;
+              :name "Patrick Berg" ;
+              :nationality "NOR" ;
+              :position "MFFW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Patrick_Berg
+:Wikidata_Patrick_Berg rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q18066870"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Carlos_Baleba
+:Carlos_Baleba rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Carlos_Baleba ;
+              :playsFor :Lille ;
+              :age 19 ;
+              :name "Carlos Baleba" ;
+              :nationality "CMR" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Carlos_Baleba
+:Wikidata_Carlos_Baleba rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q113472432"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Benjamin_Andre
+:Benjamin_Andre rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Benjamin_Andre ;
+              :playsFor :Lille ;
+              :age 32 ;
+              :name "Benjamin Andre" ;
+              :nationality "FRA" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Benjamin_Andre
+:Wikidata_Benjamin_Andre rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q2475780"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Jonathan_Bamba
+:Jonathan_Bamba rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Jonathan_Bamba ;
+              :playsFor :Lille ;
+              :age 26 ;
+              :name "Jonathan Bamba" ;
+              :nationality "FRA" ;
+              :position "FW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Jonathan_Bamba
+:Wikidata_Jonathan_Bamba rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q18921387"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Trent_Alexander_Arnold
+:Trent_Alexander_Arnold rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Trent_Alexander_Arnold ;
+              :playsFor :Liverpool ;
+              :age 24 ;
+              :name "Trent Alexander Arnold" ;
+              :nationality "ENG" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Trent_Alexander_Arnold
+:Wikidata_Trent_Alexander_Arnold rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q27569376"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Thiago_Alcantara
+:Thiago_Alcantara rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Thiago_Alcantara ;
+              :playsFor :Liverpool ;
+              :age 31 ;
+              :name "Thiago Alcantara" ;
+              :nationality "ESP" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Thiago_Alcantara
+:Wikidata_Thiago_Alcantara rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q17493"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Alisson
+:Alisson rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Alisson ;
+              :playsFor :Liverpool ;
+              :age 30 ;
+              :name "Alisson" ;
+              :nationality "BRA" ;
+              :position "GK" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Alisson
+:Wikidata_Alisson rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q18237361"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Adil_Aouchiche
+:Adil_Aouchiche rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Adil_Aouchiche ;
+              :playsFor :Lorient ;
+              :age 20 ;
+              :name "Adil Aouchiche" ;
+              :nationality "FRA" ;
+              :position "MFFW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Adil_Aouchiche
+:Wikidata_Adil_Aouchiche rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q63636233"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Laurent_Abergel
+:Laurent_Abergel rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Laurent_Abergel ;
+              :playsFor :Lorient ;
+              :age 30 ;
+              :name "Laurent Abergel" ;
+              :nationality "FRA" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Laurent_Abergel
+:Wikidata_Laurent_Abergel rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q15627798"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Houssem_Aouar
+:Houssem_Aouar rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Houssem_Aouar ;
+              :playsFor :Lyon ;
+              :age 24 ;
+              :name "Houssem Aouar" ;
+              :nationality "FRA" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Houssem_Aouar
+:Wikidata_Houssem_Aouar rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q27927442"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Jerome_Boateng
+:Jerome_Boateng rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Jerome_Boateng ;
+              :playsFor :Lyon ;
+              :age 34 ;
+              :name "Jerome Boateng" ;
+              :nationality "GER" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Jerome_Boateng
+:Wikidata_Jerome_Boateng rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q151260"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Bradley_Barcola
+:Bradley_Barcola rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Bradley_Barcola ;
+              :playsFor :Lyon ;
+              :age 20 ;
+              :name "Bradley Barcola" ;
+              :nationality "FRA" ;
+              :position "FWMF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Bradley_Barcola
+:Wikidata_Bradley_Barcola rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q99670930"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Leandro_Barreiro_Martins
+:Leandro_Barreiro_Martins rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Leandro_Barreiro_Martins ;
+              :playsFor :Mainz_05 ;
+              :age 23 ;
+              :name "Leandro Barreiro Martins" ;
+              :nationality "LUX" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Leandro_Barreiro_Martins
+:Wikidata_Leandro_Barreiro_Martins rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q50827917"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Aymen_Barkok
+:Aymen_Barkok rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Aymen_Barkok ;
+              :playsFor :Mainz_05 ;
+              :age 24 ;
+              :name "Aymen Barkok" ;
+              :nationality "MAR" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Aymen_Barkok
+:Wikidata_Aymen_Barkok rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q27892157"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Ludovic_Ajorque
+:Ludovic_Ajorque rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Ludovic_Ajorque ;
+              :playsFor :Mainz_05 ;
+              :age 28 ;
+              :name "Ludovic Ajorque" ;
+              :nationality "FRA" ;
+              :position "FW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Ludovic_Ajorque
+:Wikidata_Ludovic_Ajorque rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q27671219"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Manuel_Akanji
+:Manuel_Akanji rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Manuel_Akanji ;
+              :playsFor :Manchester_City ;
+              :age 27 ;
+              :name "Manuel Akanji" ;
+              :nationality "SUI" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Manuel_Akanji
+:Wikidata_Manuel_Akanji rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q19938984"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Nathan_Ake
+:Nathan_Ake rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Nathan_Ake ;
+              :playsFor :Manchester_City ;
+              :age 27 ;
+              :name "Nathan Ake" ;
+              :nationality "NED" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Nathan_Ake
+:Wikidata_Nathan_Ake rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q1755683"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Julian_alvarez
+:Julian_alvarez rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Julian_alvarez ;
+              :playsFor :Manchester_City ;
+              :age 23 ;
+              :name "Julian alvarez" ;
+              :nationality "ARG" ;
+              :position "FWMF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Julian_alvarez
+:Wikidata_Julian_alvarez rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q59381180"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Eric_Bailly
+:Eric_Bailly rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Eric_Bailly ;
+              :playsFor :Marseille ;
+              :age 28 ;
+              :name "Eric Bailly" ;
+              :nationality "CIV" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Eric_Bailly
+:Wikidata_Eric_Bailly rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q18637352"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Leonardo_Balerdi
+:Leonardo_Balerdi rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Leonardo_Balerdi ;
+              :playsFor :Marseille ;
+              :age 24 ;
+              :name "Leonardo Balerdi" ;
+              :nationality "ARG" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Leonardo_Balerdi
+:Wikidata_Leonardo_Balerdi rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q50233588"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Cedric_Bakambu
+:Cedric_Bakambu rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Cedric_Bakambu ;
+              :playsFor :Marseille ;
+              :age 31 ;
+              :name "Cedric Bakambu" ;
+              :nationality "COD" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Cedric_Bakambu
+:Wikidata_Cedric_Bakambu rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q932982"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Ruben_Aguilar
+:Ruben_Aguilar rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Ruben_Aguilar ;
+              :playsFor :Monaco ;
+              :age 29 ;
+              :name "Ruben Aguilar" ;
+              :nationality "FRA" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Ruben_Aguilar
+:Wikidata_Ruben_Aguilar rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q20090069"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Maghnes_Akliouche
+:Maghnes_Akliouche rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Maghnes_Akliouche ;
+              :playsFor :Monaco ;
+              :age 20 ;
+              :name "Maghnes Akliouche" ;
+              :nationality "FRA" ;
+              :position "MFDF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Maghnes_Akliouche
+:Wikidata_Maghnes_Akliouche rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q108910786"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Benoit_Badiashile
+:Benoit_Badiashile rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Benoit_Badiashile ;
+              :playsFor :Monaco ;
+              :age 21 ;
+              :name "Benoit Badiashile" ;
+              :nationality "FRA" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Benoit_Badiashile
+:Wikidata_Benoit_Badiashile rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q57704058"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Nicolas_Cozza
+:Nicolas_Cozza rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Nicolas_Cozza ;
+              :playsFor :Montpellier ;
+              :age 24 ;
+              :name "Nicolas Cozza" ;
+              :nationality "FRA" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Nicolas_Cozza
+:Wikidata_Nicolas_Cozza rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q43369696"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Joris_Chotard
+:Joris_Chotard rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Joris_Chotard ;
+              :playsFor :Montpellier ;
+              :age 21 ;
+              :name "Joris Chotard" ;
+              :nationality "FRA" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Joris_Chotard
+:Wikidata_Joris_Chotard rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q66364616"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Dennis_Appiah
+:Dennis_Appiah rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Dennis_Appiah ;
+              :playsFor :Nantes ;
+              :age 30 ;
+              :name "Dennis Appiah" ;
+              :nationality "FRA" ;
+              :position "DFMF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Dennis_Appiah
+:Wikidata_Dennis_Appiah rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q5258151"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Ludovic_Blas
+:Ludovic_Blas rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Ludovic_Blas ;
+              :playsFor :Nantes ;
+              :age 25 ;
+              :name "Ludovic Blas" ;
+              :nationality "FRA" ;
+              :position "MFFW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Ludovic_Blas
+:Wikidata_Ludovic_Blas rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q22003400"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Mohamed_Achi
+:Mohamed_Achi rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Mohamed_Achi ;
+              :playsFor :Nantes ;
+              :age 21 ;
+              :name "Mohamed Achi" ;
+              :nationality "FRA" ;
+              :position "FW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Mohamed_Achi
+:Wikidata_Mohamed_Achi rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q112107491"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Giovanni_Di_Lorenzo
+:Giovanni_Di_Lorenzo rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Giovanni_Di_Lorenzo ;
+              :playsFor :Napoli ;
+              :age 29 ;
+              :name "Giovanni Di Lorenzo" ;
+              :nationality "ITA" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Giovanni_Di_Lorenzo
+:Wikidata_Giovanni_Di_Lorenzo rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q14831282"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Elif_Elmas
+:Elif_Elmas rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Elif_Elmas ;
+              :playsFor :Napoli ;
+              :age 23 ;
+              :name "Elif Elmas" ;
+              :nationality "MKD" ;
+              :position "FWMF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Elif_Elmas
+:Wikidata_Elif_Elmas rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q25409292"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Ross_Barkley
+:Ross_Barkley rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Ross_Barkley ;
+              :playsFor :Nice ;
+              :age 29 ;
+              :name "Ross Barkley" ;
+              :nationality "ENG" ;
+              :position "FWMF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Ross_Barkley
+:Wikidata_Ross_Barkley rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q326240"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Youcef_Atal
+:Youcef_Atal rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Youcef_Atal ;
+              :playsFor :Nice ;
+              :age 26 ;
+              :name "Youcef Atal" ;
+              :nationality "ALG" ;
+              :position "DFMF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Youcef_Atal
+:Wikidata_Youcef_Atal rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q30349597"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Melvin_Bard
+:Melvin_Bard rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Melvin_Bard ;
+              :playsFor :Nice ;
+              :age 22 ;
+              :name "Melvin Bard" ;
+              :nationality "FRA" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Melvin_Bard
+:Wikidata_Melvin_Bard rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q55865078"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Darko_Braanac
+:Darko_Braanac rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Darko_Braanac ;
+              :playsFor :Osasuna ;
+              :age 31 ;
+              :name "Darko Braanac" ;
+              :nationality "SRB" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Darko_Braanac
+:Wikidata_Darko_Braanac rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q698109"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Kike_Barja
+:Kike_Barja rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Kike_Barja ;
+              :playsFor :Osasuna ;
+              :age 25 ;
+              :name "Kike Barja" ;
+              :nationality "ESP" ;
+              :position "FWMF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Kike_Barja
+:Wikidata_Kike_Barja rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q32236556"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Ezequiel_Avila
+:Ezequiel_Avila rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Ezequiel_Avila ;
+              :playsFor :Osasuna ;
+              :age 29 ;
+              :name "Ezequiel Avila" ;
+              :nationality "ARG" ;
+              :position "FWMF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Ezequiel_Avila
+:Wikidata_Ezequiel_Avila rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q19949691"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Janis_Blaswich
+:Janis_Blaswich rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Janis_Blaswich ;
+              :playsFor :RB_Leipzig ;
+              :age 31 ;
+              :name "Janis Blaswich" ;
+              :nationality "GER" ;
+              :position "GK" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Janis_Blaswich
+:Wikidata_Janis_Blaswich rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q20435757"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Abdou_Diallo
+:Abdou_Diallo rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Abdou_Diallo ;
+              :playsFor :RB_Leipzig ;
+              :age 26 ;
+              :name "Abdou Diallo" ;
+              :nationality "SEN" ;
+              :position "DFMF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Abdou_Diallo
+:Wikidata_Abdou_Diallo rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q18685713"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Karim_Benzema
+:Karim_Benzema rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Karim_Benzema ;
+              :playsFor :Real_Madrid ;
+              :age 35 ;
+              :name "Karim Benzema" ;
+              :nationality "FRA" ;
+              :position "FW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Karim_Benzema
+:Wikidata_Karim_Benzema rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q1912"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#David_Alaba
+:David_Alaba rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_David_Alaba ;
+              :playsFor :Real_Madrid ;
+              :age 30 ;
+              :name "David Alaba" ;
+              :nationality "AUT" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_David_Alaba
+:Wikidata_David_Alaba rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q31981"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Marco_Asensio
+:Marco_Asensio rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Marco_Asensio ;
+              :playsFor :Real_Madrid ;
+              :age 27 ;
+              :name "Marco Asensio" ;
+              :nationality "ESP" ;
+              :position "FWMF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Marco_Asensio
+:Wikidata_Marco_Asensio rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q16148978"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Ander_Barrenetxea
+:Ander_Barrenetxea rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Ander_Barrenetxea ;
+              :playsFor :Real_Sociedad ;
+              :age 21 ;
+              :name "Ander Barrenetxea" ;
+              :nationality "ESP" ;
+              :position "FWDF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Ander_Barrenetxea
+:Wikidata_Ander_Barrenetxea rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q59823403"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Mohamed_Ali_Cho
+:Mohamed_Ali_Cho rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Mohamed_Ali_Cho ;
+              :playsFor :Real_Sociedad ;
+              :age 19 ;
+              :name "Mohamed Ali Cho" ;
+              :nationality "FRA" ;
+              :position "FW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Mohamed_Ali_Cho
+:Wikidata_Mohamed_Ali_Cho rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q98777530"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Aritz_Elustondo
+:Aritz_Elustondo rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Aritz_Elustondo ;
+              :playsFor :Real_Sociedad ;
+              :age 28 ;
+              :name "Aritz Elustondo" ;
+              :nationality "ESP" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Aritz_Elustondo
+:Wikidata_Aritz_Elustondo rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q16516257"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Yunis_Abdelhamid
+:Yunis_Abdelhamid rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Yunis_Abdelhamid ;
+              :playsFor :Reims ;
+              :age 35 ;
+              :name "Yunis Abdelhamid" ;
+              :nationality "MAR" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Yunis_Abdelhamid
+:Wikidata_Yunis_Abdelhamid rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q3573237"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Emmanuel_Agbadou
+:Emmanuel_Agbadou rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Emmanuel_Agbadou ;
+              :playsFor :Reims ;
+              :age 25 ;
+              :name "Emmanuel Agbadou" ;
+              :nationality "CIV" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Emmanuel_Agbadou
+:Wikidata_Emmanuel_Agbadou rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q69523791"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Matthis_Abline
+:Matthis_Abline rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Matthis_Abline ;
+              :playsFor :Rennes ;
+              :age 19 ;
+              :name "Matthis Abline" ;
+              :nationality "FRA" ;
+              :position "FWMF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Matthis_Abline
+:Wikidata_Matthis_Abline rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q106621865"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Lorenz_Assignon
+:Lorenz_Assignon rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Lorenz_Assignon ;
+              :playsFor :Rennes ;
+              :age 22 ;
+              :name "Lorenz Assignon" ;
+              :nationality "TOG" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Lorenz_Assignon
+:Wikidata_Lorenz_Assignon rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q108199499"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Tammy_Abraham
+:Tammy_Abraham rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Tammy_Abraham ;
+              :playsFor :Roma ;
+              :age 25 ;
+              :name "Tammy Abraham" ;
+              :nationality "ENG" ;
+              :position "FW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Tammy_Abraham
+:Wikidata_Tammy_Abraham rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q24050378"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Edoardo_Bove
+:Edoardo_Bove rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Edoardo_Bove ;
+              :playsFor :Roma ;
+              :age 20 ;
+              :name "Edoardo Bove" ;
+              :nationality "ITA" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Edoardo_Bove
+:Wikidata_Edoardo_Bove rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q106775510"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Andrea_Belotti
+:Andrea_Belotti rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Andrea_Belotti ;
+              :playsFor :Roma ;
+              :age 29 ;
+              :name "Andrea Belotti" ;
+              :nationality "ITA" ;
+              :position "FW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Andrea_Belotti
+:Wikidata_Andrea_Belotti rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q4754963"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Emil_Audero
+:Emil_Audero rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Emil_Audero ;
+              :playsFor :Sampdoria ;
+              :age 26 ;
+              :name "Emil Audero" ;
+              :nationality "ITA" ;
+              :position "GK" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Emil_Audero
+:Wikidata_Emil_Audero rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q17410409"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Kaan_Ayhan
+:Kaan_Ayhan rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Kaan_Ayhan ;
+              :playsFor :Sassuolo ;
+              :age 28 ;
+              :name "Kaan Ayhan" ;
+              :nationality "TUR" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Kaan_Ayhan
+:Wikidata_Kaan_Ayhan rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q3191617"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Janis_Antiste
+:Janis_Antiste rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Janis_Antiste ;
+              :playsFor :Sassuolo ;
+              :age 20 ;
+              :name "Janis Antiste" ;
+              :nationality "FRA" ;
+              :position "FW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Janis_Antiste
+:Wikidata_Janis_Antiste rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q84571690"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Agustin_Alvarez_Martinez
+:Agustin_Alvarez_Martinez rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Agustin_Alvarez_Martinez ;
+              :playsFor :Sassuolo ;
+              :age 21 ;
+              :name "Agustin Alvarez Martinez" ;
+              :nationality "URU" ;
+              :position "FWMF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Agustin_Alvarez_Martinez
+:Wikidata_Agustin_Alvarez_Martinez rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q99390386"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Eder_Alvarez_Balanta
+:Eder_Alvarez_Balanta rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Eder_Alvarez_Balanta ;
+              :playsFor :Schalke_04 ;
+              :age 29 ;
+              :name "Eder Alvarez Balanta" ;
+              :nationality "COL" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Eder_Alvarez_Balanta
+:Wikidata_Eder_Alvarez_Balanta rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q6174184"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Mehmet_Can_Aydin
+:Mehmet_Can_Aydin rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Mehmet_Can_Aydin ;
+              :playsFor :Schalke_04 ;
+              :age 21 ;
+              :name "Mehmet Can Aydin" ;
+              :nationality "GER" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Mehmet_Can_Aydin
+:Wikidata_Mehmet_Can_Aydin rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q106352999"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Loic_Bade
+:Loic_Bade rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Loic_Bade ;
+              :playsFor :Sevilla ;
+              :age 22 ;
+              :name "Loic Bade" ;
+              :nationality "FRA" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Loic_Bade
+:Wikidata_Loic_Bade rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q81741599"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Carlos_Alvarez
+:Carlos_Alvarez rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Carlos_Alvarez ;
+              :playsFor :Sevilla ;
+              :age 19 ;
+              :name "Carlos Alvarez" ;
+              :nationality "ESP" ;
+              :position "FW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Carlos_Alvarez
+:Wikidata_Carlos_Alvarez rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q10555413"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Marcos_Acuna
+:Marcos_Acuna rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Marcos_Acuna ;
+              :playsFor :Sevilla ;
+              :age 31 ;
+              :name "Marcos Acuna" ;
+              :nationality "ARG" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Marcos_Acuna
+:Wikidata_Marcos_Acuna rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q17462635"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Joe_Aribo
+:Joe_Aribo rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Joe_Aribo ;
+              :playsFor :Southampton ;
+              :age 26 ;
+              :name "Joe Aribo" ;
+              :nationality "NGA" ;
+              :position "MFFW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Joe_Aribo
+:Wikidata_Joe_Aribo rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q27469960"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Che_Adams
+:Che_Adams rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Che_Adams ;
+              :playsFor :Southampton ;
+              :age 26 ;
+              :name "Che Adams" ;
+              :nationality "SCO" ;
+              :position "FW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Che_Adams
+:Wikidata_Che_Adams rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q18683792"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Carlos_Alcaraz
+:Carlos_Alcaraz rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Carlos_Alcaraz ;
+              :playsFor :Southampton ;
+              :age 20 ;
+              :name "Carlos Alcaraz" ;
+              :nationality "ARG" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Carlos_Alcaraz
+:Wikidata_Carlos_Alcaraz rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q88130791"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Ethan_Ampadu
+:Ethan_Ampadu rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Ethan_Ampadu ;
+              :playsFor :Spezia ;
+              :age 22 ;
+              :name "Ethan Ampadu" ;
+              :nationality "WAL" ;
+              :position "DFMF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Ethan_Ampadu
+:Wikidata_Ethan_Ampadu rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q26250324"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Kelvin_Amian
+:Kelvin_Amian rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Kelvin_Amian ;
+              :playsFor :Spezia ;
+              :age 25 ;
+              :name "Kelvin Amian" ;
+              :nationality "FRA" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Kelvin_Amian
+:Wikidata_Kelvin_Amian rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q26405176"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Ludovic_Ajorque
+:Ludovic_Ajorque rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Ludovic_Ajorque ;
+              :playsFor :Strasbourg ;
+              :age 28 ;
+              :name "Ludovic Ajorque" ;
+              :nationality "FRA" ;
+              :position "FW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Ludovic_Ajorque
+:Wikidata_Ludovic_Ajorque rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q27671219"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Jean_Ricner_Bellegarde
+:Jean_Ricner_Bellegarde rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Jean_Ricner_Bellegarde ;
+              :playsFor :Strasbourg ;
+              :age 24 ;
+              :name "Jean Ricner Bellegarde" ;
+              :nationality "FRA" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Jean_Ricner_Bellegarde
+:Wikidata_Jean_Ricner_Bellegarde rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q26251607"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Alessandro_Buongiorno
+:Alessandro_Buongiorno rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Alessandro_Buongiorno ;
+              :playsFor :Torino ;
+              :age 23 ;
+              :name "Alessandro Buongiorno" ;
+              :nationality "ITA" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Alessandro_Buongiorno
+:Wikidata_Alessandro_Buongiorno rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q51389133"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Ola_Aina
+:Ola_Aina rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Ola_Aina ;
+              :playsFor :Torino ;
+              :age 26 ;
+              :name "Ola Aina" ;
+              :nationality "NGA" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Ola_Aina
+:Wikidata_Ola_Aina rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q20730338"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Yves_Bissouma
+:Yves_Bissouma rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Yves_Bissouma ;
+              :playsFor :Tottenham ;
+              :age 26 ;
+              :name "Yves Bissouma" ;
+              :nationality "MLI" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Yves_Bissouma
+:Wikidata_Yves_Bissouma rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q22683033"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Bryan
+:Bryan rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Bryan ;
+              :playsFor :Tottenham ;
+              :age 22 ;
+              :name "Bryan" ;
+              :nationality "ESP" ;
+              :position "MFFW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Bryan
+:Wikidata_Bryan rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q49561427"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Rodrigo_Bentancur
+:Rodrigo_Bentancur rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Rodrigo_Bentancur ;
+              :playsFor :Tottenham ;
+              :age 25 ;
+              :name "Rodrigo Bentancur" ;
+              :nationality "URU" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Rodrigo_Bentancur
+:Wikidata_Rodrigo_Bentancur rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q18817134"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Rodrigo_Becao
+:Rodrigo_Becao rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Rodrigo_Becao ;
+              :playsFor :Udinese ;
+              :age 27 ;
+              :name "Rodrigo Becao" ;
+              :nationality "BRA" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Rodrigo_Becao
+:Wikidata_Rodrigo_Becao rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q55655668"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Beto
+:Beto rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Beto ;
+              :playsFor :Udinese ;
+              :age 25 ;
+              :name "Beto" ;
+              :nationality "GNB" ;
+              :position "FW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Beto
+:Wikidata_Beto rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q313955"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Tolgay_Arslan
+:Tolgay_Arslan rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Tolgay_Arslan ;
+              :playsFor :Udinese ;
+              :age 32 ;
+              :name "Tolgay Arslan" ;
+              :nationality "GER" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Tolgay_Arslan
+:Wikidata_Tolgay_Arslan rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q335413"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Sheraldo_Becker
+:Sheraldo_Becker rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Sheraldo_Becker ;
+              :playsFor :Union_Berlin ;
+              :age 28 ;
+              :name "Sheraldo Becker" ;
+              :nationality "SUR" ;
+              :position "FW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Sheraldo_Becker
+:Wikidata_Sheraldo_Becker rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q16069260"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Kevin_Behrens
+:Kevin_Behrens rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Kevin_Behrens ;
+              :playsFor :Union_Berlin ;
+              :age 32 ;
+              :name "Kevin Behrens" ;
+              :nationality "GER" ;
+              :position "FW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Kevin_Behrens
+:Wikidata_Kevin_Behrens rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q56065664"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Domingos_Andre_Ribeiro_Almeida
+:Domingos_Andre_Ribeiro_Almeida rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Domingos_Andre_Ribeiro_Almeida ;
+              :playsFor :Valencia ;
+              :age 22 ;
+              :name "Domingos Andre Ribeiro Almeida" ;
+              :nationality "POR" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Domingos_Andre_Ribeiro_Almeida
+:Wikidata_Domingos_Andre_Ribeiro_Almeida rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q26704452"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Edinson_Cavani
+:Edinson_Cavani rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Edinson_Cavani ;
+              :playsFor :Valencia ;
+              :age 35 ;
+              :name "Edinson Cavani" ;
+              :nationality "URU" ;
+              :position "FW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Edinson_Cavani
+:Wikidata_Edinson_Cavani rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q167790"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Samu_Castillejo
+:Samu_Castillejo rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Samu_Castillejo ;
+              :playsFor :Valencia ;
+              :age 28 ;
+              :name "Samu Castillejo" ;
+              :nationality "ESP" ;
+              :position "FW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Samu_Castillejo
+:Wikidata_Samu_Castillejo rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q17708755"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Raul_Albiol
+:Raul_Albiol rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Raul_Albiol ;
+              :playsFor :Villarreal ;
+              :age 37 ;
+              :name "Raul Albiol" ;
+              :nationality "ESP" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Raul_Albiol
+:Wikidata_Raul_Albiol rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q4599"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Alex_Baena
+:Alex_Baena rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Alex_Baena ;
+              :playsFor :Villarreal ;
+              :age 21 ;
+              :name "Alex Baena" ;
+              :nationality "ESP" ;
+              :position "MFFW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Alex_Baena
+:Wikidata_Alex_Baena rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q97404267"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Etienne_Capoue
+:Etienne_Capoue rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Etienne_Capoue ;
+              :playsFor :Villarreal ;
+              :age 34 ;
+              :name "Etienne Capoue" ;
+              :nationality "FRA" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Etienne_Capoue
+:Wikidata_Etienne_Capoue rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q60595"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Leonardo_Bittencourt
+:Leonardo_Bittencourt rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Leonardo_Bittencourt ;
+              :playsFor :Werder_Bremen ;
+              :age 29 ;
+              :name "Leonardo Bittencourt" ;
+              :nationality "GER" ;
+              :position "MFDF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Leonardo_Bittencourt
+:Wikidata_Leonardo_Bittencourt rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q687140"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Alphonse_Areola
+:Alphonse_Areola rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Alphonse_Areola ;
+              :playsFor :West_Ham ;
+              :age 29 ;
+              :name "Alphonse Areola" ;
+              :nationality "FRA" ;
+              :position "GK" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Alphonse_Areola
+:Wikidata_Alphonse_Areola rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q2839693"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Nayef_Aguerd
+:Nayef_Aguerd rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Nayef_Aguerd ;
+              :playsFor :West_Ham ;
+              :age 26 ;
+              :name "Nayef Aguerd" ;
+              :nationality "MAR" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Nayef_Aguerd
+:Wikidata_Nayef_Aguerd rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q28872567"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Michail_Antonio
+:Michail_Antonio rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Michail_Antonio ;
+              :playsFor :West_Ham ;
+              :age 32 ;
+              :name "Michail Antonio" ;
+              :nationality "JAM" ;
+              :position "FW" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Michail_Antonio
+:Wikidata_Michail_Antonio rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q1966430"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Maximilian_Arnold
+:Maximilian_Arnold rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Maximilian_Arnold ;
+              :playsFor :Wolfsburg ;
+              :age 28 ;
+              :name "Maximilian Arnold" ;
+              :nationality "GER" ;
+              :position "MF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Maximilian_Arnold
+:Wikidata_Maximilian_Arnold rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q1093851"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Sebastiaan_Bornauw
+:Sebastiaan_Bornauw rdf:type owl:NamedIndividual ,
+                       :Player ;
+              owl:sameAs :Wikidata_Sebastiaan_Bornauw ;
+              :playsFor :Wolfsburg ;
+              :age 23 ;
+              :name "Sebastiaan Bornauw" ;
+              :nationality "BEL" ;
+              :position "DF" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Sebastiaan_Bornauw
+:Wikidata_Sebastiaan_Bornauw rdf:type owl:NamedIndividual ,
+                                :WikidataLink ;
+                       :link "https://www.wikidata.org/wiki/Q55806994"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Manchester_City
+:Manchester_City rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Manuel_Akanji, :Nathan_Ake, :Julian_alvarez ;
+           :homepage "https://www.mancity.com/"^^xsd:anyURI ;
+           :goal 83 ;
+           :shot_percentage 15.8 ;
+           :yellow_card 46 ;
+           :red_card 2 ;
+           :procession_percentage 60.8 ;
+           :pass_percentage 89.4 ;
+           :aerials_won 12.8 ;
+           :rating 7.01 ;
+           :competesIn :Premier_League ;
+           owl:sameAs :Wikidata_Manchester_City ;
+           :team_name "Manchester City" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Manchester_City
+:Wikidata_Manchester_City rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q50602"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Bayern_Munich
+:Bayern_Munich rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Joao_Cancelo, :Daley_Blind, :Kingsley_Coman ;
+           :homepage "https://fcbayern.com/en"^^xsd:anyURI ;
+           :goal 99 ;
+           :shot_percentage 17.1 ;
+           :yellow_card 44 ;
+           :red_card 3 ;
+           :procession_percentage 58.1 ;
+           :pass_percentage 85.5 ;
+           :aerials_won 12.9 ;
+           :rating 6.95 ;
+           :competesIn :Bundesliga ;
+           owl:sameAs :Wikidata_Bayern_Munich ;
+           :team_name "Bayern Munich" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Bayern_Munich
+:Wikidata_Bayern_Munich rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q15789"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Paris_Saint-Germain
+:Paris_Saint-Germain rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://en.psg.fr/"^^xsd:anyURI ;
+           :goal 86 ;
+           :shot_percentage 15.0 ;
+           :yellow_card 73 ;
+           :red_card 7 ;
+           :procession_percentage 60.1 ;
+           :pass_percentage 89.5 ;
+           :aerials_won 9.5 ;
+           :rating 6.88 ;
+           :competesIn :Ligue_1 ;
+           owl:sameAs :Wikidata_Paris_Saint-Germain ;
+           :team_name "Paris Saint-Germain" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Paris_Saint-Germain
+:Wikidata_Paris_Saint-Germain rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q483020"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Barcelona
+:Barcelona rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Jordi_Alba, :Ronald_Araujo, :Marcos_Alonso ;
+           :homepage "https://www.fcbarcelona.com/en/"^^xsd:anyURI ;
+           :goal 85 ;
+           :shot_percentage 15.3 ;
+           :yellow_card 68 ;
+           :red_card 2 ;
+           :procession_percentage 62.4 ;
+           :pass_percentage 89.7 ;
+           :aerials_won 10.6 ;
+           :rating 6.87 ;
+           :competesIn :LaLiga ;
+           owl:sameAs :Wikidata_Barcelona ;
+           :team_name "Barcelona" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Barcelona
+:Wikidata_Barcelona rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q7156"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Real_Madrid
+:Real_Madrid rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Karim_Benzema, :David_Alaba, :Marco_Asensio ;
+           :homepage "https://www.realmadrid.com/en-US"^^xsd:anyURI ;
+           :goal 67 ;
+           :shot_percentage 14.4 ;
+           :yellow_card 57 ;
+           :red_card 2 ;
+           :procession_percentage 57.7 ;
+           :pass_percentage 87.7 ;
+           :aerials_won 11.8 ;
+           :rating 6.86 ;
+           :competesIn :LaLiga ;
+           owl:sameAs :Wikidata_Real_Madrid ;
+           :team_name "Real Madrid" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Real_Madrid
+:Wikidata_Real_Madrid rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q8682"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Manchester_United
+:Manchester_United rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.manutd.com/"^^xsd:anyURI ;
+           :goal 73 ;
+           :shot_percentage 13.8 ;
+           :yellow_card 64 ;
+           :red_card 1 ;
+           :procession_percentage 54.5 ;
+           :pass_percentage 84.8 ;
+           :aerials_won 14.5 ;
+           :rating 6.85 ;
+           :competesIn :Premier_League ;
+           owl:sameAs :Wikidata_Manchester_United ;
+           :team_name "Manchester United" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Manchester_United
+:Wikidata_Manchester_United rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q18656"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Juventus
+:Juventus rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Federico_Chiesa, :Leonardo_Bonucci ;
+           :homepage "https://www.juventus.com/en/"^^xsd:anyURI ;
+           :goal 77 ;
+           :shot_percentage 15.7 ;
+           :yellow_card 76 ;
+           :red_card 6 ;
+           :procession_percentage 55.4 ;
+           :pass_percentage 88.3 ;
+           :aerials_won 11.4 ;
+           :rating 6.85 ;
+           :competesIn :Serie_A ;
+           owl:sameAs :Wikidata_Juventus ;
+           :team_name "Juventus" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Juventus
+:Wikidata_Juventus rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q1422"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Aston_Villa
+:Aston_Villa rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Cameron_Archer, :Leon_Bailey, :Ludwig_Augustinsson ;
+           :homepage "https://www.avfc.co.uk/"^^xsd:anyURI ;
+           :goal 55 ;
+           :shot_percentage 13.7 ;
+           :yellow_card 63 ;
+           :red_card 4 ;
+           :procession_percentage 49.1 ;
+           :pass_percentage 78.6 ;
+           :aerials_won 19.4 ;
+           :rating 6.84 ;
+           :competesIn :Premier_League ;
+           owl:sameAs :Wikidata_Aston_Villa ;
+           :team_name "Aston Villa" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Aston_Villa
+:Wikidata_Aston_Villa rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q18711"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Borussia_Dortmund
+:Borussia_Dortmund rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.bvb.de/de/en.html"^^xsd:anyURI ;
+           :goal 75 ;
+           :shot_percentage 14.6 ;
+           :yellow_card 43 ;
+           :red_card 1 ;
+           :procession_percentage 57.5 ;
+           :pass_percentage 85.5 ;
+           :aerials_won 12.8 ;
+           :rating 6.84 ;
+           :competesIn :Bundesliga ;
+           owl:sameAs :Wikidata_Borussia_Dortmund ;
+           :team_name "Borussia Dortmund" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Borussia_Dortmund
+:Wikidata_Borussia_Dortmund rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q41420"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Atletico_Madrid
+:Atletico_Madrid rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://en.atleticodemadrid.com/"^^xsd:anyURI ;
+           :goal 67 ;
+           :shot_percentage 12.1 ;
+           :yellow_card 100 ;
+           :red_card 0 ;
+           :procession_percentage 51.8 ;
+           :pass_percentage 83.1 ;
+           :aerials_won 14.4 ;
+           :rating 6.84 ;
+           :competesIn :LaLiga ;
+           owl:sameAs :Wikidata_Atletico_Madrid ;
+           :team_name "Atletico Madrid" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Atletico_Madrid
+:Wikidata_Atletico_Madrid rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q8701"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Atalanta
+:Atalanta rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Merih_Demiral, :Berat_Djimsiti, :Jeremie_Boga ;
+           :homepage "https://en.atalanta.it/"^^xsd:anyURI ;
+           :goal 90 ;
+           :shot_percentage 16.3 ;
+           :yellow_card 66 ;
+           :red_card 3 ;
+           :procession_percentage 53.5 ;
+           :pass_percentage 83.5 ;
+           :aerials_won 16.8 ;
+           :rating 6.84 ;
+           :competesIn :Serie_A ;
+           owl:sameAs :Wikidata_Atalanta ;
+           :team_name "Atalanta" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Atalanta
+:Wikidata_Atalanta rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q1886"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Chelsea
+:Chelsea rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Cesar_Azpilicueta, :Pierre_Emerick_Aubameyang, :Kepa_Arrizabalaga ;
+           :homepage "https://www.chelseafc.com/en"^^xsd:anyURI ;
+           :goal 58 ;
+           :shot_percentage 14.6 ;
+           :yellow_card 49 ;
+           :red_card 3 ;
+           :procession_percentage 58.6 ;
+           :pass_percentage 87.0 ;
+           :aerials_won 15.2 ;
+           :rating 6.83 ;
+           :competesIn :Premier_League ;
+           owl:sameAs :Wikidata_Chelsea ;
+           :team_name "Chelsea" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Chelsea
+:Wikidata_Chelsea rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q9616"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Liverpool
+:Liverpool rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Trent_Alexander_Arnold, :Thiago_Alcantara, :Alisson ;
+           :homepage "https://www.liverpoolfc.com/"^^xsd:anyURI ;
+           :goal 68 ;
+           :shot_percentage 16.0 ;
+           :yellow_card 40 ;
+           :red_card 0 ;
+           :procession_percentage 59.0 ;
+           :pass_percentage 85.7 ;
+           :aerials_won 14.3 ;
+           :rating 6.82 ;
+           :competesIn :Premier_League ;
+           owl:sameAs :Wikidata_Liverpool ;
+           :team_name "Liverpool" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Liverpool
+:Wikidata_Liverpool rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q1130849"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#AC_Milan
+:AC_Milan rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "http://www.acmilan.com/en"^^xsd:anyURI ;
+           :goal 74 ;
+           :shot_percentage 14.7 ;
+           :yellow_card 80 ;
+           :red_card 4 ;
+           :procession_percentage 51.4 ;
+           :pass_percentage 84.0 ;
+           :aerials_won 15.2 ;
+           :rating 6.82 ;
+           :competesIn :Serie_A ;
+           owl:sameAs :Wikidata_AC_Milan ;
+           :team_name "AC Milan" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_AC_Milan
+:Wikidata_AC_Milan rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q1543"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Lille
+:Lille rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Carlos_Baleba, :Benjamin_Andre, :Jonathan_Bamba ;
+           :homepage "https://www.losc.fr/"^^xsd:anyURI ;
+           :goal 64 ;
+           :shot_percentage 12.8 ;
+           :yellow_card 67 ;
+           :red_card 2 ;
+           :procession_percentage 52.6 ;
+           :pass_percentage 83.5 ;
+           :aerials_won 15.8 ;
+           :rating 6.82 ;
+           :competesIn :Ligue_1 ;
+           owl:sameAs :Wikidata_Lille ;
+           :team_name "Lille" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Lille
+:Wikidata_Lille rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q19516"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Tottenham
+:Tottenham rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Yves_Bissouma, :Bryan, :Rodrigo_Bentancur ;
+           :homepage "https://www.tottenhamhotspur.com/"^^xsd:anyURI ;
+           :goal 68 ;
+           :shot_percentage 11.7 ;
+           :yellow_card 53 ;
+           :red_card 2 ;
+           :procession_percentage 51.3 ;
+           :pass_percentage 81.8 ;
+           :aerials_won 16.4 ;
+           :rating 6.81 ;
+           :competesIn :Premier_League ;
+           owl:sameAs :Wikidata_Tottenham ;
+           :team_name "Tottenham" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Tottenham
+:Wikidata_Tottenham rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q18741"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Napoli
+:Napoli rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Giovanni_Di_Lorenzo, :Elif_Elmas ;
+           :homepage "https://sscnapoli.it/en/"^^xsd:anyURI ;
+           :goal 86 ;
+           :shot_percentage 17.0 ;
+           :yellow_card 71 ;
+           :red_card 3 ;
+           :procession_percentage 54.1 ;
+           :pass_percentage 87.0 ;
+           :aerials_won 11.1 ;
+           :rating 6.81 ;
+           :competesIn :Serie_A ;
+           owl:sameAs :Wikidata_Napoli ;
+           :team_name "Napoli" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Napoli
+:Wikidata_Napoli rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q2641"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Leicester
+:Leicester rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.lcfc.com/"^^xsd:anyURI ;
+           :goal 68 ;
+           :shot_percentage 12.8 ;
+           :yellow_card 61 ;
+           :red_card 0 ;
+           :procession_percentage 53.2 ;
+           :pass_percentage 82.1 ;
+           :aerials_won 16.2 ;
+           :rating 6.8 ;
+           :competesIn :Premier_League ;
+           owl:sameAs :Wikidata_Leicester ;
+           :team_name "Leicester" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Leicester
+:Wikidata_Leicester rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q19481"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Wolfsburg
+:Wolfsburg rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Maximilian_Arnold, :Sebastiaan_Bornauw ;
+           :homepage "https://www.vfl-wolfsburg.de/en/home"^^xsd:anyURI ;
+           :goal 61 ;
+           :shot_percentage 14.1 ;
+           :yellow_card 56 ;
+           :red_card 3 ;
+           :procession_percentage 51.0 ;
+           :pass_percentage 78.0 ;
+           :aerials_won 16.9 ;
+           :rating 6.8 ;
+           :competesIn :Bundesliga ;
+           owl:sameAs :Wikidata_Wolfsburg ;
+           :team_name "Wolfsburg" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Wolfsburg
+:Wikidata_Wolfsburg rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q101859"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Inter
+:Inter rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Nicolo_Barella, :Francesco_Acerbi, :Kristjan_Asllani ;
+           :homepage "https://www.inter.it/en"^^xsd:anyURI ;
+           :goal 89 ;
+           :shot_percentage 14.5 ;
+           :yellow_card 59 ;
+           :red_card 2 ;
+           :procession_percentage 52.0 ;
+           :pass_percentage 87.0 ;
+           :aerials_won 11.8 ;
+           :rating 6.8 ;
+           :competesIn :Serie_A ;
+           owl:sameAs :Wikidata_Inter ;
+           :team_name "Inter" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Inter
+:Wikidata_Inter rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q631"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Lyon
+:Lyon rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Houssem_Aouar, :Jerome_Boateng, :Bradley_Barcola ;
+           :homepage "https://www.ol.fr/en"^^xsd:anyURI ;
+           :goal 81 ;
+           :shot_percentage 16.1 ;
+           :yellow_card 60 ;
+           :red_card 10 ;
+           :procession_percentage 53.6 ;
+           :pass_percentage 84.7 ;
+           :aerials_won 14.3 ;
+           :rating 6.8 ;
+           :competesIn :Ligue_1 ;
+           owl:sameAs :Wikidata_Lyon ;
+           :team_name "Lyon" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Lyon
+:Wikidata_Lyon rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q704"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#RB_Leipzig
+:RB_Leipzig rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Janis_Blaswich, :Abdou_Diallo ;
+           :homepage "https://rbleipzig.com/en"^^xsd:anyURI ;
+           :goal 60 ;
+           :shot_percentage 16.0 ;
+           :yellow_card 57 ;
+           :red_card 0 ;
+           :procession_percentage 57.3 ;
+           :pass_percentage 83.2 ;
+           :aerials_won 18.6 ;
+           :rating 6.78 ;
+           :competesIn :Bundesliga ;
+           owl:sameAs :Wikidata_RB_Leipzig ;
+           :team_name "RB Leipzig" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_RB_Leipzig
+:Wikidata_RB_Leipzig rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q702455"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Leeds
+:Leeds rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.leedsunited.com/"^^xsd:anyURI ;
+           :goal 62 ;
+           :shot_percentage 13.7 ;
+           :yellow_card 61 ;
+           :red_card 1 ;
+           :procession_percentage 55.1 ;
+           :pass_percentage 80.8 ;
+           :aerials_won 14.5 ;
+           :rating 6.77 ;
+           :competesIn :Premier_League ;
+           owl:sameAs :Wikidata_Leeds ;
+           :team_name "Leeds" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Leeds
+:Wikidata_Leeds rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q1128631"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#West_Ham
+:West_Ham rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Alphonse_Areola, :Nayef_Aguerd, :Michail_Antonio ;
+           :homepage "https://www.whufc.com/"^^xsd:anyURI ;
+           :goal 62 ;
+           :shot_percentage 12.3 ;
+           :yellow_card 48 ;
+           :red_card 3 ;
+           :procession_percentage 44.5 ;
+           :pass_percentage 77.8 ;
+           :aerials_won 19.9 ;
+           :rating 6.77 ;
+           :competesIn :Premier_League ;
+           owl:sameAs :Wikidata_West_Ham ;
+           :team_name "West Ham" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_West_Ham
+:Wikidata_West_Ham rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q18747"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Everton
+:Everton rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Dele_Alli, :Asmir_Begovi, :Dominic_Calvert_Lewin ;
+           :homepage "https://www.evertonfc.com/home"^^xsd:anyURI ;
+           :goal 47 ;
+           :shot_percentage 10.5 ;
+           :yellow_card 59 ;
+           :red_card 2 ;
+           :procession_percentage 47.3 ;
+           :pass_percentage 81.4 ;
+           :aerials_won 17.7 ;
+           :rating 6.73 ;
+           :competesIn :Premier_League ;
+           owl:sameAs :Wikidata_Everton ;
+           :team_name "Everton" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Everton
+:Wikidata_Everton rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q5794"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Bayer_Leverkusen
+:Bayer_Leverkusen rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.bayer04.de/"^^xsd:anyURI ;
+           :goal 53 ;
+           :shot_percentage 13.0 ;
+           :yellow_card 58 ;
+           :red_card 0 ;
+           :procession_percentage 57.3 ;
+           :pass_percentage 84.4 ;
+           :aerials_won 13.1 ;
+           :rating 6.73 ;
+           :competesIn :Bundesliga ;
+           owl:sameAs :Wikidata_Bayer_Leverkusen ;
+           :team_name "Bayer Leverkusen" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Bayer_Leverkusen
+:Wikidata_Bayer_Leverkusen rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q104761"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Eintracht_Frankfurt
+:Eintracht_Frankfurt rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://en.eintracht.de/"^^xsd:anyURI ;
+           :goal 69 ;
+           :shot_percentage 13.2 ;
+           :yellow_card 80 ;
+           :red_card 1 ;
+           :procession_percentage 52.4 ;
+           :pass_percentage 79.6 ;
+           :aerials_won 17.9 ;
+           :rating 6.73 ;
+           :competesIn :Bundesliga ;
+           owl:sameAs :Wikidata_Eintracht_Frankfurt ;
+           :team_name "Eintracht Frankfurt" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Eintracht_Frankfurt
+:Wikidata_Eintracht_Frankfurt rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q38245"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Monaco
+:Monaco rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Ruben_Aguilar, :Maghnes_Akliouche, :Benoit_Badiashile ;
+           :homepage "https://www.asmonaco.com/en/"^^xsd:anyURI ;
+           :goal 76 ;
+           :shot_percentage 12.8 ;
+           :yellow_card 74 ;
+           :red_card 7 ;
+           :procession_percentage 54.2 ;
+           :pass_percentage 82.7 ;
+           :aerials_won 16.5 ;
+           :rating 6.73 ;
+           :competesIn :Ligue_1 ;
+           owl:sameAs :Wikidata_Monaco ;
+           :team_name "Monaco" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Monaco
+:Wikidata_Monaco rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q180305"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Roma
+:Roma rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Tammy_Abraham, :Edoardo_Bove, :Andrea_Belotti ;
+           :homepage "https://www.asroma.com/en"^^xsd:anyURI ;
+           :goal 68 ;
+           :shot_percentage 14.3 ;
+           :yellow_card 84 ;
+           :red_card 3 ;
+           :procession_percentage 51.5 ;
+           :pass_percentage 84.5 ;
+           :aerials_won 12.1 ;
+           :rating 6.71 ;
+           :competesIn :Serie_A ;
+           owl:sameAs :Wikidata_Roma ;
+           :team_name "Roma" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Roma
+:Wikidata_Roma rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q2739"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Sevilla
+:Sevilla rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Loic_Bade, :Carlos_Alvarez, :Marcos_Acuna ;
+           :homepage "http://sevillafc.es/en"^^xsd:anyURI ;
+           :goal 53 ;
+           :shot_percentage 12.1 ;
+           :yellow_card 75 ;
+           :red_card 2 ;
+           :procession_percentage 58.7 ;
+           :pass_percentage 86.2 ;
+           :aerials_won 16.6 ;
+           :rating 6.7 ;
+           :competesIn :LaLiga ;
+           owl:sameAs :Wikidata_Sevilla ;
+           :team_name "Sevilla" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Sevilla
+:Wikidata_Sevilla rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q10329"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Borussia_M.Gladbach
+:Borussia_M.Gladbach rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.borussia.de/en"^^xsd:anyURI ;
+           :goal 64 ;
+           :shot_percentage 13.4 ;
+           :yellow_card 61 ;
+           :red_card 2 ;
+           :procession_percentage 51.5 ;
+           :pass_percentage 82.0 ;
+           :aerials_won 15.3 ;
+           :rating 6.7 ;
+           :competesIn :Bundesliga ;
+           owl:sameAs :Wikidata_Borussia_M.Gladbach ;
+           :team_name "Borussia M.Gladbach" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Borussia_M.Gladbach
+:Wikidata_Borussia_M.Gladbach rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q101959"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Arsenal
+:Arsenal rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Mohamed_Elneny, :Gabriel_Dos_Santos, :Rob_Holding ;
+           :homepage "https://www.arsenal.com/"^^xsd:anyURI ;
+           :goal 55 ;
+           :shot_percentage 12.1 ;
+           :yellow_card 47 ;
+           :red_card 5 ;
+           :procession_percentage 52.7 ;
+           :pass_percentage 85.0 ;
+           :aerials_won 13.5 ;
+           :rating 6.69 ;
+           :competesIn :Premier_League ;
+           owl:sameAs :Wikidata_Arsenal ;
+           :team_name "Arsenal" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Arsenal
+:Wikidata_Arsenal rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q9617"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Rennes
+:Rennes rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Matthis_Abline, :Lorenz_Assignon ;
+           :homepage "https://www.staderennais.com/en"^^xsd:anyURI ;
+           :goal 52 ;
+           :shot_percentage 13.5 ;
+           :yellow_card 80 ;
+           :red_card 5 ;
+           :procession_percentage 56.8 ;
+           :pass_percentage 85.6 ;
+           :aerials_won 16.9 ;
+           :rating 6.69 ;
+           :competesIn :Ligue_1 ;
+           owl:sameAs :Wikidata_Rennes ;
+           :team_name "Rennes" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Rennes
+:Wikidata_Rennes rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q19509"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#VfB_Stuttgart
+:VfB_Stuttgart rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.vfb.de/en/"^^xsd:anyURI ;
+           :goal 56 ;
+           :shot_percentage 13.4 ;
+           :yellow_card 63 ;
+           :red_card 2 ;
+           :procession_percentage 51.5 ;
+           :pass_percentage 81.1 ;
+           :aerials_won 16.3 ;
+           :rating 6.68 ;
+           :competesIn :Bundesliga ;
+           owl:sameAs :Wikidata_VfB_Stuttgart ;
+           :team_name "VfB Stuttgart" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_VfB_Stuttgart
+:Wikidata_VfB_Stuttgart rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q4512"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Wolverhampton_Wanderers
+:Wolverhampton_Wanderers rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.wolves.co.uk/"^^xsd:anyURI ;
+           :goal 36 ;
+           :shot_percentage 12.2 ;
+           :yellow_card 53 ;
+           :red_card 1 ;
+           :procession_percentage 49.7 ;
+           :pass_percentage 83.2 ;
+           :aerials_won 15.3 ;
+           :rating 6.67 ;
+           :competesIn :Premier_League ;
+           owl:sameAs :Wikidata_Wolverhampton_Wanderers ;
+           :team_name "Wolverhampton Wanderers" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Wolverhampton_Wanderers
+:Wikidata_Wolverhampton_Wanderers rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q19500"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Sassuolo
+:Sassuolo rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Kaan_Ayhan, :Janis_Antiste, :Agustin_Alvarez_Martinez ;
+           :homepage "https://www.sassuolocalcio.it/en/"^^xsd:anyURI ;
+           :goal 64 ;
+           :shot_percentage 13.9 ;
+           :yellow_card 74 ;
+           :red_card 4 ;
+           :procession_percentage 58.2 ;
+           :pass_percentage 87.8 ;
+           :aerials_won 10.9 ;
+           :rating 6.67 ;
+           :competesIn :Serie_A ;
+           owl:sameAs :Wikidata_Sassuolo ;
+           :team_name "Sassuolo" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Sassuolo
+:Wikidata_Sassuolo rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q8603"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Metz
+:Metz rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.fcmetz.com/"^^xsd:anyURI ;
+           :goal 44 ;
+           :shot_percentage 11.5 ;
+           :yellow_card 82 ;
+           :red_card 4 ;
+           :procession_percentage 46.9 ;
+           :pass_percentage 79.8 ;
+           :aerials_won 16.1 ;
+           :rating 6.66 ;
+           :competesIn :Ligue_1 ;
+           owl:sameAs :Wikidata_Metz ;
+           :team_name "Metz" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Metz
+:Wikidata_Metz rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q221525"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Villarreal
+:Villarreal rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Raul_Albiol, :Alex_Baena, :Etienne_Capoue ;
+           :homepage "https://villarrealcf.es/en/"^^xsd:anyURI ;
+           :goal 60 ;
+           :shot_percentage 10.7 ;
+           :yellow_card 65 ;
+           :red_card 5 ;
+           :procession_percentage 54.3 ;
+           :pass_percentage 84.4 ;
+           :aerials_won 13.0 ;
+           :rating 6.66 ;
+           :competesIn :LaLiga ;
+           owl:sameAs :Wikidata_Villarreal ;
+           :team_name "Villarreal" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Villarreal
+:Wikidata_Villarreal rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q12297"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Real_Sociedad
+:Real_Sociedad rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Ander_Barrenetxea, :Mohamed_Ali_Cho, :Aritz_Elustondo ;
+           :homepage "https://www.realsociedad.eus/en"^^xsd:anyURI ;
+           :goal 59 ;
+           :shot_percentage 11.3 ;
+           :yellow_card 81 ;
+           :red_card 1 ;
+           :procession_percentage 53.7 ;
+           :pass_percentage 80.8 ;
+           :aerials_won 17.9 ;
+           :rating 6.65 ;
+           :competesIn :LaLiga ;
+           owl:sameAs :Wikidata_Real_Sociedad ;
+           :team_name "Real Sociedad" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Real_Sociedad
+:Wikidata_Real_Sociedad rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q10315"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Brighton
+:Brighton rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Moises_Caicedo, :Julio_Cesar_Enciso, :Facundo_Buonanotte ;
+           :homepage "https://www.brightonandhovealbion.com/"^^xsd:anyURI ;
+           :goal 40 ;
+           :shot_percentage 12.8 ;
+           :yellow_card 45 ;
+           :red_card 6 ;
+           :procession_percentage 50.7 ;
+           :pass_percentage 81.3 ;
+           :aerials_won 14.2 ;
+           :rating 6.65 ;
+           :competesIn :Premier_League ;
+           owl:sameAs :Wikidata_Brighton ;
+           :team_name "Brighton" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Brighton
+:Wikidata_Brighton rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q19453"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Real_Betis
+:Real_Betis rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://en.realbetisbalompie.es/"^^xsd:anyURI ;
+           :goal 50 ;
+           :shot_percentage 11.7 ;
+           :yellow_card 87 ;
+           :red_card 8 ;
+           :procession_percentage 52.9 ;
+           :pass_percentage 82.0 ;
+           :aerials_won 16.4 ;
+           :rating 6.64 ;
+           :competesIn :LaLiga ;
+           owl:sameAs :Wikidata_Real_Betis ;
+           :team_name "Real Betis" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Real_Betis
+:Wikidata_Real_Betis rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q8723"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Burnley
+:Burnley rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.burnleyfootballclub.com/"^^xsd:anyURI ;
+           :goal 33 ;
+           :shot_percentage 10.1 ;
+           :yellow_card 48 ;
+           :red_card 0 ;
+           :procession_percentage 43.5 ;
+           :pass_percentage 71.6 ;
+           :aerials_won 23.4 ;
+           :rating 6.64 ;
+           :competesIn :Premier_League ;
+           owl:sameAs :Wikidata_Burnley ;
+           :team_name "Burnley" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Burnley
+:Wikidata_Burnley rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q19458"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Lens
+:Lens rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Salis_Abdul_Samed, :Patrick_Berg ;
+           :homepage "https://www.rclens.fr/fr/english"^^xsd:anyURI ;
+           :goal 55 ;
+           :shot_percentage 11.7 ;
+           :yellow_card 84 ;
+           :red_card 7 ;
+           :procession_percentage 51.1 ;
+           :pass_percentage 81.8 ;
+           :aerials_won 17.4 ;
+           :rating 6.64 ;
+           :competesIn :Ligue_1 ;
+           owl:sameAs :Wikidata_Lens ;
+           :team_name "Lens" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Lens
+:Wikidata_Lens rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q191843"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Brest
+:Brest rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Haris_Belkebla, :Youcef_Belaili ;
+           :homepage "https://www.sb29.bzh/"^^xsd:anyURI ;
+           :goal 50 ;
+           :shot_percentage 11.8 ;
+           :yellow_card 60 ;
+           :red_card 4 ;
+           :procession_percentage 49.4 ;
+           :pass_percentage 81.3 ;
+           :aerials_won 18.6 ;
+           :rating 6.64 ;
+           :competesIn :Ligue_1 ;
+           owl:sameAs :Wikidata_Brest ;
+           :team_name "Brest" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Brest
+:Wikidata_Brest rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q218372"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Fulham
+:Fulham rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Tosin_Adarabioyo, :Tom_Cairney, :Nathaniel_Chalobah ;
+           :homepage "https://www.fulhamfc.com/"^^xsd:anyURI ;
+           :goal 27 ;
+           :shot_percentage 11.6 ;
+           :yellow_card 67 ;
+           :red_card 3 ;
+           :procession_percentage 50.0 ;
+           :pass_percentage 81.2 ;
+           :aerials_won 17.2 ;
+           :rating 6.63 ;
+           :competesIn :Premier_League ;
+           owl:sameAs :Wikidata_Fulham ;
+           :team_name "Fulham" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Fulham
+:Wikidata_Fulham rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q18708"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Marseille
+:Marseille rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Eric_Bailly, :Leonardo_Balerdi, :Cedric_Bakambu ;
+           :homepage "https://www.om.fr/en"^^xsd:anyURI ;
+           :goal 54 ;
+           :shot_percentage 10.0 ;
+           :yellow_card 94 ;
+           :red_card 9 ;
+           :procession_percentage 52.4 ;
+           :pass_percentage 82.0 ;
+           :aerials_won 14.9 ;
+           :rating 6.63 ;
+           :competesIn :Ligue_1 ;
+           owl:sameAs :Wikidata_Marseille ;
+           :team_name "Marseille" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Marseille
+:Wikidata_Marseille rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q132885"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Sampdoria
+:Sampdoria rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Emil_Audero ;
+           :homepage "https://www.sampdoria.it/"^^xsd:anyURI ;
+           :goal 52 ;
+           :shot_percentage 11.3 ;
+           :yellow_card 81 ;
+           :red_card 3 ;
+           :procession_percentage 46.1 ;
+           :pass_percentage 78.5 ;
+           :aerials_won 16.8 ;
+           :rating 6.63 ;
+           :competesIn :Serie_A ;
+           owl:sameAs :Wikidata_Sampdoria ;
+           :team_name "Sampdoria" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Sampdoria
+:Wikidata_Sampdoria rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q1457"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Montpellier
+:Montpellier rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Nicolas_Cozza, :Joris_Chotard ;
+           :homepage "https://mhscfoot.com/"^^xsd:anyURI ;
+           :goal 60 ;
+           :shot_percentage 12.2 ;
+           :yellow_card 65 ;
+           :red_card 7 ;
+           :procession_percentage 46.4 ;
+           :pass_percentage 78.8 ;
+           :aerials_won 17.9 ;
+           :rating 6.63 ;
+           :competesIn :Ligue_1 ;
+           owl:sameAs :Wikidata_Montpellier ;
+           :team_name "Montpellier" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Montpellier
+:Wikidata_Montpellier rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q19513"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Nice
+:Nice rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Ross_Barkley, :Youcef_Atal, :Melvin_Bard ;
+           :homepage "https://www.ogcnice.com/en/"^^xsd:anyURI ;
+           :goal 50 ;
+           :shot_percentage 10.8 ;
+           :yellow_card 69 ;
+           :red_card 4 ;
+           :procession_percentage 53.4 ;
+           :pass_percentage 85.6 ;
+           :aerials_won 10.5 ;
+           :rating 6.63 ;
+           :competesIn :Ligue_1 ;
+           owl:sameAs :Wikidata_Nice ;
+           :team_name "Nice" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Nice
+:Wikidata_Nice rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q185163"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Hoffenheim
+:Hoffenheim rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Kevin_Akpoguma, :Angelino, :Fisnik_Asllani ;
+           :homepage "https://www.tsg-hoffenheim.de/en"^^xsd:anyURI ;
+           :goal 52 ;
+           :shot_percentage 12.6 ;
+           :yellow_card 65 ;
+           :red_card 4 ;
+           :procession_percentage 50.8 ;
+           :pass_percentage 80.7 ;
+           :aerials_won 15.7 ;
+           :rating 6.63 ;
+           :competesIn :Bundesliga ;
+           owl:sameAs :Wikidata_Hoffenheim ;
+           :team_name "Hoffenheim" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Hoffenheim
+:Wikidata_Hoffenheim rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q22707"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Southampton
+:Southampton rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Joe_Aribo, :Che_Adams, :Carlos_Alcaraz ;
+           :homepage "https://www.southamptonfc.com/en"^^xsd:anyURI ;
+           :goal 47 ;
+           :shot_percentage 11.2 ;
+           :yellow_card 52 ;
+           :red_card 3 ;
+           :procession_percentage 51.4 ;
+           :pass_percentage 79.3 ;
+           :aerials_won 14.1 ;
+           :rating 6.62 ;
+           :competesIn :Premier_League ;
+           owl:sameAs :Wikidata_Southampton ;
+           :team_name "Southampton" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Southampton
+:Wikidata_Southampton rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q18732"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Newcastle_United
+:Newcastle_United rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.newcastleunited.com/en"^^xsd:anyURI ;
+           :goal 46 ;
+           :shot_percentage 10.4 ;
+           :yellow_card 61 ;
+           :red_card 3 ;
+           :procession_percentage 41.6 ;
+           :pass_percentage 76.0 ;
+           :aerials_won 17.1 ;
+           :rating 6.62 ;
+           :competesIn :Premier_League ;
+           owl:sameAs :Wikidata_Newcastle_United ;
+           :team_name "Newcastle United" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Newcastle_United
+:Wikidata_Newcastle_United rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q18716"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Lazio
+:Lazio rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Felipe_Anderson, :Luis_Alberto, :Marcos_Antonio ;
+           :homepage "https://www.sslazio.it/en/"^^xsd:anyURI ;
+           :goal 61 ;
+           :shot_percentage 13.8 ;
+           :yellow_card 100 ;
+           :red_card 5 ;
+           :procession_percentage 52.2 ;
+           :pass_percentage 83.8 ;
+           :aerials_won 14.6 ;
+           :rating 6.62 ;
+           :competesIn :Serie_A ;
+           owl:sameAs :Wikidata_Lazio ;
+           :team_name "Lazio" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Lazio
+:Wikidata_Lazio rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q2609"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Nantes
+:Nantes rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Dennis_Appiah, :Ludovic_Blas, :Mohamed_Achi ;
+           :homepage "https://www.fcnantes.com/"^^xsd:anyURI ;
+           :goal 47 ;
+           :shot_percentage 10.8 ;
+           :yellow_card 68 ;
+           :red_card 4 ;
+           :procession_percentage 45.2 ;
+           :pass_percentage 77.0 ;
+           :aerials_won 18.1 ;
+           :rating 6.62 ;
+           :competesIn :Ligue_1 ;
+           owl:sameAs :Wikidata_Nantes ;
+           :team_name "Nantes" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Nantes
+:Wikidata_Nantes rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q192071"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Union_Berlin
+:Union_Berlin rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Sheraldo_Becker, :Kevin_Behrens ;
+           :homepage "https://www.fc-union-berlin.de/en/"^^xsd:anyURI ;
+           :goal 50 ;
+           :shot_percentage 11.7 ;
+           :yellow_card 55 ;
+           :red_card 2 ;
+           :procession_percentage 45.9 ;
+           :pass_percentage 76.2 ;
+           :aerials_won 17.6 ;
+           :rating 6.62 ;
+           :competesIn :Bundesliga ;
+           owl:sameAs :Wikidata_Union_Berlin ;
+           :team_name "Union Berlin" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Union_Berlin
+:Wikidata_Union_Berlin rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q141971"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Strasbourg
+:Strasbourg rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Ludovic_Ajorque, :Jean_Ricner_Bellegarde ;
+           :homepage "https://www.rcstrasbourgalsace.fr/en/racing-en/"^^xsd:anyURI ;
+           :goal 49 ;
+           :shot_percentage 11.3 ;
+           :yellow_card 56 ;
+           :red_card 3 ;
+           :procession_percentage 46.5 ;
+           :pass_percentage 78.3 ;
+           :aerials_won 18.3 ;
+           :rating 6.61 ;
+           :competesIn :Ligue_1 ;
+           owl:sameAs :Wikidata_Strasbourg ;
+           :team_name "Strasbourg" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Strasbourg
+:Wikidata_Strasbourg rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q126334"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Crystal_Palace
+:Crystal_Palace rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Joachim_Andersen, :Jordan_Ayew ;
+           :homepage "https://www.cpfc.co.uk/"^^xsd:anyURI ;
+           :goal 41 ;
+           :shot_percentage 9.2 ;
+           :yellow_card 54 ;
+           :red_card 2 ;
+           :procession_percentage 42.9 ;
+           :pass_percentage 76.1 ;
+           :aerials_won 18.3 ;
+           :rating 6.61 ;
+           :competesIn :Premier_League ;
+           owl:sameAs :Wikidata_Crystal_Palace ;
+           :team_name "Crystal Palace" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Crystal_Palace
+:Wikidata_Crystal_Palace rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q19467"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Freiburg
+:Freiburg rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Ritsu_Doan, :Maximilian_Eggestein, :Mark_Flekken ;
+           :homepage "https://www.scfreiburg.com/en"^^xsd:anyURI ;
+           :goal 52 ;
+           :shot_percentage 11.4 ;
+           :yellow_card 63 ;
+           :red_card 0 ;
+           :procession_percentage 47.5 ;
+           :pass_percentage 78.1 ;
+           :aerials_won 17.5 ;
+           :rating 6.6 ;
+           :competesIn :Bundesliga ;
+           owl:sameAs :Wikidata_Freiburg ;
+           :team_name "Freiburg" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Freiburg
+:Wikidata_Freiburg rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q106394"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Valencia
+:Valencia rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Domingos_Andre_Ribeiro_Almeida, :Edinson_Cavani, :Samu_Castillejo ;
+           :homepage "https://www.valenciacf.com/home"^^xsd:anyURI ;
+           :goal 50 ;
+           :shot_percentage 10.3 ;
+           :yellow_card 77 ;
+           :red_card 5 ;
+           :procession_percentage 47.9 ;
+           :pass_percentage 79.4 ;
+           :aerials_won 16.3 ;
+           :rating 6.6 ;
+           :competesIn :LaLiga ;
+           owl:sameAs :Wikidata_Valencia ;
+           :team_name "Valencia" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Valencia
+:Wikidata_Valencia rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q10333"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Celta_Vigo
+:Celta_Vigo rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Iago_Aspas, :Fran_Beltran, :Joseph_Aidoo ;
+           :homepage "https://rccelta.es/en/"^^xsd:anyURI ;
+           :goal 55 ;
+           :shot_percentage 9.4 ;
+           :yellow_card 104 ;
+           :red_card 5 ;
+           :procession_percentage 52.0 ;
+           :pass_percentage 79.9 ;
+           :aerials_won 16.5 ;
+           :rating 6.6 ;
+           :competesIn :LaLiga ;
+           owl:sameAs :Wikidata_Celta_Vigo ;
+           :team_name "Celta Vigo" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Celta_Vigo
+:Wikidata_Celta_Vigo rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q8749"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Reims
+:Reims rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Yunis_Abdelhamid, :Emmanuel_Agbadou ;
+           :homepage "https://www.stade-de-reims.com/"^^xsd:anyURI ;
+           :goal 42 ;
+           :shot_percentage 9.6 ;
+           :yellow_card 75 ;
+           :red_card 8 ;
+           :procession_percentage 46.3 ;
+           :pass_percentage 80.7 ;
+           :aerials_won 13.4 ;
+           :rating 6.6 ;
+           :competesIn :Ligue_1 ;
+           owl:sameAs :Wikidata_Reims ;
+           :team_name "Reims" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Reims
+:Wikidata_Reims rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q208228"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Torino
+:Torino rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Alessandro_Buongiorno, :Ola_Aina ;
+           :homepage "https://www.torinofc.it/en"^^xsd:anyURI ;
+           :goal 50 ;
+           :shot_percentage 12.2 ;
+           :yellow_card 72 ;
+           :red_card 4 ;
+           :procession_percentage 48.0 ;
+           :pass_percentage 80.5 ;
+           :aerials_won 16.1 ;
+           :rating 6.59 ;
+           :competesIn :Serie_A ;
+           owl:sameAs :Wikidata_Torino ;
+           :team_name "Torino" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Torino
+:Wikidata_Torino rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q2768"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Verona
+:Verona rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.hellasverona.it/en"^^xsd:anyURI ;
+           :goal 43 ;
+           :shot_percentage 10.6 ;
+           :yellow_card 91 ;
+           :red_card 1 ;
+           :procession_percentage 49.6 ;
+           :pass_percentage 76.3 ;
+           :aerials_won 20.6 ;
+           :rating 6.59 ;
+           :competesIn :Serie_A ;
+           owl:sameAs :Wikidata_Verona ;
+           :team_name "Verona" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Verona
+:Wikidata_Verona rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q8639"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Saint-Etienne
+:Saint-Etienne rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.asse.fr/"^^xsd:anyURI ;
+           :goal 42 ;
+           :shot_percentage 11.6 ;
+           :yellow_card 76 ;
+           :red_card 2 ;
+           :procession_percentage 49.0 ;
+           :pass_percentage 79.3 ;
+           :aerials_won 16.4 ;
+           :rating 6.59 ;
+           :competesIn :Ligue_1 ;
+           owl:sameAs :Wikidata_Saint-Etienne ;
+           :team_name "Saint-Etienne" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Saint-Etienne
+:Wikidata_Saint-Etienne rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q19521"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Bordeaux
+:Bordeaux rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.girondins.com/"^^xsd:anyURI ;
+           :goal 42 ;
+           :shot_percentage 11.1 ;
+           :yellow_card 74 ;
+           :red_card 4 ;
+           :procession_percentage 50.2 ;
+           :pass_percentage 83.3 ;
+           :aerials_won 15.4 ;
+           :rating 6.59 ;
+           :competesIn :Ligue_1 ;
+           owl:sameAs :Wikidata_Bordeaux ;
+           :team_name "Bordeaux" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Bordeaux
+:Wikidata_Bordeaux rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q172476"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Hertha_Berlin
+:Hertha_Berlin rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.herthabsc.com/en"^^xsd:anyURI ;
+           :goal 41 ;
+           :shot_percentage 11.3 ;
+           :yellow_card 63 ;
+           :red_card 3 ;
+           :procession_percentage 49.8 ;
+           :pass_percentage 79.5 ;
+           :aerials_won 15.8 ;
+           :rating 6.58 ;
+           :competesIn :Bundesliga ;
+           owl:sameAs :Wikidata_Hertha_Berlin ;
+           :team_name "Hertha Berlin" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Hertha_Berlin
+:Wikidata_Hertha_Berlin rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q102720"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Cagliari
+:Cagliari rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://cagliaricalcio.com/en/"^^xsd:anyURI ;
+           :goal 43 ;
+           :shot_percentage 11.4 ;
+           :yellow_card 73 ;
+           :red_card 3 ;
+           :procession_percentage 45.8 ;
+           :pass_percentage 79.8 ;
+           :aerials_won 17.2 ;
+           :rating 6.58 ;
+           :competesIn :Serie_A ;
+           owl:sameAs :Wikidata_Cagliari ;
+           :team_name "Cagliari" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Cagliari
+:Wikidata_Cagliari rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q1900"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Mainz_05
+:Mainz_05 rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Leandro_Barreiro_Martins, :Aymen_Barkok, :Ludovic_Ajorque ;
+           :homepage "https://www.mainz05.de/en"^^xsd:anyURI ;
+           :goal 39 ;
+           :shot_percentage 11.1 ;
+           :yellow_card 61 ;
+           :red_card 1 ;
+           :procession_percentage 42.7 ;
+           :pass_percentage 71.3 ;
+           :aerials_won 18.3 ;
+           :rating 6.57 ;
+           :competesIn :Bundesliga ;
+           owl:sameAs :Wikidata_Mainz_05 ;
+           :team_name "Mainz 05" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Mainz_05
+:Wikidata_Mainz_05 rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q105254"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Bologna
+:Bologna rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Musa_Barrow, :Michel_Aebischer, :Marko_Arnautovi ;
+           :homepage "https://www.bolognafc.it/en/home/"^^xsd:anyURI ;
+           :goal 51 ;
+           :shot_percentage 13.1 ;
+           :yellow_card 78 ;
+           :red_card 4 ;
+           :procession_percentage 50.7 ;
+           :pass_percentage 81.5 ;
+           :aerials_won 15.1 ;
+           :rating 6.56 ;
+           :competesIn :Serie_A ;
+           owl:sameAs :Wikidata_Bologna ;
+           :team_name "Bologna" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Bologna
+:Wikidata_Bologna rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q1893"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Augsburg
+:Augsburg rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Julian_Baumgartlinger ;
+           :homepage "https://www.fcaugsburg.de/en/"^^xsd:anyURI ;
+           :goal 36 ;
+           :shot_percentage 9.9 ;
+           :yellow_card 65 ;
+           :red_card 4 ;
+           :procession_percentage 44.0 ;
+           :pass_percentage 73.6 ;
+           :aerials_won 16.8 ;
+           :rating 6.56 ;
+           :competesIn :Bundesliga ;
+           owl:sameAs :Wikidata_Augsburg ;
+           :team_name "Augsburg" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Augsburg
+:Wikidata_Augsburg rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q15755"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Udinese
+:Udinese rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Rodrigo_Becao, :Beto, :Tolgay_Arslan ;
+           :homepage "https://www.udinese.it/eng"^^xsd:anyURI ;
+           :goal 42 ;
+           :shot_percentage 10.9 ;
+           :yellow_card 63 ;
+           :red_card 2 ;
+           :procession_percentage 47.2 ;
+           :pass_percentage 82.5 ;
+           :aerials_won 13.1 ;
+           :rating 6.55 ;
+           :competesIn :Serie_A ;
+           owl:sameAs :Wikidata_Udinese ;
+           :team_name "Udinese" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Udinese
+:Wikidata_Udinese rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q2798"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#SD_Huesca
+:SD_Huesca rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.sdhuesca.es/"^^xsd:anyURI ;
+           :goal 34 ;
+           :shot_percentage 10.7 ;
+           :yellow_card 68 ;
+           :red_card 2 ;
+           :procession_percentage 48.7 ;
+           :pass_percentage 79.8 ;
+           :aerials_won 15.7 ;
+           :rating 6.55 ;
+           :competesIn :LaLiga ;
+           owl:sameAs :Wikidata_SD_Huesca ;
+           :team_name "SD Huesca" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_SD_Huesca
+:Wikidata_SD_Huesca rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q11971"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Athletic_Bilbao
+:Athletic_Bilbao rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.athletic-club.eus/en/"^^xsd:anyURI ;
+           :goal 46 ;
+           :shot_percentage 10.6 ;
+           :yellow_card 81 ;
+           :red_card 3 ;
+           :procession_percentage 49.4 ;
+           :pass_percentage 78.5 ;
+           :aerials_won 17.9 ;
+           :rating 6.54 ;
+           :competesIn :LaLiga ;
+           owl:sameAs :Wikidata_Athletic_Bilbao ;
+           :team_name "Athletic Bilbao" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Athletic_Bilbao
+:Wikidata_Athletic_Bilbao rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q8687"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Osasuna
+:Osasuna rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Darko_Braanac, :Kike_Barja, :Ezequiel_Avila ;
+           :homepage "https://www.osasuna.es/en"^^xsd:anyURI ;
+           :goal 37 ;
+           :shot_percentage 9.8 ;
+           :yellow_card 74 ;
+           :red_card 5 ;
+           :procession_percentage 44.6 ;
+           :pass_percentage 70.2 ;
+           :aerials_won 26.8 ;
+           :rating 6.54 ;
+           :competesIn :LaLiga ;
+           owl:sameAs :Wikidata_Osasuna ;
+           :team_name "Osasuna" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Osasuna
+:Wikidata_Osasuna rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q10286"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Lorient
+:Lorient rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Adil_Aouchiche, :Laurent_Abergel ;
+           :homepage "https://www.fclorient.bzh/"^^xsd:anyURI ;
+           :goal 50 ;
+           :shot_percentage 11.2 ;
+           :yellow_card 67 ;
+           :red_card 3 ;
+           :procession_percentage 45.9 ;
+           :pass_percentage 78.8 ;
+           :aerials_won 13.7 ;
+           :rating 6.54 ;
+           :competesIn :Ligue_1 ;
+           owl:sameAs :Wikidata_Lorient ;
+           :team_name "Lorient" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Lorient
+:Wikidata_Lorient rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q48911"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Genoa
+:Genoa rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://genoacfc.it/"^^xsd:anyURI ;
+           :goal 47 ;
+           :shot_percentage 9.0 ;
+           :yellow_card 85 ;
+           :red_card 2 ;
+           :procession_percentage 46.1 ;
+           :pass_percentage 79.7 ;
+           :aerials_won 13.7 ;
+           :rating 6.54 ;
+           :competesIn :Serie_A ;
+           owl:sameAs :Wikidata_Genoa ;
+           :team_name "Genoa" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Genoa
+:Wikidata_Genoa rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q2074"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Arminia_Bielefeld
+:Arminia_Bielefeld rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.arminia.de/"^^xsd:anyURI ;
+           :goal 26 ;
+           :shot_percentage 9.8 ;
+           :yellow_card 52 ;
+           :red_card 1 ;
+           :procession_percentage 44.1 ;
+           :pass_percentage 74.6 ;
+           :aerials_won 22.2 ;
+           :rating 6.53 ;
+           :competesIn :Bundesliga ;
+           owl:sameAs :Wikidata_Arminia_Bielefeld ;
+           :team_name "Arminia Bielefeld" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Arminia_Bielefeld
+:Wikidata_Arminia_Bielefeld rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q105844"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Angers
+:Angers rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Himad_Abdelli ;
+           :homepage "https://angers-sco.fr/"^^xsd:anyURI ;
+           :goal 40 ;
+           :shot_percentage 10.7 ;
+           :yellow_card 63 ;
+           :red_card 2 ;
+           :procession_percentage 47.1 ;
+           :pass_percentage 81.3 ;
+           :aerials_won 13.2 ;
+           :rating 6.53 ;
+           :competesIn :Ligue_1 ;
+           owl:sameAs :Wikidata_Angers ;
+           :team_name "Angers" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Angers
+:Wikidata_Angers rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q845137"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Eibar
+:Eibar rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.sdeibar.com/en"^^xsd:anyURI ;
+           :goal 29 ;
+           :shot_percentage 11.9 ;
+           :yellow_card 67 ;
+           :red_card 3 ;
+           :procession_percentage 49.2 ;
+           :pass_percentage 72.6 ;
+           :aerials_won 24.4 ;
+           :rating 6.53 ;
+           :competesIn :LaLiga ;
+           owl:sameAs :Wikidata_Eibar ;
+           :team_name "Eibar" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Eibar
+:Wikidata_Eibar rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q770740"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Werder_Bremen
+:Werder_Bremen rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Leonardo_Bittencourt ;
+           :homepage "https://www.werder.de/en"^^xsd:anyURI ;
+           :goal 36 ;
+           :shot_percentage 10.6 ;
+           :yellow_card 63 ;
+           :red_card 3 ;
+           :procession_percentage 45.2 ;
+           :pass_percentage 76.2 ;
+           :aerials_won 18.3 ;
+           :rating 6.52 ;
+           :competesIn :Bundesliga ;
+           owl:sameAs :Wikidata_Werder_Bremen ;
+           :team_name "Werder Bremen" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Werder_Bremen
+:Wikidata_Werder_Bremen rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q51976"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Fiorentina
+:Fiorentina rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Sofyan_Amrabat, :Arthur, :Antonin_Barak ;
+           :homepage "https://www.acffiorentina.com/en"^^xsd:anyURI ;
+           :goal 47 ;
+           :shot_percentage 9.8 ;
+           :yellow_card 86 ;
+           :red_card 5 ;
+           :procession_percentage 46.8 ;
+           :pass_percentage 81.0 ;
+           :aerials_won 14.2 ;
+           :rating 6.52 ;
+           :competesIn :Serie_A ;
+           owl:sameAs :Wikidata_Fiorentina ;
+           :team_name "Fiorentina" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Fiorentina
+:Wikidata_Fiorentina rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q2052"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Nimes
+:Nimes rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "http://www.nimes-olympique.com/"^^xsd:anyURI ;
+           :goal 40 ;
+           :shot_percentage 10.3 ;
+           :yellow_card 57 ;
+           :red_card 5 ;
+           :procession_percentage 45.8 ;
+           :pass_percentage 77.5 ;
+           :aerials_won 14.0 ;
+           :rating 6.52 ;
+           :competesIn :Ligue_1 ;
+           owl:sameAs :Wikidata_Nimes ;
+           :team_name "Nimes" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Nimes
+:Wikidata_Nimes rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q730809"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#West_Bromwich_Albion
+:West_Bromwich_Albion rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.wba.co.uk/"^^xsd:anyURI ;
+           :goal 35 ;
+           :shot_percentage 8.9 ;
+           :yellow_card 51 ;
+           :red_card 4 ;
+           :procession_percentage 41.0 ;
+           :pass_percentage 72.2 ;
+           :aerials_won 19.1 ;
+           :rating 6.51 ;
+           :competesIn :Premier_League ;
+           owl:sameAs :Wikidata_West_Bromwich_Albion ;
+           :team_name "West Bromwich Albion" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_West_Bromwich_Albion
+:Wikidata_West_Bromwich_Albion rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q18744"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#FC_Koln
+:FC_Koln rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://fc.de/en"^^xsd:anyURI ;
+           :goal 34 ;
+           :shot_percentage 10.6 ;
+           :yellow_card 62 ;
+           :red_card 1 ;
+           :procession_percentage 47.1 ;
+           :pass_percentage 77.3 ;
+           :aerials_won 18.5 ;
+           :rating 6.51 ;
+           :competesIn :Bundesliga ;
+           owl:sameAs :Wikidata_FC_Koln ;
+           :team_name "FC Koln" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_FC_Koln
+:Wikidata_FC_Koln rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q104770"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Deportivo_Alaves
+:Deportivo_Alaves rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.deportivoalaves.com/es/"^^xsd:anyURI ;
+           :goal 36 ;
+           :shot_percentage 9.1 ;
+           :yellow_card 87 ;
+           :red_card 8 ;
+           :procession_percentage 44.6 ;
+           :pass_percentage 72.9 ;
+           :aerials_won 22.6 ;
+           :rating 6.5 ;
+           :competesIn :LaLiga ;
+           owl:sameAs :Wikidata_Deportivo_Alaves ;
+           :team_name "Deportivo Alaves" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Deportivo_Alaves
+:Wikidata_Deportivo_Alaves rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q223620"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Levante
+:Levante rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.levanteud.com/en"^^xsd:anyURI ;
+           :goal 46 ;
+           :shot_percentage 10.1 ;
+           :yellow_card 70 ;
+           :red_card 1 ;
+           :procession_percentage 51.5 ;
+           :pass_percentage 80.1 ;
+           :aerials_won 12.2 ;
+           :rating 6.5 ;
+           :competesIn :LaLiga ;
+           owl:sameAs :Wikidata_Levante ;
+           :team_name "Levante" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Levante
+:Wikidata_Levante rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q8823"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Spezia
+:Spezia rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Ethan_Ampadu, :Kelvin_Amian ;
+           :homepage "https://www.speziacalcio.com/en/home.html"^^xsd:anyURI ;
+           :goal 52 ;
+           :shot_percentage 10.2 ;
+           :yellow_card 92 ;
+           :red_card 5 ;
+           :procession_percentage 51.6 ;
+           :pass_percentage 81.1 ;
+           :aerials_won 14.4 ;
+           :rating 6.5 ;
+           :competesIn :Serie_A ;
+           owl:sameAs :Wikidata_Spezia ;
+           :team_name "Spezia" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Spezia
+:Wikidata_Spezia rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q8615"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Getafe
+:Getafe rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Carles_Alena ;
+           :homepage "https://www.getafecf.com/en"^^xsd:anyURI ;
+           :goal 28 ;
+           :shot_percentage 9.5 ;
+           :yellow_card 117 ;
+           :red_card 7 ;
+           :procession_percentage 44.4 ;
+           :pass_percentage 66.5 ;
+           :aerials_won 22.8 ;
+           :rating 6.49 ;
+           :competesIn :LaLiga ;
+           owl:sameAs :Wikidata_Getafe ;
+           :team_name "Getafe" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Getafe
+:Wikidata_Getafe rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q8806"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Parma_Calcio_1913
+:Parma_Calcio_1913 rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.parmacalcio1913.com/en/"^^xsd:anyURI ;
+           :goal 39 ;
+           :shot_percentage 10.4 ;
+           :yellow_card 91 ;
+           :red_card 1 ;
+           :procession_percentage 48.4 ;
+           :pass_percentage 82.5 ;
+           :aerials_won 16.9 ;
+           :rating 6.49 ;
+           :competesIn :Serie_A ;
+           owl:sameAs :Wikidata_Parma_Calcio_1913 ;
+           :team_name "Parma Calcio 1913" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Parma_Calcio_1913
+:Wikidata_Parma_Calcio_1913 rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q2693"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Elche
+:Elche rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Edgar_Badia, :Alejandro_Alfaro ;
+           :homepage "https://www.elchecf.es/"^^xsd:anyURI ;
+           :goal 34 ;
+           :shot_percentage 7.1 ;
+           :yellow_card 95 ;
+           :red_card 3 ;
+           :procession_percentage 48.1 ;
+           :pass_percentage 81.5 ;
+           :aerials_won 13.2 ;
+           :rating 6.48 ;
+           :competesIn :LaLiga ;
+           owl:sameAs :Wikidata_Elche ;
+           :team_name "Elche" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Elche
+:Wikidata_Elche rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q10512"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Granada
+:Granada rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.granadacf.es/"^^xsd:anyURI ;
+           :goal 47 ;
+           :shot_percentage 9.4 ;
+           :yellow_card 96 ;
+           :red_card 6 ;
+           :procession_percentage 43.4 ;
+           :pass_percentage 70.0 ;
+           :aerials_won 18.3 ;
+           :rating 6.47 ;
+           :competesIn :LaLiga ;
+           owl:sameAs :Wikidata_Granada ;
+           :team_name "Granada" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Granada
+:Wikidata_Granada rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q8812"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Cadiz
+:Cadiz rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.cadizcf.com/en"^^xsd:anyURI ;
+           :goal 36 ;
+           :shot_percentage 8.0 ;
+           :yellow_card 77 ;
+           :red_card 3 ;
+           :procession_percentage 38.5 ;
+           :pass_percentage 68.8 ;
+           :aerials_won 18.5 ;
+           :rating 6.47 ;
+           :competesIn :LaLiga ;
+           owl:sameAs :Wikidata_Cadiz ;
+           :team_name "Cadiz" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Cadiz
+:Wikidata_Cadiz rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q460448"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Real_Valladolid
+:Real_Valladolid rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.realvalladolid.es/"^^xsd:anyURI ;
+           :goal 34 ;
+           :shot_percentage 9.7 ;
+           :yellow_card 93 ;
+           :red_card 4 ;
+           :procession_percentage 46.2 ;
+           :pass_percentage 74.8 ;
+           :aerials_won 17.1 ;
+           :rating 6.46 ;
+           :competesIn :LaLiga ;
+           owl:sameAs :Wikidata_Real_Valladolid ;
+           :team_name "Real Valladolid" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Real_Valladolid
+:Wikidata_Real_Valladolid rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q10319"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Sheffield_United
+:Sheffield_United rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.sufc.co.uk/"^^xsd:anyURI ;
+           :goal 20 ;
+           :shot_percentage 8.5 ;
+           :yellow_card 73 ;
+           :red_card 3 ;
+           :procession_percentage 43.0 ;
+           :pass_percentage 76.9 ;
+           :aerials_won 19.1 ;
+           :rating 6.46 ;
+           :competesIn :Premier_League ;
+           owl:sameAs :Wikidata_Sheffield_United ;
+           :team_name "Sheffield United" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Sheffield_United
+:Wikidata_Sheffield_United rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q19607"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Crotone
+:Crotone rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.fccrotone.it/"^^xsd:anyURI ;
+           :goal 45 ;
+           :shot_percentage 9.5 ;
+           :yellow_card 85 ;
+           :red_card 4 ;
+           :procession_percentage 47.2 ;
+           :pass_percentage 80.4 ;
+           :aerials_won 12.7 ;
+           :rating 6.43 ;
+           :competesIn :Serie_A ;
+           owl:sameAs :Wikidata_Crotone ;
+           :team_name "Crotone" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Crotone
+:Wikidata_Crotone rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q6690"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Benevento
+:Benevento rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.beneventocalcio.club/"^^xsd:anyURI ;
+           :goal 40 ;
+           :shot_percentage 11.0 ;
+           :yellow_card 90 ;
+           :red_card 5 ;
+           :procession_percentage 44.2 ;
+           :pass_percentage 77.7 ;
+           :aerials_won 13.4 ;
+           :rating 6.43 ;
+           :competesIn :Serie_A ;
+           owl:sameAs :Wikidata_Benevento ;
+           :team_name "Benevento" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Benevento
+:Wikidata_Benevento rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q652516"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Dijon
+:Dijon rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :homepage "https://www.dfco.fr/"^^xsd:anyURI ;
+           :goal 25 ;
+           :shot_percentage 9.2 ;
+           :yellow_card 75 ;
+           :red_card 5 ;
+           :procession_percentage 46.9 ;
+           :pass_percentage 80.0 ;
+           :aerials_won 14.3 ;
+           :rating 6.42 ;
+           :competesIn :Ligue_1 ;
+           owl:sameAs :Wikidata_Dijon ;
+           :team_name "Dijon" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Dijon
+:Wikidata_Dijon rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q503317"^^xsd:anyURI .
+
+        
+###  http://www.semanticweb.org/ontologies/2025/football#Schalke_04
+:Schalke_04 rdf:type owl:NamedIndividual ,
+                    :Team ;
+         :hires :Eder_Alvarez_Balanta, :Mehmet_Can_Aydin ;
+           :homepage "https://schalke04.de/en/"^^xsd:anyURI ;
+           :goal 25 ;
+           :shot_percentage 8.9 ;
+           :yellow_card 70 ;
+           :red_card 2 ;
+           :procession_percentage 46.2 ;
+           :pass_percentage 76.5 ;
+           :aerials_won 15.6 ;
+           :rating 6.41 ;
+           :competesIn :Bundesliga ;
+           owl:sameAs :Wikidata_Schalke_04 ;
+           :team_name "Schalke 04" .
+
+
+###  http://www.semanticweb.org/ontologies/2025/football#Wikidata_Schalke_04
+:Wikidata_Schalke_04 rdf:type owl:NamedIndividual ,
+                    :WikidataLink ;
+           :link "https://www.wikidata.org/wiki/Q32494"^^xsd:anyURI .
+
+        
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :League
+                :Player
+                :Team
+              )
+] .
