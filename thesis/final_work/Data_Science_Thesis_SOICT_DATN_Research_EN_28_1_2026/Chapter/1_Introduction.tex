@@ -1,0 +1,309 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+
+\section{Problem Statement}
+\label{sec:dvd}
+Recognizing the identities of multiple subjects within a crowd, especially without subject cooperation, is an urgent requirement in today's complex security environment. Many existing approaches aim to solve this problem globally. However, most of these methods focus on simply improving the accuracy achieved from a single camera angle. Furthermore, published methods typically require large training costs and currently achieve a Rank-1 accuracy lower than 96\%.
+
+To address these limitations, we propose a novel approach named "Multi-view gait recognition with Deep Learning - MVDL".
+
+
+
+\section{Background and Problems of Research} 
+\label{sec:giaiphap}
+\subsection{Overview}
+
+Gait recognition, the identification of a person based on their walking style, has seen several notable contributions in recent years. The Rank-1 accuracy rates for some contemporary models are: Cross-View Gait Recognition by Discriminative Feature Learning: 95.4\% \cite{9351667}. Combining the Silhouette and Skeleton Data for Gait Recognition:  92.5\% \cite{10096986}. Gait Recognition Using 3-D Human Body Shape Inference: 91.4\% \cite{Zhu_2023_WACV}. Learning Visual Prompt for Gait Recognition:  93.2\% \cite{Ma_2024_CVPR}. Learning rich features for gait recognition by integrating skeletons and silhouettes: 91.28\% \cite{Peng2024}. GaitGCI: Generative Counterfactual Intervention for Gait Recognition: 93.0\% \cite{10203341}. These solutions face two primary constraints: accuracy levels fall short of the 96\% benchmark, and inference is limited to data captured from a single camera perspective.
+
+\subsection{The Fundamentals of Human Gait} 
+Human gait refers to the specific way a person walks, including the cyclical pattern of movement of the limbs and body during locomotion on foot.\cite{Manske2021-jd} It's one of the most fundamental and complex human motor activities, involving coordinated interaction between the nervous system, muscles, bones, and joints.
+
+There are 4 key features of human gait. Bipedal: Humans are one of the few mammals that walk upright on two legs consistently.  \cite{Abu-Faraj2015-dt} Double pendulum motion: In simple terms, each leg acts like an inverted pendulum during the stance phase and a regular pendulum during the swing phase. Reciprocal arm swing: Arms swing opposite to the legs for balance and efficiency. Heel-to-toe rolling: In normal walking, the heel strikes the ground first (heel strike), followed by weight transfer through the foot to push off with the toes (toe-off).
+
+\begin{center}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Figure/Overview-of-the-gait-cycle-and-sub-phases-analyzed-in-this-study-Total-gait-cycle-first.jpg}
+    \caption{Overview of the gait cycle and sub-phases analyzed}
+    \label{fig:gait_cycle_overview}
+\end{figure}
+\end{center}
+
+The gait cycle is typically described for one leg and is divided into two main phases: Stance phase (60\% of the cycle)\cite{DiShiGait} – when the foot is on the ground. It includes: initial contact (heel strike), loading response (foot flattens), mid-stance (body directly over the foot), terminal stance (heel rises), and pre-swing (toe-off preparation) Figure~\ref{fig:gait_cycle_overview}.  Swing phase (40\% of the cycle) – when the foot is in the air. It includes: initial swing (toe-off and leg moves forward), mid-swing (leg passes under the body), and terminal swing (preparing for heel strike)
+
+
+There is also double support (both feet on the ground) during walking, which disappears when a person starts running (then it becomes double float) Figure~\ref{fig:terminology_to_describe_the_events}. This phase occurs twice during each gait cycle, taking up about 20\% of the total cycle, and is a critical period for weight acceptance and stability. \cite{Magee2007-pg}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Figure/F000146f014-002-9781455709779.jpg}
+    \caption{Terminology to describe the events of the gait cycle}
+    \label{fig:terminology_to_describe_the_events}
+\end{figure}
+
+Details of the double support phase includes: occurs twice per cycle: The double support phase happens twice, beginning with the heel strike of one foot and continuing until the other foot lifts off the ground, accounts for 20\% of the cycle: the entire gait cycle is approximately 20\% double support and 80\% single support, where only one foot is on the ground consisting of two sub-phases: initial double support: begins with the heel strike of the leading foot and ends when the opposite foot lifts off the ground,  \cite{Magee2007-pg} and  terminal double support: starts when the opposite foot makes initial contact with the ground and ends when the leading foot lifts off the ground,  provides stability: it is a key time for stability, as both feet are on the ground to support the body's weight. and can be affected by other factors: things like walking while being in certain conditions, such as Parkinson's disease, are often associated with a longer double support phase.
+
+
+\subsection{Overview of Gait Recognition}
+Gait Recognition is a biometric technology that identifies individuals based on their unique way of walking—their gait pattern. It is often called "walking fingerprint" technology because, like a fingerprint, each person's gait is considered distinct.
+
+Unlike other biometrics that require close proximity or cooperation (like fingerprint or iris scans), gait analysis can be performed at a distance and without the subject's knowledge, making it particularly valuable for surveillance and security applications.\cite{li2009encyclopedia}
+
+Gait recognition typically involves three main stages powered by modern AI and computer vision techniques. The first stage, acquisition and detection, uses a video camera to capture a sequence of a person walking, then the system detects and isolates the moving human figure from the background. The second stage, feature extraction and modeling, can apply two primary approaches. In model-based methods, the system builds a representation of the human body, including skeleton, joints, and limbs, and tracks their movement over time to extract dynamic features such as step length, cadence, limb swing speed, torso angle, and joint angles. This approach is more robust to changes in clothing or carrying items. In contrast, appearance-based (model-free) methods treat the entire walking figure as a single shape without modeling body parts. These often rely on silhouettes and generate a Gait Energy Image (GEI), which is a composite image created by averaging silhouettes across a walking cycle, it captures the unique blur pattern of the walk. This approach is simpler to compute and effective with high-quality video.
+
+Gait recognition offers several advantages: it is non-intrusive and can be performed at a distance without requiring cooperation or awareness; it is difficult to conceal or impersonate because gait is a subconscious motor pattern; it remains effective even in low resolution video where facial recognition may fail; and it complements other biometrics, enhancing identification accuracy when combined. Actually, facial task will fail to recognize the new face after the subject gpt a facial surgery. However, challenges and limitations still exist. Performance can be sensitive in some cases, such as clothing, footwear, carrying conditions, or emotional state. Recognition accuracy also depends on viewing angle, as gait appearance changes with camera perspective. Environmental factors like rough terrain or stairs can alter natural gait, and the complex of processing video sequences, especially in real time, demands significant computing power. In essence, gait recognition transforms the unconscious act of walking into a unique and identifiable biometric signature.
+
+\subsection{Single-View in Gait Recognition}
+
+
+In gait recognition, the concept of single-view gait recognition refers to the process of identifying or verifying an individual using gait information which is captured from only one camera angle or fixed viewpoint. Unlike multi-view systems that integrate data from several perspectives, single-view recognition relies entirely on the information available from a single, static camera. This makes it a practical approach for many real-world applications, particularly in surveillance environments where most CCTV networks consist of independent cameras installed at fixed positions. The system learns to recognize individuals by analyzing the unique walking patterns visible from that one viewpoint, which can be sufficient for effective recognition under controlled conditions.
+
+A defining characteristic of single-view gait recognition has its reliance on a single camera. The system processes video footage or sequences of images captured from one perspective, which is often chosen to maximize the visibility of gait features. In research contexts, cameras are frequently positioned to capture a 90-degree side profile, also known as a lateral view, the main reason is that this angle provides the richest information about limb motion and overall body dynamics. However, this reliance on a fixed angle also introduces significant challenges. A system trained on side-view data may struggle when the subject walks directly toward or away from the camera, as the silhouettes and dynamic features appear drastically different from those captured in lateral views. This dependence on viewpoint highlights one of the main limitations of single-view recognition systems.
+
+Beyond viewpoint, single-view gait recognition is also sensitive to co-variates which are external factors that can alter the appearance of a person’s gait. Clothing, such as a long coat, can change the silhouette and obscure limb movement. Carrying conditions, like holding a backpack or briefcase, can affect posture and walking dynamics. Footwear choices, whether high heels or sneakers, influence stride and cadence, while emotional states, such as walking happily, sadly, or while injured, can subtly alter gait patterns. These variables make recognition more complex and can reduce accuracy if not properly accounted for in system design.
+
+
+In essence, single-view gait recognition requires sufficient data to extract meaningful features. Typically, the system processes a full gait sequence, meaning a video of the subject walking through an entire gait cycle. From this sequence, features such as the Gait Energy Image (GEI) are generated. The GEI is a composite representation created by averaging silhouettes across the walking cycle, capturing the distinctive blur pattern of an individual’s gait. This feature serves as a powerful tool for distinguishing between individuals, even when only a single viewpoint is available. Thus, while single-view gait recognition faces challenges related to viewpoint dependence and sensitivity to co-variates, it remains a practical and widely studied approach in biometric identification.
+
+
+
+\subsection{The Fundamentals of  Gait Energy Image (GEI)}
+\begin{center}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Figure/GEI.png}
+    \caption{Gait Energy Image \cite{An_TBIOM_OUMVLP_Pose}}
+    \label{fig:Gait_Energy_Image}
+\end{figure}
+\end{center}
+
+
+When a video of a person walking is taken, their silhouette can be extracted from each frame and then layered together into a single, averaged image. The result is a blurred, ghost-like picture that captures the essence of their movement, and this representation is known as a Gait Energy Image (GEI). The GEI serves as a type of “motion history” which is condensed into one static picture. It was introduced as a powerful appearance-based representation for gait recognition, designed to simplify the complex task of analyzing dozens or even hundreds of frames in a video sequence into the more manageable task of analyzing a single image. By compressing temporal information into one composite form, the GEI provides a unique way of capturing both the static and dynamic aspects of human walking.
+
+The creation of a GEI Figure~\ref{fig:Gait_Energy_Image} involves a systematic process. First, silhouette extraction is performed, where the walking person is detected in each frame of the video and segmented from the background. This produces a sequence of binary silhouettes, typically represented as white figures against a black background. Next, temporal averaging is applied. Over the course of one complete gait cycle—from one heel strike to the next heel strike of the same foot—all the silhouette frames are averaged together. The pixel values in the final GEI are calculated based on how frequently each pixel was active, meaning part of the silhouette, during the cycle. Mathematically, this is expressed as 
+$ G(x,y) = \frac{1}{N} \sum^N_{t = 1} B_t(x, y)$ where 
+             $G(x,y)$ is the pixel value at location (x,y) in the GEI.
+        $N$ is the total number of frames in one gait cycle.
+        $B_t(x,y)$ is the pixel value (1 for foreground, 0 for background) in the silhouette image at time $t$.
+        $\sum$ means authors sum up all the silhouette values for that pixel over time.
+         $\frac{1}{N}$ averages that sum.
+This averaging process transforms temporal motion into a spatially encoded image that reflects both presence and movement.
+
+A typical GEI reveals three distinct regions that correspond to different aspects of the body’s motion. The static body parts, such as the head and body, appear as the brightest and most solid regions because they are consistently present in the silhouettes throughout the gait cycle. The dynamic limb parts, including the arms and legs, appear as grey, blurred regions since they move rapidly and occupy varying positions across frames. This blurred energy pattern captures the unique swing and stride of the limbs. Finally, the background remains the darkest region, as those pixels are never activated during the walking sequence. Together, these regions create a composite image that encodes both the physical build of the person and the dynamic characteristics of their gait.
+
+The GEI offers several important advantages. It reduces data complexity by compressing a long video sequence into a single image, which significantly lowers computational costs and memory requirements. It is also robust to noise, as averaging across an entire gait cycle smooths out random segmentation errors that may occur in individual frames. Furthermore, the GEI encodes both shape and dynamics: the bright static regions capture the person’s body structure, while the blurred dynamic regions capture temporal movement features such as stride length and leg swing. Once a GEI is generated, it can be easily compared against a database using standard image classification techniques, including feature descriptors and convolutional neural networks (CNNs), making it a practical tool for biometric identification.
+
+Despite its strengths, the GEI has limitations. One major drawback is the loss of temporal order. Because the GEI is an average, it does not preserve the sequence of movements, meaning it cannot distinguish between left and right steps or capture the precise timing of limb motions. Another limitation is sensitivity to viewing angle. A GEI generated from a side view looks completely different from one generated from a frontal view, making recognition highly dependent on camera placement. Additionally, the GEI is sensitive to appearance co-variates such as clothing or carrying conditions. For example, a long coat or a backpack can dramatically alter the silhouette, obscuring the underlying gait pattern and reducing recognition accuracy. These challenges highlight the need for complementary methods or multi-view approaches to overcome the constraints of GEI-based gait recognition.
+
+\subsection{Multiple-View in Gait Recognition}
+
+Multiple-view gait recognition is an advanced method that employs multiple cameras positioned at different angles to capture a person’s walk. Instead of relying on a single viewpoint, the system integrates information from several perspectives to build a more comprehensive and robust representation of the gait. This integration can be achieved either by fusing the data collected from each camera view or by reconstructing a 3 dimensional model of the person’s movement. By combining these different viewpoints, the system is less likely to be misled by changes in walking direction or by objects that obscure one particular view. The central idea behind multiple-view gait recognition is to overcome the inherent limitations of single-camera systems by leveraging synchronized information from multiple sources, thereby creating a more reliable and accurate biometric signature.
+
+There are two primary strategies used in multiple-view gait recognition. The first is view fusion, where gait features such as Gait Energy Images (GEIs) or skeletal models are extracted independently from each camera view. These features are combined at different stages of processing early fusion of raw data, mid level fusion of extracted features, or late fusion of matching scores—to produce a single, view-invariant gait signature. This fusion process ensures that the final representation captures the essential characteristics of the gait while minimizing the distortions caused by viewpoint changes. The second strategy is three-dimensional model reconstruction. In this approach, computer vision techniques and photogrammetry are applied to synchronized video streams from multiple cameras to reconstruct a precise 3D model of the person walking. Once the 3D model is created, it can be analyzed from any virtual viewpoint, effectively eliminating the problem of viewpoint dependence. Features can then be extracted directly from this volumetric representation, providing a richer and more flexible dataset for recognition.
+
+Although multiple-view gait recognition offers a powerful and robust solution, particularly in high-stakes or controlled environments such as security-sensitive facilities, it comes with significant trade-offs. The complexity of setting up and synchronizing multiple cameras, along with the computational demands of fusing data or reconstructing 3D models, makes the system more expensive and resource-intensive compared to single-view approaches. Nevertheless, the enhanced accuracy and resilience to covariates make multiple-view gait recognition a valuable tool in scenarios where reliability and precision are paramount.
+
+
+
+\subsection{Classic / Pre–Deep Learning Gait Recognition Approaches}
+
+\subsubsection{Gait Energy Image (GEI) and Silhouette-Based Methods}
+The most influential non-DL approaches.
+
+    Han \& Bhanu (2006): “Individual recognition using gait energy image.”  \\
+     In the paper, authors propose a new spatio-temporal gait representation, called Gait Energy Image (GEI), to characterize human walking properties for individual recognition by gait. \cite{1561189} To address the problem of the lack of training templates, authors also propose a novel approach for human recognition by combining statistical gait features from real and synthetic templates. Authors directly compute the real templates from training silhouette sequences, while authors generate the synthetic templates from training sequences by simulating silhouette distortion. Authors use a statistical approach for learning effective features from real and synthetic templates. Authors compare the proposed GEI-based gait recognition approach with other gait recognition approaches on USF HumanID Database. Experimental results show that the proposed GEI is an effective and efficient gait representation for individual recognition, and the proposed approach achieves highly competitive performance with respect to the published gait recognition approaches. \cite{1561189}
+   
+    Wang, Tan, Ning, \& Hu (2003): “Silhouette analysis-based gait recognition for human identification.”  \\
+     Human identification at a distance has recently gained growing interest from computer vision researchers. Gait recognition aims essentially to address this problem by identifying people based on the way they walk. \cite{1251144} In the paper, a simple but efficient gait recognition algorithm using spatial-temporal silhouette analysis is proposed. For each image sequence, a background subtraction algorithm and a simple correspondence procedure are first used to segment and track the moving silhouettes of a walking figure. Then, eigenspace transformation based on principal component analysis (PCA) is applied to time-varying distance signals derived from a sequence of silhouette images to reduce the dimensionality of the input feature space. Supervised pattern classification techniques are finally performed in the lower-dimensional eigenspace for recognition. This method implicitly captures the structural and transitional characteristics of gait. Extensive experimental results on outdoor image sequences demonstrate that the proposed algorithm has an encouraging recognition performance with relatively low computational cost. \cite{1251144}
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.75\linewidth]{Figure/5-Figure3-1.png}
+        \caption{Silhouette representation}
+        \label{fig:Silhouette_representation}
+    \end{figure}
+
+    Silhouette representation, Figure~\ref{fig:Silhouette_representation}, illustration of boundary extraction and counterclockwise unwrapping and the normalized distance signal consisting of all distances between the centroid and the pixels on the boundary
+
+   BenAbdelkader, Cutler, \& Davis (2002): "Stride and cadence as a biometric in automatic person identification." \cite{BenAbdelkader2002StrideAC}. 
+     Authors present a correspondence-free method to automatically estimate the spatio-temporal parameters of gait (stride length and cadence) of a walking person from video. Stride and cadence, Figure~\ref{fig:automatic_person_identification}, are functions of body height, weight, and gender, and authors use these biometrics for identification and verification of people. The cadence is estimated using the periodicity of a walking person. Using a calibrated camera system, the stride length is estimated by first tracking the person and estimating their distance travelled over a period of time. By counting the number of steps (again using periodicity), and assuming constant-velocity walking, authors are able to estimate the stride to within 1cm for a typical outdoor surveillance configuration (under certain assumptions). With a database of 17 people and 8 samples of each, authors show that a person is verified with an Equal Error Rate (EER) of 11\%, and correctly identified with a probability of 40\%. This method works with low-resolution images of people, and is robust to changes in lighting, clothing, and tracking errors. It is view-invariant though performance is optimal in a near fronto-parallel configuration. \cite{BenAbdelkader2002StrideAC}
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.75\linewidth]{Figure/2-Figure1-1.png}
+        \caption{Overview of automatic person identification}
+        \label{fig:automatic_person_identification}
+    \end{figure}
+
+    Liu \& Sarkar (2004): "Simplest representation yet for gait recognition: Averaged that silhouette." \cite{1333741} .
+    Authors present a robust representation for gait recognition that is compact, easy to construct, and affords efficient matching. Instead of a time series based representation comprising of a sequence of raw silhouette frames or of features extracted therein, as has been the practice, authors simply align and average the silhouettes over one gait cycle. Authors then base recognition on the Euclidean distance between these averaged silhouette representations. Authors show, using the recently formulated gait challenge problem, that the improvement in execution time is 30 times while possessing recognition power that is comparable to the gait baseline algorithm, which is becoming the comparison standard in gait recognition. Experiments with portions of the average silhouette representation show that recognition power is not entirely derived from upper body shape, rather the dynamics of the legs also contribute equally to recognition. However, this study does raise intriguing doubts about the need for accurate shape and dynamics representations for gait recognition.  \cite{1333741}
+    
+
+\subsubsection{Model-Based Approaches (No Deep Learning)}
+Kinematic or structural human models.
+
+    Cunado, Nixon \& Carter (2002): "Automatic extraction and description of human gait models for recognition purposes."  \cite{Cunado2003AutomaticEA}.
+      Using gait as a biometric is of emerging interest. Authors describe a new model-based moving feature extraction analysis is presented that automatically extracts and describes human gait for recognition. The gait signature is extracted directly from the evidence gathering process. This is possible by using a Fourier series to describe the motion of the upper leg and apply temporal evidence gathering techniques to extract the moving model from a sequence of images. Simulation results highlight potential performance benefits in the presence of noise. Classification uses the k-nearest neighbour rule applied to the Fourier components of the motion of the upper leg. Experimental analysis demonstrates that an improved classification rate is given by the phase-weighted Fourier magnitude information over the use of the magnitude information alone. The improved classification capability of the phase-weighted magnitude information is verified using statistical analysis of the separation of clusters in the feature space. Furthermore, the technique is shown to be able to handle high levels of occlusion, which is of especial importance in gait as the human body is self-occluding. As such, a new technique has been developed to automatically extract and describe a moving articulated shape, the human leg, and shown its potential in gait as a biometric. \cite{Cunado2003AutomaticEA}
+
+    Yam, Nixon, Carter (2004): "Automated person recognition by walking and running via model-based approaches." \cite{YAM20041057} .     Gait enjoys advantages over other biometrics in that it can be perceived from a distance and is difficult to disguise. Current approaches are mostly statistical and concentrate on walking only. By analysing leg motion authors show how authors can recognise people not only by the walking gait, but also by the running gait. This is achieved by either of two new modelling approaches which employ coupled oscillators and the biomechanics of human locomotion as the underlying concepts. These models give a plausible method for data reduction by providing estimates of the inclination of the thigh and of the leg, from the image data. Both approaches derive a phase-weighted Fourier description gait signature by automated non-invasive means. One approach is completely automated whereas the other requires specification of a single parameter to distinguish between walking and running. Results show that both gaits are potential biometrics, with running being more potent. By its basis in evidence gathering, this new technique can tolerate noise and low resolution.\cite{YAM20041057}
+    
+    A. Kale, A. Roy-Chowdhury, et al. (2004) : "Identification of humans using gait"  \cite{Kale-Sundaresan}.
+     In the paper authors propose a view based approach to recognize humans using gait. The width of the outer contour of the binarized silhouette of a walking person is chosen as the image feature. A set of exemplars that occur during a walk cycle is chosen for each individual. Using these examples a lower dimensional Frame to Exemplar Distance (FED) vector is generated, Figure~\ref{fig:Stances_corresponding}. A continuous HMM is trained using several such FED vector sequences. This methodology serves to compactly capture structural and dynamic features that are unique to an individual. The statistical nature of the HMM renders overall robustness to representation and recognition. Human identification performance of the proposed scheme is illustrated using outdoor video sequences.  \cite{Kale-Sundaresan}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.75\linewidth]{Figure/Stances-corresponding-to-the-gait-cycle-of-two-individuals-a-Person-1-b-Person-2.png}
+        \caption{Stances corresponding to the gait cycle of two individuals. (a) Person 1. (b) Person 2.}
+        \label{fig:Stances_corresponding}
+    \end{figure}
+
+\subsubsection{Gait Dynamics, Frequency, and Statistical Methods}
+Feature engineering and classical ML.
+Makihara \& Yagi (2010): Silhouette transformation based on walking speed for gait identification. \cite{Makihara-Akira} . 
+     Authors propose a method of gait silhouette transformation from one speed to another to cope with walking speed changes in gait identification. When a person changes his/her walking speed, dynamic features (e.g. stride and joint angle) are changed while static features (e.g. thigh and shin lengths) are unchanged. Based on the fact, firstly, static and dynamic features are separated from gait silhouettes by fitting a human model. Secondly, a factorization-based speed transformation model for the dynamic features is created using a training set for multiple persons on multiple speeds. This model can transform the dynamic features from a reference speed to another arbitrary speed. Finally, silhouettes are restored by combining the unchanged static features and the transformed dynamic features. Evaluation by gait identification using silhouette-based frequency-domain features shows the effectiveness of the proposed method. \cite{Makihara-Akira}
+
+    K. Bashir, T. Xiang and S. Gong (2009)}: "Gait recognition using Gait Entropy Image," \cite{Bashir-Khalid}.
+    Gait as a behavioural biometric is concerned with how people walk. However, most existing gait representations capture both motion and appearance information. They are thus sensitive to changes in various covariate conditions such as carrying and clothing. In this paper, a novel gait representation termed as Gait Entropy Image (GEnI) is proposed. Based on computing entropy, a GEnI encodes in a single image the randomness of pixel values in the silhouette images over a complete gait cycle. It thus captures mostly motion information and is robust to covariate condition changes that affect appearance. Extensive experiments on the USF HumanID dataset, CASIA dataset and the SOTON dataset have been carried out to demonstrate that the proposed gait representation outperforms existing methods, especially when there are significant appearance changes. Our experiments also show clear advantage of GEnI over the alternatives without the assumption on cooperative subjects, i.e. both the gallery and the probe sets consist of a mixture of gait sequences under different and unknown covariate conditions. \cite{Bashir-Khalid}
+    
+
+\subsubsection{Handcrafted Spatiotemporal Templates}
+GEI-inspired variants without Deep Learning. They focused entirely on hand-designed image transforms using SVM or k-NN.
+Hofmann Martin , Bachmann Sebastian \& Rigoll Gerhard (2012): DGHEI (Depth Gradient Histogram Energy Image) \cite{Hofmann-Martin}    
+     Using gait recognition methods, people can be identified by the way they walk. The most successful and efficient of these methods are based on the Gait Energy Image (GEI). In this paper, authors extend the traditional Gait Energy Image by including depth information. First, GEI is extended by calculating the required silhouettes using depth data. Authors then formulate a completely new feature, which authors call the Depth Gradient Histogram Energy Image (DGHEI). Authors compare the improved depth-GEI and the new DGHEI to the traditional GEI. Authors do this using a new gait database which was recorded with the Kinect sensor. On this database authors show significant performance gain of DGHEI. \cite{Hofmann-Martin} 
+    
+     Chen Wang, Junping Zhang, Jian Pu, Xiaoru Yuan \& Liang Wang (2010): CGEI (Chrono Gait Image) \cite{Wang-Zhang}.
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.75\linewidth]{Figure/An-example-of-generating-a-CGI-temporal-template.png}
+        \caption{An example of generating a CGI temporal template}
+        \label{fig:CGI_temporal_template}
+    \end{figure}  
+     In the paper, authors propose a novel temporal template, called Chrono-Gait Image (CGI), Figure~\ref{fig:CGI_temporal_template}, to describe the spatio-temporal walking pat- tern for human identification by gait. The CGI temporal template en- codes the temporal information among gait frames via color mapping to improve the recognition performance. Our method starts with the ex- traction of the contour in each gait image, followed by utilizing a color mapping function to encode each of gait contour images in the same gait sequence and compositing them to a single CGI. Authors also obtain the CGI-based real templates by generating CGI for each period of one gait se- quence and utilize contour distortion to generate the CGI-based synthetic templates. In addition to independent recognition using either of individ- ual templates, authors combine the real and synthetic temporal templates for refining the performance of human recognition. Extensive experiments on the USF HumanID database indicate that compared with the recently published gait recognition approaches, our CGI-based approach attains better performance in gait recognition with considerable robustness to gait period detection. \cite{Wang-Zhang}
+
+
+\subsubsection{Other methods}
+Worapan Kusakunniran (2014): Recognizing gaits on spatio-temporal feature domain. \cite{Kusakunniran2014_TIFS}.
+     Gait has been known as an effective biometric feature to identify a person at a distance, e.g., in video surveillance applications. Many methods have been proposed for gait recognitions from various different perspectives. It is found that these methods rely on appearance (e.g., shape contour, silhouette)-based analyses, which require preprocessing of foreground–background segmentation (FG/BG). This process not only causes additional time complexity, but also adversely influences performances of gait analyses due to imperfections of existing FG/BG methods. Besides, appearance-based gait recognitions are sensitive to several variations and partial occlusions, e.g., caused by carrying a bag and varying a cloth type. To avoid these limitations, this paper proposes a new framework to construct a new gait feature directly from a raw video. The proposed gait feature extraction process is performed in the spatio-temporal domain. The space-time interest points (STIPs) are detected by considering large variations along both spatial and temporal directions in local spatio-temporal volumes of a raw gait video sequence. Thus, STIPs are allocated, where there are significant movements of human body in both space and time. A histogram of oriented gradients and a histogram of optical flow are computed on a 3D video patch in a neighborhood of each detected STIP, as a STIP descriptor. Then, the bag-of-words model is applied on each set of STIP descriptors to construct a gait feature for representing and recognizing an individual gait. When compared with other existing methods in the literature, it has been shown that the performance of the proposed method is promising for the case of normal walking, and is outstanding for the case of partial occlusion caused by walking with carrying a bag and walking with varying a cloth type. \cite{Kusakunniran2014_TIFS}
+     
+    Kusakunniran et al. (2014): Recognizing gaits across views through correlated motion co-clustering.\cite{Kusakunniran2014_TIP} 
+     Human gait is an important biometric feature, which can be used to identify a person remotely. However, view change can cause significant difficulties for gait recognition because it will alter available visual features for matching substantially. Moreover, it is observed that different parts of gait will be affected differently by view change. By exploring relations between two gaits from two different views, it is also observed that a part of gait in one view is more related to a typical part than any other parts of gait in another view. A new method proposed in this paper considers such variance of correlations between gaits across views that is not explicitly analyzed in the other existing methods. In our method, a novel motion co-clustering is carried out to partition the most related parts of gaits from different views into the same group. In this way, relationships between gaits from different views will be more precisely described based on multiple groups of the motion co-clustering instead of a single correlation descriptor. Inside each group, a linear correlation between gait information across views is further maximized through canonical correlation analysis (CCA). Consequently, gait information in one view can be projected onto another view through a linear approximation under the trained CCA subspaces. In the end, a similarity between gaits originally recorded from different views can be measured under the approximately same view. Comprehensive experiments based on widely adopted gait databases have shown that our method outperforms the state-of-the-art. \cite{Kusakunniran2014_TIP}
+     
+    Himanshu Aggarwal and Dinesh K. Vishwakarma (2016): Covariate conscious approach for gait recognition based upon Zernike moment invariants.  \cite{Aggarwal2016_AESI}.
+     Gait recognition i.e. identification of an individual from his/her walking pattern is an emerging field. While existing gait recognition techniques perform satisfactorily in normal walking conditions, there performance tend to suffer drastically with variations in clothing and carrying conditions. In this work, authors propose a novel covariate cognizant framework to deal with the presence of such covariates. Authors describe gait motion by forming a single 2D spatio-temporal template from video sequence, called Average Energy Silhouette image (AESI). Zernike moment invariants (ZMIs) are then computed to screen the parts of AESI infected with covariates. Following this, features are extracted from Spatial Distribution of Oriented Gradients (SDOGs) and novel Mean of Directional Pixels (MDPs) methods. The obtained features are fused together to form the final well-endowed feature set. Experimental evaluation of the proposed framework on three publicly available datasets i.e. CASIA dataset B, OU-ISIR Treadmill dataset B and USF Human-ID challenge dataset with recently published gait recognition approaches, prove its superior performance.  \cite{Aggarwal2016_AESI}
+     
+    Xu, Makihara, et al (2019): Speed-Invariant Gait Recognition Using Single-Support Gait Energy Image (SSGEI) \cite{Xu2019_SSGEI}.
+     Gait is one of the most popular behavioral biometrics because it can be authenticated at a distance from a camera without subject cooperation. Speed differences between matching pairs, however, cause significant performance drops in gait recognition, and gait mode difference (i.e., walking versus running) makes gait recognition further challenging. Authors therefore propose a speed-invariant gait representation called single-support GEI (SSGEI), which realizes a good trade-off between speed invariance and stability by aggregating multiple frames around single-support phases. In addition, to mitigate the pose differences between walking and running modes at single-support phases, authors morph walking and running SSGEIs into intermediate SSGEIs between walking and running mode, where authors exploit a free-form deformation field from the walking or running modes to the intermediate mode obtained by training data. Authors finally apply Gabor filtering and spatial metric learning as postprocessing for further accuracy improvement. Experiments on two publicly available datasets, the OU-ISIR Treadmill Dataset A and the CASIA-C Dataset demonstrate that the proposed method yields the state-of-the-art accuracies in both identification and verification scenarios with a low computational cost. \cite{Xu2019_SSGEI}
+
+
+\subsection{Recent Gait Recognition Research}
+Foundational works (2018–2020) emphasize CNN foundations and sensor fusion; 2021–2023 focus on hybrids and reviews; 2024–2025 incorporate transformers and incremental learning for robustness.
+
+Evaluation of CNN Architectures for Gait Recognition Based on Optical Flow Maps (2018) \cite{8053503}.    
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=1\linewidth]{Figure/Evaluation-of-CNN.png}
+        \caption{Proposed CNN models for gait signature extraction.}
+        \label{fig:gait_signature_extraction}
+    \end{figure}
+     a) 2D-CNN: linear CNN with four 2D convolutions, two fully connected layers and a softmax
+classifier. \\
+b) 3D-CNN: four 3D convolutions, two fully connected layers and a softmax classifier. \\
+c) ResNet-A: residual CNN with a 2D convolution, four
+residual blocks, an average pooling layer and a final softmax classifier. d) ResNet-B: extended version of ResNet-A. Note that before the first block of each
+kind (ResB 1, 2, 3, 4), Figure~\ref{fig:gait_signature_extraction}, there is an adapter convolution to resize the input image to the size of the next block.
+
+     The work targets people identification in video based on the way they walk (i.e. gait) by using deep learning architectures. Authors explore the use of convolutional neural networks (CNN) for learning high-level descriptors from low-level motion features (i.e. optical flow components). The low number of training samples for each subject and the use of a test set containing subjects different from the training ones makes the search of a good CNN architecture a challenging task. Authors carry out a thorough experimental evaluation deploying and analyzing four distinct CNN models with different depth but similar complexity. Authors show that even the simplest CNN models greatly improve the results using shallow classifiers. All experiments have been carried out on the challenging TUM-GAID dataset, which contains people in different covariate scenarios (i.e. clothing, shoes, bags).\cite{8053503}
+   
+    Deep Learning-Based Gait Recognition Using Smartphones in the Wild (2020) \cite{9056812}.
+     Comparing with other biometrics, gait has advantages of being unobtrusive and difficult to conceal. Inertial sensors such as accelerometer and gyroscope are often used to capture gait dynamics. Nowadays, these inertial sensors have commonly been integrated in smartphones and widely used by average person, which makes it very convenient and inexpensive to collect gait data. In this paper, authors study gait recognition using smartphones in the wild. Unlike traditional methods that often require the person to walk along a specified road and/or at a normal walking speed, the proposed method collects inertial gait data under a condition of unconstraint without knowing when, where, and how the user walks. To obtain a high performance of person identification and authentication, deep-learning techniques are presented to learn and model the gait biometrics from the walking data. Specifically, a hybrid deep neural network is proposed for robust gait feature representation, where features in the space domain and in the time domain are successively abstracted by a convolutional neural network and a recurrent neural network. In the experiments, two datasets collected by smartphones on a total of 118 subjects are used for evaluations. Experiments show that the proposed method achieves over 93.5\% and 93.7\% accuracy in person identification and authentication, respectively. \cite{9056812}
+     
+    iLGaCo: Incremental Learning of Gait Covariate Factors (2020) \cite{9304857}.
+     Gait is a popular biometric pattern used for identifying people based on their way of walking. Traditionally, gait recognition approaches based on deep learning are trained using the whole training dataset. In fact, if new data (classes, view-points, walking conditions, etc.) need to be included, it is necessary to re-train again the model with old and new data samples. In this paper, authors propose iLGaCo, the first incremental learning approach of covariate factors for gait recognition, where the deep model can be updated with new information without re-training it from scratch by using the whole dataset. Instead, our approach performs a shorter training process with the new data and a small subset of previous samples. This way, our model learns new information while retaining previous knowledge. Authors evaluate iLGaCo on CASIA-B dataset in two incremental ways: adding new view-points and adding new walking conditions. In both cases, our results are close to the classical `training-from-scratch' approach, obtaining a marginal drop in accuracy ranging from 0.2\% to 1.2\%, what shows the efficacy of our approach. In addition, the comparison of iLGaCo with other incremental learning methods, such as LwF and iCarl, shows a significant improvement in accuracy, between 6\% and 15\% depending on the experiment.
+    \cite{9304857}
+    Deep Convolutional Feature-based Gait Recognition Using Silhouettes and RGB Images (2021) \cite{9559026}.
+    Today, many different biometric features are used
+for human identiﬁcation. Unlike biometric features, such as eye,
+iris, ear, and ﬁngerprint, gait biometrics enables recognition
+from long distance and low resolution images. In this paper,
+different design choices for a deep learning-based gait recognition
+system are investigated in detail. Some preprocessing steps, such
+as human silhouette extraction and gait cycle calculation are
+eliminated to make the system suitable for practical applications.
+To assess different input types’ effect on the gait recognition
+performance, both binary silhouettes and RGB images are given
+as input to the network. To observe the contribution of transfer
+learning, authors ﬁne-tuned a pre-trained generic object recognition
+model with the CASIA-B gait dataset and performed experiments
+on the OU-ISIR Large Population gait dataset. To observe the
+effect of pose variations, authors conducted experiments for both
+identical-view and cross-view conditions. Successful results are
+obtained, especially for cross-view gait recognition, compared to
+different approaches for gait recognition.\cite{9559026}    
+
+
+\subsection{Features usage in Gait Recognition}
+
+Gait recognition, a specialized form of behavioral biometrics, is the process of identifying individuals based on their unique walking style. Unlike other biometric systems that rely on fingerprints or facial features, gait recognition focuses on the dynamic patterns of human movement. The features used in this process are derived from multiple sources, including visual data captured through cameras, motion sensors that track body dynamics, and pressure systems that measure the forces exerted by the feet. Together, these inputs provide a comprehensive profile of a person’s gait, which can then be analyzed and compared for identification or verification purposes.
+
+One major category of gait recognition features is appearance based, or vision based, features. They are extracted directly from video footage and emphasize the shape and movement of the body silhouette over time. Silhouette and shape metrics involve analyzing the outline of the body in motion, including measurements such as aspect ratio, area, and overall height of the silhouette. Another important representation is the Motion History Image (MHI) or the Gait Energy Image (GEI), which are created by averaging silhouettes across a full gait cycle to capture motion dynamics and produce a distinctive gait signature. Structural and contour features also play a role, as they analyze the boundaries and proportions of the human body, allowing for the extraction of relative sizes and relationships between body parts. These vision-based features provide a powerful way to capture both static and dynamic aspects of walking.
+
+Temporal and spatial features form another critical group, as they quantify the rhythm and dimensions of a person’s walk. Temporal parameters include walking speed or pace, cadence (the number of steps taken per minute), and the duration of steps or strides. They also account for the stance phase, when the foot is in contact with the ground, and the swing phase, when the foot is in the air. Spatial parameters, on the other hand, measure distances such as step length—the distance between the heel strike of one foot and the opposite foot—and stride length, which is the distance between two consecutive placements of the same foot. These features capture the timing and geometry of gait, offering valuable insights into the unique walking rhythm of each individual.
+
+In short, kinematic and kinetic features describe the motion and forces generated by the body during walking. Kinematic features focus on the dynamics of body parts, such as joint angles at the hip, knee, and ankle, which provide strong discriminatory power for recognition. They also include measurements of displacement, velocity, and acceleration of body segments and joints. Kinetic features, in contrast, relate to the forces involved in walking. Ground reaction forces (GRF) measure the impact of the feet against the ground, while plantar pressures capture the distribution of force across the sole of the foot. Joint torques or moments further describe the rotational forces acting on the joints during movement. Together, these features provide a biomechanical perspective on gait, complementing the visual and temporal-spatial data to create a holistic representation of an individual’s walking pattern.
+ 
+\section{Research Objectives and Conceptual Framework}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\linewidth]{view_definition.png}
+    \caption{Multi-view camera setting}
+    \label{fig:Multi-view-camera-setting}
+\end{figure}
+
+The limitations of existing researches in gait recognition highlight a significant challenge in achieving high accuracy across large-scale datasets. For instance, the OU-MVLP dataset, Figure~\ref{fig:Multi-view-camera-setting}, one of the most widely used benchmarks in this field, has demonstrated that current models struggle to surpass a rank-1 accuracy of 96\%. This shortfall underscores the need for innovative approaches that can push the boundaries of recognition performance and overcome the inherent difficulties posed by multi-view gait analysis.
+
+The overarching goal of our project is to enhance the accuracy of gait recognition models by introducing a novel multi-view training approach. Our conceptual framework draws inspiration from the idea of drug combination therapies used in the treatment of COVID-19, where multiple strategies are combined to achieve superior outcomes. Similarly, our framework is structured into three distinct steps that work together to improve the discriminative power of gait recognition systems. The first step, Embedding Vector Enrichment via Knowledge Propagation, focuses on enriching the embedding vectors generated from individual camera angles by facilitating information exchange between neighboring angles, such as between 75° and 90° or between 75° and 60°. This is achieved through the message propagation mechanism of a Graph Neural Network (GNN), Figure~\ref{fig:data_flown}, which allows the embedding vector of the central camera angle to absorb contextual information from related perspectives. This exchange of knowledge is projected to increase object discrimination accuracy by approximately 4\% to 6\%, thereby strengthening the foundation of the recognition process. The exchange of information is an essential requirement in this process, as the subsequent step cannot serve any meaningful purpose without it. If no exchange takes place, the next stage becomes ineffective and ultimately redundant.
+
+
+
+The second step, Multi-Perspective Synthesis, builds upon the enriched embedding vectors by synthesizing them into a new model. This step addresses the computational challenges associated with similarity functions. Traditional expensive functions, such as chi-square, are often required to distinguish complex non-matching images, while simpler functions like L2 or cosine similarity may fail in special cases. To overcome this, authors propose the use of a multi-perspective model based on Transformer architecture, which is capable of synthesizing enriched embedding vector information more effectively. By leveraging the Transformer’s ability to capture long-range dependencies and contextual relationships, this step ensures that the enriched vectors are combined into a highly robust representation, reducing computational overhead while improving accuracy.
+
+The third step, Inference and Identification, utilizes the enriched embedding vectors obtained from any single angle or a combination of angles generated in Step 1 as input for the model created in Step 2. The output is a highly discriminative embedding vector designed for identity representation. With this refined vector, cosine similarity comparison achieves superior discrimination, enabling the system to distinguish identities with greater precision. The final results produced through this three-step process are expected to outperform those reported in related studies, thereby setting a new benchmark in gait recognition research.
+
+Our proposed model architecture is designed to maximize the strengths of different types of models by combining one reasoner model with multiple descriptor models. Each view is assigned its own descriptor model, which specializes in capturing the details of that particular perspective. The reasoner model, in contrast, does not need to directly observe the images; instead, it reasons about them based on the information provided by the descriptor models. This separation of roles is a key factor in why our architecture can outperform existing approaches. By allowing descriptor models to collaborate through cross-view training, authors enable them to provide richer and more accurate descriptions of the input data.
+
+It is important to note that describing and reasoning are fundamentally different skills. Convolutional Neural Networks (CNNs) excel at describing fine-grained details within an image, but they are less effective at performing deep reasoning tasks. Conversely, Transformer models are highly capable of reasoning about complex relationships but are not as efficient at capturing low-level descriptive details. By assigning each model to the task it performs best—CNNs for description and Transformers for reasoning—authors achieve outcomes that are superior to those produced by architectures that attempt to force a single model to handle both tasks simultaneously. This division of labor ensures that our system leverages the unique strengths of each model type, resulting in a more powerful and accurate gait recognition framework.
+
+
+
+
+ Our proposed model architecture includes 1 reasoner model and multiple descriptor models. Each view has its own descriptor model. The reasoner model doesn't have to see directly to reason about images. It's the reason why our architecture can outperform other architectures, Figure~\ref{fig:proposed-model-architecture}.
+
+ Authors allow descriptor models to collaborate through cross-view training. It helps descriptor to provide better description.  
+
+ Descripting and reasoning are very different skills. CNN models are better at describing details of a certain image than deep reasoning an image. Transformer models are better at deep reasoning task than describing details of an image. By letting each model stand in their shoes, authors gain better outcomes than forcing a single model to do both tasks.
+
+\section{Contributions}
+
+This thesis makes two significant contributions to the advancement of gait recognition research, each addressing critical limitations in existing methodologies and offering innovative solutions to improve the recognition accuracy. The first contribution lies in the application of the message propagation mechanism, a concept derived from Graph Neural Networks (GNNs), to enrich the information content of embedding vectors associated with specific camera angles. In traditional gait recognition systems, embedding vectors generated from individual viewpoints often suffer from limited contextual awareness, as they capture only the features visible from that particular angle. By introducing message propagation, the embedding vector of a central camera angle—referred to as the center vertex—can exchange information with neighboring angles. This process allows the vector to absorb complementary details that would otherwise remain isolated, thereby enhancing its representational capacity. The enriched embedding vectors become more robust and discriminative, enabling the system to better distinguish between individuals even when the visual input is constrained or partially occluded. This contribution demonstrates how the integration of GNN-inspired mechanisms can significantly strengthen the foundation of gait recognition models by leveraging cross-view knowledge propagation.
+
+The second major contribution of this thesis is the proposal to utilize a multi-perspective model, a Transformer architecture, to synthesize the information obtained from the enriched embedding vectors. While the enrichment process ensures that each vector carries more comprehensive information, the main challenge lies in effectively combining these vectors into a unified representation that can be used for accurate identity recognition. Traditional similarity functions, such as chi-square, cosine, or L2, often fall short in handling the complexity of multi-view data, either due to computational inefficiency or lacking of precision in special cases. To overcome this, the Transformer model is introduced as a synthesis mechanism capable of integrating enriched vectors across multiple perspectives. Transformers excel at capturing long-range dependencies and contextual relationships, making them particularly well-suited for this task. By synthesizing the enriched embedding vectors, the Transformer produces a newly and highly discriminative representation that encapsulates the diverse viewpoints in a coherent and meaningful way. This contribution not only addresses the limitations of existing similarity-based approaches but also establishes a new pathway for leveraging advanced deep learning architectures in gait recognition.
+
+Together, these contributions form a cohesive framework that enhances both the descriptive \& integrative aspects of gait recognition. The application of GNN-inspired message propagation enriches the foundational data, while the Transformer-based synthesis ensures that this enriched information is effectively utilized for identity discrimination. By combining these two innovations, the thesis provides a powerful and scalable approach that has the potential to outperform existing models and set new benchmarks in the field.
+\section{Organization of Thesis}
+The remainder of this thesis is structured as follows:
+\begin{itemize}
+    \item \textbf{Chapter 2: Literature Review} discusses the scope of research and reviews relevant works, including Convolutional Neural Networks (CNN) and the Transformer Encoder architecture.
+    \item \textbf{Chapter 3: Methodology} details the proposed architecture and training mechanisms for both the Convolutional Neural Network and the Transformer model.
+    \item \textbf{Chapter 4: Numerical Results} presents the evaluation parameters, simulation methods, and the performance results of the MVDL model on single-view and two-view reasoning tasks.
+    \item \textbf{Chapter 5: Conclusions} summarizes the findings and provides suggestions for future work.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+\end{document}

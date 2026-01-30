@@ -1,0 +1,30 @@
+\babel@toc {nil}{}\relax 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Overview of the gait cycle and sub-phases analyzed}}{1}{figure.caption.6}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Terminology to describe the events of the gait cycle}}{2}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Gait Energy Image \blx@tocontentsinit {0}\cite {An_TBIOM_OUMVLP_Pose}}}{4}{figure.caption.8}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Silhouette representation}}{6}{figure.caption.9}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Overview of automatic person identification}}{7}{figure.caption.10}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Stances corresponding to the gait cycle of two individuals. (a) Person 1. (b) Person 2.}}{8}{figure.caption.11}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces An example of generating a CGI temporal template}}{9}{figure.caption.12}%
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Proposed CNN models for gait signature extraction.}}{11}{figure.caption.13}%
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Multi-view camera setting}}{14}{figure.caption.14}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Spatial-temporal deep neural network}}{21}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Overall structure of the network model.}}{22}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Three batch-sampling methods comparison}}{22}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces View Information Elimination Mechanism (VIEM) framework}}{24}{figure.caption.24}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Our proposed model architecture}}{26}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Example of how information can be exchanged and enriched between one camera angle and related angles}}{26}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Proposed solution's workflow}}{27}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Backbone Architecture}}{30}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Proposed solution's workflow}}{31}{figure.caption.29}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces The subject repeat forward (A to B) and backward (B to A)}}{33}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Examples of silhouette sequence ( view angle = 90° ) }}{33}{figure.caption.31}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Examples of size-normalized GEI for each view angles}}{34}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Rank accuracy of all view points}}{37}{figure.caption.34}%
+\addvspace {10\p@ }
+\contentsfinish 
+\contentsfinish 

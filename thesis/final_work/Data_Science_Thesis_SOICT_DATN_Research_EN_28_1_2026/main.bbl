@@ -1,0 +1,2082 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global}
+  \entry{9351667}{article}{}
+    \name{author}{10}{}{%
+      {{hash=C}{%
+         family={Chao},
+         familyi={C\bibinitperiod},
+      }}%
+      {{hash=H}{%
+         family={Hanqing},
+         familyi={H\bibinitperiod},
+      }}%
+      {{hash=W}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+      }}%
+      {{hash=K}{%
+         family={Kun},
+         familyi={K\bibinitperiod},
+      }}%
+      {{hash=H}{%
+         family={He},
+         familyi={H\bibinitperiod},
+      }}%
+      {{hash=Y}{%
+         family={Yiwei},
+         familyi={Y\bibinitperiod},
+      }}%
+      {{hash=Z}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+      }}%
+      {{hash=J}{%
+         family={Junping},
+         familyi={J\bibinitperiod},
+      }}%
+      {{hash=F}{%
+         family={Feng},
+         familyi={F\bibinitperiod},
+      }}%
+      {{hash=J}{%
+         family={Jianfeng},
+         familyi={J\bibinitperiod},
+      }}%
+    }
+    \keyw{Gait recognition;Feature extraction;Three-dimensional displays;Legged
+  locomotion;Deep learning;Pipelines;Data mining;Gait recognition;biometric
+  authentication;GaitSet;deep learning}
+    \strng{namehash}{CHW+1}
+    \strng{fullhash}{CHWKHYZJFJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/TPAMI.2021.3057879
+    \endverb
+    \field{number}{7}
+    \field{pages}{3467\bibrangedash 3478}
+    \field{title}{GaitSet: Cross-View Gait Recognition Through Utilizing Gait
+  As a Deep Set}
+    \field{volume}{44}
+    \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}
+    \field{year}{2022}
+  \endentry
+
+  \entry{10096986}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=LW}{%
+         family={Likai},
+         familyi={L\bibinitperiod},
+         given={Wang},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=RH}{%
+         family={Ruize},
+         familyi={R\bibinitperiod},
+         given={Han},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=WF}{%
+         family={Wei},
+         familyi={W\bibinitperiod},
+         given={Feng},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \keyw{Convolution;Biological system modeling;Pose estimation;Neural
+  networks;Speech recognition;Feature extraction;Skeleton;Gait
+  recognition;two-branch neural network;graph convolution;convolutional neural
+  network}
+    \strng{namehash}{LWRHWF1}
+    \strng{fullhash}{LWRHWF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{ICASSP 2023 - 2023 IEEE International Conference on
+  Acoustics, Speech and Signal Processing (ICASSP)}
+    \verb{doi}
+    \verb 10.1109/ICASSP49357.2023.10096986
+    \endverb
+    \field{pages}{1\bibrangedash 5}
+    \field{title}{Combining the Silhouette and Skeleton Data for Gait
+  Recognition}
+    \field{year}{2023}
+  \endentry
+
+  \entry{Zhu_2023_WACV}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=HZ}{%
+         family={Haidong},
+         familyi={H\bibinitperiod},
+         given={Zhu},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=ZZ}{%
+         family={Zhaoheng},
+         familyi={Z\bibinitperiod},
+         given={Zheng},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=RN}{%
+         family={Ram},
+         familyi={R\bibinitperiod},
+         given={Nevatia},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HZZZRN1}
+    \strng{fullhash}{HZZZRN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the IEEE/CVF Winter Conference on
+  Applications of Computer Vision (WACV)}
+    \field{pages}{909\bibrangedash 918}
+    \field{title}{Gait Recognition Using 3-D Human Body Shape Inference}
+    \field{month}{01}
+    \field{year}{2023}
+  \endentry
+
+  \entry{Ma_2024_CVPR}{inproceedings}{}
+    \name{author}{6}{}{%
+      {{hash=KM}{%
+         family={Kang},
+         familyi={K\bibinitperiod},
+         given={Ma},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=YF}{%
+         family={Ying},
+         familyi={Y\bibinitperiod},
+         given={Fu},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=CC}{%
+         family={Chunshui},
+         familyi={C\bibinitperiod},
+         given={Cao},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=SH}{%
+         family={Saihui},
+         familyi={S\bibinitperiod},
+         given={Hou},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=YH}{%
+         family={Yongzhen},
+         familyi={Y\bibinitperiod},
+         given={Huang},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=DZ}{%
+         family={Dezhi},
+         familyi={D\bibinitperiod},
+         given={Zheng},
+         giveni={Z\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KMYFCC+1}
+    \strng{fullhash}{KMYFCCSHYHDZ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the IEEE/CVF Conference on Computer Vision
+  and Pattern Recognition (CVPR)}
+    \field{pages}{593\bibrangedash 603}
+    \field{title}{Learning Visual Prompt for Gait Recognition}
+    \field{month}{06}
+    \field{year}{2024}
+  \endentry
+
+  \entry{Peng2024}{article}{}
+    \name{author}{4}{}{%
+      {{hash=YP}{%
+         family={Yunjie},
+         familyi={Y\bibinitperiod},
+         given={Peng},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Kang},
+         familyi={K\bibinitperiod},
+         given={Ma},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=YZ}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Zhang},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=ZH}{%
+         family={Zhiqiang},
+         familyi={Z\bibinitperiod},
+         given={He},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{YPKMYZ+1}
+    \strng{fullhash}{YPKMYZZH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1007/s11042-023-15483-x
+    \endverb
+    \field{number}{3}
+    \field{pages}{7273\bibrangedash 7294}
+    \field{title}{Learning rich features for gait recognition by integrating
+  skeletons and silhouettes}
+    \verb{url}
+    \verb https://doi.org/10.1007/s11042-023-15483-x
+    \endverb
+    \field{volume}{83}
+    \field{journaltitle}{Multimedia Tools and Applications}
+    \field{month}{01}
+    \field{year}{2024}
+  \endentry
+
+  \entry{10203341}{inproceedings}{}
+    \name{author}{6}{}{%
+      {{hash=HD}{%
+         family={Huanzhang},
+         familyi={H\bibinitperiod},
+         given={Dou},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=PZ}{%
+         family={Pengyi},
+         familyi={P\bibinitperiod},
+         given={Zhang},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=WS}{%
+         family={Wei},
+         familyi={W\bibinitperiod},
+         given={Su},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Yunlong},
+         familyi={Y\bibinitperiod},
+         given={Yu},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=YL}{%
+         family={Yining},
+         familyi={Y\bibinitperiod},
+         given={Lin},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=XL}{%
+         family={Xi},
+         familyi={X\bibinitperiod},
+         given={Li},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \keyw{Legged locomotion;Adaptation
+  models;Pedestrians;Costs;Convolution;Computational
+  modeling;Focusing;Biometrics}
+    \strng{namehash}{HDPZWS+1}
+    \strng{fullhash}{HDPZWSYYYLXL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2023 IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition (CVPR)}
+    \verb{doi}
+    \verb 10.1109/CVPR52729.2023.00540
+    \endverb
+    \field{pages}{5578\bibrangedash 5588}
+    \field{title}{GaitGCI: Generative Counterfactual Intervention for Gait
+  Recognition}
+    \field{year}{2023}
+  \endentry
+
+  \entry{Manske2021-jd}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MRC}{%
+         family={Manske},
+         familyi={M\bibinitperiod},
+         given={Robert\bibnamedelima C},
+         giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier - Health Sciences Division}%
+    }
+    \strng{namehash}{MRC1}
+    \strng{fullhash}{MRC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{edition}{5}
+    \field{title}{Fundamental orthopedic management for the physical therapist
+  assistant}
+    \list{location}{1}{%
+      {Philadelphia, PA}%
+    }
+    \field{month}{10}
+    \field{year}{2021}
+  \endentry
+
+  \entry{Abu-Faraj2015-dt}{inbook}{}
+    \name{author}{8}{}{%
+      {{hash=AF}{%
+         family={Abu-Faraj},
+         familyi={A\bibinithyphendelim F\bibinitperiod},
+      }}%
+      {{hash=OZ}{%
+         family={O},
+         familyi={O},
+         given={Ziad},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=H}{%
+         family={Harris},
+         familyi={H\bibinitperiod},
+      }}%
+      {{hash=FG}{%
+         family={F},
+         familyi={F},
+         given={Gerald},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=S}{%
+         family={Smith},
+         familyi={S\bibinitperiod},
+      }}%
+      {{hash=AP}{%
+         family={A},
+         familyi={A},
+         given={Peter},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=H}{%
+         family={Hassani},
+         familyi={H\bibinitperiod},
+      }}%
+      {{hash=S}{%
+         family={Sahar},
+         familyi={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {John Wiley \& Sons, Inc.}%
+    }
+    \strng{namehash}{AFOZH+1}
+    \strng{fullhash}{AFOZHFGSAPHS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Wiley Encyclopedia of Electrical and Electronics
+  Engineering}
+    \field{pages}{1\bibrangedash 34}
+    \field{title}{Human gait and Clinical Movement Analysis}
+    \list{location}{1}{%
+      {Hoboken, NJ, USA}%
+    }
+    \field{month}{12}
+    \field{year}{2015}
+  \endentry
+
+  \entry{DiShiGait}{article}{}
+    \name{author}{7}{}{%
+      {{hash=DS}{%
+         family={Di},
+         familyi={D\bibinitperiod},
+         given={Shi},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=Z}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+      }}%
+      {{hash=W}{%
+         family={Wuxiang},
+         familyi={W\bibinitperiod},
+      }}%
+      {{hash=D}{%
+         family={Ding},
+         familyi={D\bibinitperiod},
+      }}%
+      {{hash=X}{%
+         family={Xilun},
+         familyi={X\bibinitperiod},
+      }}%
+      {{hash=S}{%
+         family={Sun},
+         familyi={S\bibinitperiod},
+      }}%
+      {{hash=L}{%
+         family={Lei},
+         familyi={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DSZW+1}
+    \strng{fullhash}{DSZWDXSL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1242/bio.047332
+    \endverb
+    \field{pages}{bio.047332}
+    \field{title}{Parametric generation of three-dimensional gait for
+  robot-assisted rehabilitation}
+    \field{volume}{9}
+    \field{journaltitle}{Biology Open}
+    \field{month}{01}
+    \field{year}{2020}
+  \endentry
+
+  \entry{Magee2007-pg}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MDJ}{%
+         family={Magee},
+         familyi={M\bibinitperiod},
+         given={David\bibnamedelima J},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \list{publisher}{1}{%
+      {Saunders}%
+    }
+    \strng{namehash}{MDJ1}
+    \strng{fullhash}{MDJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{edition}{5}
+    \field{series}{Musculoskeletal Rehabilitation Series}
+    \field{title}{Orthopedic physical assessment - E-book}
+    \field{month}{12}
+    \field{year}{2007}
+  \endentry
+
+  \entry{li2009encyclopedia}{book}{}
+    \name{author}{2}{}{%
+      {{hash=LS}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={S.Z.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=JA}{%
+         family={Jain},
+         familyi={J\bibinitperiod},
+         given={A.K.},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{LSJA1}
+    \strng{fullhash}{LSJA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{isbn}{9780387730028}
+    \field{number}{2}
+    \field{series}{Encyclopedia of Biometrics}
+    \field{title}{Encyclopedia of Biometrics: I - Z.}
+    \verb{url}
+    \verb https://books.google.com.vn/books?id=0bQbOYVULQcC
+    \endverb
+    \field{year}{2009}
+  \endentry
+
+  \entry{An_TBIOM_OUMVLP_Pose}{article}{}
+    \name{author}{7}{}{%
+      {{hash=AW}{%
+         family={An},
+         familyi={A\bibinitperiod},
+         given={Weizhi},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=YS}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Shiqi},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=MY}{%
+         family={Makihara},
+         familyi={M\bibinitperiod},
+         given={Yasushi},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=XXWC}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Xinhui Wu\bibnamedelima Chi},
+         giveni={X\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim
+  C\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Yang},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=LR}{%
+         family={Liao},
+         familyi={L\bibinitperiod},
+         given={Rijun},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Yagi},
+         familyi={Y\bibinitperiod},
+         given={Yasushi},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AWYSMY+1}
+    \strng{fullhash}{AWYSMYXXWCYYLRYY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Performance Evaluation of Model-based Gait on Multi-view Very
+  Large Population Database with Pose Sequences}
+    \field{journaltitle}{IEEE Trans. on Biometrics, Behavior, and Identity
+  Science}
+    \field{year}{2020 (Accepted)}
+  \endentry
+
+  \entry{1561189}{article}{}
+    \name{author}{2}{}{%
+      {{hash=HJ}{%
+         family={Han},
+         familyi={H\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=BB}{%
+         family={Bhanu},
+         familyi={B\bibinitperiod},
+         given={Bir},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \keyw{Image recognition;Humans;Fingerprint recognition;Hidden Markov
+  models;Legged locomotion;Biometrics;Character recognition;Spatial
+  databases;Iris;Computational modeling;Index Terms- Gait recognition;real and
+  synthetic templates;distortion analysis;feature fusion;performance
+  evaluation;video.}
+    \strng{namehash}{HJBB1}
+    \strng{fullhash}{HJBB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/TPAMI.2006.38
+    \endverb
+    \field{number}{2}
+    \field{pages}{316\bibrangedash 322}
+    \field{title}{Individual recognition using gait energy image}
+    \field{volume}{28}
+    \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}
+    \field{year}{2006}
+  \endentry
+
+  \entry{1251144}{article}{}
+    \name{author}{4}{}{%
+      {{hash=WL}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Liang},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=TT}{%
+         family={Tan},
+         familyi={T\bibinitperiod},
+         given={Tieniu},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=NH}{%
+         family={Ning},
+         familyi={N\bibinitperiod},
+         given={Huazhong},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=HW}{%
+         family={Hu},
+         familyi={H\bibinitperiod},
+         given={Weiming},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \keyw{Humans;Image sequences;Principal component analysis;Computer
+  vision;Algorithm design and analysis;Image segmentation;Legged
+  locomotion;Pattern classification;Pattern recognition;Image recognition}
+    \strng{namehash}{WLTTNH+1}
+    \strng{fullhash}{WLTTNHHW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/TPAMI.2003.1251144
+    \endverb
+    \field{number}{12}
+    \field{pages}{1505\bibrangedash 1518}
+    \field{title}{Silhouette analysis-based gait recognition for human
+  identification}
+    \field{volume}{25}
+    \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}
+    \field{year}{2003}
+  \endentry
+
+  \entry{BenAbdelkader2002StrideAC}{article}{}
+    \name{author}{3}{}{%
+      {{hash=BC}{%
+         family={BenAbdelkader},
+         familyi={B\bibinitperiod},
+         given={Chiraz},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=DLS}{%
+         family={Davis},
+         familyi={D\bibinitperiod},
+         given={Larry\bibnamedelima S.},
+         giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=CR}{%
+         family={Cutler},
+         familyi={C\bibinitperiod},
+         given={Ross},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BCDLSCR1}
+    \strng{fullhash}{BCDLSCR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{372\bibrangedash 377}
+    \field{title}{Stride and cadence as a biometric in automatic person
+  identification and verification}
+    \verb{url}
+    \verb https://api.semanticscholar.org/CorpusID:16999156
+    \endverb
+    \field{journaltitle}{Proceedings of Fifth IEEE International Conference on
+  Automatic Face Gesture Recognition}
+    \field{year}{2002}
+  \endentry
+
+  \entry{1333741}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=LZ}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Zongyi},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Sarkar},
+         familyi={S\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \keyw{Shape;Robustness;Feature extraction;Humans;Computer science;Euclidean
+  distance;Leg;Displays;Principal component analysis;Trajectory}
+    \strng{namehash}{LZSS1}
+    \strng{fullhash}{LZSS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the 17th International Conference on
+  Pattern Recognition, 2004. ICPR 2004.}
+    \verb{doi}
+    \verb 10.1109/ICPR.2004.1333741
+    \endverb
+    \field{pages}{211\bibrangedash 214 Vol.4}
+    \field{title}{Simplest representation yet for gait recognition: averaged
+  silhouette}
+    \field{volume}{4}
+    \field{year}{2004}
+  \endentry
+
+  \entry{Cunado2003AutomaticEA}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CD}{%
+         family={Cunado},
+         familyi={C\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=NMS}{%
+         family={Nixon},
+         familyi={N\bibinitperiod},
+         given={Mark\bibnamedelima S.},
+         giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=CJN}{%
+         family={Carter},
+         familyi={C\bibinitperiod},
+         given={John\bibnamedelima N.},
+         giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CDNMSCJN1}
+    \strng{fullhash}{CDNMSCJN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{1\bibrangedash 41}
+    \field{title}{Automatic extraction and description of human gait models for
+  recognition purposes}
+    \verb{url}
+    \verb https://api.semanticscholar.org/CorpusID:1622910
+    \endverb
+    \field{volume}{90}
+    \field{journaltitle}{Comput. Vis. Image Underst.}
+    \field{year}{2003}
+  \endentry
+
+  \entry{YAM20041057}{article}{}
+    \name{author}{3}{}{%
+      {{hash=YC}{%
+         family={Yam},
+         familyi={Y\bibinitperiod},
+         given={ChewYean},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=NMS}{%
+         family={Nixon},
+         familyi={N\bibinitperiod},
+         given={Mark\bibnamedelima S.},
+         giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=CJN}{%
+         family={Carter},
+         familyi={C\bibinitperiod},
+         given={John\bibnamedelima N.},
+         giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+    }
+    \keyw{Biometrics, Gait, Model-based, Coupled oscillator, Bilateral
+  symmetry, Evidence gathering}
+    \strng{namehash}{YCNMSCJN1}
+    \strng{fullhash}{YCNMSCJN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb https://doi.org/10.1016/j.patcog.2003.09.012
+    \endverb
+    \field{issn}{0031-3203}
+    \field{number}{5}
+    \field{pages}{1057\bibrangedash 1072}
+    \field{title}{Automated person recognition by walking and running via
+  model-based approaches}
+    \verb{url}
+    \verb https://www.sciencedirect.com/science/article/pii/S0031320303003996
+    \endverb
+    \field{volume}{37}
+    \field{journaltitle}{Pattern Recognition}
+    \field{year}{2004}
+  \endentry
+
+  \entry{Kale-Sundaresan}{article}{}
+    \name{author}{7}{}{%
+      {{hash=AK}{%
+         family={A.},
+         familyi={A\bibinitperiod},
+         given={Kale},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=AS}{%
+         family={A.},
+         familyi={A\bibinitperiod},
+         given={Sundaresan},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=AR}{%
+         family={A.N.},
+         familyi={A\bibinitperiod},
+         given={Rajagopalan},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=NC}{%
+         family={N.P.},
+         familyi={N\bibinitperiod},
+         given={Cuntoor},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=RCA}{%
+         family={Roy-Chowdhury},
+         familyi={R\bibinithyphendelim C\bibinitperiod},
+         given={A.K.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=VK}{%
+         family={V.},
+         familyi={V\bibinitperiod},
+         given={Kruger},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=RC}{%
+         family={R.},
+         familyi={R\bibinitperiod},
+         given={Chellappa},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \keyw{Humans;Hidden Markov models;Legged locomotion;Computer
+  science;Feature extraction;Parameter estimation;Probability density
+  function;Robustness;Image databases;Spatial databases}
+    \strng{namehash}{AKASAR+1}
+    \strng{fullhash}{AKASARNCRCAVKRC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/TIP.2004.832865
+    \endverb
+    \field{number}{9}
+    \field{pages}{1163\bibrangedash 1173}
+    \field{title}{Identification of humans using gait}
+    \field{volume}{13}
+    \field{journaltitle}{IEEE Transactions on Image Processing}
+    \field{year}{2004}
+  \endentry
+
+  \entry{Makihara-Akira}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=AT}{%
+         family={Akira},
+         familyi={A\bibinitperiod},
+         given={Tsuji},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=YM}{%
+         family={Yasushi},
+         familyi={Y\bibinitperiod},
+         given={Makihara},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Yasushi},
+         familyi={Y\bibinitperiod},
+         given={Yagi},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \keyw{Legged locomotion;Thigh;Humans;Surveillance;Feature
+  extraction;Yagi-Uda antennas;Frequency;Access
+  control;Authentication;Fingerprint recognition}
+    \strng{namehash}{ATYMYY1}
+    \strng{fullhash}{ATYMYY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2010 IEEE Computer Society Conference on Computer Vision
+  and Pattern Recognition}
+    \verb{doi}
+    \verb 10.1109/CVPR.2010.5540144
+    \endverb
+    \field{pages}{717\bibrangedash 722}
+    \field{title}{Silhouette transformation based on walking speed for gait
+  identification}
+    \field{year}{2010}
+  \endentry
+
+  \entry{Bashir-Khalid}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=KB}{%
+         family={Khalid},
+         familyi={K\bibinitperiod},
+         given={Bashir},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=TX}{%
+         family={Tao},
+         familyi={T\bibinitperiod},
+         given={Xiang},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=SG}{%
+         family={Shaogang},
+         familyi={S\bibinitperiod},
+         given={Gong},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \keyw{Gait Recognition;Gait Representation;Biometrics;Entropy Image}
+    \strng{namehash}{KBTXSG1}
+    \strng{fullhash}{KBTXSG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{3rd International Conference on Imaging for Crime
+  Detection and Prevention (ICDP 2009)}
+    \verb{doi}
+    \verb 10.1049/ic.2009.0230
+    \endverb
+    \field{pages}{1\bibrangedash 6}
+    \field{title}{Gait recognition using Gait Entropy Image}
+    \field{year}{2009}
+  \endentry
+
+  \entry{Hofmann-Martin}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=MH}{%
+         family={Martin},
+         familyi={M\bibinitperiod},
+         given={Hofmann},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=SB}{%
+         family={Sebastian},
+         familyi={S\bibinitperiod},
+         given={Bachmann},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=GR}{%
+         family={Gerhard},
+         familyi={G\bibinitperiod},
+         given={Rigoll},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \keyw{Histograms;Hidden Markov models;Feature extraction;Databases;Data
+  models;Principal component analysis}
+    \strng{namehash}{MHSBGR1}
+    \strng{fullhash}{MHSBGR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2012 IEEE Fifth International Conference on Biometrics:
+  Theory, Applications and Systems (BTAS)}
+    \verb{doi}
+    \verb 10.1109/BTAS.2012.6374606
+    \endverb
+    \field{pages}{399\bibrangedash 403}
+    \field{title}{2.5D gait biometrics using the Depth Gradient Histogram
+  Energy Image}
+    \field{year}{2012}
+  \endentry
+
+  \entry{Wang-Zhang}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=CW}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Wang},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=JZ}{%
+         family={Junping},
+         familyi={J\bibinitperiod},
+         given={Zhang},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=JP}{%
+         family={Jian},
+         familyi={J\bibinitperiod},
+         given={Pu},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=XY}{%
+         family={Xiaoru},
+         familyi={X\bibinitperiod},
+         given={Yuan},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=LW}{%
+         family={Liang},
+         familyi={L\bibinitperiod},
+         given={Wang},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \name{editor}{3}{}{%
+      {{hash=KD}{%
+         family={Kostas},
+         familyi={K\bibinitperiod},
+         given={Daniilidis},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=PM}{%
+         family={Petros},
+         familyi={P\bibinitperiod},
+         given={Maragos},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=NP}{%
+         family={Nikos},
+         familyi={N\bibinitperiod},
+         given={Paragios},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer Berlin Heidelberg}%
+    }
+    \strng{namehash}{CWJZJP+1}
+    \strng{fullhash}{CWJZJPXYLW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Computer Vision -- ECCV 2010}
+    \field{isbn}{978-3-642-15549-9}
+    \field{pages}{257\bibrangedash 270}
+    \field{title}{Chrono-Gait Image: A Novel Temporal Template for Gait
+  Recognition}
+    \list{location}{1}{%
+      {Berlin, Heidelberg}%
+    }
+    \field{year}{2010}
+  \endentry
+
+  \entry{Kusakunniran2014_TIFS}{article}{}
+    \name{author}{1}{}{%
+      {{hash=KW}{%
+         family={Kusakunniran},
+         familyi={K\bibinitperiod},
+         given={Worapan},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KW1}
+    \strng{fullhash}{KW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/TIFS.2014.2336379
+    \endverb
+    \field{number}{9}
+    \field{pages}{1416\bibrangedash 1423}
+    \field{title}{Recognizing gaits on spatio-temporal feature domain}
+    \field{volume}{9}
+    \field{journaltitle}{IEEE Transactions on Information Forensics and
+  Security}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Kusakunniran2014_TIP}{article}{}
+    \name{author}{5}{}{%
+      {{hash=KW}{%
+         family={Kusakunniran},
+         familyi={K\bibinitperiod},
+         given={Worapan},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=WQ}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Qiang},
+         giveni={Q\bibinitperiod},
+      }}%
+      {{hash=ZJ}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Jian},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LH}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Hongdong},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=WL}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Liang},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KWWQZJ+1}
+    \strng{fullhash}{KWWQZJLHWL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/TIP.2013.2294552
+    \endverb
+    \field{number}{2}
+    \field{pages}{696\bibrangedash 709}
+    \field{title}{Recognizing gaits across views through correlated motion
+  co-clustering}
+    \field{volume}{23}
+    \field{journaltitle}{IEEE Transactions on Image Processing}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Aggarwal2016_AESI}{article}{}
+    \name{author}{2}{}{%
+      {{hash=AH}{%
+         family={Aggarwal},
+         familyi={A\bibinitperiod},
+         given={Himanshu},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=VDK}{%
+         family={Vishwakarma},
+         familyi={V\bibinitperiod},
+         given={Dinesh\bibnamedelima K.},
+         giveni={D\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AHVDK1}
+    \strng{fullhash}{AHVDK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{note}{arXiv:1611.06683}
+    \field{title}{Covariate conscious approach for gait recognition based upon
+  Zernike moment invariants}
+    \field{journaltitle}{Preprint (arXiv)}
+    \field{year}{2016}
+  \endentry
+
+  \entry{Xu2019_SSGEI}{article}{}
+    \name{author}{5}{}{%
+      {{hash=XC}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Chi},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=MY}{%
+         family={Makihara},
+         familyi={M\bibinitperiod},
+         given={Yasushi},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=LX}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Xiang},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Yagi},
+         familyi={Y\bibinitperiod},
+         given={Yasushi},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=LJ}{%
+         family={Lu},
+         familyi={L\bibinitperiod},
+         given={Jianfeng},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{XCMYLX+1}
+    \strng{fullhash}{XCMYLXYYLJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1007/s11042-019-7712-3
+    \endverb
+    \field{number}{18}
+    \field{pages}{26509\bibrangedash 26536}
+    \field{title}{Speed-Invariant Gait Recognition Using Single-Support Gait
+  Energy Image}
+    \field{volume}{78}
+    \field{journaltitle}{Multimedia Tools and Applications}
+    \field{year}{2019}
+  \endentry
+
+  \entry{8053503}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=CFM}{%
+         family={Castro},
+         familyi={C\bibinitperiod},
+         given={Francisco\bibnamedelima M.},
+         giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=MJMJ}{%
+         family={Marin-Jimenez},
+         familyi={M\bibinithyphendelim J\bibinitperiod},
+         given={Manuel\bibnamedelima J.},
+         giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=GN}{%
+         family={Guil},
+         familyi={G\bibinitperiod},
+         given={Nicolas},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=LTS}{%
+         family={Lopez-Tapia},
+         familyi={L\bibinithyphendelim T\bibinitperiod},
+         given={Santiago},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=PdlBN}{%
+         prefix={Perez de\bibnamedelima la},
+         prefixi={P\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim
+  l\bibinitperiod},
+         family={Blanca},
+         familyi={B\bibinitperiod},
+         given={Nicolas},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \keyw{Computer architecture;Training;Gait recognition;Optical
+  imaging;Feature extraction;Neural networks}
+    \strng{namehash}{CFMMJMJGN+1}
+    \strng{fullhash}{CFMMJMJGNLTSBNPdl1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2017 International Conference of the Biometrics Special
+  Interest Group (BIOSIG)}
+    \verb{doi}
+    \verb 10.23919/BIOSIG.2017.8053503
+    \endverb
+    \field{pages}{1\bibrangedash 5}
+    \field{title}{Evaluation of Cnn Architectures for Gait Recognition Based on
+  Optical Flow Maps}
+    \field{year}{2017}
+  \endentry
+
+  \entry{9056812}{article}{}
+    \name{author}{5}{}{%
+      {{hash=ZQ}{%
+         family={Zou},
+         familyi={Z\bibinitperiod},
+         given={Qin},
+         giveni={Q\bibinitperiod},
+      }}%
+      {{hash=WY}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Yanling},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=WQ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Qian},
+         giveni={Q\bibinitperiod},
+      }}%
+      {{hash=ZY}{%
+         family={Zhao},
+         familyi={Z\bibinitperiod},
+         given={Yi},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=LQ}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Qingquan},
+         giveni={Q\bibinitperiod},
+      }}%
+    }
+    \keyw{Gait recognition;Sensors;Smart phones;Legged
+  locomotion;Authentication;Time series analysis;Gait recognition;inertial
+  sensor;person identification;convolutional neural network;recurrent neural
+  network}
+    \strng{namehash}{ZQWYWQ+1}
+    \strng{fullhash}{ZQWYWQZYLQ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/TIFS.2020.2985628
+    \endverb
+    \field{pages}{3197\bibrangedash 3212}
+    \field{title}{Deep Learning-Based Gait Recognition Using Smartphones in the
+  Wild}
+    \field{volume}{15}
+    \field{journaltitle}{IEEE Transactions on Information Forensics and
+  Security}
+    \field{year}{2020}
+  \endentry
+
+  \entry{9304857}{inproceedings}{}
+    \name{author}{6}{}{%
+      {{hash=MZ}{%
+         family={Mu},
+         familyi={M\bibinitperiod},
+         given={Zihao},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=CFM}{%
+         family={Castro},
+         familyi={C\bibinitperiod},
+         given={Francisco\bibnamedelima M.},
+         giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=MJMJ}{%
+         family={Marín-Jiménez},
+         familyi={M\bibinithyphendelim J\bibinitperiod},
+         given={Manuel\bibnamedelima J.},
+         giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=GN}{%
+         family={Guil},
+         familyi={G\bibinitperiod},
+         given={Nicolás},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=LYR}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Yan-Ran},
+         giveni={Y\bibinithyphendelim R\bibinitperiod},
+      }}%
+      {{hash=YS}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Shiqi},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \keyw{Training;Gait recognition;Adaptation models;Feature extraction;Legged
+  locomotion;Task analysis;Biological system modeling}
+    \strng{namehash}{MZCFMMJMJ+1}
+    \strng{fullhash}{MZCFMMJMJGNLYRYS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2020 IEEE International Joint Conference on Biometrics
+  (IJCB)}
+    \verb{doi}
+    \verb 10.1109/IJCB48548.2020.9304857
+    \endverb
+    \field{pages}{1\bibrangedash 8}
+    \field{title}{iLGaCo: Incremental Learning of Gait Covariate Factors}
+    \field{year}{2020}
+  \endentry
+
+  \entry{9559026}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=ISG}{%
+         family={Işık},
+         familyi={I\bibinitperiod},
+         given={Selin\bibnamedelima Gök},
+         giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=EHK}{%
+         family={Ekenel},
+         familyi={E\bibinitperiod},
+         given={Hazım\bibnamedelima Kemal},
+         giveni={H\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \keyw{Image resolution;Transfer learning;Sociology;Computer
+  architecture;Fingerprint recognition;Convolutional neural networks;Object
+  recognition;Deep learning;gait recognition;transfer
+  learning;cross-view;biometric}
+    \strng{namehash}{ISGEHK1}
+    \strng{fullhash}{ISGEHK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2021 6th International Conference on Computer Science and
+  Engineering (UBMK)}
+    \verb{doi}
+    \verb 10.1109/UBMK52708.2021.9559026
+    \endverb
+    \field{pages}{336\bibrangedash 341}
+    \field{title}{Deep Convolutional Feature-based Gait Recognition Using
+  Silhouettes and RGB Images}
+    \field{year}{2021}
+  \endentry
+
+  \entry{Xu_WACV2021}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=XC}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={C},
+         giveni={C},
+      }}%
+      {{hash=MY}{%
+         family={Makihara},
+         familyi={M\bibinitperiod},
+         given={Y},
+         giveni={Y},
+      }}%
+      {{hash=LJ}{%
+         family={Lu},
+         familyi={L\bibinitperiod},
+         given={J},
+         giveni={J},
+      }}%
+    }
+    \strng{namehash}{XCMYLJ1}
+    \strng{fullhash}{XCMYLJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proc. of the IEEE/CVF Winter Conf. on Applications of
+  Computer Vision 2021 (WACV 2021)}
+    \field{pages}{1\bibrangedash 11}
+    \field{title}{APPLICATIONS: Real-Time Gait-Based Age Estimation and Gender
+  Classification from a Single Image}
+    \field{month}{01}
+    \field{year}{2021}
+  \endentry
+
+  \entry{8466800}{article}{}
+    \name{author}{5}{}{%
+      {{hash=ZTMA}{%
+         family={Zulcaffle},
+         familyi={Z\bibinitperiod},
+         given={Tengku Mohd\bibnamedelima Afendi},
+         giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim
+  A\bibinitperiod},
+      }}%
+      {{hash=KF}{%
+         family={Kurugollu},
+         familyi={K\bibinitperiod},
+         given={Fatih},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=CD}{%
+         family={Crookes},
+         familyi={C\bibinitperiod},
+         given={Danny},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=BA}{%
+         family={Bouridane},
+         familyi={B\bibinitperiod},
+         given={Ahmed},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=FM}{%
+         family={Farid},
+         familyi={F\bibinitperiod},
+         given={Mohsen},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \keyw{Cameras;Gait recognition;Legged locomotion;Lighting;Image color
+  analysis;Optical flow;Footwear;Gait recognition;frontal view;Time of Flight
+  camera;fusion of features;depth gait data set}
+    \strng{namehash}{ZTMAKFCD+1}
+    \strng{fullhash}{ZTMAKFCDBAFM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/TIFS.2018.2870594
+    \endverb
+    \field{number}{4}
+    \field{pages}{1067\bibrangedash 1082}
+    \field{title}{Frontal View Gait Recognition With Fusion of Depth Features
+  From a Time of Flight Camera}
+    \field{volume}{14}
+    \field{journaltitle}{IEEE Transactions on Information Forensics and
+  Security}
+    \field{year}{2019}
+  \endentry
+
+  \entry{8929373}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=GHSM}{%
+         family={Gowri},
+         familyi={G\bibinitperiod},
+         given={H\bibnamedelima S\bibnamedelima Manasa},
+         giveni={H\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim
+  M\bibinitperiod},
+      }}%
+      {{hash=OM}{%
+         family={Okade},
+         familyi={O\bibinitperiod},
+         given={Manish},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \keyw{Skeleton;Cameras;Feature extraction;Training;Gait
+  recognition;Foot;Human Gait;Kinect camera;Skeleton data;Frontal Gait;kNN
+  Classifier}
+    \strng{namehash}{GHSMOM1}
+    \strng{fullhash}{GHSMOM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{TENCON 2019 - 2019 IEEE Region 10 Conference (TENCON)}
+    \verb{doi}
+    \verb 10.1109/TENCON.2019.8929373
+    \endverb
+    \field{pages}{452\bibrangedash 456}
+    \field{title}{Skeleton based Frontal Gait Recognition utilizing Fourier
+  Descriptors}
+    \field{year}{2019}
+  \endentry
+
+  \entry{10081323}{article}{}
+    \name{author}{4}{}{%
+      {{hash=DM}{%
+         family={Deng},
+         familyi={D\bibinitperiod},
+         given={Muqing},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=FZ}{%
+         family={Fan},
+         familyi={F\bibinitperiod},
+         given={Zhuyao},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=LP}{%
+         family={Lin},
+         familyi={L\bibinitperiod},
+         given={Peng},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=FX}{%
+         family={Feng},
+         familyi={F\bibinitperiod},
+         given={Xiaoreng},
+         giveni={X\bibinitperiod},
+      }}%
+    }
+    \keyw{Legged locomotion;Feature extraction;Gait
+  recognition;Skeleton;Cameras;Kinematics;Deep learning;Gait
+  recognition;frontal-view recognition;gait dynamics;deep learning;feature
+  fusion}
+    \strng{namehash}{DMFZLP+1}
+    \strng{fullhash}{DMFZLPFX1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/TMM.2023.3262131
+    \endverb
+    \field{pages}{117\bibrangedash 126}
+    \field{title}{Human Gait Recognition Based on Frontal-View Sequences Using
+  Gait Dynamics and Deep Learning}
+    \field{volume}{26}
+    \field{journaltitle}{IEEE Transactions on Multimedia}
+    \field{year}{2024}
+  \endentry
+
+  \entry{8485345}{article}{}
+    \name{author}{4}{}{%
+      {{hash=TS}{%
+         family={Tong},
+         familyi={T\bibinitperiod},
+         given={Suibing},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=FY}{%
+         family={Fu},
+         familyi={F\bibinitperiod},
+         given={Yuzhuo},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=YX}{%
+         family={Yue},
+         familyi={Y\bibinitperiod},
+         given={Xinwei},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=LH}{%
+         family={Ling},
+         familyi={L\bibinitperiod},
+         given={Hefei},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \keyw{Feature extraction;Gait recognition;Trajectory;Recurrent neural
+  networks;Convolutional neural networks;Biological system
+  modeling;Multi-view;gait recognition;STG;LSTM;STDNN}
+    \strng{namehash}{TSFYYX+1}
+    \strng{fullhash}{TSFYYXLH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/ACCESS.2018.2874073
+    \endverb
+    \field{pages}{57583\bibrangedash 57596}
+    \field{title}{Multi-View Gait Recognition Based on a Spatial-Temporal Deep
+  Neural Network}
+    \field{volume}{6}
+    \field{journaltitle}{IEEE Access}
+    \field{year}{2018}
+  \endentry
+
+  \entry{8451629}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=KMH}{%
+         family={Khan},
+         familyi={K\bibinitperiod},
+         given={Muhammad\bibnamedelima Hassan},
+         giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=FMS}{%
+         family={Farid},
+         familyi={F\bibinitperiod},
+         given={Muhammad\bibnamedelima Shahid},
+         giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=ZM}{%
+         family={Zahoor},
+         familyi={Z\bibinitperiod},
+         given={Maryiam},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=GM}{%
+         family={Grzegorzek},
+         familyi={G\bibinitperiod},
+         given={Marcin},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \keyw{Spatiotemporal phenomena;Gait recognition;Support vector
+  machines;Training;Three-dimensional displays;Probes;Solid modeling;Cross-view
+  gait recognition;spatiotemporal gait features;view transformation}
+    \strng{namehash}{KMHFMSZM+1}
+    \strng{fullhash}{KMHFMSZMGM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2018 25th IEEE International Conference on Image
+  Processing (ICIP)}
+    \verb{doi}
+    \verb 10.1109/ICIP.2018.8451629
+    \endverb
+    \field{pages}{773\bibrangedash 777}
+    \field{title}{Cross- View Gait Recognition Using Non-Linear View
+  Transformations of Spatiotemporal Features}
+    \field{year}{2018}
+  \endentry
+
+  \entry{8759096}{article}{}
+    \name{author}{4}{}{%
+      {{hash=ZY}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Yuqi},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=HY}{%
+         family={Huang},
+         familyi={H\bibinitperiod},
+         given={Yongzhen},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=YS}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Shiqi},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=WL}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Liang},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \keyw{Gait recognition;Feature extraction;Three-dimensional
+  displays;Generative adversarial networks;Face recognition;Deep
+  learning;Clothing;Gait recognition;discriminative feature learning;angle
+  center loss;spatial-temporal features}
+    \strng{namehash}{ZYHYYS+1}
+    \strng{fullhash}{ZYHYYSWL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/TIP.2019.2926208
+    \endverb
+    \field{pages}{1001\bibrangedash 1015}
+    \field{title}{Cross-View Gait Recognition by Discriminative Feature
+  Learning}
+    \field{volume}{29}
+    \field{journaltitle}{IEEE Transactions on Image Processing}
+    \field{year}{2020}
+  \endentry
+
+  \entry{9643338}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=HQ}{%
+         family={Hong},
+         familyi={H\bibinitperiod},
+         given={Qi},
+         giveni={Q\bibinitperiod},
+      }}%
+      {{hash=WZ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Zhongyuan},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=CJ}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Jianyu},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=HB}{%
+         family={Huang},
+         familyi={H\bibinitperiod},
+         given={Baojin},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \keyw{Image recognition;Face recognition;Conferences;Feature
+  extraction;Cameras;Data mining;Character recognition;gait recognition;feature
+  fusion;cross-view}
+    \strng{namehash}{HQWZCJ+1}
+    \strng{fullhash}{HQWZCJHB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2021 IEEE 33rd International Conference on Tools with
+  Artificial Intelligence (ICTAI)}
+    \verb{doi}
+    \verb 10.1109/ICTAI52525.2021.00102
+    \endverb
+    \field{pages}{640\bibrangedash 646}
+    \field{title}{Cross-View Gait Recognition Based on Feature Fusion}
+    \field{year}{2021}
+  \endentry
+
+  \entry{9578019}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=ZS}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Shaoxiong},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=WY}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Yunhong},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=LA}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Annan},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{Legged locomotion;Visualization;Linear approximation;Feature
+  extraction;Solids;Nonlinear dynamical systems;Task analysis}
+    \strng{namehash}{ZSWYLA1}
+    \strng{fullhash}{ZSWYLA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2021 IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition (CVPR)}
+    \verb{doi}
+    \verb 10.1109/CVPR46437.2021.00898
+    \endverb
+    \field{pages}{9091\bibrangedash 9100}
+    \field{title}{Cross-View Gait Recognition with Deep Universal Linear
+  Embeddings}
+    \field{year}{2021}
+  \endentry
+
+  \entry{10313271}{article}{}
+    \name{author}{3}{}{%
+      {{hash=WJ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Jingxue},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=GJ}{%
+         family={Guo},
+         familyi={G\bibinitperiod},
+         given={Jun},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=XZ}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Zhenghui},
+         giveni={Z\bibinitperiod},
+      }}%
+    }
+    \keyw{Gait recognition;Feature extraction;Training;Generators;Generative
+  adversarial networks;Legged locomotion;Streaming media;Cross-view;gait
+  recognition;residual module;self-attention mechanism;two-channel networks}
+    \strng{namehash}{WJGJXZ1}
+    \strng{fullhash}{WJGJXZ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/ACCESS.2023.3331395
+    \endverb
+    \field{pages}{127769\bibrangedash 127782}
+    \field{title}{Cross-View Gait Recognition Model Combining Multi-Scale
+  Feature Residual Structure and Self-Attention Mechanism}
+    \field{volume}{11}
+    \field{journaltitle}{IEEE Access}
+    \field{year}{2023}
+  \endentry
+
+  \entry{10082933}{article}{}
+    \name{author}{4}{}{%
+      {{hash=AMAA}{%
+         family={Aljazaerly},
+         familyi={A\bibinitperiod},
+         given={Mohamad Ammar\bibnamedelima Alsherfawi},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim
+  A\bibinitperiod},
+      }}%
+      {{hash=MY}{%
+         family={Makihara},
+         familyi={M\bibinitperiod},
+         given={Yasushi},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=MD}{%
+         family={Muramatsu},
+         familyi={M\bibinitperiod},
+         given={Daigo},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Yagi},
+         familyi={Y\bibinitperiod},
+         given={Yasushi},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \keyw{Training data;Biometrics (access control);Deep learning;Sampling
+  methods;Databases;Convolutional neural networks;Gait
+  recognition;Biometrics;deep learning;forensics;gait recognition}
+    \strng{namehash}{AMAAMYMD+1}
+    \strng{fullhash}{AMAAMYMDYY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/ACCESS.2023.3262271
+    \endverb
+    \field{pages}{31177\bibrangedash 31187}
+    \field{title}{Batch Hard Contrastive Loss and Its Application to Cross-View
+  Gait Recognition}
+    \field{volume}{11}
+    \field{journaltitle}{IEEE Access}
+    \field{year}{2023}
+  \endentry
+
+  \entry{10488455}{article}{}
+    \name{author}{6}{}{%
+      {{hash=HT}{%
+         family={Huang},
+         familyi={H\bibinitperiod},
+         given={Tianhuan},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=BX}{%
+         family={Ben},
+         familyi={B\bibinitperiod},
+         given={Xianye},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=GC}{%
+         family={Gong},
+         familyi={G\bibinitperiod},
+         given={Chen},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=XW}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Wenzheng},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=WQ}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Qiang},
+         giveni={Q\bibinitperiod},
+      }}%
+      {{hash=ZH}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Hongchao},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \keyw{Feature extraction;Gait recognition;Cameras;Circuits and
+  systems;Training;Task analysis;Adversarial machine learning;Adversarial
+  domain adaptation;adversarial view-change elimination;gait
+  recognition;hierarchical feature aggregation}
+    \strng{namehash}{HTBXGC+1}
+    \strng{fullhash}{HTBXGCXWWQZH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/TCSVT.2024.3384308
+    \endverb
+    \field{number}{9}
+    \field{pages}{8026\bibrangedash 8040}
+    \field{title}{GaitDAN: Cross-View Gait Recognition via Adversarial Domain
+  Adaptation}
+    \field{volume}{34}
+    \field{journaltitle}{IEEE Transactions on Circuits and Systems for Video
+  Technology}
+    \field{year}{2024}
+  \endentry
+
+  \entry{10752706}{article}{}
+    \name{author}{4}{}{%
+      {{hash=SSM}{%
+         family={Saad\bibnamedelima Shakeel},
+         familyi={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=LK}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Kun},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=LX}{%
+         family={Liao},
+         familyi={L\bibinitperiod},
+         given={Xiaochuan},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=KW}{%
+         family={Kang},
+         familyi={K\bibinitperiod},
+         given={Wenxiong},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \keyw{Representation learning;Legged locomotion;Adaptation
+  models;Distributed databases;Benchmark testing;Pattern recognition;Spatial
+  resolution;Gait recognition;Attention module;biometrics;gait
+  recognition;self-attention;temporal modeling}
+    \strng{namehash}{SSMLKLX+1}
+    \strng{fullhash}{SSMLKLXKW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/TIM.2024.3497164
+    \endverb
+    \field{pages}{1\bibrangedash 14}
+    \field{title}{TAG: A Temporal Attentive Gait Network for Cross-View Gait
+  Recognition}
+    \field{volume}{74}
+    \field{journaltitle}{IEEE Transactions on Instrumentation and Measurement}
+    \field{year}{2025}
+  \endentry
+
+  \entry{10777002}{article}{}
+    \name{author}{2}{}{%
+      {{hash=ZS}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Shuai},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=LC}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Chibiao},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \keyw{Feature extraction;Gait recognition;Adversarial machine learning;Data
+  mining;Data models;Representation
+  learning;Clothing;Vectors;Transforms;Pipelines;Cross-view gait
+  recognition;adversarial learning;view elimination}
+    \strng{namehash}{ZSLC1}
+    \strng{fullhash}{ZSLC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/ACCESS.2024.3510718
+    \endverb
+    \field{pages}{182455\bibrangedash 182468}
+    \field{title}{Cross-View Gait Recognition via View Information Elimination
+  Mechanism}
+    \field{volume}{12}
+    \field{journaltitle}{IEEE Access}
+    \field{year}{2024}
+  \endentry
+
+  \entry{10707343}{article}{}
+    \name{author}{4}{}{%
+      {{hash=ZW}{%
+         family={Zhai},
+         familyi={Z\bibinitperiod},
+         given={Wenzhe},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=LH}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Haomiao},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=ZC}{%
+         family={Zheng},
+         familyi={Z\bibinitperiod},
+         given={Chaoqun},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=XX}{%
+         family={Xing},
+         familyi={X\bibinitperiod},
+         given={Xianglei},
+         giveni={X\bibinitperiod},
+      }}%
+    }
+    \keyw{Feature extraction;Data mining;Gait recognition;Three-dimensional
+  displays;Convolution;Long short term memory;Legged locomotion;Fuses;Circuits
+  and systems;Transformers;Gait recognition;fine-grained
+  recognition;multi-scale feature;temporal context information}
+    \strng{namehash}{ZWLHZC+1}
+    \strng{fullhash}{ZWLHZCXX1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/TCSVT.2024.3476384
+    \endverb
+    \field{number}{2}
+    \field{pages}{1123\bibrangedash 1135}
+    \field{title}{Multi-View Gait Recognition With Joint Local Multi-Scale and
+  Global Contextual Spatio-Temporal Features}
+    \field{volume}{35}
+    \field{journaltitle}{IEEE Transactions on Circuits and Systems for Video
+  Technology}
+    \field{year}{2025}
+  \endentry
+
+  \entry{7533144}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=WT}{%
+         family={Wolf},
+         familyi={W\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Babaee},
+         familyi={B\bibinitperiod},
+         given={Mohammadreza},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=RG}{%
+         family={Rigoll},
+         familyi={R\bibinitperiod},
+         given={Gerhard},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \keyw{Legged locomotion;Clothing;Training;Gait
+  recognition;Three-dimensional displays;Videos;Neural networks;Deep
+  Learning;Convolutional Neural Networks;Gait Recognition}
+    \strng{namehash}{WTBMRG1}
+    \strng{fullhash}{WTBMRG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2016 IEEE International Conference on Image Processing
+  (ICIP)}
+    \verb{doi}
+    \verb 10.1109/ICIP.2016.7533144
+    \endverb
+    \field{pages}{4165\bibrangedash 4169}
+    \field{title}{Multi-view gait recognition using 3D convolutional neural
+  networks}
+    \field{year}{2016}
+  \endentry
+\enddatalist
+\endinput

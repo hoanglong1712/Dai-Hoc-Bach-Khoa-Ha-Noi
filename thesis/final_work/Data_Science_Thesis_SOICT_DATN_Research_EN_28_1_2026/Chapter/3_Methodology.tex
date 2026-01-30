@@ -1,0 +1,246 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+
+\section{Overview}
+The proposed methodology, named \textbf{Multi-view gait recognition with Deep Learning (MVDL)}, integrates a Convolutional Neural Network (CNN) for initial feature extraction with a Transformer model for multi-view knowledge synthesis. This integrated approach is designed to enrich feature embeddings and enhance accuracy, particularly for single-view inference.
+
+\subsection{Our proposed model architecture}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Figure/out_architecture.png}
+    \caption{Our proposed model architecture}
+    \label{fig:proposed-model-architecture}
+\end{figure}
+
+ Our proposed model architecture includes 1 reasoner model and multiple descriptor models. Each view has its own descriptor model. The reasoner model doesn't have to see directly to reason about images. It's the reason why our architecture can outperform other architectures.
+
+ We allow descriptor models to collaborate through cross-view training. It helps descriptor to provide better description.  
+
+ Descripting and reasoning are very different skills. CNN models are better at describing details of a certain image than deep reasoning an image. Transformer models are better at deep reasoning task than describing details of an image. By letting each model stand in their shoes, we gain better outcomes than forcing a single model to do both tasks.
+
+\textbf{The overall workflow of the solution is structured as a two-stage process}:
+
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.75\linewidth]{60-76-90.png}
+        \caption{Example of how information can be exchanged and enriched between one camera angle and related angles}
+        \label{fig:data_flown}
+    \end{figure}
+    
+    Embedding Enrichment (GNN-Inspired Knowledge Propagation): The initial CNN models, one trained per camera angle, exchange knowledge with neighboring angles (e.g., 75\textdegree \space exchanging information with 60\textdegree \space and 90\textdegree). This mechanism, inspired by Graph Neural Network (GNN) message propagation, is aimed at improving the single-angle model's predictive accuracy and robustness against overfitting. 
+
+    We hypothesized that the information between pixels in a 90-degree image is similar to the information between pixels in a 75-degree image. Experiments showed that some identities were unrecognizable in 90-degree images but were recognizable in 75-degree images. This suggests that if we train the model, previously trained on the 90-degree dataset, on the 75-degree dataset, the new recognition system will be able to recognize identities from both 75-degree and 90-degree images. If we train this new recognition system again on the 90-degree dataset, it will utilize the knowledge gained from training the 75-degree dataset to recognize identities from 90-degree images, thereby improving the accuracy of the CNN model for 90-degree images. From this base, we trained in sequence from 90 degrees to 75 degrees to 60 degrees to 45 degrees to 30 degrees to 15 degrees to 00 degrees, then from 00 degrees to 30 degrees to 45 degrees to 60 degrees to 75 degrees to 90 degrees.
+
+    This method ensures that the model at any given angle contains a portion of the model's knowledge at any angle from 00 degrees to 90 degrees. This is the basis for the subsequent model to have superior accuracy in the inference process.
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.75\linewidth]{model_overview.png}
+        \caption{Proposed solution's workflow}
+        %\label{fig:placeholder}
+    \end{figure}
+    
+     Multi-View Synthesis (Transformer Model): The enriched embedding vectors from multiple CNNs are concatenated and fed into a Transformer model to synthesize the information into a single, highly discriminative embedding vector.
+
+\section{Our model explanation in math}
+
+\subsection{Convolutional Neural Network (CNN)}
+
+The proposed methodology utilizes a Convolutional Neural Network (CNN) as the initial feature extractor. A CNN architecture consists of convolutional layers, activation functions, pooling layers, and fully connected layers. We propose using the hyperbolic tangent (tanh) as the activation function, which applies a nonlinearity after each convolution or fully connected layer, mapping inputs to values between -1 and 1. 
+
+
+\begin{enumerate}
+    \item Convolution Operation: For an input image or feature map X and a filter/kernel W, the convolution operation at position (i,j) is:
+    \begin{equation}
+    Z^{(l)}_{i, j} = (W^{(l)} * X^{(l - 1)}) + b^{(l)} \label{eq:conop}   
+    \end{equation}
+    
+    
+    \begin{itemize}
+        \item $Z^{(l)}$: Pre-activation output at layer l
+        \item $X^{(l-1)}$: Input from previous layer
+        \item $W^{(l)}$: Filter weights
+        \item $b^{(l)}$: Bias term
+        \item  *: Convolution operator
+    \end{itemize}
+    \item Batch Normalization: 
+
+    Normalize the output $Z^{(l)}$
+    \begin{equation}
+    \hat {Z}_{i,j}^{(l)}=\frac{Z_{i,j}^{(l)}-\mu ^{(l)}}{\sqrt{(\sigma ^{(l)})^2+\epsilon }}
+    \label{eq:normal}
+    \end{equation}
+    Then scale and shift:
+    \begin{equation}
+    \tilde {Z}_{i,j}^{(l)}=\gamma ^{(l)}\cdot \hat {Z}_{i,j}^{(l)}+\beta ^{(l)}
+    \label{eq:scale}
+    \end{equation}
+    \begin{itemize}
+        \item $\mu^{(l)}$: Mean of the batch
+        \item $ \sigma ^{(l)}$: Standard deviation of the batch
+        \item $ \epsilon$ : Small constant for numerical stability
+        \item $ \gamma ^{(l)},\beta ^{(l)}$: Learnable parameters
+
+    \end{itemize}
+    \item Max Pooling: Pooling reduces spatial dimensions:
+    \begin{equation}
+    P_{i,j}^{(l)}=\mathrm{pool}(\hat {Z_{i,j}^{(l)}})
+    \label{eq:maxpool}
+    \end{equation}
+    
+
+    \item Tanh Activation Function: Tanh activation is applied element-wise
+
+    \begin{equation}
+    A_{i,j}^{(l)}=\tanh (Z_{i,j}^{(l)})=\frac{e^{Z_{i,j}^{(l)}}-e^{-Z_{i,j}^{(l)}}}{e^{Z_{i,j}^{(l)}}+e^{-Z_{i,j}^{(l)}}}
+    \label{eq:tanh}
+    \end{equation}
+
+    \item Fully Connected Layer: At the end, flattened features are passed through dense layers
+    \begin{equation}
+    Z^{(fc)}=W^{(fc)}\cdot x+b^{(fc)}
+    \label{eq:full1}
+    \end{equation}
+    \begin{equation}
+    A^{(fc)}=\tanh (Z^{(fc)})
+    \label{eq:full2}
+    \end{equation}
+\end{enumerate}
+
+\subsection{Transfomer Encoder}
+The Transformer model is utilized in the proposed methodology for synthesizing enriched embedding vectors. The encoder block is composed of a stack of identical layers, with each layer consisting of a Multi-Head Self-Attention (MHSA) mechanism and a position-wise Feed-Forward Network (FFN).
+
+\begin{enumerate}
+    \item Input and Positional Encoding\\
+    If $X=(x_1,x_2,\ldots,x_n)$ is the sequence of input embeddings, where $x_t \in R^d$ and d is the model's dimension, the input to the first encoder layer $Z^{(0)}$ is:
+    \begin{equation}
+    Z^{(0)}=X+PE
+    \label{eq:position}
+    \end{equation}
+    
+    where $PE$ has the same dimension as X and is usually calculated using sine and cosine functions. For a position t and dimension i:
+    \begin{equation}
+    PE(t,2i)=sin( \frac{t}{10000^{2i/d}} )
+    \label{eq:sin}
+    \end{equation}
+    \begin{equation}
+    PE(t,2i+1)=cos(\frac{t}{10000^{2i/d}} )
+    \label{eq:cos}
+    \end{equation}
+
+    \item Encoder Layer\\
+    A single encoder layer, L, takes an input matrix $Z^{(l-1)}$ from the previous layer (or the input embeddings for l=1) and produces an output matrix $Z^{(l)}$ through the following steps:
+    \begin{enumerate}
+        \item Multi-Head Self-Attention (MHSA):
+        The MHSA sub-layer first performs Scaled Dot-Product Attention Attention(Q,K,V):
+        \begin{equation}
+        Attention(Q,K,V)=A \cdot V
+        \label{eq:attention}
+        \end{equation}
+        
+        where:
+        \begin{itemize}
+            \item The Attention Weights A are computed as:
+            \begin{equation}
+            A=softmax(\frac{QK^T}{\sqrt{d_k}})
+            \label{eq:attentionweight}
+            \end{equation}
+            
+            \item Query (Q), Key (K), and Value (V) matrices are linear projections of the input $Z^{(l-1)}$:
+            \begin{equation}
+            Q = Z^{(l-1)} W_Q    
+            \label{eq:q}
+            \end{equation}
+            \begin{equation}
+            K = Z^{(l-1)} W_K
+            \label{eq:K}
+            \end{equation}
+            \begin{equation}
+            V = Z^{(l-1)} W_V
+            \label{eq:V}
+            \end{equation}
+            where $W_Q,W_K,W_V \in R^{d \times d_k}$ are learned weight matrices, and $d_k$ is the dimension of the key/query space. 
+            
+            Multi-Head Attention computes the attention output h times in parallel (the "heads"), each with its own weight matrices, and then concatenates the results:
+            \begin{equation}
+            H_i=Attention(Z^{(l-1)}W_{Q_{i}},Z^{(l-1)}W_{K_i},Z^{(l-1)}W_{V_i})
+            \label{eq:hi}
+            \end{equation}
+            \begin{equation}
+            Z_{MHSA}=[H_1;H_2;…;H_h]W^O
+            \label{eq:zmhsa}
+            \end{equation}
+            where $W^O \in R^{(h \cdot d_k) \times d}$ is the final linear projection matrix.
+
+            The output of the first sub-layer, incorporating Layer Normalization (LN) and a Residual Connection (RC), is:
+            \begin{equation}
+            Z'^{(l)}=LN(Z^{(l - 1)}+Z_{MHSA})
+            \label{eq:zl}
+            \end{equation}
+            
+        \end{itemize}
+        \item Feed-Forward Network (FFN): 
+        The FFN is applied independently and identically to each position in the sequence. It consists of two linear transformations with a non-linearity in between.
+        \begin{equation}
+        FFN(z')=max(0,z'W_1+b_1)W_2+b_2
+        \label{eq:ffn}
+        \end{equation}
+        
+        The second sub-layer output $Z^{(l)}$ is then calculated by applying the FFN, followed by another residual connection and layer normalization:
+        \begin{equation}
+        Z^{(l)}=LN(Z'^{(l)}+FFN(Z'^{(l)}))
+        \label{eq:zln}
+        \end{equation}
+        
+    \end{enumerate}
+\end{enumerate}
+
+\section{Convolutional neural network model - Descriptor model}
+
+The backbone architecture of the proposed model, Figure~\ref{fig:backbone}, begins with a Convolutional Neural Network (CNN), which serves as the initial encoding mechanism responsible for processing the Gait Energy Images (GEI) input. This CNN-based design provides a structured pipeline that gradually transforms raw gait images into meaningful feature representations suitable for downstream tasks. Each component of the architecture is carefully selected to balance computational efficiency, robustness, and accuracy, ensuring that the model can effectively capture both low-level and high-level features from the input data.
+
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=1\linewidth]{backbone_architecture.png}
+        \caption{Backbone Architecture}
+        \label{fig:backbone}
+    \end{figure}
+
+The first stage of the architecture is the input layer, which incorporates a dropout mechanism with a parameter value of . Dropout acts as a regularization technique designed to prevent overfitting by reducing feature co-adaptation. By randomly setting a fraction of input units to zero during training, dropout introduces noise into the system, which functions as a simple yet effective form of data augmentation. This randomness forces the network to learn more generalized patterns rather than relying too heavily on specific features, thereby improving its ability to generalize to unseen data.
+
+Following the input stage, the model employs a feature block layer composed of a 7×7 convolution, batch normalization, ReLU activation, and a max pooling operation with a stride of 2. The choice of a 7×7 kernel is deliberate, as it provides computational efficiency while rapidly capturing large-scale, low-level features. This kernel size establishes a broad initial receptive field, enabling the network to detect prominent structural patterns in the gait images early in the process. The inclusion of batch normalization within this block further stabilizes the learning process, while the ReLU activation introduces non-linearity, allowing the network to model complex relationships between features. The max pooling operation reduces dimensionality, ensuring that the most salient features are preserved while suppressing irrelevant noise.
+
+The architecture then incorporates a normalization layer in the form of batch normalization with learnable parameters. This layer plays a crucial role in stabilizing and accelerating training by normalizing the input to each subsequent layer. By maintaining consistent distributions of activations, batch normalization mitigates issues such as internal covariate shift, thereby improving convergence speed and overall model performance.
+
+Next, the activation function is applied using the ReLU mechanism. ReLU is particularly effective in addressing the vanishing gradient problem, which often hampers the training of deep networks. By introducing non-linearity, ReLU enables the network to learn more complex mappings between inputs and outputs. Additionally, ReLU encourages sparse feature representation, which enhances computational efficiency and reduces redundancy in the learned features.
+
+The model then performs down-sampling through a max pooling operation with a 2×2 kernel. This step reduces the spatial dimensions of the feature maps by approximately 75\%, ensuring translation invariance and further suppressing noise. By retaining only the most prominent features, max pooling enhances the robustness of the learned representations while simultaneously reducing computational complexity.
+
+Finally, the architecture concludes with the output block, which consists of a sequence of linear layers, a Tanh activation, and an additional dropout mechanism with a rate of 0.5. The Tanh activation ensures that the output activations are zero-centered and bounded, preventing gradients from being consistently positive or negative. This property leads to more efficient training and faster convergence. The dropout mechanism in this stage further reduces the risk of overfitting by introducing additional regularization. Together, these components produce a refined output representation that is both discriminative and stable, forming the basis for accurate gait recognition.
+
+This backbone architecture, with its carefully orchestrated layers and mechanisms, provides a strong foundation for the model. By combining dropout regularization, kernel convolution, batch normalization, ReLU activation, max pooling, and a structured output block, the design ensures that the system is capable of extracting meaningful features from gait images while maintaining efficiency and robustness throughout the training process.
+
+
+The use of a fully connected layer in combination with the Tanh activation function and dropout is not the most optimal solution, as the effectiveness of this approach tends to rely heavily on random chance. The stochastic nature of dropout introduces variability that can make the results unstable and less predictable, which reduces the reliability of the overall model.
+
+\section{Transformer model - Reasoner model}
+
+Although the data enrichment mechanism enables Convolutional Neural Network (CNN) models to achieve state-of-the-art (SOTA) results with accuracy levels exceeding 90\%, this improvement alone is not sufficient to surpass the performance reported in existing published studies. To address this limitation, we propose a second stage in the framework where a Transformer model is introduced to synthesize the enriched embedding vectors, Figure~\ref{fig:workflow}. The Transformer serves as a reasoner model, complementing the descriptive capabilities of CNNs by integrating and refining the enriched information into a more discriminative representation. This synthesis process is crucial for bridging the gap between high-performing CNN-based approaches and the superior benchmarks established in prior research.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\linewidth]{model_overview.png}
+    \caption{Proposed solution's workflow}
+    \label{fig:workflow}
+\end{figure}
+
+To clarify the conceptual foundation of this approach, we draw an analogy between gait recognition and authorship. In this analogy, each individual in the dataset is regarded as a “writer,” while each gait image or instance is considered an “essay” authored by that person. By examining these essays—represented as embedding vectors—we can identify the unique “writing style” of each individual, which corresponds to their identity. The Transformer model functions as a tool for mining the most common and distinctive patterns across multiple essays or embeddings that belong to the same person. In doing so, it captures the underlying identity traits that remain consistent across different viewpoints, thereby enhancing recognition accuracy.
+
+The Transformer model operates in two distinct phases: training and inference. During the training phase, the input data consists of concatenated embedding vectors generated from the enriched CNN models at multiple camera angles, specifically 45°, 60°, 75°, and 90°. These embeddings are fed into the Transformer, which synthesizes them into a knowledge-rich vector of length 128. This synthesized vector encapsulates the collective information from multiple perspectives, providing a robust representation of the individual’s gait. In the inference phase, the input is simplified to the embedding vector of any single camera angle, produced by its corresponding enriched CNN model. The Transformer then processes this input to generate a knowledge-enriched embedding vector. This final vector is highly discriminative and is subsequently used for identity recognition through cosine similarity comparison. By leveraging the Transformer’s ability to integrate information across perspectives, the system achieves more reliable and precise identification, ultimately advancing the performance of gait recognition beyond the current state-of-the-art.
+
+In this transformer model, we use 12 encoder layers with 4 attention headers per encoder layer. The dropout value is 0.25. We obtained this dropout value during testing, and it helps the model achieve optimal performance.
+
+In natural language processing problems, transformer models are used to analyze which author wrote a piece of text. The model's tokens are words, phrases, or parts of words. In the problem we are considering, the sample texts are vectors composed of embedded vectors of images from each perspective of the same person. The task of the transformer model is to generate an embedded vector that has low similarity to a vector generated from an image or set of images of another person, and high similarity to a vector generated from an image or set of images of the same person. This vector represents the unique characteristics of a person from multiple perspectives at the same time by modeling the relationships between the data pieces in the input descriptive data vector generated by CNN descriptors.
+
+In this chapter, the proposed methodology is presented in a systematic and comprehensive manner, emphasizing the integration of a Convolutional Neural Network (CNN) with a Transformer model to construct a robust framework for knowledge extraction and synthesis. Specifically, the CNN is employed in the initial stage to perform feature extraction, thereby capturing fine-grained local patterns and structural representations within the dataset. Following this, the Transformer model is introduced to facilitate multi-view knowledge synthesis, enabling the system to model long-range dependencies and contextual relationships that extend beyond the scope of localized features. Furthermore, the chapter elaborates on the central hypothesis underpinning this approach, which posits that the combination of CNN’s capacity for extracting rich and detailed features with the Transformer’s ability to synthesize diverse perspectives and semantic contexts will yield a more comprehensive and insightful understanding of the dataset. In this regard, the methodology not only leverages the complementary strengths of both architectures but also establishes a theoretical foundation for why their integration is expected to outperform traditional single-model approaches. Therefore, the chapter situates the proposed framework within a broader research context, demonstrating how the methodological design and guiding hypothesis collectively contribute to advancing the effectiveness of knowledge extraction in complex datasets.
+\end{document}

@@ -1,0 +1,59 @@
+\babel@toc {nil}{}\relax 
+\ttl@change@i {\@ne }{chapter}{0.0cm}{\bfseries \vspace {0.3cm}}{{\bfseries {\scshape } CHAPTER \thecontentslabel .\ }}{}{\titlerule *[0.3pc]{.}\contentspage }\relax 
+\ttl@change@v {chapter}{}{}{}\relax 
+\ttl@change@i {\@ne }{section}{0.0cm}{\vspace {0.3cm}}{\thecontentslabel \ }{}{\titlerule *[0.3pc]{.}\contentspage }\relax 
+\ttl@change@v {section}{}{}{}\relax 
+\ttl@change@i {\@ne }{subsection}{1.0cm}{\vspace {0.3cm}}{\thecontentslabel \ }{}{\titlerule *[0.3pc]{.}\contentspage }\relax 
+\ttl@change@v {subsection}{}{}{}\relax 
+\thispagestyle {empty}
+\contentsline {chapter}{\numberline {1}INTRODUCTION}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Problem Statement}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Background and Problems of Research}{1}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Overview}{1}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}The Fundamentals of Human Gait}{1}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Overview of Gait Recognition}{2}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Single-View in Gait Recognition}{3}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.5}The Fundamentals of Gait Energy Image (GEI)}{4}{subsection.1.2.5}%
+\contentsline {subsection}{\numberline {1.2.6}Multiple-View in Gait Recognition}{5}{subsection.1.2.6}%
+\contentsline {subsection}{\numberline {1.2.7}Classic / Pre–Deep Learning Gait Recognition Approaches}{5}{subsection.1.2.7}%
+\contentsline {subsubsection}{\numberline {a}Gait Energy Image (GEI) and Silhouette-Based Methods}{5}{subsubsection.1.2.7.1}%
+\contentsline {subsubsection}{\numberline {b}Model-Based Approaches (No Deep Learning)}{7}{subsubsection.1.2.7.2}%
+\contentsline {subsubsection}{\numberline {c}Gait Dynamics, Frequency, and Statistical Methods}{8}{subsubsection.1.2.7.3}%
+\contentsline {subsubsection}{\numberline {d}Handcrafted Spatiotemporal Templates}{9}{subsubsection.1.2.7.4}%
+\contentsline {subsubsection}{\numberline {e}Other methods}{10}{subsubsection.1.2.7.5}%
+\contentsline {subsection}{\numberline {1.2.8}Recent Gait Recognition Research}{11}{subsection.1.2.8}%
+\contentsline {subsection}{\numberline {1.2.9}Features usage in Gait Recognition}{13}{subsection.1.2.9}%
+\contentsline {section}{\numberline {1.3}Research Objectives and Conceptual Framework}{13}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Contributions}{15}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Organization of Thesis}{16}{section.1.5}%
+\contentsline {chapter}{\numberline {2}LITERATURE REVIEW}{17}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Scope of Research}{17}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Our new approach}{17}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Our proposed model architecture}{17}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Related Works}{17}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Highlighted Researches on OU-ISIR Gait Database, Multi-View Large Population Dataset (OU-MVLP) }{17}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Key Papers on 1-View (Single-View) Gait Recognition}{18}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Key Papers on Multi-View Gait Recognition}{19}{subsection.2.2.3}%
+\contentsline {chapter}{\numberline {3}METHODOLOGY}{26}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Overview}{26}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Our proposed model architecture}{26}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Our model explanation in math}{27}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Convolutional Neural Network (CNN)}{27}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Transfomer Encoder}{28}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Convolutional neural network model - Descriptor model}{29}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Transformer model - Reasoner model}{31}{section.3.4}%
+\contentsline {chapter}{\numberline {4}NUMERICAL RESULTS}{33}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Dataset}{33}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Data Source}{33}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Evaluation Parameters}{33}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Experiment Setting}{34}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Reasoning on two views (Multi-View Synthesis)}{35}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Reasoning on one view (Single-View Inference)}{35}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Other measurements}{37}{subsection.4.5.1}%
+\contentsline {chapter}{\numberline {5}CONCLUSIONS}{38}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Summary}{38}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Suggestion for Future Works }{38}{section.5.2}%
+\contentsline {chapter}{REFERENCE}{42}{section*.38}%
+\ttl@change@i {\@ne }{chapter}{0.0cm}{\bfseries \vspace {0.3cm}}{{\bfseries {\scshape } \thecontentslabel .\ }}{}{\titlerule *[0.3pc]{.}\contentspage }\relax 
+\ttl@change@v {chapter}{}{}{}\relax 
+\contentsfinish 

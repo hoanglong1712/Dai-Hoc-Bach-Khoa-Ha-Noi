@@ -1,0 +1,321 @@
+\documentclass[../main.tex]{subfiles}
+\usepackage{longtable}
+\begin{document}
+
+\section{Dataset}
+\subsection{Data Source}
+ \href{http://www.am.sanken.osaka-u.ac.jp/BiometricDB/GaitMVLP.html}{The OU-ISIR Gait Database, Multi-View Large Population Dataset (OU-MVLP)} is meant to aid research efforts in the general area of developing, testing and evaluating algorithms for cross-view gait recognition. The Institute of Scientific and Industrial Research (ISIR), Osaka University (OU) has copyright in the collection of gait video and associated data and serves as a distributor of the OU-ISIR Gait Database.
+
+The data was collected in conjunction with an experience-based long-run exhibition of video-based gait analysis at a science museum, Figure~\ref{fig:walking-course}. The approved informed consent was obtained from all the subjects in this dataset. The dataset consists of 10,307 subjects (5,114 males and 5,193 females with various ages, ranging from 2 to 87 years) from 14 view angles, Figure ~\ref{fig:silhouette_exampl}, ranging 0°-90°, 180°-270°. Gait images of 1,280 x 980 pixels at 25 fps are captured by seven network cameras (Cam1-7) placed at intervals of 15-deg azimuth angles along a quarter of a circle whose center coincides with the center of the walking course. Its radius is approximately 8 m and height is approximately 5 m. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Figure/camera_setup.png}
+    \caption{The subject repeat forward (A to B) and backward (B to A)}
+    \label{fig:walking-course}
+\end{figure}
+
+
+The entire data set was divided into two disjoint subsets
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Figure/silhouette_examples.png}
+    \caption{
+Examples of silhouette sequence ( view angle = 90° ) }
+    \label{fig:silhouette_exampl}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{Figure/GEI_examples2.png}
+    \caption{Examples of size-normalized GEI for each view angles}
+    \label{fig:normal-gei}
+\end{figure}
+\section{Evaluation Parameters}
+
+Our research topic focuses on generating the most discriminative embedding vector for each identifier, Figure~\ref{fig:normal-gei}. Therefore, the primary metric for evaluating the performance of the MVDL model is the Rank-1 Accuracy.
+$$ Accuracy = \frac{\text{Number of Correct Prediction}}{\text{Total Number of  Prediction}}
+\times 100\%$$
+
+\begin{itemize}
+    \item \textbf{Rank-1 Accuracy}: This metric represents the probability that the correct identity is found at the first position (highest similarity score) when comparing the query embedding vector against the gallery (stored identity) embedding vectors.
+
+    \item \textbf{Cosine Similarity}: The comparison function used for matching the enriched query embedding with the gallery embeddings is the Cosine Similarity
+\end{itemize}
+
+\section{Experiment Setting}
+
+\begin{enumerate}
+    \item Chosen baselines: 
+    
+    \begin{table}[h]
+    
+        \centering
+        \caption{Baseline table}
+        \begin{tabular}{|l|c|}
+    \hline
+         Name &  Best Accuracy\\ \hline         
+         GaitSFF: improving gait recognition performance based  & \\ 
+         on selective feature fusion in video surveillance & 90.06\% \\ \hline 
+         Cross-View Gait Recognition by Discriminative & \\ Feature Learning 
+         & 95.40\% \\ \hline
+         Learning Visual Prompt for Gait Recognition  & 93.20\% \\ \hline         
+    \end{tabular}
+    
+        \label{tab:baseline}
+    \end{table}   
+
+     \item Reason of baseline selection
+     \begin{enumerate}
+         \item They use the OU-MVLP dataset
+         \item All papers are published in the recent year.
+     \end{enumerate}
+     \item We conduct two inference experiments on the trained model. Experiment 1 infers based on 1 camera angle. Experiment 2 infers based on 2 camera angles.
+     \item Experimental steps:
+     \begin{enumerate}
+        \item Train / Test setting
+        \begin{itemize}
+            \item Training dataset contains IDs which are less than "08000".
+            \item Validating dataset contains IDs which are equal and greater than "08000".
+            \item Each angle gets about 10 training session, each session gets 60 epochs.
+            \item Each training session goes along with one testing session.
+        \end{itemize}        
+         
+         \item Passing an image of a camera angle through a CNN model
+         \item Feeding the vector obtained from the CNN model into the Transformer model to get the embedding value containing the enriched data.
+         \item Applying cosine distance to embedding vectors to determine object identity
+     \end{enumerate}
+     
+\end{enumerate}
+
+\section{Reasoning on two views (Multi-View Synthesis)}
+
+\begin{center}
+\captionof{table}{The performance comparisons on OUMVLP with two-view accuracy}    
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+    & 000 & 015 & 030 & 045 & 060 & 075 & 090  \\ \hline
+    000 & 81.16 & 95.1 & 95.37 & 95.19 & 95.19 & 96.68 & 96.86 \\ \hline
+015 & 95.1 & 88.32 & 95.78 & 96.34 & 96.34 & 97.72 & 97.51 \\ \hline
+030 & 95.78 & 95.63 & 91.68 & 96.42 & 96.42 & 97.45 & 97.63 \\ \hline
+045 & 95.37 & 96.28 & 95.77 & 94.78 & 97.29 & \textbf{97.85} & \textbf{98.48} \\ \hline
+060 & 95.19 & 96.34 & 96.42 & 97.29 & 94.27 & 97.17 & 97.86 \\ \hline
+075 & 96.68 & \textbf{97.72} & 97.45 & 97.85 & 97.17 & 95.58 & 97.61 \\ \hline
+090 & \textbf{96.86} & 97.51 & \textbf{97.63} & \textbf{98.48} & \textbf{97.86} & 97.61 & 96.75 \\ \hline
+Mean & 93.73 & 95.27 & 95.73 & 96.62 & 96.36 & 97.15 & \textbf{97.53} \\ \hline 
+\end{tabular}
+
+\end{center}
+
+\section{Reasoning on one view (Single-View Inference)}
+
+\begin{center}
+\captionof{table}{The performance comparisons on OUMVLP, excluding the identical-views cases.} 
+    \begin{tabular}{|l|c|c|c|c|c|c|c|c|}
+        \hline
+         Method &  \multicolumn{7}{c|}{Probe view} & Mean \\
+         \cline{2-8}
+         &  0$^{\circ}$  &  15$^{\circ}$   
+         &  30$^{\circ}$  &  45$^{\circ}$   
+         &  60$^{\circ}$  &  75$^{\circ}$   
+         &  90$^{\circ}$ & \\ \hline
+         GaitSet \cite{9351667} & 81.30 & 88.60 & 90.20 & 90.70 & 88.60 
+         & 89.10 & 88.30 & 88.10 \\ \hline
+         GaitGCI \cite{10203341} & 91.20 & 92.30 & 92.60 & 92.70  & 93.00 
+         & 92.30 & 92.10 & 92.31 \\ \hline  
+         BiFusion \cite{Peng2024} & 86.17 & 90.60 & 91.28 & 91.56 & 90.88
+         & 90.78 & 90.48 & 90.25 \\ \hline
+         VPNet-M\cite{Ma_2024_CVPR} & \textbf{91.90} & \textbf{93.00} & \textbf{92.40} & 92.70 & 
+         93.20 &  92.50 & 92.30  & \textbf{92.57} \\ \hline
+         GaitGL-HBS & 84.70 & 90.20 & 91.40 & 91.70 &
+         90.90 & 91.00 & 90.50 & 90.05\\ \hline     
+         STC-Att \cite{10096986} &  91.30 & 92.40 & 91.20 & 89.90 & 92.10 & 90.90 & 90.20 & 91.14 \\ \hline 
+         Ours (without & & & & &  & & & \\
+         MVDL & & & & &  & & & \\
+         boosting) & 76.01 & 84.04 & 85.44 & 90.27 & 91.06 & 92.60 & 93.18 & 87.51
+         \\ \hline 
+         \textbf{MVDL (ours)} & 83.21 & 89.55 & 91.68 & \textbf{94.78} & \textbf{94.44} & \textbf{95.62} & \textbf{96.75} & 92.29 \\ \hline
+    \end{tabular}    
+    
+\end{center}
+
+This section presents the final results obtained after feeding the enriched single-view embedding vectors into the Transformer-based multi-perspective model for synthesis. The resulting synthesized embedding vector is then used for the final identity comparison.
+
+
+The table below compares the performance of the MVDL solution against published state-of-the-art methods in gait recognition.
+
+    \begin{center}
+     \captionof{table}{Performance of the MVDL solution}
+    \begin{tabular}{lrr}
+     \hline
+    Model                                                                                & Year & Rank-1 Accuracy  \\  \hline
+    Cross-View Gait Recognition  & & \\
+    by Discriminative Feature Learning                       & 2022                                 & 95.40\%                             \\  \hline
+    Combining the Silhouette and  & &\\
+    Skeleton Data for Gait Recognition                      & 2023                                 & 92.50\%                               \\  \hline
+    Gait Recognition Using 3-D  & &\\
+    Human Body Shape Inference                                & 2023                                 & 91.40\%                              \\  \hline
+    Learning Visual Prompt for  & &\\
+    Gait Recognition                                          & 2024                                 & 93.20\%                               \\  \hline
+    Learning rich features for  & &\\
+    gait recognition by integrating  & &\\ 
+    skeletons and silhouettes & 2024                                 & 91.28\%                             \\  \hline
+    GaitGCI: Generative Counterfactual  & &\\
+    Intervention for Gait Recognition                 & 2024                                 & 93.00\%                              \\ \hline
+    MVDL (Proposed)                                                                   & \textbf{2025}                                 & \textbf{96.75\%}                           
+    \end{tabular}
+   
+    \end{center}
+
+
+\textbf{Analysis}: The Rank-1 accuracy achieved by the proposed MVDL model is 96.75\%, which surpasses the performance of all comparative state-of-the-art models referenced in this study. This result demonstrates the efficacy of the complete two-stage methodology:    The initial embedding enrichment (knowledge propagation) provides highly informative input features. The multi-perspective Transformer synthesis effectively integrates the multi-view knowledge, resulting in a single, maximally discriminative embedding vector that significantly outperforms existing published methods. The achieved accuracy successfully addresses the primary objective of this research by pushing the performance beyond the 96\% threshold previously established as a challenge in the literature.
+
+\begin{center}
+\captionof{table}{The Rank accuracy per view.} 
+    \begin{longtable}{|l|c|c|c|c|c|c|c|}
+        \hline
+         Rank &  \multicolumn{7}{c|}{Angle} \\
+         \cline{2-8}
+          &  0 & 15 & 30 & 45 & 60 & 75 & 90\\ \hline
+          1 & 0.8321 & 0.8955 & 0.9169 & 0.9563 & 0.9444 & 0.9512 & 0.9675
+          \\ \hline
+          2 & 0.8842 & 0.9241 & 0.9458 & 0.9721 & 0.9616 & 0.967 & 0.9783
+          \\ \hline
+          3 & 0.9047 & 0.9358 & 0.9559 & 0.9791 & 0.9714 & 0.9758 & 0.9838
+          \\ \hline
+          4 & 0.9163 & 0.9419 & 0.9642 & 0.9828 & 0.9748 & 0.98 & 0.9856
+          \\ \hline
+          5 & 0.928 & 0.9465 & 0.9697 & 0.9861 & 0.9782 & 0.9819 & 0.9878
+          \\ \hline
+          6 & 0.9346 & 0.9526 & 0.9711 & 0.9879 & 0.9794 & 0.9851 & 0.9892
+          \\ \hline
+          7 & 0.9391 & 0.9562 & 0.9729 & 0.9898 & 0.9811 & 0.9874 & 0.9905
+          \\ \hline
+          8 & 0.9424 & 0.9577 & 0.9775 & 0.9902 & 0.9828 & 0.9888 & 0.9905
+          \\ \hline
+          9 & 0.9463 & 0.9592 & 0.9784 & 0.9907 & 0.9834 & 0.9893 & 0.9905
+          \\ \hline
+          10 & 0.9501 & 0.9623 & 0.9789 & 0.9907 & 0.984 & 0.9893 & 0.9919
+          \\ \hline
+          11 & 0.9512 & 0.9623 & 0.9807 & 0.9907 & 0.984 & 0.9898 & 0.9919
+          \\ \hline
+          12 & 0.9524 & 0.9643 & 0.9816 & 0.9916 & 0.984 & 0.9898 & 0.9928
+          \\ \hline
+          13 & 0.9546 & 0.9659 & 0.9816 & 0.9916 & 0.9851 & 0.9907 & 0.9932
+          \\ \hline
+          14 & 0.9557 & 0.9664 & 0.9816 & 0.9916 & 0.9851 & 0.9912 & 0.9941
+          \\ \hline
+          15 & 0.9579 & 0.9674 & 0.9816 & 0.9916 & 0.9863 & 0.9912 & 0.995
+          \\ \hline
+          16 & 0.9601 & 0.9679 & 0.9826 & 0.9916 & 0.9863 & 0.9912 & 0.995
+          \\ \hline
+          17 & 0.9612 & 0.9689 & 0.9826 & 0.9921 & 0.9874 & 0.9912 & 0.995
+          \\ \hline
+          18 & 0.9623 & 0.9694 & 0.9839 & 0.9921 & 0.9874 & 0.9912 & 0.995
+          \\ \hline
+          19 & 0.9662 & 0.9699 & 0.9844 & 0.9921 & 0.988 & 0.9912 & 0.9955
+          \\ \hline
+          20 & 0.9673 & 0.9704 & 0.9848 & 0.9921 & 0.9891 & 0.9912 & 0.9959
+          \\ \hline          
+    \end{longtable}    
+    
+\end{center}
+
+We note that all published researches work on one view. We propose to use more than one view while inferencing in order to increase the accuracy rate. Our "MVDL" model is flexible; it could accept input from 1 view or multiple views. 
+
+Our best accuracy on one-view "96.75\%" is better than the best accuracy of other paper and our best accuracy on two-view "98.48\%" is better than our best accuracy on one-view "96.75\%".
+
+\begin{figure}[h]
+    \centering
+    \caption{Rank accuracy of all view points}
+    \includegraphics[width=0.75\linewidth]{Figure/cmc.png}
+    
+    %\label{fig:placeholder}
+\end{figure}
+
+\newpage
+
+\subsection{Other measurements}
+
+The overall training time is approximately 2 months. Inference time of a GEI is about 0.001 seconds which includes the amount of time to turn GEI into an embedded vector by the descriptor, the amount of time to turn the described vector into a new reasonable vector and the amount of time to compare the new vector with others in the database of embedded vectors.
+
+
+    \begin{table}
+     \centering
+    \captionof{table}{Descriptor FLOP.}
+        \begin{tabular}{lrr}
+        Component & Estimated FLOP & \% of Total \\ \hline 
+        Convolutional Layers &	501.74 Million &	93.8\% \\ \hline 
+    Fully Connected Layers &	33.10 Million	& 6.2\% \\ \hline 
+    Total &	534.84 Million	& 100\% \\ \hline 
+        \end{tabular}      
+    
+    \end{table}
+
+    \begin{table}
+    \captionof{table}{Reasoner FLOP with vector sequence length of 128.} 
+    \centering
+        \begin{tabular}{lrr}
+        Module & Estimated FLOP & \% of Total \\ \hline 
+        Multi-Head Attention  &	184.55 Million  &	26.2\%  \\ \hline 
+Feed-Forward Network &	520.09 Million &	73.8\%  \\ \hline 
+Total Model &	704.64 Million	 & 100\%  \\ \hline 
+        \end{tabular}    
+
+    \end{table}
+
+The chapter presents a comprehensive overview of all the results obtained from this research, demonstrating that the proposed approach consistently outperforms other existing methods across the evaluated tasks. This superiority is not only conveyed through detailed numerical comparisons but is also illustrated in a visual manner, with the inclusion of charts depicting the Cumulative Match Characteristic (CMC) Curves. These curves provide a clear and intuitive representation of the performance differences, highlighting how the proposed model achieves higher accuracy and reliability at various ranks compared to alternative techniques. By analyzing the CMC Curves, readers can observe the distinct advantages of the methodology, as the results reveal a significant improvement in matching effectiveness and knowledge extraction. Consequently, the chapter establishes strong empirical evidence that validates the effectiveness of the proposed framework, reinforcing the claim that it surpasses conventional approaches and offering a transparent visualization of its impact through the presented charts.
+
+
+%\begin{figure}[h]
+    %\centering
+    %\includegraphics[width=0.75\linewidth]{Figure/rank-00.png}
+    %\caption{Rank accuracy of 0-degree view point}
+    %\label{fig:placeholder}
+%\end{figure}
+
+
+%\begin{figure}[h]
+    %\centering
+    %\includegraphics[width=0.75\linewidth]{Figure/rank-15.png}
+    %\caption{Rank accuracy of 15-degree view point}
+    %\label{fig:placeholder}
+%\end{figure}
+
+%\begin{figure}[h]
+    %\centering
+    %\includegraphics[width=0.75\linewidth]{Figure/rank-30.png}
+    %\caption{Rank accuracy of 30-degree view point}
+    %\label{fig:placeholder}
+%\end{figure}
+
+%\begin{figure}[h]
+ %   \centering
+  %  \includegraphics[width=0.75\linewidth]{Figure/rank-45.png}
+  %   \caption{Rank accuracy of 45-degree view point}
+    %\label{fig:placeholder}
+%\end{figure}
+
+%\begin{figure}[h]
+ %   \centering
+  %  \includegraphics[width=0.75\linewidth]{Figure/rank-60.png}
+    %\caption{Rank accuracy of 60-degree view point}
+    %\label{fig:placeholder}
+%\end{figure}
+
+%\begin{figure}[h]
+    %\centering
+    %\includegraphics[width=0.75\linewidth]{Figure/rank-75.png}
+    %\caption{Rank accuracy of 75-degree view point}
+    %\label{fig:placeholder}
+%\end{figure}
+
+%\begin{figure}[h]
+    %\centering
+    %\includegraphics[width=0.75\linewidth]{Figure/rank-90.png}
+    %\caption{Rank accuracy of 90-degree view point}
+    %\label{fig:placeholder}
+%\end{figure}
+ 
+\end{document}

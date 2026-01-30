@@ -1,0 +1,62 @@
+\documentclass[../main.tex]{subfiles}
+\usepackage{ragged2e}
+\begin{document}
+
+\begin{center}
+    \Large{\textbf{ABSTRACT}}\\
+\end{center}
+\vspace{1cm}
+
+\justifying
+The main challenge addressed in the research of this thesis is the need for recognising multiple, and uncooperative subjects in the crowd. Existing single-angle approaches often yield less than 96\% accuracy, and some research asks for high training costs. Our proposed solution, "Multi-View Gait Recognition with Deep Learning" - MVDL) , utilizes multiple camera angles during model training while strictly holding the flexible requirement for both single-angle inference and multiple-angles inference. It helps the model enrich data without compromising real-world deployment. This is achieved using a novel concept, inspired by combination drug therapies, that applies a "virus-transmission-like mechanism" to improve the accuracy at each observation angle. The implementation follows three main steps: Step 1: Multi-Angle Training and Knowledge Propagation, where we applied a new training method inspired by the Graph Neural Network (GNN) message propagation mechanism to bidirectionally enrich the embedding vector of the center camera angle , and results from all angles are then combined into a multi-perspective Transformer model; Step 2: Single-Angle Inference and Embedding Enrichment, where the initial embedding from the single-angle model is fed into the Transformer to obtain an enriched vector ; and finally, Step 3: Identity Recognition, where the enriched vector is compared with stored embeddings using cosine similarity. Our main contributions are the usage of a new training method which is inspired by the GNN message propagation mechanism for embedding enrichment and the usage of the Transformer for synthesizing this enriched information. This approach has successfully pushed the model accuracy to 96.75\% at a camera angle, and 98.48\% at a pair of camera angles, surpassing the achievements of published research while requiring fewer computational resources.
+
+
+\begin{comment}
+\begin{enumerate}
+    \item \textbf{Introduction}
+    
+    Recognizing the identities of multiple, uncooperative subjects within a crowd is a critical need in modern security contexts. While numerous existing approaches address this problem , most primarily focus on improving accuracy from a single camera angle. Current published methods often incur high training costs and typically achieve an accuracy lower than 96\%.
+    \item \textbf{Proposed Approach}
+  
+    Our approach, "Multi-view gait recognition with Deep Learning" (MVGRwDL), utilizes multiple camera angles during model training while maintaining the requirement of single-angle inference. This strategy effectively addresses the data enrichment challenge without compromising real-world deployment constraints. The core concept, inspired by combination drug therapies, involves applying a virus-transmission-like mechanism to enhance the model's accuracy at each observation angle
+  
+    \item \textbf{Solution Overview}
+
+    The implementation is structured into three main steps:
+    \begin{itemize}
+        \item \textbf{Step 1: Multi-Angle Training and Knowledge Propagation}
+        \begin{itemize}
+            \item \textbf{Phase 1}: Knowledge is propagated bidirectionally between models trained on individual camera angles to boost the single-view accuracy of each model. This is achieved using the message propagation mechanism of a Graph Neural Network (GNN) to enrich the embedding vector of the center camera angle
+            \item \textbf{Phase 2}: The embedding values from the trained single-angle models are combined into a final model (a multi-perspective Transformer model).
+        \end{itemize}
+        \item \textbf{Step 2: Single-Angle Inference and Embedding Enrichment}
+        \begin{itemize}
+            \item \textbf{Phase 1}: The single-angle model corresponding to the input view generates the initial embedding vector for the object
+            \item \textbf{Phase 2}: This initial embedding vector is input into the multi-angle model (the Transformer) to obtain an enriched embedding vector.
+        \end{itemize}
+        \item \textbf{Step 3: Identity Recognition}
+        \begin{itemize}
+            \item The enriched embedding vector is compared with stored embedding values (using cosine similarity ) to determine the object's identity.
+        \end{itemize}
+    \end{itemize}
+    
+    \item \textbf{Main Contributions}
+    \begin{enumerate}
+        \item Proposing and applying the message propagation mechanism of a Graph Neural Network (GNN) to enrich the embedding vector information at a specific camera angle (center vertex).
+        \item Proposing the use of a multi-perspective model (Transformer) to synthesize the information of the enriched embedding vectors.
+    \end{enumerate}   
+
+This solution introduces a novel approach to object comparison and identification , demonstrating higher accuracy while requiring fewer computational resources compared to models published in 2023, 2024, and 2025. Our results have successfully pushed the model accuracy to 96.75\% at a camera angle, surpassing the achievements of published research.
+    
+\end{enumerate}
+
+\end{comment}
+\begin{flushright}
+\begin{tabular}{@{}c@{}}
+Student\\
+\textit{(Signature and full name)}
+\end{tabular}
+\end{flushright}
+
+
+\end{document}

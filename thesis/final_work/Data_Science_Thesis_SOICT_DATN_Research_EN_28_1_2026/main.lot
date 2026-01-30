@@ -1,0 +1,21 @@
+\babel@toc {nil}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Cross-View Gait Recognition by Discriminative Feature Learning}}{18}{figure.caption.15}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Combining the Silhouette and Skeleton Data for Gait Recognition}}{18}{figure.caption.16}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Gait Recognition Using 3-D Human Body Shape Inference}}{19}{figure.caption.17}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces Learning Visual Prompt for Gait Recognition}}{19}{figure.caption.18}%
+\contentsline {table}{\numberline {2.5}{\ignorespaces Learning rich features for gait recognition by integrating skeletons and silhouettes}}{20}{figure.caption.19}%
+\contentsline {table}{\numberline {2.6}{\ignorespaces The Accuracies of Different Methods Evaluated on OU-ISIR}}{20}{figure.caption.20}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Baseline table}}{34}{table.caption.33}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces The performance comparisons on OUMVLP with two-view accuracy}}{35}{table.4.2}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces The performance comparisons on OUMVLP, excluding the identical-views cases.}}{35}{table.4.3}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Performance of the MVDL solution}}{35}{table.4.4}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces The Rank accuracy per view.}}{36}{table.4.5}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Descriptor FLOP.}}{37}{table.caption.35}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces Reasoner FLOP with vector sequence length of 128.}}{37}{table.caption.36}%
+\addvspace {10\p@ }
+\contentsfinish 
+\contentsfinish 

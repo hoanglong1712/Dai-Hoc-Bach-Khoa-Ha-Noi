@@ -1,0 +1,173 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\section{Scope of Research}
+This study is focused on identifying the identities of objects using gait as a biometric measure. The research is specifically conducted on the Gait Energy Image (GEI) dataset provided by the Department of Intelligent Media, The Institute of Scientific and Industrial Research, Osaka University. \cite{Xu_WACV2021}
+
+\subsection{Our new approach}
+The overarching goal of this project is to improve the accuracy of gait recognition models by introducing a new multi-view training approach. Our conceptual framework, inspired by combination drug therapies for COVID-19, is structured into three distinct steps:
+
+\begin{enumerate}
+    \item \textbf{Step 1: Embedding Vector Enrichment via Knowledge Propagation} Figure~\ref{fig:data_flown} 
+    
+    \item \textbf{Step 2: Multi-Perspective Synthesis}
+    \item \textbf{Step 3: Inference and Identification}    
+\end{enumerate}
+
+\subsection{Our proposed model architecture}
+
+ Our proposed model architecture includes 1 reasoner model and multiple descriptor models. Each view has its own descriptor model. The reasoner model doesn't have to see directly to reason about images. It's the reason why our architecture can outperform other architectures. Figure~\ref{fig:proposed-model-architecture}
+ We allow descriptor models to collaborate through cross-view training. It helps descriptor provide better description.  
+
+ Descripting and reasoning are very different skills. CNN models are better at describing details of a certain image than deep reasoning an image. Transformer models are better at deep reasoning task than describing details of an image. By letting each model stand in their shoes, we gain better outcomes than forcing a single model to do both tasks.
+
+\section{Related Works}
+
+The area of multi-view gait recognition has received significant attention. The current state-of-the-art solutions, along with their reported Rank-1 accuracy rates on cross-view tasks, are summarized below. A common limitation across these methods is that their achieved accuracy levels are consistently lower than 96\%, and they are typically designed for inference using input from only one camera angle.
+
+\subsection{Highlighted Researches on OU-ISIR Gait Database, Multi-View Large Population Dataset (OU-MVLP) }
+
+\begin{enumerate}    
+    \item Cross-View Gait Recognition by Discriminative Feature Learning, Table~\ref{tab:Cross-View}: The Rank-1 accuracy rate of the proposed model is 95.4\% \cite{9351667}
+
+    \begin{figure}[h]
+        \centering
+        \captionof{table}{Cross-View Gait Recognition by Discriminative Feature Learning}
+        \includegraphics[width=0.5\linewidth]{Figure/crossview.png}        
+        \label{tab:Cross-View}
+    \end{figure}
+\item Combining the Silhouette and Skeleton Data for Gait Recognition, Table~\ref{tab:Silhouette-and-Skeleton}: The Rank-1 accuracy rate of the proposed model is 92.5\% \cite{10096986}
+\begin{figure}[h]
+    \centering
+    \captionof{table}{Combining the Silhouette and Skeleton Data for Gait Recognition}
+    \includegraphics[width=1\linewidth]{Figure/combine_silhoulete.png}    
+    \label{tab:Silhouette-and-Skeleton}
+\end{figure}
+    
+    \item Gait Recognition Using 3-D Human Body Shape Inference, Table~\ref{tab:Gait-Recognition-3D}:  The Rank-1 accuracy rate of the proposed model is 91.4\% 
+    \cite{Zhu_2023_WACV}
+    \begin{figure}[h]
+        \centering
+        \captionof{table}{Gait Recognition Using 3-D Human Body Shape Inference}
+        \includegraphics[width=1\linewidth]{Figure/gait3d.png}        
+        \label{tab:Gait-Recognition-3D}
+    \end{figure}
+     
+    \item Learning Visual Prompt for Gait Recognition, Table~\ref{tab:Learning-Visual}: The Rank-1 accuracy rate of the proposed model is 93.2\% 
+    \cite{Ma_2024_CVPR}
+    \begin{figure}[h]
+        \centering
+         \captionof{table}{Learning Visual Prompt for Gait Recognition}
+        \includegraphics[width=1\linewidth]{Figure/learning_visual.png}
+        \label{tab:Learning-Visual}
+    \end{figure}
+   \item Learning rich features for gait recognition by integrating skeletons and silhouettes, Table~\ref{tab:Learning-rich}: The Rank-1 accuracy rate of the proposed model is 91.28\%
+   \cite{Peng2024}
+   \begin{figure}[h]
+       \centering
+       \captionof{table}{Learning rich features for gait recognition by integrating skeletons and silhouettes}
+       \includegraphics[width=1\linewidth]{Figure/learning_rich.png}
+       %\caption{Enter Caption}
+       \label{tab:Learning-rich}
+   \end{figure}    
+\end{enumerate}
+
+\subsection{Key Papers on 1-View (Single-View) Gait Recognition}
+Most relevant papers focus on frontal-view recognition, as it is the dominant single-view scenario in surveillance and biometrics literature.
+
+   Frontal View Gait Recognition With Fusion of Depth Features From a Time of Flight Camera  \cite{8466800}. 
+    To address the limitations of traditional frontal view gait recognition—historically reliant on RGB, stereo, or Doppler sensors, "Frontal View Gait Recognition With Fusion of Depth Features From a Time of Flight Camera" introduces a robust four-part framework utilizing Time-of-Flight (ToF) camera feature fusion. The methodology comprises a novel silhouette extraction algorithm to mitigate multiple reflection artifacts, a cycle-detection-based frame selection process, four unique gait image representations, and a specialized fusion classifier. Validation was conducted using a longitudinal dataset of 46 and 33 subjects across two sessions, demonstrating that the proposed approach significantly exceeds state-of-the-art benchmarks. Specifically, the method achieved Rank 1 and Rank 5 recognition rates of 66.1\% and 81.0\%, respectively, representing a substantial improvement over existing performance peaks of 35.7\% and 57.7\%.\cite{8466800} 
+
+    Skeleton based Frontal Gait Recognition utilizing Fourier Descriptors \cite{8929373}.
+    Using gait to identify people is a cool new area in biometrics, and its biggest win is that it's totally unobtrusive, unlike other tech, it doesn't need people to stop or touch anything. "Skeleton based Frontal Gait Recognition utilizing Fourier Descriptors" specifically looks at how to recognize a person's walk in tight spots like narrow corridors where they can only be seen from the front. Authors used the Kinect’s skeleton tracking to measure the distance between the "spine base" and every other joint (which they call the centroid distance) to create a unique profile for five key frames of a person's stride. Because the Kinect captures depth, they get much more accurate joint measurements from the front than usual, which is a huge plus for surveillance in cramped spaces. They then ran those descriptors through a simple kNN classifier and found that thier method is not only way more accurate but also a lot faster than the older ways of doing things!
+
+    Human Gait Recognition Based on Frontal-View Sequences Using Gait Dynamics and Deep Learning \cite{10081323}.
+    "Human Gait Recognition Based on Frontal-View Sequences Using Gait Dynamics and Deep Learning" introduces a new way to identify people just by how they walk using a front-on view like seeing someone walk toward the camera in a hallway, combined with the power of deep learning. Most current systems try to look at people from the side, but in the real world (like in a crowded building), the camera often only get a view from the front. The proposed method focuses on three main things: how the limbs move,  the body proportions, and the overall shape people make while walking. Instead of just looking at a single snapshot, the system watches how these shapes change over time to capture people's unique "walking rhythm.". Authors then feed this info into a smart computer program (a deep learning model) that learns to recognize these patterns. To make sure the system doesn't get confused if objects are wearing different clothes or carrying a bag, authorts added a special "fusion" step that double-checks the data for errors. When they tested it against older methods, thier system was much more reliable and accurate at picking the right person out of a crowd.   
+
+    Human gait recognition based on frontal view using kinect features and orthogonal least square selection \cite{10081323}.
+    Paper "Human gait recognition based on frontal view using kinect features and orthogonal least square selection" looks at how human can identify people by the way they walk, even if they are walking directly toward a camera or at an angle. To do this, authors used a Kinect sensor (like the one used for video games) to track a person's 3D skeleton as they moved. Because a skeleton has so many different moving parts, they used a "smart filter" technique called Orthogonal Least Square (OLS) to pick out only the most important movements that make a person's walk unique. Then they fed these specific movements into a digital "brain" called a neural network to see if it could correctly name the person. The results were impressive: the system was especially good at recognizing people from a front-on view, hitting a 90.6\% accuracy rate.
+    
+\subsection{Key Papers on Multi-View Gait Recognition}
+Multi-view (or cross-view) gait recognition focuses on handling appearance variations across different camera angles, a core challenge in real-world biometrics.
+
+    Multi-View Gait Recognition Based on a Spatial-Temporal Deep Neural Network, Table~\ref{tab:Multi-ViewGaitRecognition} \cite{8485345}.
+
+\begin{figure}[h]
+    \centering
+    \captionof{table}{The Accuracies of Different Methods Evaluated on OU-ISIR}
+    \includegraphics[width=0.75\linewidth]{Figure/Multi-ViewGaitRecognition.png}
+    
+    \label{tab:Multi-ViewGaitRecognition}
+\end{figure}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=1\linewidth]{Figure/access-gagraphic-2874073.jpg}
+        \caption{Spatial-temporal deep neural network}
+        \label{fig:Spatial-temporal}
+    \end{figure}
+    Figure~\ref{fig:Spatial-temporal} shows a spatial-temporal deep neural network. This network is adopted to extract gait feature so as to overcome the influence of view variations. TFN adopts the convolution operation-based STG and LSTM to extract the spatial-temporal gradient feature used for gait recognition, which greatly reduces computation cost.
+    
+    Paper "The Accuracies of Different Methods Evaluated on OU-ISIR" introduces a new computer system called STDNN that identifies people by their walk, even when seen from different camera angles. The system works like a brain with two specialized parts: one part focuses on time (how the body moves and flows over a few seconds), and the other focuses on space (the overall shape and outlines of the body). The "time" part uses a special memory unit to track the rhythm of object's steps, while the "space" part uses smart filters to learn exactly what makes object's body shape unique compared to everyone else. By combining these two types of information, the system gets a very complete picture of a person's walk. When authors tested it, it was incredibly accurate—correctly identifying people over 95\% of the time when the camera angle was the same, and over 92\% of the time even when switching between different views. This makes it much more powerful than older methods and very useful for real-world security.
+    
+    Cross-View Gait Recognition Using Non-Linear View Transformations of Spatiotemporal Features \cite{8451629}.
+    Paper "Cross-View Gait Recognition Using Non-Linear View Transformations of Spatiotemporal Features" introduces a new way to identify people by how they walk, even if the camera sees them from a side view and then later from a front view. Normally, computers get confused when the camera angle changes, but the system solves this by automatically "translating" any walking angle into one standard view. Authors built a smart computer network that learns to do this on its own without needing a human to tell it which angle it is looking at. It simply finds the common patterns in how a person moves through space and time and maps them to a single, consistent model. Once all the walking styles are translated to this same view, the system can easily compare them to find a match. When they tested this against other top methods, their system was better at correctly identifying people across different camera angles.
+
+    Cross-View Gait Recognition by Discriminative Feature Learning \cite{8759096}.
+    Lately, using "deep learning" computers to identify people by their walk has become very popular because they are great at spotting patterns. However, many current systems use a "comparison" method that struggles when it has to tell the difference between two very similar-looking people. To fix this, authors created a new tool called Angle Center Loss (ACL). Instead of just remembering one general "center" for how a person walks, the system remembers what that person looks like from every different camera angle. It focuses on closing the gap between these different views so the person’s profile stays consistent. They also improved how the computer "watches" the person. They built a system that automatically picks out the most important body parts, like the legs or torso, and ignores the rest. Then, they added a "temporal attention" feature—think of this as a spotlight that pays more attention to clear walking frames and ignores blurry or bad ones. By focusing on the best parts of the body and the clearest moments of the walk, their system achieved top-tier results, beating out older methods that just averaged everything together.
+
+    Cross-View Gait Recognition Based on Feature Fusion
+    \cite{9643338}.
+    Compared to face recognition, gait recognition is one of the most promising video biometric recognition technologies given that gait images can be readily captured at a distance and gait characteristics are robust to appearance camouflage. A lot of existing gait recognition methods aim at a single scene such as fixed cameras, but the recognition accuracy will decrease sharply if the viewpoints are changed. In paper "Cross-View Gait Recognition Based on Feature Fusion", authors improve the existing methods and propose a cross-view gait recognition method based on feature fusion. Firstly, a multi-scale feature fusion module is proposed to extract the features of gait sequences with different granularities. Then, a dual-path structure is introduced to learn global appearance features and fine-grained local features, respectively. The features of two paths are gradually merged as the network deepens to obtain the complementary information. In the last feature mapping stage, the Generalized-Mean pooling is used to favour discriminative representation. Extensive experiments on the public dataset CASIA-B show that the method can achieve state-of-the-art recognition performance.
+
+    Cross-View Gait Recognition with Deep Universal Linear Embeddings \cite{9578019}.
+    Gait is considered an attractive biometric identifier for its non-invasive and non-cooperative features compared with other biometric identifiers such as fingerprint and iris. At present, cross-view gait recognition methods always establish representations from various deep convolutional networks for recognition and ignore the potential dynamical information of the gait sequences. If assuming that pedestrians have different walking patterns, gait recognition can be performed by calculating their dynamical features from each view. Paper "Cross-View Gait Recognition with Deep Universal Linear Embeddings" introduces the Koopman operator theory to gait recognition, which can find an embedding space for a global linear approximation of a nonlinear dynamical system. Furthermore, a novel framework based on convolutional variational autoencoder and deep Koopman embedding is proposed to approximate the Koopman operators, which is used as dynamical features from the linearized embedding space for cross-view gait recognition. It gives solid physical interpretability for a gait recognition system. Experiments on a large public dataset, OU-MVLP, prove the effectiveness of the proposed method.
+
+    Cross-View Gait Recognition Model Combining Multi-Scale Feature Residual Structure and Self-Attention Mechanism \cite{10313271}.
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.5\linewidth]{Figure/Cross-ViewGaitRecognitionModel.png}
+        \caption{Overall structure of the network model.}
+        \label{fig:Overall-structure}
+    \end{figure}
+    In the cross-view condition, the gait recognition rate caused by the vastly different gait silhouette maps is substantially reduced. To improve the accuracy of gait recognition under cross-view conditions, Figure~\ref{fig:Overall-structure}, paper "Cross-View Gait Recognition Model Combining Multi-Scale Feature Residual Structure and Self-Attention Mechanism" proposes a cross-view gait recognition network model combining multi-scale feature residual module (MFRM) and self-attention (SA) mechanism based on  (GAN). First, the local and global feature information in the input gait energy image is fully extracted using the MFRM. Then, the SA mechanism module is used to adjust the information of channel dimensions and capture the association between feature information and is introduced into both the generator and discriminator. Next, the model is trained using a two-channel network training strategy to avoid the pattern collapse problem during training. Finally, the generator and discriminator are optimized to improve the quality of the generated gait images. It conducts experiments using the CASIA-B and OU-MVLP public datasets. The experiments demonstrate that the MFRM can better obtain the local and global feature information of the images. The SA mechanism module can effectively establish global dependencies between features, so that the generated gait images have clearer and richer detail information. The average Rank-1 recognition accuracies of the results reach 91.1\% and 97.8\% on the two datasets respectively, which are both better than the current commonly used algorithms, indicating that the network model in the paper can well improve the gait recognition accuracy across perspectives
+    
+    Batch Hard Contrastive Loss and Its Application to Cross-View Gait Recognition \cite{10082933}.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.75\linewidth]{Figure/access-gagraphic-3262271.jpg}
+        \caption{Three batch-sampling methods comparison}
+        \label{fig:Three-batch-sampling}
+    \end{figure}
+    This study compared three batch-sampling methods: Batch-all, sample-based, and identity-based. Each batch contained several identities with an equal number of samples. Identity-based sampling with contrastive loss delivered the best performance for gait verification, achieving 0.50\% equal error rate in training GaitSet, Figure~\ref{fig:Three-batch-sampling}.
+    
+    Biometric person authentication comprises two tasks: the identification task (i.e., one-to-many matching) and the verification task (i.e., one-to-one matching). In paper "Batch Hard Contrastive Loss and Its Application to Cross-View Gait Recognition", authors propose a loss function called batch hard contrastive loss (BHCn) for the deep learning-based verification task. For this purpose, they consider batch mining techniques developed in the identification task and translate them to the verification task. More specifically, inspired by batch mining triplet losses to learn a relative distance for the identification task, they propose BHCn to learn an absolute distance that better represents verification in general. Their method preserves the identity-agnostic nature of the contrastive loss by selecting the hardest pair of samples for each pair of identities in a batch instead of selecting the hardest pair for each sample. They validate the effectiveness of the proposed method in cross-view gait recognition using three networks: a lightweight input, structure, and output network they call GEI + CNN (Gait Energy Image Convolutional Neural Network) as well as the widely used GaitSet and GaitGL, which have sophisticated inputs, structures, and outputs. They trained these networks with the publicly available silhouette-based datasets, the OU-ISIR Gait Database Multi-View Large Population (OU-MVLP) dataset and the Institute of Automation Chinese Academy of Sciences Gait Database Multiview (CASIA-B) dataset. Experimental results show that the proposed BHCn outperforms other loss functions, such as a triplet loss with batch mining as well as the conventional contrastive loss.
+    
+    GaitDAN: Cross-View Gait Recognition via Adversarial Domain Adaptation \cite{10488455}.
+    View change causes significant differences in the gait appearance. Consequently, recognizing gait in cross-view scenarios is highly challenging. Most recent approaches either convert the gait from the original view to the target view before recognition is carried out or extract the gait feature irrelevant to the camera view through either brute force learning or decouple learning. However, these approaches have many constraints, such as the difficulty of handling unknown camera views. This work treats the view-change issue as a domain-change issue and proposes to tackle this problem through adversarial domain adaptation. This way, gait information from different views is regarded as the data from different sub-domains. The proposed approach focuses on adapting the gait feature differences caused by such sub-domain change and, at the same time, maintaining sufficient discriminability across the different people. For this purpose, a Hierarchical Feature Aggregation (HFA) strategy is proposed for discriminative feature extraction. By incorporating HFA, the feature extractor can well aggregate the spatial-temporal feature across the various stages of the network and thereby comprehensive gait features can be obtained. Then, an Adversarial View-change Elimination (AVE) module equipped with a set of explicit models for recognizing the different gait viewpoints is proposed. Through the adversarial learning process, AVE would not be able to identify the gait viewpoint in the end, given the gait features generated by the feature extractor. That is, the adversarial domain adaptation mitigates the view change factor, and discriminative gait features that are compatible with all sub-domains are effectively extracted. Extensive experiments on three of the most popular public datasets, CASIA-B, OULP, and OUMVLP richly demonstrate the effectiveness of the approach.
+    
+    TAG: A Temporal Attentive Gait Network for Cross-View Gait Recognition \cite{10752706}.
+    Recognizing a person from a distance using gait (i.e., walking pattern) is a challenging yet interesting biometric problem. Despite recent advancements in deep learning-based gait recognition (GR) research, learning discriminative gait temporal representation is still challenging because of delicate silhouette differences in the spatial domain. Aiming to address this issue, authors propose a novel attention-based GR framework, namely, temporal attentive gait (TAG), which aims to refine the gait feature representation from the temporal dimension’s perspective in a comprehensive fashion. The proposed TAG mainly consists of three modules, namely, short-term temporal feature learning (ST-TFL), hybrid multikernel temporal attention (H-MKTA), and multikernel temporal self-attention (MK-TSA), respectively. First, ST-TFL aims to capture local temporal contextual clues, facilitating the learning of short-period temporal motion patterns. Second, H-MKTA learns locally and globally distributed gait temporal information by adaptively capturing the multiscale temporal evolutions inside the gait sequential data. To refine the temporal attentive features learned by ST-TFL and H-MKTA, the MK-TSA learns global dependencies between gait temporal frames to recalibrate temporal weights using a self-attention mechanism. To further enhance the discriminative power of the gait feature representation, a multilevel (ML) framework is adopted, combining gait features from different levels of the backbone. Experiments conducted on three benchmark gait datasets, CASIA-B, Gait3D, and CCPG, demonstrate the strong potential of the TAG in learning effective gait representation under complex scenarios for recognition.
+
+    Cross-View Gait Recognition via View Information Elimination Mechanism \cite{10777002}.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.75\linewidth]{Figure/access-gagraphic-3510718.jpg}
+        \caption{View Information Elimination Mechanism (VIEM) framework}
+        \label{fig:VIEM-framework}
+    \end{figure}
+
+The overall pipeline of View Information Elimination Mechanism (VIEM) framework, Figure~\ref{fig:VIEM-framework}. First, the human silhouette sequences from different views are processed by a sharing block, which is composed of 4 ResNet blocks to extract basic gait features. Concretely, the ResNet Block1 and Block 2 are used to extract original deep features. Next the Block3 and Block4 learn global features and local features respectively, and part features are obtained by horizontal segmentation. Then the global and local features are supervised by identity classification loss and a newly designed center loss. To eliminate the influence of viewpoint information, the extracted global and local features are concatenated and fed into the viewpoint elimination module (indicated by the green dashed section in the figure below). Specifically, the concatenated features are processed by two separate fully connected layers and then fed into N different viewpoint classifiers to learn viewpoint features. The designed adversarial learning loss reduces viewpoint features through reverse optimization, while the gait ID loss in the upper part of the figure aims to enhance the discriminative power of each pedestrian’s gait features. The top and bottom parts are jointly optimized using Equ. 14 to form an adversarial learning structure. Ultimately, this approach yields pedestrian gait features that are robust to viewpoint transformations and have strong ID discrimination.
+    
+    Gait recognition is a new and promising biometric identification method, which has many advantages, such as requiring no contact, long-distance, and hard to imitate. However, gait recognition faces many challenges in real-life scenarios, including occlusion, diverse view angles, cloth change and carrying variances. Among those, the change of viewpoints would be one of the trickiest factors. Thus, effectively mitigating or entirely eliminating the influence of perspective factors stands as a viable approach to enhance the performance of gait recognition. A novel mechanism for perspective elimination in gait recognition is proposed in the paper, aimed at mitigating the impact of viewpoints. Firstly, an adversarial learning framework is devised between the feature extractor and the perspective classifier, which confounds the discriminate ability of the perspective classifier regarding gait features, thereby reducing the influence of perspective from the feature-wise. Secondly, a redesigned center loss is proposed to draw the features with the same ID from different views close to identity centers while increasing the inter-class distances. Finally, the view-invariant identity-wise gait features are learned. The proposed method achieves mean Rank-1 = 99.2\%, 97.6\%, 94.0\% on CASIA-B (NM, BG, CL), and mean Rank-1 = 91.0\% on OU-MVLP, demonstrate the effectiveness of the method.
+
+    Multi-View Gait Recognition With Joint Local Multi-Scale and Global Contextual Spatio-Temporal Features \cite{10707343}.
+    Existing gait recognition methods are capable of extracting rich spatial gait information but often overlook fine-grained temporal features within local regions and temporal contextual information across different sub-regions. Considering gait recognition as a fine-grained recognition task and each individual exhibits uniqueness in their movements across different temporal sequences, authors propose a local multi-scale and global contextual spatio-temporal (LMGCS) network for gait recognition. It divides the whole gait sequence into sub-sequences with multiple spatio resolutions and extracts multi-scale temporal features. They extract the temporal context information of different sub-sequences with the transformer, and all sub-sequences are fused to form global features. Furthermore, the loss function that combines the triplet loss function and cross-entropy loss function is utilized to prompt the proposed model to fulfill the gait recognition. The proposed method achieved state-of-the-art results on two popular public datasets. It achieved rank-1 accuracy of 98.0\%, 95.4\%, and 85.0\% on the three walk states of the CASIA-B dataset and 90.9\% on the OU-MVLP dataset.
+
+    Multi-view gait recognition using 3D convolutional neural networks \cite{7533144}.
+    In paper "Multi-view gait recognition using 3D convolutional neural networks" authors present a deep convolutional neural network using 3D convolutions for Gait Recognition in multiple views capturing spatio-temporal features. A special input format, consisting of the gray-scale image and optical flow enhance color invariance. The approach is evaluated on three different datasets, including variances in clothing, walking speeds and the view angle. In contrast to most state-of-the-art Gait Recognition systems the used neural network is able to generalize gait features across multiple large view angle changes. The results show a comparable to better performance in comparison with previous approaches, especially for large view differences.
+
+
+The chapter is dedicated to providing a comprehensive description of all the papers and studies that are directly related to the current research, offering a detailed overview of the existing body of work in the field. In addition to reviewing prior contributions, it also emphasizes the fundamental concepts and methodologies of Convolutional Neural Networks (CNNs) and Transformer architectures, which serve as the foundational basis for the proposed model. By examining both the relevant literature and the theoretical underpinnings of these two powerful deep learning approaches, the chapter establishes a clear connection between past research efforts and the innovative framework being introduced, thereby situating the proposed model within a broader academic and technological context.
+
+\end{document}
